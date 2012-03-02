@@ -1,3 +1,9 @@
+"ホームディレクトリのvimrcに以下書き込み
+"
+"if filereadable(expand('$HOME/dotfiles/.vimrc'))
+"    source $HOME/dotfiles/.vimrc
+"endif
+
 "---------------------------------------------------------------------------
 " 基本設定:
 "
@@ -7,27 +13,13 @@ colorscheme desert
 set clipboard=unnamed,autoselect
 
 "---------------------------------------------------------------------------
-" フォント設定:
-"
-if has('win32')
-set guifont=Osaka－等幅:h14
-set linespace=1
-if has('kaoriya')
-set ambiwidth=auto
-endif
-elseif has('mac')
-set guifont=Osaka－等幅:h14
-elseif has('xfontset')
-set guifontset=a14,r14,k14
-endif
-
-"---------------------------------------------------------------------------
-" ウインドウに関する設定:
+" gvimに関する設定:
 "
 "set columns=120
 "set lines=50
 "set cmdheight=2
-"colorscheme evening
+"set guioptions-=T
+"set guifont=Osaka－等幅:h12:cSHIFTJIS
 
 "---------------------------------------------------------------------------
 " 編集に関する設定:
@@ -61,9 +53,8 @@ set expandtab
 "---------------------------------------------------------------------------
 " ファイル操作に関する設定
 "
-" スワップファイルを作成しない
+" スワップ、バックアップを作成しない
 set noswapfile
-" バックアップファイルを作成しない
 set nobackup
 
 " ファイル名に大文字小文字の区別がないシステム用の設定:
@@ -91,8 +82,6 @@ set laststatus=2
 set showcmd
 " タイトルを表示
 set title
-" ステータスラインを常に表示
-set laststatus=2
 " シンタックスハイライトを有効にする
 syntax on
 " 入力されているテキストの最大幅
