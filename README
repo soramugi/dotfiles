@@ -1,0 +1,16 @@
+--------------------------------------
+vimrc
+--------------------------------------
+ホームディレクトリのvimrcに以下書き込み
+
+if filereadable(expand('$HOME/dotfiles/.vimrc'))
+    source $HOME/dotfiles/.vimrc
+endif
+--------------------------------------
+gvimrc
+--------------------------------------
+ホームディレクトリのgvimrcに以下書き込み
+
+if filereadable(expand('$HOME/dotfiles/.gvimrc'))
+    source $HOME/dotfiles/.gvimrc
+endif

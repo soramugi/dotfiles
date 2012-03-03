@@ -1,25 +1,8 @@
-"ホームディレクトリのvimrcに以下書き込み
-"
-"if filereadable(expand('$HOME/dotfiles/.vimrc'))
-"    source $HOME/dotfiles/.vimrc
-"endif
-
 "---------------------------------------------------------------------------
 " 基本設定:
 "
-" カラー設定
+" カラー
 colorscheme desert
-" クリップボードを連携
-set clipboard=unnamed,autoselect
-
-"---------------------------------------------------------------------------
-" gvimに関する設定:
-"
-"set columns=120
-"set lines=50
-"set cmdheight=2
-"set guioptions-=T
-"set guifont=Osaka－等幅:h12:cSHIFTJIS
 
 "---------------------------------------------------------------------------
 " 編集に関する設定:
@@ -157,5 +140,4 @@ set mousehide
 "---------------------------------------------------------------------------
 " その他設定
 " バッファを切替えてもundoの効力を失わない
-set hidden
-
+"set hidden
