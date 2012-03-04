@@ -2,9 +2,6 @@ if filereadable(expand('./.vimrc'))
     source ./.vimrc
 endif
 
-" クリップボードを連携
-set clipboard=unnamed,autoselect
-
 set columns=120
 set lines=50
 set cmdheight=2
