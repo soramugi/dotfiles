@@ -65,6 +65,8 @@ set wrap
 set laststatus=2
 " コマンドをステータス行に表示
 set showcmd
+" コマンドの行数
+set cmdheight=2
 " タイトルを表示
 set title
 " シンタックスハイライトを有効にする
