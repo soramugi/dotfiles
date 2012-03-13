@@ -5,6 +5,9 @@
 colorscheme desert
 " クリップボードを連携
 set clipboard=unnamed,autoselect
+" 試しに文字コーードの指定
+set encoding=utf-8
+set termencoding=euc-jp
 
 "---------------------------------------------------------------------------
 " 編集に関する設定:
