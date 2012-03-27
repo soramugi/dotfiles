@@ -1,5 +1,5 @@
 # プロンプトの表示形式
-PS1="\h: \W $ "
+PS1="[\u@\h \W]$ "
 
 # Mac用man日本語化
 # http://www.fan.gr.jp/~sakai/softwares/unix#wordhighlight_id18
