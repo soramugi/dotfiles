@@ -1,0 +1,8 @@
+#初期起動時のメッセージ非表示
+startup_message off
+#コマンドキー変更
+escape ^Tt
+#スクロール数
+defscrollback 2000
+#通知機能
+defmonitor on
