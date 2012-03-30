@@ -109,6 +109,10 @@ set smartcase
 set wrapscan
 " コマンド、検索パターンを100個まで履歴に残す
 set history=100
+" 検索などで飛んだらそこを真ん中に
+for maptype in ['n', 'N', '*', '#', 'g*', 'g#', 'G']
+  execute 'nmap' maptype maptype . 'zz'
+endfor
 "---------------------------------------------------------------------------
 "自動折りたたみ設定
 set foldmethod=indent
@@ -203,3 +207,18 @@ set fileformats=unix,dos,mac
 if exists('&ambiwidth')
   set ambiwidth=double
 endif
+
+
+" プラグイン管理
+" :NeoBundleInstall コマンド叩けばアップデート
+set nocompatible
+filetype plugin indent off
+
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+  call neobundle#rc(expand('~/.vim/bundle/'))
+endif
+" 使いたいプラグインのリポジトリを羅列。
+NeoBundle 'git://github.com/Shougo/neobundle.vim.git'
+
+filetype plugin indent on
