@@ -11,4 +11,4 @@ fi
 export CLICOLOR=1
 export LSCOLORS=DxGxcxdxCxegedabagacad
 
-alias ll='ls -la'
+alias ll='ls -l'
