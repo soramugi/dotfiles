@@ -113,6 +113,9 @@ set history=100
 for maptype in ['n', 'N', '*', '#', 'g*', 'g#', 'G']
   execute 'nmap' maptype maptype . 'zz'
 endfor
+" Escの2回押しでハイライト消去
+nnoremap <ESC><ESC> :nohlsearch<CR><ESC>
+
 "---------------------------------------------------------------------------
 "自動折りたたみ設定
 set foldmethod=indent
