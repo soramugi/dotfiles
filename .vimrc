@@ -150,8 +150,8 @@ set mousehide
 
 "---------------------------------------------------------------------------
 " 辞書
-
-autocmd FileType php :set dictionary=PHP.dict<CR>
+autocmd FileType php :set dict=~/.vim/dict/PHP.dict
+autocmd FileType js :set dict=~/.vim/dict/javascript.dict
 
 "---------------------------------------------------------------------------
 " その他設定
