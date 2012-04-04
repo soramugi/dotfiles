@@ -214,6 +214,7 @@ endif
 
 " プラグイン管理
 " :NeoBundleInstall コマンド叩けばアップデート
+if has('unix')
 set nocompatible
 filetype plugin indent off
 
@@ -225,3 +226,4 @@ endif
 NeoBundle 'git://github.com/Shougo/neobundle.vim.git'
 
 filetype plugin indent on
+endif
