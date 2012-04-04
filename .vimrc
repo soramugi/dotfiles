@@ -149,6 +149,11 @@ set mousehide
 "set guioptions+=a
 
 "---------------------------------------------------------------------------
+" 辞書
+
+autocmd FileType php :set dictionary=PHP.dict<CR>
+
+"---------------------------------------------------------------------------
 " その他設定
 " バッファを切替えてもundoの効力を失わない
 "set hidden
@@ -225,6 +230,7 @@ endif
 " 使いたいプラグインのリポジトリを羅列。
 NeoBundle 'git://github.com/Shougo/neobundle.vim.git'
 NeoBundle 'git://github.com/yuroyoro/vimdoc_ja.git'
+NeoBundle 'smartchr'
 
 filetype plugin indent on
 " Brief help
