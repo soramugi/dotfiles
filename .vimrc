@@ -211,19 +211,25 @@ if exists('&ambiwidth')
   set ambiwidth=double
 endif
 
-
+"---------------------------------------------------------------------------
 " プラグイン管理
-" :NeoBundleInstall コマンド叩けばアップデート
+" neobundle.vim
 if has('unix')
 set nocompatible
 filetype plugin indent off
 
 if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-  call neobundle#rc(expand('~/.vim/bundle/'))
+  set runtimepath+=~/.vim.bundle/neobundle.vim/
+  call neobundle#rc(expand('~/.vim.bundle/'))
 endif
 " 使いたいプラグインのリポジトリを羅列。
 NeoBundle 'git://github.com/Shougo/neobundle.vim.git'
+NeoBundle 'git://github.com/yuroyoro/vimdoc_ja.git'
 
 filetype plugin indent on
+" Brief help
+" :NeoBundleList          - list configured bundles
+" :NeoBundleInstall(!)    - install(update) bundles
+" :NeoBundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+map neoli NeoBundleList
 endif
