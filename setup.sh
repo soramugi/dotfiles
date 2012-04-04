@@ -1,10 +1,20 @@
 #!/bin/bash
 
+#vimスクリプト管理ツールのインスコ
 mkdir ~/.vim.bundle
 git clone https://github.com/Shougo/neobundle.vim ~/.vim.bundle/neobundle.vim
 
-DOT_FILES=( .screenrc .vimrc .bashrc )
+#gitのエディタ
+git config --global core.editor 'vim -c "set fenc=utf-8"'
+#エイリアス
+git config --global alias.co 'checkout'
+git config --global alias.st 'status'
+git config --global alias.ci 'commit'
+git config --global alias.di 'diff'
+git config --global alias.br 'branch'
 
+#シンボリックりんく
+DOT_FILES=( .screenrc .vimrc .bashrc )
 for file in ${DOT_FILES[@]}
 do
     ln -s $HOME/dotfiles/$file $HOME/$file
