@@ -239,3 +239,9 @@ filetype plugin indent on
 " :NeoBundleClean(!)      - confirm(or auto-approve) removal of unused bundles
 map neoli NeoBundleList
 endif
+
+"---------------------------------------------------------------------------
+" vimrcのlocal設定
+if filereadable(expand('$HOME/.local/.vimrc.local'))
+    source $HOME/.local/.vimrc.local
+endif
