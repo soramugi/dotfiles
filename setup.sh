@@ -14,7 +14,7 @@ git config --global alias.df 'diff'
 git config --global alias.br 'branch'
 
 #シンボリックりんく
-DOT_FILES=( .bashrc .vimrc .gvimrc .screenrc )
+DOT_FILES=( .bashrc .vimrc .gvimrc .vim .screenrc )
 for file in ${DOT_FILES[@]}
 do
     ln -s $HOME/dotfiles/$file $HOME/$file
@@ -24,3 +24,4 @@ done
 mkdir $HOME/.local
 touch $HOME/.local/.vimrc.local
 touch $HOME/.local/.gvimrc.local
+touch $HOME/.local/.bashrc.local
