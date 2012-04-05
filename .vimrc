@@ -219,7 +219,6 @@ endif
 "---------------------------------------------------------------------------
 " プラグイン管理
 " neobundle.vim
-if has('unix')
 set nocompatible
 filetype plugin indent off
 
@@ -237,8 +236,6 @@ filetype plugin indent on
 " :NeoBundleList          - list configured bundles
 " :NeoBundleInstall(!)    - install(update) bundles
 " :NeoBundleClean(!)      - confirm(or auto-approve) removal of unused bundles
-map neoli NeoBundleList
-endif
 
 "---------------------------------------------------------------------------
 " vimrcのlocal設定
