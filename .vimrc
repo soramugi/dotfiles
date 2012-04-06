@@ -183,6 +183,11 @@ set mousehide
 "set guioptions+=a
 
 "---------------------------------------------------------------------------
+" キーバインド設定
+map da :<CR>ggvGD<CR><ESC>
+map ya :<CR>ggvGy<CR><ESC>
+
+"---------------------------------------------------------------------------
 " 辞書
 autocmd FileType php :set dict=~/.vim/dict/PHP.dict
 autocmd FileType js :set dict=~/.vim/dict/javascript.dict
