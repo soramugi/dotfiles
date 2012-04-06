@@ -12,12 +12,25 @@ endif
 " 使いたいプラグインのリポジトリを羅列。
 NeoBundle 'yuroyoro/vimdoc_ja'
 NeoBundle 'kana/vim-smartchr'
+NeoBundle 'YankRing.vim'
 
 filetype plugin indent on
 " Brief help
 " :NeoBundleList          - list configured bundles
 " :NeoBundleInstall(!)    - install(update) bundles
 " :NeoBundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+
+" プラグイン管理
+" neobundle.vim
+"---------------------------------------------------------------------------
+" プラグイン設定
+"
+" YankRing.vim
+let g:yankring_history_dir = expand('$HOME')
+let g:yankring_history_file = '.yankring_history'
+let g:yankring_manual_clipboard_check = 1
+let g:yankring_max_history = 10
+let g:yankring_window_height = 13
 
 "---------------------------------------------------------------------------
 " 基本設定:
