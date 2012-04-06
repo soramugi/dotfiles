@@ -3,13 +3,13 @@
 " neobundle.vim
 set nocompatible
 filetype plugin indent off
-set rtp+=~/dotfiles/neobundle.vim
 
 if has('vim_starting')
-  set runtimepath+=~/dotfiles/neobundle.vim
+  set runtimepath+=~/.vim.neobundle/neobundle.vim
   call neobundle#rc(expand('~/.vim.neobundle/'))
 endif
 " 使いたいプラグインのリポジトリを羅列。
+NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'yuroyoro/vimdoc_ja'
 NeoBundle 'kana/vim-smartchr'
 NeoBundle 'YankRing.vim'

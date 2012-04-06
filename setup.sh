@@ -2,6 +2,7 @@
 
 #vimスクリプト管理ツールのインスコ
 mkdir ~/.vim.neobundle
+git clone git://github.com/Shougo/neobundle.vim.git ~/.vim.neobundle/neobundle.vim
 
 #gitのエディタ
 git config --global core.editor 'vim -c "set fenc=utf-8"'
