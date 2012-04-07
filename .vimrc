@@ -13,6 +13,7 @@ NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'yuroyoro/vimdoc_ja'
 NeoBundle 'kana/vim-smartchr'
 NeoBundle 'YankRing.vim'
+NeoBundle 'thinca/vim-fontzoom'
 
 filetype plugin indent on
 " Brief help
@@ -192,8 +193,8 @@ map ya :<CR>ggvG$Y<CR><ESC>
 
 "---------------------------------------------------------------------------
 " 辞書
-autocmd FileType php :set dict=~/.vim/dict/PHP.dict
-autocmd FileType js :set dict=~/.vim/dict/javascript.dict
+autocmd FileType php :set dict=~/dotfiles/dict/php.dict
+autocmd FileType js :set dict=~/dotfiles/dict/javascript.dict
 
 "---------------------------------------------------------------------------
 " その他設定

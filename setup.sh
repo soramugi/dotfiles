@@ -14,7 +14,7 @@ git config --global alias.df 'diff'
 git config --global alias.br 'branch'
 
 #シンボリックりんく
-DOT_FILES=( .bashrc .vimrc .gvimrc .vim .screenrc )
+DOT_FILES=( .bashrc .vimrc .gvimrc .screenrc )
 for file in ${DOT_FILES[@]}
 do
 if [ ! -e $HOME/$file ]
