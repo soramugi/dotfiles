@@ -14,6 +14,7 @@ NeoBundle 'yuroyoro/vimdoc_ja'
 NeoBundle 'kana/vim-smartchr'
 NeoBundle 'YankRing.vim'
 NeoBundle 'thinca/vim-fontzoom'
+NeoBundle 'thinca/vim-visualstar'
 
 filetype plugin indent on
 " Brief help
@@ -33,6 +34,10 @@ let g:yankring_manual_clipboard_check = 1
 let g:yankring_max_history = 10
 let g:yankring_window_height = 13
 
+" vim-visualstar
+nnoremap <Plug>N N
+map * <Plug>(visualstar-*)<Plug>N
+map # <Plug>(visualstar-#)<Plug>N
 "---------------------------------------------------------------------------
 " 基本設定:
 "
