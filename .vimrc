@@ -22,8 +22,6 @@ filetype plugin indent on
 " :NeoBundleInstall(!)    - install(update) bundles
 " :NeoBundleClean(!)      - confirm(or auto-approve) removal of unused bundles
 
-" プラグイン管理
-" neobundle.vim
 "---------------------------------------------------------------------------
 " プラグイン設定
 "
