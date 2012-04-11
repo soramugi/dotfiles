@@ -12,3 +12,6 @@ export CLICOLOR=1
 export LSCOLORS=DxGxcxdxCxegedabagacad
 
 alias ll='ls -laF'
+
+# Control+sとかいらない
+stty stop undef
