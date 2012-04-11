@@ -6,3 +6,4 @@ escape ^Tt
 defscrollback 2000
 #通知機能
 defmonitor on
+activity foo
