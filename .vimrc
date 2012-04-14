@@ -199,6 +199,11 @@ set mousehide
 "map da :<CR>ggvG$dd<CR><ESC>
 "map ya :<CR>ggvG$Y<CR><ESC>
 
+inoreabbrev <expr> _phpdump
+            \ "echo '<pre>';\n" .
+            \ "var_dump(\n" .
+            \ ");\n" .
+            \ "exit;<Up><Up><Right><Right><Right><Right>"
 "---------------------------------------------------------------------------
 " 辞書
 autocmd FileType php :set dict=~/dotfiles/dict/php.dict
