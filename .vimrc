@@ -21,6 +21,11 @@ filetype plugin indent on
 " :NeoBundleList          - list configured bundles
 " :NeoBundleInstall(!)    - install(update) bundles
 " :NeoBundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+cnoreabbrev neoli NeoBundleList
+cnoreabbrev neoin NeoBundleInstall
+cnoreabbrev neoin! NeoBundleInstall!
+cnoreabbrev neocl NeoBundleClean
+cnoreabbrev neocl! NeoBundleClean!
 
 "---------------------------------------------------------------------------
 " プラグイン設定
