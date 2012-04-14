@@ -207,11 +207,6 @@ inoreabbrev <expr> _phpdump
             \ ");\n" .
             \ "exit;<Up><Up><Right><Right><Right><Right>"
 "---------------------------------------------------------------------------
-" 辞書
-autocmd FileType php :set dict=~/dotfiles/dict/php.dict
-autocmd FileType js :set dict=~/dotfiles/dict/javascript.dict
-
-"---------------------------------------------------------------------------
 " その他設定
 " バッファを切替えてもundoの効力を失わない
 "set hidden
