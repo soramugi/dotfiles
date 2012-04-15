@@ -209,11 +209,15 @@ set mousehide
 "map da :<CR>ggvG$dd<CR><ESC>
 "map ya :<CR>ggvG$Y<CR><ESC>
 
+" phpdumpをいちいち入力するノ面倒
 inoreabbrev <expr> _phpdump
             \ "echo '<pre>';\n" .
             \ "var_dump(\n" .
             \ ");\n" .
             \ "exit;<Up><Up><Right><Right><Right><Right>"
+
+" コンマの後に自動的にスペースを挿入
+inoremap , ,<Space>
 "---------------------------------------------------------------------------
 " その他設定
 " バッファを切替えてもundoの効力を失わない
