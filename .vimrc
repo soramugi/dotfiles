@@ -15,7 +15,7 @@ NeoBundle 'kana/vim-smartchr'
 NeoBundle 'YankRing.vim'
 NeoBundle 'thinca/vim-fontzoom'
 NeoBundle 'thinca/vim-visualstar'
-NeoBundle 'AutoComplPop'
+NeoBundle 'Shougo/neocomplcache'
 
 filetype plugin indent on
 " Brief help
@@ -42,6 +42,9 @@ let g:yankring_window_height = 13
 nnoremap <Plug>N N
 map * <Plug>(visualstar-*)<Plug>N
 map # <Plug>(visualstar-#)<Plug>N
+
+" neocomplcache
+let g:neocomplcache_enable_at_startup = 1
 "---------------------------------------------------------------------------
 " 基本設定:
 "
