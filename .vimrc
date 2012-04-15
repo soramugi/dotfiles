@@ -50,6 +50,11 @@ let g:neocomplcache_enable_at_startup = 1
 "
 " カラー
 colorscheme desert
+"ポップアップ補完メニュー色設定
+highlight Pmenu ctermbg=8 guibg=#606060
+highlight PmenuSel ctermbg=12 guibg=SlateBlue
+highlight PmenuSbar ctermbg=0 guibg=#404040
+"highlight PmenuThumb ctermbg=0 guibg=Red
 " クリップボードを連携
 set clipboard=unnamed,autoselect
 
