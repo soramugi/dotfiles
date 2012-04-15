@@ -37,6 +37,7 @@ let g:yankring_history_file = '.yankring_history'
 let g:yankring_manual_clipboard_check = 1
 let g:yankring_max_history = 10
 let g:yankring_window_height = 13
+nmap ,y :YRShow<CR>
 
 " vim-visualstar
 nnoremap <Plug>N N
@@ -45,6 +46,7 @@ map # <Plug>(visualstar-#)<Plug>N
 
 " neocomplcache
 let g:neocomplcache_enable_at_startup = 1
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 "---------------------------------------------------------------------------
 " 基本設定:
 "
