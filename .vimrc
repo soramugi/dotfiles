@@ -10,12 +10,12 @@ if has('vim_starting')
 endif
 " 使いたいプラグインのリポジトリを羅列。
 NeoBundle 'Shougo/neobundle.vim'
+NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'yuroyoro/vimdoc_ja'
 NeoBundle 'kana/vim-smartchr'
 NeoBundle 'YankRing.vim'
 NeoBundle 'thinca/vim-fontzoom'
 NeoBundle 'thinca/vim-visualstar'
-NeoBundle 'Shougo/neocomplcache'
 
 filetype plugin indent on
 " Brief help
@@ -212,7 +212,7 @@ set mousehide
 "map ya :<CR>ggvG$Y<CR><ESC>
 
 " phpdumpをいちいち入力するノ面倒
-inoreabbrev <expr> _phpdump
+inoreabbrev <expr> _phpd
             \ "echo '<pre>';\n" .
             \ "var_dump(\n" .
             \ ");\n" .
