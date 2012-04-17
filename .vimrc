@@ -48,6 +48,9 @@ map # <Plug>(visualstar-#)<Plug>N
 
 " neocomplcache
 let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_auto_select = 1 "初期の選択
+let g:neocomplcache_enable_camel_case_completion = 1 "キャメルケースの有効
+let g:neocomplcache_enable_underbar_completion = 1 "スネークケースの有効
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " vimfiler
