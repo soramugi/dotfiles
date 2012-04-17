@@ -82,6 +82,8 @@ set matchtime=2
 set wildmenu
 " テキスト挿入中の自動折り返しを日本語に対応させる
 set formatoptions+=mM
+" カーソル位置を最後の編集位置
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 "---------------------------------------------------------------------------
 " インデント
 
