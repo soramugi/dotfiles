@@ -12,6 +12,7 @@ endif
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vimfiler'
 NeoBundle 'yuroyoro/vimdoc_ja'
 NeoBundle 'kana/vim-smartchr'
 NeoBundle 'YankRing.vim'
@@ -48,6 +49,11 @@ map # <Plug>(visualstar-#)<Plug>N
 " neocomplcache
 let g:neocomplcache_enable_at_startup = 1
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+
+" vimfiler
+"let: g:vimfiler_safe_mode_by_default = 0
+"let: g:vimfiler_as_default_explorer = 1
+nmap ,f :VimFiler<CR>
 "---------------------------------------------------------------------------
 " 基本設定:
 "
