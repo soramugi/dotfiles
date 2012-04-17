@@ -28,3 +28,6 @@ mkdir $HOME/.local
 touch $HOME/.local/.vimrc.local
 touch $HOME/.local/.gvimrc.local
 touch $HOME/.local/.bashrc.local
+
+#初期読み込み
+source ~/.bashrc
