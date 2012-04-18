@@ -14,3 +14,5 @@ cd vim73
 
 make
 make install
+
+echo "alias vim='$HOME/local/bin/vim'" >> $HOME/.local/.bashrc.local
