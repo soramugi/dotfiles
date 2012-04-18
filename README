@@ -14,3 +14,31 @@ gvimrc
 if filereadable(expand('$HOME/dotfiles/.gvimrc'))
     source $HOME/dotfiles/.gvimrc
 endif
+
+--------------------------------------
+.bashrcがすでにあったばあい
+下記を追加
+--------------------------------------
+if [ -f ~/dotfiles/.bashrc ]; then
+    . ~/dotfiles/.bashrc
+fi
+
+--------------------------------------
+vimが最新バージョンじゃ無かった場合
+以下のコマンドを流せばホームディレクトリに最新版のvimが...!!
+--------------------------------------
+mkdir -p $HOME/local/{bin, src}
+cd $HOME/local/src/
+wget ftp://ftp.vim.org/pub/vim/unix/vim-7.3.tar.bz2
+tar jxvf vim-7.3.tar.bz2
+cd vim73
+
+./configure \
+--enable-multibyte \
+--enable-xim \
+--enable-fontset \
+--with-features=big \
+--prefix=$HOME/local
+
+make
+make install
