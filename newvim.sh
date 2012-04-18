@@ -1,4 +1,5 @@
-mkdir -p $HOME/local/{bin, src}
+mkdir -p $HOME/local/bin
+mkdir -p $HOME/local/src
 cd $HOME/local/src/
 wget ftp://ftp.vim.org/pub/vim/unix/vim-7.3.tar.bz2
 tar jxvf vim-7.3.tar.bz2
