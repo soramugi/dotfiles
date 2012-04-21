@@ -148,8 +148,6 @@ match ZenkakuSpace /　/
 
 " ステータスラインに表示する情報の指定
 set statusline=%n%{winnr('$')>1?'/'.winnr().'/'.winnr('$'):''}\:%y%F\%h%w%m%r%=\|%{(&fenc!=''?&fenc:&enc).'\|'.&ff.'\|'}<%c,%l/%L:%p%%>
-"set statusline=%n%{winnr('$')>1?'/'.winnr().'/'.winnr('$'):''}\:%y%F\%h%w%m%r%=\|DICT=%{&dictionary}\|%{(&fenc!=''?&fenc:&enc).'\|'.&ff.'\|'}<%c,%l/%L:%p%%>
-"set statusline=%F%m%r%h%w\%=[TYPE=%Y]\[FORMAT=%{&ff}]\[ENC=%{&fileencoding}]\[LOW=%l/%L]
 
 "---------------------------------------------------------------------------
 " 日本語入力に関する設定:
@@ -219,21 +217,12 @@ set mousehide
 
 "---------------------------------------------------------------------------
 " キーバインド設定
-"map da :<CR>ggvG$dd<CR><ESC>
-"map ya :<CR>ggvG$Y<CR><ESC>
-
-" phpdumpをいちいち入力するノ面倒
-inoreabbrev <expr> _phpd
-            \ "echo '<pre>';\n" .
-            \ "var_dump(\n" .
-            \ ");\n" .
-            \ "exit;<Up><Up><Right><Right><Right><Right>"
-
-" コンマの後に自動的にスペースを挿入
+"
 inoremap , ,<Space>
+inoremap : :<Space>
 
 " カレントディレクトリの移動
-command! -nargs=? -complete=dir -bang CD  call s:ChangeCurrentDir('<args>',  '<bang>') 
+command! -nargs=? -complete=dir -bang CD  call s:ChangeCurrentDir('<args>',  '<bang>')
 function! s:ChangeCurrentDir(directory,  bang)
     if a:directory == ''
         lcd %:p:h
