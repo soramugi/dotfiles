@@ -219,7 +219,6 @@ set mousehide
 " キーバインド設定
 "
 inoremap , ,<Space>
-inoremap : :<Space>
 
 " カレントディレクトリの移動
 command! -nargs=? -complete=dir -bang CD  call s:ChangeCurrentDir('<args>',  '<bang>')
@@ -234,8 +233,6 @@ function! s:ChangeCurrentDir(directory,  bang)
         pwd
     endif
 endfunction
-
-" Change current directory.
 nnoremap <silent> <Space>cd :<C-u>CD<CR>
 "---------------------------------------------------------------------------
 " その他設定
