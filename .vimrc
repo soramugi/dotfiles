@@ -12,10 +12,9 @@ endif
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/vimfiler'
+NeoBundle 'YankRing.vim'
 NeoBundle 'yuroyoro/vimdoc_ja'
 NeoBundle 'kana/vim-smartchr'
-NeoBundle 'YankRing.vim'
 NeoBundle 'thinca/vim-visualstar'
 NeoBundle 'vim-ruby/vim-ruby'
 
@@ -53,10 +52,6 @@ let g:neocomplcache_enable_camel_case_completion = 1 "キャメルケースの�
 let g:neocomplcache_enable_underbar_completion = 1 "スネークケースの有効
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
-" vimfiler
-"let: g:vimfiler_safe_mode_by_default = 0
-"let: g:vimfiler_as_default_explorer = 1
-nmap ,f :VimFiler<CR>
 "---------------------------------------------------------------------------
 " 基本設定:
 "
