@@ -17,6 +17,7 @@ NeoBundle 'yuroyoro/vimdoc_ja'
 NeoBundle 'kana/vim-smartchr'
 NeoBundle 'YankRing.vim'
 NeoBundle 'thinca/vim-visualstar'
+NeoBundle 'vim-ruby/vim-ruby'
 
 filetype plugin indent on
 " Brief help
