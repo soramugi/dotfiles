@@ -4,6 +4,8 @@ startup_message off
 escape ^Ss
 #スクロール数
 defscrollback 2000
+#ステータスライン表示
+hardstatus alwayslastline "%H[%n] [%w]"
 #通知機能
 defmonitor on
 activity foo
