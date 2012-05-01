@@ -3,7 +3,8 @@ PS1="${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[01;33m\] \W \$
 
 # lsのカラー設定
 export CLICOLOR=1
-export LSCOLORS=DxGxcxdxCxegedabagacad
+LS_COLORS='di=33';
+export LS_COLORS
 
 alias ll='ls -laF'
 
