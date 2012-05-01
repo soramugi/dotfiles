@@ -22,3 +22,8 @@ endif
 if [ -f ~/dotfiles/.bashrc ]; then
     . ~/dotfiles/.bashrc
 fi
+
+--------------------------------------
+.bash_profileに以下を記述
+--------------------------------------
+screen -S mugi -D -RR
