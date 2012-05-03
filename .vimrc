@@ -5,8 +5,8 @@ set nocompatible
 filetype plugin indent off
 
 if has('vim_starting')
-  set runtimepath+=~/.vim.neobundle/neobundle.vim
-  call neobundle#rc(expand('~/.vim.neobundle/'))
+  set runtimepath+=~/.vim/neobundle.vim
+  call neobundle#rc(expand('~/.vim/'))
 endif
 " 使いたいプラグインのリポジトリを羅列。
 NeoBundle 'Shougo/neobundle.vim'
