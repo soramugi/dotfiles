@@ -1,5 +1,4 @@
 "---------------------------------------------------------------------------
-" プラグイン管理
 " neobundle.vim
 set nocompatible
 filetype plugin indent off
@@ -8,7 +7,6 @@ if has('vim_starting')
   set runtimepath+=~/.vim/neobundle.vim
   call neobundle#rc(expand('~/.vim/'))
 endif
-" 使いたいプラグインのリポジトリを羅列。
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/unite.vim'
@@ -23,10 +21,6 @@ NeoBundle 'JavaScript-syntax'
 NeoBundle 'pangloss/vim-javascript'
 
 filetype plugin indent on
-" Brief help
-" :NeoBundleList          - list configured bundles
-" :NeoBundleInstall(!)    - install(update) bundles
-" :NeoBundleClean(!)      - confirm(or auto-approve) removal of unused bundles
 cnoreabbrev neoli NeoBundleList
 cnoreabbrev neoin NeoBundleInstall
 cnoreabbrev neoin! NeoBundleInstall!
@@ -51,53 +45,42 @@ map # <Plug>(visualstar-#)<Plug>N
 
 " neocomplcache
 let g:neocomplcache_enable_at_startup = 1
-let g:neocomplcache_enable_auto_select = 0 "初期の選択
-let g:neocomplcache_enable_camel_case_completion = 1 "キャメルケースの有効
-let g:neocomplcache_enable_underbar_completion = 1 "スネークケースの有効
+let g:neocomplcache_enable_auto_select = 0
+let g:neocomplcache_enable_camel_case_completion = 1
+let g:neocomplcache_enable_underbar_completion = 1
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
 "---------------------------------------------------------------------------
 " 基本設定:
 "
-" カラー
 colorscheme desert
 "ポップアップ補完メニュー色設定
 highlight Pmenu ctermbg=8 guibg=#606060
 highlight PmenuSel ctermbg=12 guibg=SlateBlue
 highlight PmenuSbar ctermbg=0 guibg=#404040
 "highlight PmenuThumb ctermbg=0 guibg=Red
-" クリップボードを連携
+
 set clipboard=unnamed,autoselect
 
 "---------------------------------------------------------------------------
 " 編集に関する設定:
 "
-" 改行コードの自動認識
 set fileformats=unix,dos,mac
-" バックスペースでインデントや改行を削除できるようにする
 set backspace=2
-" 括弧入力時に対応する括弧を表示 (noshowmatch:表示しない)
 set showmatch
-" 対応する括弧の表示時間
 set matchtime=2
-" コマンドライン補完するときに強化されたものを使う(参照 :help wildmenu)
 set wildmenu
-" テキスト挿入中の自動折り返しを日本語に対応させる
 set formatoptions+=mM
 " カーソル位置を最後の編集位置
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 "---------------------------------------------------------------------------
 " インデント
 
-" 自動的にインデントする (noautoindent:インデントしない)
+" 空白タブ設定
 set autoindent
-" タブが対応する空白の数
 set tabstop=4
-" タブやバックスペースの使用等の編集操作をするときに、タブが対応する空白の数
 set softtabstop=4
-" インデントの各段階に使われる空白の数
 set shiftwidth=4
-" タブをスペースに展開しない (expandtab:展開する)
 set expandtab
 
 "---------------------------------------------------------------------------
@@ -114,33 +97,19 @@ if filereadable($VIM . '/vimrc') && filereadable($VIM . '/ViMrC')
 set tags=./tags,tags
 endif
 "---------------------------------------------------------------------------
-" GUI固有ではない画面表示の設定:
-"
-" 行番号を表示
+" 画面表示の設定:
+
 set number
-" ルーラーを表示 (noruler:非表示)
 set ruler
-" タブや改行を表示 (list:表示)
 set list
-" どの文字でタブや改行を表示するかを設定、改行,eol:<
 set listchars=tab:>-,extends:<,trail:-
-" 長い行を折り返して表示 (nowrap:折り返さない)
 set wrap
-" 常にステータス行を表示 (詳細は:he laststatus)
 set laststatus=2
-" コマンドをステータス行に表示
 set showcmd
-" コマンドの行数
 set cmdheight=1
-" タイトルを表示
 set title
-" シンタックスハイライトを有効にする
 syntax on
-" 入力されているテキストの最大幅
-" (行がそれより長くなると、この幅を超えないように空白の後で改行される)を無効にする
 set textwidth=0
-" ウィンドウの幅より長い行は折り返して、次の行に続けて表示する
-set wrap
 
 " 全角スペースの表示
 highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=darkgray
@@ -161,23 +130,18 @@ endif
 "---------------------------------------------------------------------------
 " 検索の挙動に関する設定:
 
-" インクリメンタル検索
 set incsearch
-" 検索にマッチしたすべてのテキストをハイライト
 set hlsearch
-" 検索時に大文字小文字を無視 (noignorecase:無視しない)
 set ignorecase
-" 大文字小文字の両方が含まれている場合は大文字小文字を区別
 set smartcase
-" 検索時にファイルの最後まで行ったら最初に戻る (nowrapscan:戻らない)
 set wrapscan
-" コマンド、検索パターンを100個まで履歴に残す
 set history=100
+
 " 検索などで飛んだらそこを真ん中に
 for maptype in ['n', 'N', '*', '#', 'g*', 'g#', 'G']
   execute 'nmap' maptype maptype . 'zz'
 endfor
-" Escの2回押しでハイライト消去
+
 nnoremap <ESC><ESC> :nohlsearch<CR><ESC>
 " 検索で自動的に移動しない
 nnoremap * *N
@@ -206,14 +170,9 @@ endif
 "---------------------------------------------------------------------------
 " マウスに関する設定:
 "
-" どのモードでもマウスを使えるようにする
 set mouse=a
-" マウスの移動でフォーカスを自動的に切替えない (mousefocus:切替る)
 set nomousefocus
-" 入力時にマウスポインタを隠す (nomousehide:隠さない)
 set mousehide
-" ビジュアル選択(D&D他)を自動的にクリップボードへ (:help guioptions_a)
-"set guioptions+=a
 
 "---------------------------------------------------------------------------
 " キーバインド設定
@@ -234,8 +193,6 @@ endfunction
 nnoremap <silent> <Space>cd :<C-u>CD<CR>
 "---------------------------------------------------------------------------
 " その他設定
-" バッファを切替えてもundoの効力を失わない
-"set hidden
 
 "---------------------------------------------------------------------------
 " 文字コードの自動認識
