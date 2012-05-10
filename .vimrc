@@ -14,6 +14,7 @@ NeoBundle 'YankRing.vim'
 NeoBundle 'yuroyoro/vimdoc_ja'
 NeoBundle 'kana/vim-smartchr'
 NeoBundle 'thinca/vim-visualstar'
+NeoBundle 'matchit.zip'
 " Ruby環境
 NeoBundle 'vim-ruby/vim-ruby'
 " js環境
@@ -151,7 +152,7 @@ nnoremap # #N
 "自動折りたたみ設定
 set foldmethod=indent
 set foldlevel=1
-set nofoldenable
+set foldenable
 "---------------------------------------------------------------------------
 " プラットホーム依存の特別な設定
 
@@ -191,6 +192,20 @@ function! s:ChangeCurrentDir(directory,  bang)
     endif
 endfunction
 nnoremap <silent> <Space>cd :<C-u>CD<CR>
+"---------------------------------------------------------------------------
+" 言語毎設定
+
+" php
+let php_sql_query=1
+let php_htmlInStrings=1
+let php_noShortTags = 1
+let php_folding = 1
+
+"---------------------------------------------------------------------------
+" 文法チェック
+set makeprg=php\ -l\ %
+set errorformat=%m\ in\ %f\ on\ line\ %l
+
 "---------------------------------------------------------------------------
 " その他設定
 
