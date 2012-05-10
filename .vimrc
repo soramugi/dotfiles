@@ -15,11 +15,14 @@ NeoBundle 'yuroyoro/vimdoc_ja'
 NeoBundle 'kana/vim-smartchr'
 NeoBundle 'thinca/vim-visualstar'
 NeoBundle 'matchit.zip'
+NeoBundle 'thinca/vim-quickrun'
 " Ruby環境
 NeoBundle 'vim-ruby/vim-ruby'
 " js環境
 NeoBundle 'JavaScript-syntax'
 NeoBundle 'pangloss/vim-javascript'
+" php環境
+NeoBundle 'soh335/vim-symfony'
 
 filetype plugin indent on
 cnoreabbrev neoli NeoBundleList
