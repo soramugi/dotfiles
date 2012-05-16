@@ -13,8 +13,26 @@ git config --global alias.ci 'commit -a'
 git config --global alias.di 'diff'
 git config --global alias.br 'branch'
 
+# bashrcの書き込み
+if [ ! -e $HOME/.bash_aliases ]
+then
+if [ -e $HOME/.profile ]
+then
+    echo 'screen -S mugi -D -RR' >> $HOME/.profile
+else
+    echo 'screen -S mugi -D -RR' >> $HOME/.bash_profile
+    echo 'if [ -f ~/.bash_aliases ]; then' >> $HOME/.bashrc
+    echo '    . ~/.bash_aliases' >> $HOME/.bashrc
+    echo 'fi' >> $HOME/.bashrc
+fi
+fi
+
 #シンボリックりんく
-DOT_FILES=( .bashrc .vimrc .gvimrc .screenrc )
+if [ ! -e $HOME/.bash_aliases ]
+then
+    ln -s $HOME/dotfiles/.bashrc $HOME/.bash_aliases
+fi
+DOT_FILES=( .vimrc .gvimrc .screenrc )
 for file in ${DOT_FILES[@]}
 do
 if [ ! -e $HOME/$file ]
