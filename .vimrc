@@ -16,6 +16,7 @@ NeoBundle 'kana/vim-smartchr'
 NeoBundle 'thinca/vim-visualstar'
 NeoBundle 'matchit.zip'
 NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'vim-scripts/sudo.vim'
 " Ruby環境
 NeoBundle 'vim-ruby/vim-ruby'
 " js環境
