@@ -49,3 +49,11 @@ touch $HOME/.local/.bashrc.local
 
 #初期読み込み
 source ~/.bashrc
+if [ -e $HOME/.profile ]
+then
+    source $HOME/.profile
+fi
+if [ -e $HOME/.bash_profile ]
+then
+    source $HOME/.bash_profile
+fi
