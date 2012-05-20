@@ -155,7 +155,7 @@ nnoremap # #N
 "自動折りたたみ設定
 set foldmethod=indent
 set foldlevel=1
-set foldenable
+set nofoldenable
 "---------------------------------------------------------------------------
 " プラットホーム依存の特別な設定
 
