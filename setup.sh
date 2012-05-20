@@ -48,7 +48,6 @@ touch $HOME/.local/.gvimrc.local
 touch $HOME/.local/.bashrc.local
 
 #初期読み込み
-source ~/.bashrc
 if [ -e $HOME/.profile ]
 then
     source $HOME/.profile
