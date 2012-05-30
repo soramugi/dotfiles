@@ -18,8 +18,12 @@ if [ ! -e $HOME/.bash_aliases ]
 then
 if [ -e $HOME/.profile ]
 then
+    echo '# 履歴の日付' >> $HOME/.profile
+    echo 'export HISTTIMEFORMAT="%Y-%m-%d %T "' >> $HOME/.profile
     echo 'screen -S mugi -D -RR' >> $HOME/.profile
 else
+    echo '# 履歴の日付' >> $HOME/.bash_profile
+    echo 'export HISTTIMEFORMAT="%Y-%m-%d %T "' >> $HOME/.bash_profile
     echo 'screen -S mugi -D -RR' >> $HOME/.bash_profile
     echo 'if [ -f ~/.bash_aliases ]; then' >> $HOME/.bashrc
     echo '    . ~/.bash_aliases' >> $HOME/.bashrc
