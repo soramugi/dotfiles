@@ -17,6 +17,7 @@ NeoBundle 'thinca/vim-visualstar'
 NeoBundle 'matchit.zip'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'vim-scripts/sudo.vim'
+NeoBundle 'vim-scripts/Align'
 " Ruby環境
 NeoBundle 'vim-ruby/vim-ruby'
 " js環境
