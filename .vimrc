@@ -27,21 +27,22 @@ NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'soh335/vim-symfony'
 
 filetype plugin indent on
-cnoreabbrev neoli NeoBundleList
-cnoreabbrev neoin NeoBundleInstall
+
+cnoreabbrev neoli  NeoBundleList
+cnoreabbrev neoin  NeoBundleInstall
 cnoreabbrev neoin! NeoBundleInstall!
-cnoreabbrev neocl NeoBundleClean
+cnoreabbrev neocl  NeoBundleClean
 cnoreabbrev neocl! NeoBundleClean!
 
 "---------------------------------------------------------------------------
 " プラグイン設定
 "
 " YankRing.vim
-let g:yankring_history_dir = expand('$HOME')
-let g:yankring_history_file = '.yankring_history'
+let g:yankring_history_dir            = expand('$HOME')
+let g:yankring_history_file           = '.yankring_history'
 let g:yankring_manual_clipboard_check = 1
-let g:yankring_max_history = 10
-let g:yankring_window_height = 13
+let g:yankring_max_history            = 10
+let g:yankring_window_height          = 13
 nmap ,y :YRShow<CR>
 
 " vim-visualstar
@@ -50,10 +51,10 @@ map * <Plug>(visualstar-*)<Plug>N
 map # <Plug>(visualstar-#)<Plug>N
 
 " neocomplcache
-let g:neocomplcache_enable_at_startup = 1
-let g:neocomplcache_enable_auto_select = 0
+let g:neocomplcache_enable_at_startup            = 1
+let g:neocomplcache_enable_auto_select           = 0
 let g:neocomplcache_enable_camel_case_completion = 1
-let g:neocomplcache_enable_underbar_completion = 1
+let g:neocomplcache_enable_underbar_completion   = 1
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
 "---------------------------------------------------------------------------
@@ -61,10 +62,10 @@ inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 "
 colorscheme desert
 "ポップアップ補完メニュー色設定
-highlight Pmenu ctermbg=8 guibg=#606060
-highlight PmenuSel ctermbg=12 guibg=SlateBlue
-highlight PmenuSbar ctermbg=0 guibg=#404040
-"highlight PmenuThumb ctermbg=0 guibg=Red
+highlight  Pmenu      ctermbg=8  guibg=#606060
+highlight  PmenuSel   ctermbg=12 guibg=SlateBlue
+highlight  PmenuSbar  ctermbg=0  guibg=#404040
+"highlight PmenuThumb ctermbg=0  guibg=Red
 
 set clipboard=unnamed,autoselect
 
