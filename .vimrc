@@ -9,12 +9,9 @@ if has('vim_starting')
 endif
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neocomplcache'
-NeoBundle 'Shougo/unite.vim'
 NeoBundle 'YankRing.vim'
 NeoBundle 'yuroyoro/vimdoc_ja'
-NeoBundle 'kana/vim-smartchr'
 NeoBundle 'thinca/vim-visualstar'
-NeoBundle 'matchit.zip'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'vim-scripts/sudo.vim'
 NeoBundle 'vim-scripts/Align'
