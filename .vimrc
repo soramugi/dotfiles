@@ -80,15 +80,23 @@ set wildmenu
 set formatoptions+=mM
 " カーソル位置を最後の編集位置
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
-"---------------------------------------------------------------------------
-" インデント
 
-" 空白タブ設定
+"---------------------------------------------------------------------------
+" タブ
+
 set autoindent
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+"set tabstop=4
+"set softtabstop=4
+"set shiftwidth=4
 set expandtab
+set smarttab
+
+"タブ幅をリセット
+au BufNewFile,BufRead * set tabstop=4 shiftwidth=4
+
+"タブ幅を変更する
+au BufNewFile,BufRead *.rb set nowrap tabstop=2 shiftwidth=2
+au BufNewFile,BufRead *.yml set nowrap tabstop=2 shiftwidth=2
 
 "---------------------------------------------------------------------------
 " ファイル操作に関する設定
