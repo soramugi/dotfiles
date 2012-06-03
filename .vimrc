@@ -34,6 +34,23 @@ cnoreabbrev neocl  NeoBundleClean
 cnoreabbrev neocl! NeoBundleClean!
 
 "---------------------------------------------------------------------------
+" プラグイン設定
+"---------------------------------------------------------------------------
+
+" YankRing.vim
+let g:yankring_history_dir            = expand('$HOME')
+let g:yankring_history_file           = '.yankring_history'
+let g:yankring_manual_clipboard_check = 1
+let g:yankring_max_history            = 10
+let g:yankring_window_height          = 13
+
+" neocomplcache
+let g:neocomplcache_enable_at_startup            = 1
+let g:neocomplcache_enable_auto_select           = 0
+let g:neocomplcache_enable_camel_case_completion = 1
+let g:neocomplcache_enable_underbar_completion   = 1
+
+"---------------------------------------------------------------------------
 " 基本設定:
 "---------------------------------------------------------------------------
 
@@ -83,7 +100,6 @@ set statusline=%n%{winnr('$')>1?'/'.winnr().'/'.winnr('$'):''}\:%y%F\%h%w%m%r%=\
 "---------------------------------------------------------------------------
 " 色設定
 "---------------------------------------------------------------------------
-
 colorscheme desert
 "ポップアップ補完メニュー
 highlight  Pmenu      ctermbg=8  guibg=#606060
@@ -94,7 +110,6 @@ highlight  PmenuSbar  ctermbg=0  guibg=#404040
 "---------------------------------------------------------------------------
 " タブ
 "---------------------------------------------------------------------------
-
 set autoindent
 set tabstop=4
 set softtabstop=4
@@ -124,6 +139,19 @@ au BufNewFile,BufRead *.yml set nowrap tabstop=2 shiftwidth=2
 "leaderキー切り替え
 let mapleader = ","
 
+"インサートモードでも移動
+inoremap <c-d> <delete>
+inoremap <c-j> <down>
+inoremap <c-k> <up>
+inoremap <c-h> <left>
+inoremap <c-l> <right>
+
+"画面切り替え
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
+nnoremap <c-h> <c-w>h
+
 " ESC2回でハイライト非表示
 nnoremap <ESC><ESC> :nohlsearch<CR><ESC>
 
@@ -147,16 +175,7 @@ function! s:ChangeCurrentDir(directory,  bang)
 endfunction
 nnoremap <silent> <Space>cd :<C-u>CD<CR>
 
-"---------------------------------------------------------------------------
-" プラグイン設定
-"---------------------------------------------------------------------------
-
 " YankRing.vim
-let g:yankring_history_dir            = expand('$HOME')
-let g:yankring_history_file           = '.yankring_history'
-let g:yankring_manual_clipboard_check = 1
-let g:yankring_max_history            = 10
-let g:yankring_window_height          = 13
 nmap ,y :YRShow<CR>
 
 " vim-visualstar
@@ -165,11 +184,6 @@ map * <Plug>(visualstar-*)<Plug>N
 map # <Plug>(visualstar-#)<Plug>N
 
 " neocomplcache
-let g:neocomplcache_enable_at_startup            = 1
-let g:neocomplcache_enable_auto_select           = 0
-let g:neocomplcache_enable_camel_case_completion = 1
-let g:neocomplcache_enable_underbar_completion   = 1
-" tabで候補切り替え
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
 "---------------------------------------------------------------------------
