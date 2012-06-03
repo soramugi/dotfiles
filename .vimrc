@@ -198,6 +198,8 @@ function! s:ChangeCurrentDir(directory,  bang)
     endif
 endfunction
 nnoremap <silent> <Space>cd :<C-u>CD<CR>
+"leader設定
+let mapleader = ","
 "---------------------------------------------------------------------------
 " 言語毎設定
 
