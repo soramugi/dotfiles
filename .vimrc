@@ -81,6 +81,8 @@ set formatoptions+=mM
 " カーソル位置を最後の編集位置
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
+" 保存時に行末の空白を除去する
+autocmd BufWritePre * :%s/\s\+$//ge
 "---------------------------------------------------------------------------
 " タブ
 
