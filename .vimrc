@@ -49,6 +49,7 @@ set clipboard=unnamed,autoselect
 set noswapfile
 set nobackup
 " 画面表示
+syntax on
 set number
 set ruler
 set list
@@ -58,8 +59,8 @@ set laststatus=2
 set showcmd
 set cmdheight=1
 set title
-syntax on
 set textwidth=0
+set scrolloff=5
 "自動折りたたみ設定
 set foldmethod=indent
 set foldlevel=1
