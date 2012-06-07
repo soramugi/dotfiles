@@ -21,7 +21,6 @@ PROMPT_COMMAND='share_history'
 shopt -u histappend
 export HISTSIZE=9999
 
-
 # local特別実装いれるとこ
 if [ -f ~/.local/.bashrc.local ]; then
     . ~/.local/.bashrc.local
