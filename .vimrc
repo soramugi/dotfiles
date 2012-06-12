@@ -5,8 +5,8 @@ set nocompatible
 filetype plugin indent off
 
 if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim
-  call neobundle#rc(expand('~/.vim/bundle/'))
+  set runtimepath+=~/dotfiles/.vim/bundle/neobundle.vim/
+  call neobundle#rc(expand('~/dotfiles/.vim/bundle/'))
 endif
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neocomplcache'
@@ -93,6 +93,9 @@ set history=100
 set mouse=a
 set nomousefocus
 set mousehide
+" 日本語ドキュメントの格納場所
+set runtimepath+=~/dotfiles/.vim/
+helptags $HOME/dotfiles/.vim/doc
 
 " ステータスラインに表示する情報の指定
 set statusline=%n%{winnr('$')>1?'/'.winnr().'/'.winnr('$'):''}\:%y%F\%h%w%m%r%=\|%{(&fenc!=''?&fenc:&enc).'\|'.&ff.'\|'}<%c,%l/%L:%p%%>
