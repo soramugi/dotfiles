@@ -11,7 +11,6 @@ endif
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'YankRing.vim'
-"NeoBundle 'yuroyoro/vimdoc_ja'
 NeoBundle 'thinca/vim-visualstar'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'vim-scripts/sudo.vim'

@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #vimスクリプト管理ツールのインスコ
-mkdir ~/.vim/bundle
-git clone git://github.com/Shougo/neobundle.vim.git ~/.vim/bundle/neobundle.vim
+mkdir ~/dotfiles/.vim/bundle
+git clone git://github.com/Shougo/neobundle.vim.git ~/dotfiles/.vim/bundle/neobundle.vim
 
 #gitのエディタ
 git config --global core.editor 'vim -c "set fenc=utf-8"'
