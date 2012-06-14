@@ -25,13 +25,6 @@ NeoBundle 'soh335/vim-symfony'
 
 filetype plugin indent on
 
-" 省入力コマンド設定
-cnoreabbrev neoli  NeoBundleList
-cnoreabbrev neoin  NeoBundleInstall
-cnoreabbrev neoin! NeoBundleInstall!
-cnoreabbrev neocl  NeoBundleClean
-cnoreabbrev neocl! NeoBundleClean!
-
 "---------------------------------------------------------------------------
 " プラグイン設定
 "---------------------------------------------------------------------------
@@ -177,6 +170,13 @@ function! s:ChangeCurrentDir(directory,  bang)
     endif
 endfunction
 nnoremap <silent> <Space>cd :<C-u>CD<CR>
+
+" NeoBundle
+cnoreabbrev neoli  NeoBundleList
+cnoreabbrev neoin  NeoBundleInstall
+cnoreabbrev neoin! NeoBundleInstall!
+cnoreabbrev neocl  NeoBundleClean
+cnoreabbrev neocl! NeoBundleClean!
 
 " YankRing.vim
 nmap ,y :YRShow<CR>
