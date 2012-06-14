@@ -120,11 +120,12 @@ set expandtab
 set smarttab
 
 " リセット
-au BufNewFile,BufRead *     set tabstop=4 shiftwidth=4
+au BufNewFile,BufRead *      set tabstop=4 shiftwidth=4
 
 " 拡張子で変更
-au BufNewFile,BufRead *.rb  set tabstop=2 shiftwidth=2
-au BufNewFile,BufRead *.yml set tabstop=2 shiftwidth=2
+au BufNewFile,BufRead *.rb   set tabstop=2 shiftwidth=2
+au BufNewFile,BufRead *.yml  set tabstop=2 shiftwidth=2
+au BufNewFile,BufRead *.haml set tabstop=2 shiftwidth=2
 
 "---------------------------------------------------------------------------
 " キーバインド設定
