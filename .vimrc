@@ -104,10 +104,10 @@ set statusline=%n%{winnr('$')>1?'/'.winnr().'/'.winnr('$'):''}\:%y%F\%h%w%m%r%=\
 "---------------------------------------------------------------------------
 colorscheme desert
 "ポップアップ補完メニュー
-highlight  Pmenu      ctermbg=8  guibg=#606060
-highlight  PmenuSel   ctermbg=12 guibg=SlateBlue
-highlight  PmenuSbar  ctermbg=0  guibg=#404040
-"highlight PmenuThumb ctermbg=0  guibg=Red
+hi Pmenu      ctermbg=0
+hi PmenuSel   ctermbg=4
+hi PmenuSbar  ctermbg=2
+hi PmenuThumb ctermfg=3
 
 "---------------------------------------------------------------------------
 " タブ
