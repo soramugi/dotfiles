@@ -23,7 +23,7 @@ function share_history {
 PROMPT_COMMAND='share_history'
 shopt -u histappend
 export HISTSIZE=9999
-export HISTIGNORE=ls:ll:history
+export HISTIGNORE='ls*:ll*:history*'
 export HISTTIMEFORMAT='%Y-%m-%d %T '
 
 # local特別実装いれるとこ
