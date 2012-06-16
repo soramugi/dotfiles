@@ -177,13 +177,6 @@ function! s:ChangeCurrentDir(directory,  bang)
 endfunction
 nnoremap <silent> <Space>cd :<C-u>CD<CR>
 
-" NeoBundle
-cnoreabbrev neoli  NeoBundleList
-cnoreabbrev neoin  NeoBundleInstall
-cnoreabbrev neoin! NeoBundleInstall!
-cnoreabbrev neocl  NeoBundleClean
-cnoreabbrev neocl! NeoBundleClean!
-
 " YankRing.vim
 nmap ,y :YRShow<CR>
 
@@ -194,6 +187,22 @@ map # <Plug>(visualstar-#)<Plug>N
 
 " neocomplcache
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+
+"---------------------------------------------------------------------------
+" 短縮入力:
+"---------------------------------------------------------------------------
+" コマンド                    有効範囲
+" inorea/inoreabbrev            挿入
+" cnorea/cnoreabbrev        コマンドライン
+" noreab/noreabbrev       挿入/コマンドライン
+"---------------------------------------------------------------------------
+
+" NeoBundle
+cnorea neoli  NeoBundleList
+cnorea neoin  NeoBundleInstall
+cnorea neoin! NeoBundleInstall!
+cnorea neocl  NeoBundleClean
+cnorea neocl! NeoBundleClean!
 
 "---------------------------------------------------------------------------
 " 編集に関する設定:
