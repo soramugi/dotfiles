@@ -9,6 +9,7 @@ if has('vim_starting')
   call neobundle#rc(expand('~/dotfiles/.vim/bundle/'))
 endif
 NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/vimproc'
 NeoBundle 'YankRing.vim'
 NeoBundle 'thinca/vim-visualstar'
 NeoBundle 'thinca/vim-quickrun'
