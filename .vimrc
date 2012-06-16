@@ -90,7 +90,7 @@ helptags $HOME/dotfiles/.vim/doc
 " タグジャンプ
 if has('path_extra')
   set tags+=tags;
-  set tags+=$HOME/dotfiles/.vim/tags
+  set tags+=$HOME/tags/*/tags
 endif
 
 
