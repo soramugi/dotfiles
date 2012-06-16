@@ -88,6 +88,12 @@ set mousehide
 " 日本語ドキュメントの格納場所
 set runtimepath+=~/dotfiles/.vim/
 helptags $HOME/dotfiles/.vim/doc
+" タグジャンプ
+if has('path_extra')
+  "set tags+=tags;
+  set tags+=$HOME/dotfiles/.vim/tags
+endif
+
 
 " ステータスラインに表示する情報の指定
 set statusline=%n%{winnr('$')>1?'/'.winnr().'/'.winnr('$'):''}\:%y%F\%h%w%m%r%=\|%{(&fenc!=''?&fenc:&enc).'\|'.&ff.'\|'}<%c,%l/%L:%p%%>
@@ -193,11 +199,6 @@ inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 "---------------------------------------------------------------------------
 " 編集に関する設定:
 "---------------------------------------------------------------------------
-
-" タグジャンプ
-if has('path_extra')
-  set tags+=tags;
-endif
 
 " カーソル位置を最後の編集位置
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
