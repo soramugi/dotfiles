@@ -10,6 +10,7 @@ LS_COLORS='di=33';
 export LS_COLORS
 
 alias ll='ls -laF'
+alias ctags='ctags -a -f ~/.tags -R `pwd`'
 
 # Control+sとかいらない
 stty stop undef

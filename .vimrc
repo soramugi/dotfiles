@@ -89,11 +89,7 @@ set mousehide
 set runtimepath+=~/dotfiles/.vim/
 helptags $HOME/dotfiles/.vim/doc
 " タグジャンプ
-if has('path_extra')
-  set tags+=tags;
-  set tags+=$HOME/tags/*/tags
-endif
-
+set tags+=$HOME/.tags
 
 " ステータスラインに表示する情報の指定
 set statusline=%n%{winnr('$')>1?'/'.winnr().'/'.winnr('$'):''}\:%y%F\%h%w%m%r%=\|%{(&fenc!=''?&fenc:&enc).'\|'.&ff.'\|'}<%c,%l/%L:%p%%>
