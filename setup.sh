@@ -8,6 +8,7 @@ git config --global alias.st 'status'
 git config --global alias.ci 'commit -a'
 git config --global alias.di 'diff'
 git config --global alias.br 'branch'
+git config --global alias.gr 'log --graph --date=short --decorate=short --pretty=format:"%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s"'
 
 # bashrcの書き込み
 if [ ! -e $HOME/.bash_aliases ]
