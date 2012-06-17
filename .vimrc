@@ -70,6 +70,7 @@ set cmdheight=1
 set title
 set textwidth=0
 set scrolloff=5
+set cursorline
 "自動折りたたみ設定
 set foldmethod=indent
 set foldlevel=1
@@ -98,11 +99,13 @@ set statusline=%n%{winnr('$')>1?'/'.winnr().'/'.winnr('$'):''}\:%y%F\%h%w%m%r%=\
 " 色設定
 "---------------------------------------------------------------------------
 colorscheme desert
+hi CursorLine cterm=none ctermbg=darkblue
 "ポップアップ補完メニュー
 hi Pmenu      ctermbg=0
 hi PmenuSel   ctermbg=4
 hi PmenuSbar  ctermbg=2
 hi PmenuThumb ctermfg=3
+
 
 "---------------------------------------------------------------------------
 " タブ
