@@ -99,7 +99,7 @@ set statusline=%n%{winnr('$')>1?'/'.winnr().'/'.winnr('$'):''}\:%y%F\%h%w%m%r%=\
 " 色設定
 "---------------------------------------------------------------------------
 colorscheme desert
-hi CursorLine cterm=none ctermbg=gray
+hi CursorLine cterm=none ctermbg=blue
 "ポップアップ補完メニュー
 hi Pmenu      ctermbg=0
 hi PmenuSel   ctermbg=4
