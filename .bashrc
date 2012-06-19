@@ -11,6 +11,7 @@ export LS_COLORS
 
 alias ll='ls -laF'
 alias ctags='ctags -a -f ~/.tags -R `pwd`'
+alias sudo='sudo -H'
 
 # Control+sとかいらない
 stty stop undef
