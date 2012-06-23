@@ -42,6 +42,11 @@ let g:neocomplcache_enable_auto_select           = 0
 let g:neocomplcache_enable_camel_case_completion = 1
 let g:neocomplcache_enable_underbar_completion   = 1
 
+" quickrun
+let g:quickrun_config = {}
+let g:quickrun_config._ = {'runner' : 'vimproc'}
+let g:quickrun_config['*'] = {'split': 'below'}
+
 "---------------------------------------------------------------------------
 " 基本設定:
 "---------------------------------------------------------------------------
