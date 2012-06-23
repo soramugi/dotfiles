@@ -170,6 +170,9 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
 nnoremap <c-h> <c-w>h
 
+" s* で置換指定
+nnoremap <expr> s* ':%substitute/\<' . expand('<cword>') . '\>/'
+
 " ESC2回でハイライト非表示
 nnoremap <ESC><ESC> :nohlsearch<CR><ESC>
 
