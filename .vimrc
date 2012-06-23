@@ -148,6 +148,14 @@ inoremap <c-k> <up>
 inoremap <c-h> <left>
 inoremap <c-l> <right>
 
+"行頭と行末
+nmap <C-e> <End>
+nmap <C-a> <Home>
+vnoremap <C-e> <End>
+vnoremap <C-a> <Home>
+inoremap <C-e> <End>
+inoremap <C-a> <Home>
+
 "画面切り替え
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
