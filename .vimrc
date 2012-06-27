@@ -157,12 +157,12 @@ inoremap <c-h> <left>
 inoremap <c-l> <right>
 
 "行頭と行末
-nmap <C-e> <End>
-nmap <C-a> <Home>
-vnoremap <C-e> <End>
-vnoremap <C-a> <Home>
-inoremap <C-e> <End>
-inoremap <C-a> <Home>
+imap <C-e> <End>
+imap <C-a> <Home>
+cmap <C-e> <End>
+cmap <C-a> <Home>
+vmap <C-e> <End>
+vmap <C-a> <Home>
 
 "画面切り替え
 nnoremap <c-j> <c-w>j
