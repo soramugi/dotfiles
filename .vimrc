@@ -125,20 +125,17 @@ hi PmenuThumb ctermfg=3
 " タブ
 "---------------------------------------------------------------------------
 set autoindent
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set expandtab
 set smarttab
 
 " リセット
-au BufNewFile,BufRead *      set tabstop=4 shiftwidth=4
+au BufNewFile,BufRead *      set tabstop=2 shiftwidth=2
 
 " 拡張子で変更
-au BufNewFile,BufRead *.rb   set tabstop=2 shiftwidth=2
-au BufNewFile,BufRead *.yml  set tabstop=2 shiftwidth=2
-au BufNewFile,BufRead *.haml set tabstop=2 shiftwidth=2
-au BufNewFile,BufRead *.sass set tabstop=2 shiftwidth=2
+au BufNewFile,BufRead *.php  set tabstop=4 shiftwidth=4
 
 "---------------------------------------------------------------------------
 " キーバインド設定
