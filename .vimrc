@@ -75,7 +75,6 @@ set cmdheight=1
 set title
 set textwidth=0
 set scrolloff=5
-set cursorline
 "自動折りたたみ設定
 set foldmethod=indent
 set foldlevel=1
@@ -107,7 +106,6 @@ set t_Co=256
 colorscheme desert
 "colorscheme molokai
 
-hi CursorLine cterm=none ctermbg=darkgray
 "ポップアップ補完メニュー
 hi Pmenu      ctermbg=0
 hi PmenuSel   ctermbg=4
