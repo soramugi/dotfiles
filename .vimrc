@@ -16,6 +16,7 @@ NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'vim-scripts/sudo.vim'
 NeoBundle 'vim-scripts/Align'
 NeoBundle 'vim-scripts/taglist.vim'
+"NeoBundle 'myusuf3/numbers.vim'
 "NeoBundle 'vim-scripts/TagHighlight'
 "NeoBundle 'nathanaelkane/vim-indent-guides'
 "NeoBundle 'vim-scripts/project.tar.gz'
@@ -225,6 +226,9 @@ cnorea neoin  NeoBundleInstall
 cnorea neoin! NeoBundleInstall!
 cnorea neocl  NeoBundleClean
 cnorea neocl! NeoBundleClean!
+
+" numbers.vim
+cnorea nt     NumbersToggle
 
 "---------------------------------------------------------------------------
 " 編集に関する設定:
