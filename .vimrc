@@ -25,6 +25,7 @@ NeoBundle 'vim-scripts/taglist.vim'
 "NeoBundle 'vim-scripts/Source-Explorer-srcexpl.vim'
 "NeoBundle 'vim-scripts/trinity.vim'
 "NeoBundle 'vim-scripts/gtags.vim'
+NeoBundle 'tpope/vim-surround'
 " Ruby環境
 NeoBundle 'vim-ruby/vim-ruby'
 " js環境
