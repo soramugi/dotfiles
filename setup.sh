@@ -38,12 +38,6 @@ then
 fi
 done
 
-#local環境設定ファイル
-mkdir $HOME/.local
-touch $HOME/.local/.vimrc.local
-touch $HOME/.local/.gvimrc.local
-touch $HOME/.local/.bashrc.local
-
 #初期読み込み
 if [ -e $HOME/.profile ]
 then

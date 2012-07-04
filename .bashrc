@@ -26,6 +26,6 @@ alias sudo='sudo -H'
 alias grep='grep --color=auto'
 
 # local特別実装いれるとこ
-if [ -f ~/.local/.bashrc.local ]; then
-    . ~/.local/.bashrc.local
+if [ -f ~/dotfiles/.local/.bashrc ]; then
+    . ~/dotfiles/.local/.bashrc
 fi

@@ -276,6 +276,6 @@ let php_folding = 1
 "---------------------------------------------------------------------------
 " local設定
 "---------------------------------------------------------------------------
-if filereadable(expand('$HOME/.local/.vimrc.local'))
-    source $HOME/.local/.vimrc.local
+if filereadable(expand('$HOME/dotfiles/.local/.vimrc'))
+  source $HOME/dotfiles/.local/.vimrc
 endif

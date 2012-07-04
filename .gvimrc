@@ -10,6 +10,6 @@ set guioptions-=T
 
 "---------------------------------------------------------------------------
 " gvimrcのlocal設定
-if filereadable(expand('$HOME/.local/.gvimrc.local'))
-    source $HOME/.local/.gvimrc.local
+if filereadable(expand('$HOME/dotfiles/.local/.gvimrc'))
+    source $HOME/dotfiles/.local/.gvimrc
 endif
