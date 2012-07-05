@@ -16,7 +16,7 @@ NeoBundle 'thinca/vim-visualstar'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'vim-scripts/sudo.vim'
 NeoBundle 'vim-scripts/Align'
-NeoBundle 'vim-scripts/taglist.vim'
+"NeoBundle 'vim-scripts/taglist.vim'
 "NeoBundle 'myusuf3/numbers.vim'
 "NeoBundle 'vim-scripts/TagHighlight'
 "NeoBundle 'nathanaelkane/vim-indent-guides'
@@ -62,6 +62,7 @@ let g:quickrun_config['*'] = {'split': 'below'}
 " 基本設定:
 "---------------------------------------------------------------------------
 
+set runtimepath+=~/dotfiles/.vim/
 " 編集系
 set fileformats=unix,dos,mac
 set backspace=2
@@ -101,11 +102,10 @@ set history=100
 set mouse=a
 set nomousefocus
 set mousehide
-" 日本語ドキュメントの格納場所
-set runtimepath+=~/dotfiles/.vim/
-helptags $HOME/dotfiles/.vim/doc
 " タグジャンプ
 set tags+=$HOME/.tags
+" 日本語ドキュメントの格納場所
+helptags $HOME/dotfiles/.vim/doc
 
 " ステータスラインに表示する情報の指定
 set statusline=%n%{winnr('$')>1?'/'.winnr().'/'.winnr('$'):''}\:%y%F\%h%w%m%r%=\|%{(&fenc!=''?&fenc:&enc).'\|'.&ff.'\|'}<%c,%l/%L:%p%%>
