@@ -25,6 +25,7 @@ alias ctags='ctags -a -f ~/.tags -R `pwd`'
 alias sudo='sudo -H'
 alias grep='grep --color=auto'
 alias less='less -M'
+alias eman='LANG=c man'
 
 # local特別実装いれるとこ
 if [ -f ~/dotfiles/.local/.bashrc ]; then
