@@ -215,8 +215,11 @@ function! s:ChangeCurrentDir(directory,  bang)
 endfunction
 nnoremap <silent> <Space>cd :<C-u>CD<CR>
 
-" すばやくvimrc編集
+" vimrc編集
 nnoremap <silent> <Space>ev  :<C-u>edit $MYVIMRC<CR>
+
+" vimrcの再読込
+nnoremap <Space>r :<C-u>source $MYVIMRC \| if has('gui_running') \| source $MYGVIMRC \| endif <CR>
 
 " YankRing.vim
 nmap ,y :YRShow<CR>

@@ -26,6 +26,7 @@ alias sudo='sudo -H'
 alias grep='grep --color=auto'
 alias less='less -M'
 alias eman='LANG=c man'
+alias vl='vim -u ~/dotfiles/.vimrclite --noplugin'
 
 # local特別実装いれるとこ
 if [ -f ~/dotfiles/.local/.bashrc ]; then

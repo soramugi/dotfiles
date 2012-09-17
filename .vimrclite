@@ -1,0 +1,87 @@
+"---------------------------------------------------------------------------
+" 基本設定:
+"---------------------------------------------------------------------------
+
+" 編集系
+set fileformats=unix,dos,mac
+set backspace=2
+set showmatch
+set matchtime=2
+set wildmenu
+set formatoptions+=mM
+" バックアップ作成
+set noswapfile
+set nobackup
+" 画面表示
+set ruler
+set wrap
+set laststatus=2
+set showcmd
+set cmdheight=1
+set title
+set textwidth=0
+set scrolloff=5
+set visualbell t_vb=
+"自動折りたたみ設定
+set foldmethod=indent
+set foldlevel=1
+set nofoldenable
+" 検索
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+set wrapscan
+
+"---------------------------------------------------------------------------
+" タブ
+"---------------------------------------------------------------------------
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set expandtab
+set smarttab
+
+"---------------------------------------------------------------------------
+" キーバインド設定
+"---------------------------------------------------------------------------
+" コマンド       ノーマルモード 挿入モード コマンドラインモード ビジュアルモード
+" map/noremap           @            -              -                  @
+" nmap/nnoremap         @            -              -                  -
+" imap/inoremap         -            @              -                  -
+" cmap/cnoremap         -            -              @                  -
+" vmap/vnoremap         -            -              -                  @
+" map!/noremap!         -            @              @                  -
+"-------------------------------------------------------------------------------
+
+"leaderキー切り替え
+let mapleader = ","
+
+" s* で置換指定
+nnoremap <expr> s* ':%substitute/\<' . expand('<cword>') . '\>/'
+
+" ESC2回でハイライト非表示
+nnoremap <ESC><ESC> :nohlsearch<CR><ESC>
+
+" 検索で自動的に移動しない
+nnoremap * *N
+nnoremap # #N
+
+" すばやくvimrc編集
+nnoremap <silent> <Space>ev  :<C-u>edit $MYVIMRC<CR>
+
+"---------------------------------------------------------------------------
+" 編集に関する設定:
+"---------------------------------------------------------------------------
+
+" カーソル位置を最後の編集位置
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+
+" 検索などで飛んだらそこを真ん中に
+for maptype in ['n', 'N', '*', '#', 'g*', 'g#', 'G']
+  execute 'nmap' maptype maptype . 'zz'
+endfor
+
+" 全角スペースの表示
+highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=darkgray
+match ZenkakuSpace /　/
