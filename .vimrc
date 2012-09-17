@@ -162,11 +162,6 @@ inoremap [ []<LEFT>
 inoremap ( ()<LEFT>
 inoremap " ""<LEFT>
 inoremap ' ''<LEFT>
-vnoremap { "zdi^V{<C-R>z}<ESC>
-vnoremap [ "zdi^V[<C-R>z]<ESC>
-vnoremap ( "zdi^V(<C-R>z)<ESC>
-vnoremap " "zdi^V"<C-R>z^V"<ESC>
-vnoremap ' "zdi'<C-R>z'<ESC>
 
 "インサートモードでも移動
 inoremap <c-d> <delete>
@@ -220,6 +215,9 @@ nnoremap <silent> <Space>ev  :<C-u>edit $MYVIMRC<CR>
 
 " vimrcの再読込
 nnoremap <Space>r :<C-u>source $MYVIMRC \| if has('gui_running') \| source $MYGVIMRC \| endif <CR>
+
+" sudoで開き直す
+nnoremap <silent> <Space>s :<C-u>edit sudo:%<CR>
 
 " YankRing.vim
 nmap ,y :YRShow<CR>
