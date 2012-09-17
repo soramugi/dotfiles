@@ -215,6 +215,9 @@ function! s:ChangeCurrentDir(directory,  bang)
 endfunction
 nnoremap <silent> <Space>cd :<C-u>CD<CR>
 
+" すばやくvimrc編集
+nnoremap <silent> <Space>ev  :<C-u>edit $MYVIMRC<CR>
+
 " YankRing.vim
 nmap ,y :YRShow<CR>
 
