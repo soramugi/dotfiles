@@ -87,6 +87,7 @@ set cmdheight=1
 set title
 set textwidth=0
 set scrolloff=5
+set visualbell t_vb=
 "自動折りたたみ設定
 set foldmethod=indent
 set foldlevel=1
@@ -154,6 +155,18 @@ au BufNewFile,BufRead *.php  set tabstop=4 shiftwidth=4
 
 "leaderキー切り替え
 let mapleader = ","
+
+"閉じかっこの自動入力
+inoremap { {}<LEFT>
+inoremap [ []<LEFT>
+inoremap ( ()<LEFT>
+inoremap " ""<LEFT>
+inoremap ' ''<LEFT>
+vnoremap { "zdi^V{<C-R>z}<ESC>
+vnoremap [ "zdi^V[<C-R>z]<ESC>
+vnoremap ( "zdi^V(<C-R>z)<ESC>
+vnoremap " "zdi^V"<C-R>z^V"<ESC>
+vnoremap ' "zdi'<C-R>z'<ESC>
 
 "インサートモードでも移動
 inoremap <c-d> <delete>
@@ -240,7 +253,7 @@ cnorea nt     NumbersToggle
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
 " 保存時に行末の空白を除去する
-autocmd BufWritePre * :%s/\s\+$//ge
+"autocmd BufWritePre * :%s/\s\+$//ge
 
 " 検索などで飛んだらそこを真ん中に
 for maptype in ['n', 'N', '*', '#', 'g*', 'g#', 'G']
