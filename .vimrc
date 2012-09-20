@@ -26,6 +26,7 @@ NeoBundle 'vim-scripts/Align'
 "NeoBundle 'vim-scripts/trinity.vim'
 "NeoBundle 'vim-scripts/gtags.vim'
 NeoBundle 'tpope/vim-surround'
+NeoBundle 'svn-diff.vim'
 " Ruby環境
 NeoBundle 'vim-ruby/vim-ruby'
 " js環境
