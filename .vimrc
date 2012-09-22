@@ -165,19 +165,19 @@ inoremap " ""<LEFT>
 inoremap ' ''<LEFT>
 
 "インサートモードでも移動
-inoremap <c-d> <delete>
-inoremap <c-j> <down>
-inoremap <c-k> <up>
-inoremap <c-h> <left>
-inoremap <c-l> <right>
+""inoremap <c-d> <delete>
+""inoremap <c-j> <down>
+""inoremap <c-k> <up>
+""inoremap <c-h> <left>
+""inoremap <c-l> <right>
 
 "行頭と行末
-imap <C-e> <End>
-imap <C-a> <Home>
-cmap <C-e> <End>
-cmap <C-a> <Home>
-vmap <C-e> <End>
-vmap <C-a> <Home>
+""imap <C-e> <End>
+""imap <C-a> <Home>
+""cmap <C-e> <End>
+""cmap <C-a> <Home>
+""vmap <C-e> <End>
+""vmap <C-a> <Home>
 
 "画面切り替え
 nnoremap <c-j> <c-w>j
