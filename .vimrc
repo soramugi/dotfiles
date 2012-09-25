@@ -107,10 +107,6 @@ set ignorecase
 set smartcase
 set wrapscan
 set history=100
-" マウス
-set mouse=a
-set nomousefocus
-set mousehide
 " タグジャンプ
 set tags+=$HOME/.tags
 " 日本語ドキュメントの格納場所
