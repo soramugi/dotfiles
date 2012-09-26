@@ -30,6 +30,7 @@ alias less='less -M'
 alias eman='LANG=c man'
 alias vi='vim'
 alias vl='vim -u ~/dotfiles/.vimrclite --noplugin'
+alias pgrep='find -name "*.php" | xargs grep'
 
 # local特別実装いれるとこ
 if [ -f ~/dotfiles/.local/.bashrc ]; then
