@@ -17,7 +17,6 @@ shopt -u histappend
 
 export EDITOR=vim
 export HISTSIZE=9999
-export HISTIGNORE='ls*:ll:history*'
 export HISTTIMEFORMAT='%Y-%m-%d %T '
 export CLICOLOR=1
 export LS_COLORS='di=33'
