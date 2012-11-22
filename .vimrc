@@ -160,27 +160,15 @@ au BufNewFile,BufRead *.php  set tabstop=4 shiftwidth=4
 "leaderキー切り替え
 let mapleader = ","
 
+" /で別ウィンドウ開く
+nnoremap / q/a
+
 "閉じかっこの自動入力
 inoremap { {}<LEFT>
 inoremap [ []<LEFT>
 inoremap ( ()<LEFT>
 inoremap " ""<LEFT>
 inoremap ' ''<LEFT>
-
-"インサートモードでも移動
-""inoremap <c-d> <delete>
-""inoremap <c-j> <down>
-""inoremap <c-k> <up>
-""inoremap <c-h> <left>
-""inoremap <c-l> <right>
-
-"行頭と行末
-""imap <C-e> <End>
-""imap <C-a> <Home>
-""cmap <C-e> <End>
-""cmap <C-a> <Home>
-""vmap <C-e> <End>
-""vmap <C-a> <Home>
 
 "画面切り替え
 nnoremap <c-j> <c-w>j
