@@ -23,7 +23,7 @@ NeoBundle 'thinca/vim-visualstar'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'vim-scripts/sudo.vim'
 NeoBundle 'vim-scripts/Align'
-"NeoBundle 'vim-scripts/taglist.vim'
+NeoBundle 'vim-scripts/taglist.vim'
 "NeoBundle 'myusuf3/numbers.vim'
 "NeoBundle 'vim-scripts/TagHighlight'
 "NeoBundle 'nathanaelkane/vim-indent-guides'
@@ -62,9 +62,16 @@ let g:neocomplcache_enable_camel_case_completion = 1
 let g:neocomplcache_enable_underbar_completion   = 1
 
 " quickrun
-let g:quickrun_config = {}
-let g:quickrun_config._ = {'runner' : 'vimproc'}
+let g:quickrun_config      = {}
+let g:quickrun_config._    = {'runner' : 'vimproc'}
 let g:quickrun_config['*'] = {'split': 'below'}
+
+" taglist.vim
+set tags=tags
+let Tlist_Show_One_File      = 1 "現在編集中のソースのタグしか表示しない
+let Tlist_Exit_OnlyWiindow   = 1 "taglist が最後のウインドウなら vim を閉じる
+let Tlist_Enable_Fold_Column = 1 " 折り畳み
+let g:tlist_php_settings     = 'php;c:class;d:constant;f:function'
 
 "---------------------------------------------------------------------------
 " 基本設定:
@@ -146,7 +153,7 @@ au BufNewFile,BufRead *.php  set tabstop=4 shiftwidth=4
 " タグジャンプ
 "---------------------------------------------------------------------------
 
-" 拡張子で変更
+" 拡張子で読み込みタグ変更
 au BufNewFile,BufRead *.php set tags+=$HOME/php.tags
 
 "---------------------------------------------------------------------------
@@ -228,7 +235,6 @@ map # <Plug>(visualstar-#)<Plug>N
 
 " neocomplcache
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-
 "---------------------------------------------------------------------------
 " 短縮入力:
 "---------------------------------------------------------------------------
@@ -245,9 +251,8 @@ cnorea neoin! NeoBundleInstall!
 cnorea neocl  NeoBundleClean
 cnorea neocl! NeoBundleClean!
 
-" numbers.vim
-cnorea nt     NumbersToggle
-
+" taglist.vim
+cnorea tl Tlist
 "---------------------------------------------------------------------------
 " 編集に関する設定:
 "---------------------------------------------------------------------------
