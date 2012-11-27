@@ -186,6 +186,9 @@ nnoremap <ESC><ESC> :nohlsearch<CR><ESC>
 nnoremap * *N
 nnoremap # #N
 
+" 連続ペーストを効率よく
+vnoremap <silent> <C-p> "0p<CR>
+
 " カレントディレクトリの移動
 " <Space>cdで編集しているファイルのカレント位置へ
 command! -nargs=? -complete=dir -bang CD  call s:ChangeCurrentDir('<args>',  '<bang>')
