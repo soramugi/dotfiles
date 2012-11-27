@@ -123,11 +123,10 @@ colorscheme desert
 "colorscheme molokai
 
 "ポップアップ補完メニュー
-hi Pmenu      ctermbg=0
-hi PmenuSel   ctermbg=4
+hi Pmenu      ctermbg=2
+hi PmenuSel   ctermbg=8
 hi PmenuSbar  ctermbg=2
 hi PmenuThumb ctermfg=3
-
 
 "---------------------------------------------------------------------------
 " タブ
