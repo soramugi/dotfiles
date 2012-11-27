@@ -107,8 +107,6 @@ set ignorecase
 set smartcase
 set wrapscan
 set history=100
-" タグジャンプ
-set tags+=$HOME/.tags
 " 日本語ドキュメントの格納場所
 helptags $HOME/dotfiles/.vim/doc
 
@@ -143,6 +141,13 @@ au BufNewFile,BufRead *      set tabstop=2 shiftwidth=2
 
 " 拡張子で変更
 au BufNewFile,BufRead *.php  set tabstop=4 shiftwidth=4
+
+"---------------------------------------------------------------------------
+" タグジャンプ
+"---------------------------------------------------------------------------
+
+" 拡張子で変更
+au BufNewFile,BufRead *.php set tags+=$HOME/php.tags
 
 "---------------------------------------------------------------------------
 " キーバインド設定

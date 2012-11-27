@@ -22,7 +22,7 @@ export CLICOLOR=1
 export LS_COLORS='di=33'
 
 alias ll='ls -laF'
-alias ctags='ctags -a -f ~/.tags -R `pwd`'
+alias ctags_php='ctags --languages=PHP --langmap=PHP:.php --exclude="*.js" --php-types=c+f+d -f ~/php.tags -R `pwd` -a'
 alias sudo='sudo -H'
 alias grep='grep --color=auto'
 alias less='less -M'
