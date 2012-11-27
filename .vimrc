@@ -114,6 +114,8 @@ set ignorecase
 set smartcase
 set wrapscan
 set history=100
+" タグ
+set tags+=$HOME/tags
 " 日本語ドキュメントの格納場所
 helptags $HOME/dotfiles/.vim/doc
 
