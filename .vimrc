@@ -57,7 +57,7 @@ let g:yankring_window_height          = 13
 
 " neocomplcache
 let g:neocomplcache_enable_at_startup            = 1
-let g:neocomplcache_enable_auto_select           = 0
+let g:neocomplcache_enable_auto_select           = 1
 let g:neocomplcache_enable_camel_case_completion = 1
 let g:neocomplcache_enable_underbar_completion   = 1
 
