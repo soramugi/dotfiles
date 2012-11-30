@@ -25,11 +25,11 @@ alias ll='ls -laF'
 alias ctags_php='ctags --languages=PHP --langmap=PHP:.php --exclude="*.js" --php-types=c+f+d -f ~/php.tags -R `pwd` -a'
 alias sudo='sudo -H'
 alias grep='grep --color=auto'
+alias pgrep='find . -name "*.php" | xargs grep -n --color=auto'
 alias less='less -M'
 alias eman='LANG=c man'
 alias vi='vim'
 alias vl='vim -u ~/dotfiles/.vimrclite --noplugin'
-alias pgrep='find . -name "*.php" | xargs grep'
 
 # local特別実装いれるとこ
 if [ -f ~/dotfiles/.local/.bashrc ]; then
