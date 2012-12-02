@@ -18,6 +18,7 @@ export LS_COLORS='di=33'
 export EDITOR=vim
 export HISTSIZE=9999
 export HISTTIMEFORMAT='%Y-%m-%d %T '
+export PATH=~/bin:$PATH
 
 # ---------------------------------------------------------------------------
 #  screen
