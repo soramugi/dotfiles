@@ -10,6 +10,8 @@ if has('vim_starting')
 endif
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/neosnippet'
+NeoBundle 'honza/snipmate-snippets'
 NeoBundle 'Shougo/vimproc', {
 \ 'build' : {
 \     'windows' : 'echo "Sorry, cannot update vimproc binary file in Windows."',
@@ -35,6 +37,7 @@ NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'svn-diff.vim'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'Lokaltog/vim-powerline'
 " Ruby環境
 NeoBundle 'vim-ruby/vim-ruby'
 " js環境
@@ -77,6 +80,16 @@ let g:tlist_php_settings     = 'php;c:class;d:constant;f:function'
 " syntastic.vim
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=2
+
+" neosnippet
+imap <C-k> <Plug>(neosnippet_expand_or_jump)
+smap <C-k> <Plug>(neosnippet_expand_or_jump)
+imap <expr><TAB> neosnippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+if has('conceal')
+  set conceallevel=2 concealcursor=i
+endif
+let g:neosnippet#snippets_directory='~/dotfiles/.vim/bundle/snipmate-snippets/snippets'
 
 "---------------------------------------------------------------------------
 " 基本設定:
@@ -123,9 +136,6 @@ set history=100
 set tags+=$HOME/tags
 " 日本語ドキュメントの格納場所
 helptags $HOME/dotfiles/.vim/doc
-
-" ステータスラインに表示する情報の指定
-set statusline=%n%{winnr('$')>1?'/'.winnr().'/'.winnr('$'):''}\:%y%F\%h%w%m%r%=\|%{(&fenc!=''?&fenc:&enc).'\|'.&ff.'\|'}<%c,%l/%L:%p%%>
 
 "---------------------------------------------------------------------------
 " 色設定
@@ -242,6 +252,7 @@ map # <Plug>(visualstar-#)<Plug>N
 
 " neocomplcache
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><C-j> pumvisible() ? "\<C-n>" : "\<TAB>"
 "---------------------------------------------------------------------------
 " 短縮入力:
 "---------------------------------------------------------------------------
