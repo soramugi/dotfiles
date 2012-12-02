@@ -34,6 +34,7 @@ NeoBundle 'vim-scripts/taglist.vim'
 "NeoBundle 'vim-scripts/gtags.vim'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'svn-diff.vim'
+NeoBundle 'scrooloose/syntastic'
 " Ruby環境
 NeoBundle 'vim-ruby/vim-ruby'
 " js環境
@@ -72,6 +73,10 @@ let Tlist_Show_One_File      = 1 "現在編集中のソースのタグしか表�
 let Tlist_Exit_OnlyWiindow   = 1 "taglist が最後のウインドウなら vim を閉じる
 let Tlist_Enable_Fold_Column = 1 " 折り畳み
 let g:tlist_php_settings     = 'php;c:class;d:constant;f:function'
+
+" syntastic.vim
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_loc_list=2
 
 "---------------------------------------------------------------------------
 " 基本設定:
