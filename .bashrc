@@ -63,7 +63,7 @@ alias scim='svn ci -m'
 # オリジナル
 alias vl='vim -u ~/dotfiles/.vimrclite --noplugin'
 alias eman='LANG=c man'
-alias pgrep='find . -name "*.php" | xargs grep'
+alias pgrep='find . -name "*.php" | xargs grep -n --color=auto'
 alias ctags_php='ctags --languages=PHP --langmap=PHP:.php --exclude="*.js" --php-types=c+f+d -f ~/php.tags -R `pwd` -a'
 
 # ---------------------------------------------------------------------------
