@@ -63,6 +63,19 @@ alias sup='svn up'
 alias sci='svn ci'
 alias scim='svn ci -m'
 
+# for git
+alias g='git'
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit'
+alias gl='git pull'
+alias gp='git push'
+alias gco='git checkout'
+alias gb='git branch'
+alias gsb='git submodule'
+alias grh='git reset --soft HEAD'
+alias grhh='git reset --hard HEAD'
+
 # オリジナル
 alias vl='vim -u ~/dotfiles/.vimrclite --noplugin'
 alias eman='LANG=c man'
