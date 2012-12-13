@@ -40,7 +40,7 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'mattn/webapi-vim'
-NeoBundle 'mattn/vimplenote-vim'
+NeoBundle 'soramugi/vimplenote-vim', 'prot'
 " Ruby環境
 NeoBundle 'vim-ruby/vim-ruby'
 " js環境
@@ -92,6 +92,13 @@ endif
 
 " open-browser
 let g:netrw_nogx = 1
+
+" vimplenote
+if filereadable(expand('$HOME/.VimpleNote'))
+  " let g:VimpleNoteUsername = your_email
+  " let g:VimpleNotePassword = your_pass
+  source $HOME/.VimpleNote
+endif
 
 "---------------------------------------------------------------------------
 " 基本設定:
@@ -220,7 +227,7 @@ nnoremap # #N
 vnoremap <silent> <C-p> "0p<CR>
 
 " vimrc編集
-nnoremap <silent> <Space>ev  :<C-u>edit $MYVIMRC<CR>
+nnoremap <silent> <Space>e  :<C-u>edit $MYVIMRC<CR>
 
 " vimrcの再読込
 nnoremap <Space>r :<C-u>source $MYVIMRC \| if has('gui_running') \| source $MYGVIMRC \| endif <CR>
@@ -269,6 +276,10 @@ cnorea neocl! NeoBundleClean!
 
 " taglist.vim
 cnorea tl Tlist
+
+" VimpleNote
+cnorea note VimpleNote
+
 "---------------------------------------------------------------------------
 " 編集に関する設定:
 "---------------------------------------------------------------------------
