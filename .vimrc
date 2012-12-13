@@ -38,6 +38,9 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'svn-diff.vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Lokaltog/vim-powerline'
+NeoBundle 'tyru/open-browser.vim'
+NeoBundle 'mattn/webapi-vim'
+NeoBundle 'mattn/vimplenote-vim'
 " Ruby環境
 NeoBundle 'vim-ruby/vim-ruby'
 " js環境
@@ -82,14 +85,13 @@ let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=2
 
 " neosnippet
-imap <C-k> <Plug>(neosnippet_expand_or_jump)
-smap <C-k> <Plug>(neosnippet_expand_or_jump)
-imap <expr><TAB> neosnippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+let g:neosnippet#snippets_directory='~/dotfiles/.vim/bundle/snipmate-snippets/snippets'
 if has('conceal')
   set conceallevel=2 concealcursor=i
 endif
-let g:neosnippet#snippets_directory='~/dotfiles/.vim/bundle/snipmate-snippets/snippets'
+
+" open-browser
+let g:netrw_nogx = 1
 
 "---------------------------------------------------------------------------
 " 基本設定:
@@ -217,22 +219,6 @@ nnoremap # #N
 " 連続ペーストを効率よく
 vnoremap <silent> <C-p> "0p<CR>
 
-" カレントディレクトリの移動
-" <Space>cdで編集しているファイルのカレント位置へ
-command! -nargs=? -complete=dir -bang CD  call s:ChangeCurrentDir('<args>',  '<bang>')
-function! s:ChangeCurrentDir(directory,  bang)
-    if a:directory == ''
-        lcd %:p:h
-    else
-        execute 'lcd' . a:directory
-    endif
-
-    if a:bang == ''
-        pwd
-    endif
-endfunction
-nnoremap <silent> <Space>cd :<C-u>CD<CR>
-
 " vimrc編集
 nnoremap <silent> <Space>ev  :<C-u>edit $MYVIMRC<CR>
 
@@ -253,6 +239,18 @@ map # <Plug>(visualstar-#)<Plug>N
 " neocomplcache
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><C-j> pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><C-k> pumvisible() ? "\<C-p>" : "\<TAB>"
+
+" neosnippet
+imap <C-i> <Plug>(neosnippet_expand_or_jump)
+smap <C-i> <Plug>(neosnippet_expand_or_jump)
+imap <expr><TAB> neosnippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" open-browser
+nmap <C-O> <Plug>(openbrowser-smart-search)
+vmap <C-O> <Plug>(openbrowser-smart-search)
+
 "---------------------------------------------------------------------------
 " 短縮入力:
 "---------------------------------------------------------------------------
