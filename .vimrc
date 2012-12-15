@@ -41,6 +41,7 @@ NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'soramugi/vimplenote-vim', 'prot'
+NeoBundle 'mattn/excitetranslate-vim'
 " Ruby環境
 NeoBundle 'vim-ruby/vim-ruby'
 " js環境
@@ -257,6 +258,9 @@ smap <expr><TAB> neosnippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" 
 " open-browser
 nmap <C-O> <Plug>(openbrowser-smart-search)
 vmap <C-O> <Plug>(openbrowser-smart-search)
+
+" excitetranslate-vim
+nmap <C-e> :ExciteTranslate<CR>
 
 "---------------------------------------------------------------------------
 " 短縮入力:
