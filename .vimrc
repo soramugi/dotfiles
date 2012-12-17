@@ -141,6 +141,9 @@ set ignorecase
 set smartcase
 set wrapscan
 set history=100
+set grepprg=grep\ -rnIH
+autocmd QuickfixCmdPost vimgrep copen
+autocmd QuickfixCmdPost grep copen
 " タグ
 set tags+=$HOME/tags
 " 日本語ドキュメントの格納場所
@@ -235,6 +238,12 @@ nnoremap <Space>r :<C-u>source $MYVIMRC \| if has('gui_running') \| source $MYGV
 " sudoで開き直す
 nnoremap <silent> <Space>s :<C-u>edit sudo:%<CR>
 
+" vimgrep の書式を挿入
+nnoremap <expr> <Space>g ':vimgrep /\<' . expand('<cword>') . '\>/j **/*.' . expand('%:e')
+
+" help 引くのに便利かなと
+nnoremap <expr> <Space>h ':h ' . expand('<cword>')
+
 " YankRing.vim
 nmap ,y :YRShow<CR>
 
@@ -279,7 +288,6 @@ cnorea tl Tlist
 
 " VimpleNote
 cnorea note VimpleNote
-
 "---------------------------------------------------------------------------
 " 編集に関する設定:
 "---------------------------------------------------------------------------
