@@ -37,7 +37,6 @@ NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'svn-diff.vim'
 NeoBundle 'scrooloose/syntastic'
-NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'soramugi/vimplenote-vim', 'prot'
@@ -147,13 +146,15 @@ set ignorecase
 set smartcase
 set wrapscan
 set history=100
-set grepprg=grep\ -rnIH
+set grepprg=grep\ -rnIH\ --exclude-dir=.svn\ --exclude-dir=.git
 autocmd QuickfixCmdPost vimgrep copen
 autocmd QuickfixCmdPost grep copen
 " タグ
 set tags+=$HOME/tags
 " 日本語ドキュメントの格納場所
 helptags $HOME/dotfiles/.vim/doc
+" ステータスラインに表示する情報の指定
+set statusline=%n%{winnr('$')>1?'/'.winnr().'/'.winnr('$'):''}\:%y%F\%h%w%m%r%=\|%{(&fenc!=''?&fenc:&enc).'\|'.&ff.'\|'}<%c,%l/%L:%p%%>
 
 "---------------------------------------------------------------------------
 " 色設定
@@ -244,8 +245,9 @@ nnoremap <Space>r :<C-u>source $MYVIMRC \| if has('gui_running') \| source $MYGV
 " sudoで開き直す
 nnoremap <silent> <Space>s :<C-u>edit sudo:%<CR>
 
-" vimgrep の書式を挿入
+" grep の書式を挿入
 nnoremap <expr> <Space>g ':vimgrep /\<' . expand('<cword>') . '\>/j **/*.' . expand('%:e')
+nnoremap <expr> <Space>G ':sil grep! ' . expand('<cword>') . ' *'
 
 " help 引くのに便利かなと
 nnoremap <expr> <Space>h ':h ' . expand('<cword>')
