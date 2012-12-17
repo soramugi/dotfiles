@@ -41,6 +41,7 @@ NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'soramugi/vimplenote-vim', 'prot'
+NeoBundle 'mattn/excitetranslate-vim'
 " Ruby環境
 NeoBundle 'vim-ruby/vim-ruby'
 " js環境
@@ -69,9 +70,14 @@ let g:neocomplcache_enable_camel_case_completion = 1
 let g:neocomplcache_enable_underbar_completion   = 1
 
 " quickrun
-let g:quickrun_config      = {}
-let g:quickrun_config._    = {'runner' : 'vimproc'}
-let g:quickrun_config['*'] = {'split': 'below'}
+let g:quickrun_config               = {}
+let g:quickrun_config._             = {'runner' : 'vimproc'}
+let g:quickrun_config['*']          = {'split': 'below'}
+let g:quickrun_config['ruby.rspec'] = {'command': "rspec"}
+augroup UjihisaRSpec
+  autocmd!
+  autocmd BufWinEnter,BufNewFile *_spec.rb set filetype=ruby.rspec
+augroup END
 
 " taglist.vim
 set tags=tags
@@ -267,6 +273,9 @@ smap <expr><TAB> neosnippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" 
 nmap <C-O> <Plug>(openbrowser-smart-search)
 vmap <C-O> <Plug>(openbrowser-smart-search)
 
+" excitetranslate-vim
+nmap <C-e> :ExciteTranslate<CR>
+
 "---------------------------------------------------------------------------
 " 短縮入力:
 "---------------------------------------------------------------------------
@@ -313,10 +322,10 @@ match ZenkakuSpace /　/
 
 " 日本語入力自設定
 if has('multi_byte_ime') || has('xim')
-" カーソル色(設定例:紫)
-highlight CursorIM guibg=Purple guifg=NONE
-" 挿入モード・検索モードでのデフォルトのIME状態設定
-set iminsert=0 imsearch=0
+  " カーソル色(設定例:紫)
+  highlight CursorIM guibg=Purple guifg=NONE
+  " 挿入モード・検索モードでのデフォルトのIME状態設定
+  set iminsert=0 imsearch=0
 endif
 
 "---------------------------------------------------------------------------
