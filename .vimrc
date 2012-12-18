@@ -105,6 +105,7 @@ if filereadable(expand('$HOME/.VimpleNote'))
   source $HOME/.VimpleNote
 endif
 
+source $VIMRUNTIME/macros/matchit.vim
 "---------------------------------------------------------------------------
 " 基本設定:
 "---------------------------------------------------------------------------
