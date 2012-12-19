@@ -238,10 +238,7 @@ nnoremap # #N
 vnoremap <silent> <C-p> "0p<CR>
 
 " vimrc編集
-nnoremap <silent> <Space>e  :<C-u>edit $MYVIMRC<CR>
-
-" vimrcの再読込
-nnoremap <Space>r :<C-u>source $MYVIMRC \| if has('gui_running') \| source $MYGVIMRC \| endif <CR>
+nnoremap <silent> <Space>e  :<C-u>tabedit $MYVIMRC<CR>
 
 " sudoで開き直す
 nnoremap <silent> <Space>s :<C-u>edit sudo:%<CR>
