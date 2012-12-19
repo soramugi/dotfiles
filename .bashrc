@@ -62,6 +62,8 @@ alias sadd='svn st | grep '?' | sed 's/\?//' | xargs svn add'
 alias sup='svn up'
 alias sci='svn ci'
 alias scim='svn ci -m'
+alias spll='svn pl -R ./ | grep "svn:" | sort | uniq -c'
+
 
 # for git
 alias g='git'
