@@ -212,6 +212,13 @@ let mapleader = ","
 " /で別ウィンドウ開く
 nnoremap / q/a
 
+" 終了保存
+nnoremap <C-q> :q<CR>
+nnoremap <C-w> :w<CR>
+
+" エンターで行増やす
+nnoremap <CR> o<Esc>
+
 "閉じかっこの自動入力
 inoremap { {}<LEFT>
 inoremap [ []<LEFT>
@@ -224,6 +231,10 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
 nnoremap <c-h> <c-w>h
+
+" tab移動
+nnoremap <S-Tab> gt
+nnoremap <Tab><Tab> gT
 
 " s* で置換指定
 nnoremap <expr> s* ':%substitute/\<' . expand('<cword>') . '\>/'
