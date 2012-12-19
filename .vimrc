@@ -150,6 +150,7 @@ set history=100
 set grepprg=grep\ -rnIH\ --exclude=*.svn*\ --exclude=*.git*
 autocmd QuickfixCmdPost vimgrep copen
 autocmd QuickfixCmdPost grep copen
+set switchbuf+=usetab,newtab
 " タグ
 set tags+=$HOME/tags
 " 日本語ドキュメントの格納場所
