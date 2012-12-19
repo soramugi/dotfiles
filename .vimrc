@@ -214,7 +214,6 @@ nnoremap / q/a
 
 " 終了保存
 nnoremap <C-q> :q<CR>
-nnoremap <C-w> :w<CR>
 
 " エンターで行増やす
 nnoremap <CR> o<Esc>
