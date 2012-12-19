@@ -241,6 +241,9 @@ nnoremap <expr> s* ':%substitute/\<' . expand('<cword>') . '\>/'
 " ESC2回でハイライト非表示
 nnoremap <ESC><ESC> :nohlsearch<CR><ESC>
 
+" tagsジャンプの時に複数ある時は一覧表示
+nnoremap <C-]> g<C-]>
+
 " 検索で自動的に移動しない
 nnoremap * *N
 nnoremap # #N
