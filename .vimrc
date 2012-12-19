@@ -147,7 +147,7 @@ set ignorecase
 set smartcase
 set wrapscan
 set history=100
-set grepprg=grep\ -rnIH\ --exclude-dir=.svn\ --exclude-dir=.git
+set grepprg=grep\ -rnIH\ --exclude=*.svn*\ --exclude=*.git*
 autocmd QuickfixCmdPost vimgrep copen
 autocmd QuickfixCmdPost grep copen
 " タグ
