@@ -215,9 +215,6 @@ nnoremap / q/a
 " 終了保存
 nnoremap <C-q> :q<CR>
 
-" エンターで行増やす
-nnoremap <CR> o<Esc>
-
 "閉じかっこの自動入力
 inoremap { {}<LEFT>
 inoremap [ []<LEFT>
