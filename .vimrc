@@ -264,6 +264,9 @@ nnoremap <expr> <Space>G ':sil grep! ' . expand('<cword>') . ' *'
 " help 引くのに便利かなと
 nnoremap <expr> <Space>h ':tab h ' . expand('<cword>')
 
+" quickrun"
+nnoremap <Space>r :QuickRun<CR>
+
 " vim-visualstar
 nnoremap <Plug>N N
 map * <Plug>(visualstar-*)<Plug>N
