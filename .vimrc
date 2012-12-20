@@ -20,7 +20,7 @@ NeoBundle 'Shougo/vimproc', {
 \     'unix' : 'make -f make_unix.mak',
 \   },
 \ }
-NeoBundle 'YankRing.vim'
+NeoBundle 'vim-scripts/yanktmp.vim'
 NeoBundle 'thinca/vim-visualstar'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'vim-scripts/sudo.vim'
@@ -54,13 +54,6 @@ filetype plugin indent on
 "---------------------------------------------------------------------------
 " プラグイン設定
 "---------------------------------------------------------------------------
-
-" YankRing.vim
-let g:yankring_history_dir            = expand('$HOME')
-let g:yankring_history_file           = '.yankring_history'
-let g:yankring_manual_clipboard_check = 1
-let g:yankring_max_history            = 10
-let g:yankring_window_height          = 13
 
 " neocomplcache
 let g:neocomplcache_enable_at_startup            = 1
@@ -106,6 +99,13 @@ if filereadable(expand('$HOME/.VimpleNote'))
 endif
 
 source $VIMRUNTIME/macros/matchit.vim
+
+" yanktmp
+let g:yanktmp_file = $HOME . '/.vim_tmp_file'
+map <silent> sy :call YanktmpYank()<CR>
+map <silent> sp :call YanktmpPaste_p()<CR>
+map <silent> sP :call YanktmpPaste_P()<CR>
+
 "---------------------------------------------------------------------------
 " 基本設定:
 "---------------------------------------------------------------------------
@@ -264,9 +264,6 @@ nnoremap <expr> <Space>G ':sil grep! ' . expand('<cword>') . ' *'
 " help 引くのに便利かなと
 nnoremap <expr> <Space>h ':h ' . expand('<cword>')
 
-" YankRing.vim
-nmap ,y :YRShow<CR>
-
 " vim-visualstar
 nnoremap <Plug>N N
 map * <Plug>(visualstar-*)<Plug>N
@@ -298,6 +295,8 @@ nmap <C-e> :ExciteTranslate<CR>
 " cnorea/cnoreabbrev          -                @
 " noreab/noreabbrev           @                @
 "---------------------------------------------------------------------------
+
+cnorea h tab help
 
 " NeoBundle
 cnorea neoli  NeoBundleList
