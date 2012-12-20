@@ -14,6 +14,9 @@ git config --global alias.br 'branch'
 git config --global alias.sub 'submodule'
 git config --global alias.gr 'log --graph --date=short --decorate=short --pretty=format:"%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s"'
 
+# カラー
+git config --global color.ui true
+
 # サブモジュール
 git submodule init
 git submodule update
