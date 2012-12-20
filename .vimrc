@@ -212,7 +212,7 @@ let mapleader = ","
 " /で別ウィンドウ開く
 nnoremap / q/a
 
-" 終了保存
+" 終了
 nnoremap <C-q> :q<CR>
 
 "閉じかっこの自動入力
@@ -229,8 +229,11 @@ nnoremap <c-l> <c-w>l
 nnoremap <c-h> <c-w>h
 
 " tab移動
-nnoremap <S-Tab> gt
-nnoremap <Tab><Tab> gT
+nnoremap <C-n> gt
+nnoremap <C-p> gT
+
+" カレントディレクトリをtabで開く
+nnoremap <silent> <Space>t :<C-u>tabnew ./<CR>
 
 " s* で置換指定
 nnoremap <expr> s* ':%substitute/\<' . expand('<cword>') . '\>/'
@@ -259,7 +262,7 @@ nnoremap <expr> <Space>g ':vimgrep /\<' . expand('<cword>') . '\>/j **/*.' . exp
 nnoremap <expr> <Space>G ':sil grep! ' . expand('<cword>') . ' *'
 
 " help 引くのに便利かなと
-nnoremap <expr> <Space>h ':h ' . expand('<cword>')
+nnoremap <expr> <Space>h ':tab h ' . expand('<cword>')
 
 " vim-visualstar
 nnoremap <Plug>N N
