@@ -62,10 +62,15 @@ let g:neocomplcache_enable_camel_case_completion = 1
 let g:neocomplcache_enable_underbar_completion   = 1
 
 " quickrun
-let g:quickrun_config               = {}
-let g:quickrun_config._             = {'runner' : 'vimproc'}
-let g:quickrun_config['*']          = {'split': 'below'}
-let g:quickrun_config['ruby.rspec'] = {'command': "rspec"}
+let g:quickrun_config   = {
+\   "_" : {
+\       "runner" : "vimproc",
+\       "outputter/buffer/split" : ":botright 8sp",
+\   },
+\   'ruby.rspec' : {
+\       'command' : "rspec"
+\   }
+\}
 augroup UjihisaRSpec
   autocmd!
   autocmd BufWinEnter,BufNewFile *_spec.rb set filetype=ruby.rspec
