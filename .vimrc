@@ -60,6 +60,7 @@ let g:neocomplcache_enable_at_startup            = 1
 let g:neocomplcache_enable_auto_select           = 1
 let g:neocomplcache_enable_camel_case_completion = 1
 let g:neocomplcache_enable_underbar_completion   = 1
+let g:neocomplcache_max_list                     = 10
 
 " quickrun
 let g:quickrun_config   = {
@@ -171,10 +172,10 @@ colorscheme desert
 "colorscheme molokai
 
 "ポップアップ補完メニュー
-hi Pmenu      ctermbg=2
-hi PmenuSel   ctermbg=8
-hi PmenuSbar  ctermbg=2
-hi PmenuThumb ctermfg=3
+highlight Pmenu      ctermbg=2
+highlight PmenuSel   ctermbg=7
+highlight PmenuSbar  ctermbg=2
+highlight PmenuThumb ctermfg=3
 
 "---------------------------------------------------------------------------
 " タブ
