@@ -1,4 +1,2 @@
 .vim/bundle/*
-.local/.bashrc
-.local/.vimrc
-.local/.gvimrc
+undo/*

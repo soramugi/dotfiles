@@ -342,6 +342,11 @@ endfor
 highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=darkgray
 match ZenkakuSpace /　/
 
+" 無限undo
+if has('persistent_undo')
+  set undodir=~/dotfiles/undo/
+  set undofile
+endif
 "---------------------------------------------------------------------------
 " 日本語入力に関する設定:
 "---------------------------------------------------------------------------
@@ -363,10 +368,3 @@ let php_sql_query=1
 let php_htmlInStrings=1
 let php_noShortTags = 1
 let php_folding = 1
-
-"---------------------------------------------------------------------------
-" local設定
-"---------------------------------------------------------------------------
-if filereadable(expand('$HOME/dotfiles/.local/.vimrc'))
-  source $HOME/dotfiles/.local/.vimrc
-endif

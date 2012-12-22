@@ -87,11 +87,3 @@ alias vl='vim -u ~/dotfiles/.vimrclite --noplugin'
 alias eman='LANG=c man'
 alias ctags_php='ctags --languages=PHP --langmap=PHP:.php --exclude="*.js" --php-types=c+f+d -f ~/php.tags -R `pwd` -a'
 function pgrep () { grep -rnIH --color=auto --include=*.php $@ *; }
-
-# ---------------------------------------------------------------------------
-#  別ファイル読み込み
-# ---------------------------------------------------------------------------
-
-if [ -f ~/dotfiles/.local/.bashrc ]; then
-    . ~/dotfiles/.local/.bashrc
-fi
