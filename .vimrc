@@ -113,6 +113,9 @@ map <silent> sy :call YanktmpYank()<CR>
 map <silent> sp :call YanktmpPaste_p()<CR>
 map <silent> sP :call YanktmpPaste_P()<CR>
 
+" ctrlp"
+let g:ctrlp_map = '<Space>f'
+
 "---------------------------------------------------------------------------
 " 基本設定:
 "---------------------------------------------------------------------------
