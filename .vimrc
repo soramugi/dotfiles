@@ -25,14 +25,11 @@ NeoBundle 'thinca/vim-visualstar'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'vim-scripts/sudo.vim'
 NeoBundle 'vim-scripts/Align'
-NeoBundle 'vim-scripts/taglist.vim'
 "NeoBundle 'myusuf3/numbers.vim'
 "NeoBundle 'vim-scripts/TagHighlight'
 "NeoBundle 'nathanaelkane/vim-indent-guides'
 "NeoBundle 'vim-scripts/project.tar.gz'
 "NeoBundle 'vim-scripts/wokmarks.vim'
-"NeoBundle 'vim-scripts/Source-Explorer-srcexpl.vim'
-"NeoBundle 'vim-scripts/trinity.vim'
 "NeoBundle 'vim-scripts/gtags.vim'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'svn-diff.vim'
@@ -42,6 +39,11 @@ NeoBundle 'mattn/webapi-vim'
 NeoBundle 'soramugi/vimplenote-vim', 'prot'
 NeoBundle 'mattn/excitetranslate-vim'
 NeoBundle 'kien/ctrlp.vim.git'
+" IDE風
+NeoBundle 'vim-scripts/taglist.vim'
+NeoBundle 'vim-scripts/Trinity'
+NeoBundle 'wesleyche/SrcExpl'
+NeoBundle 'scrooloose/nerdtree'
 " Ruby環境
 NeoBundle 'vim-ruby/vim-ruby'
 " js環境
@@ -323,6 +325,10 @@ cnorea tl Tlist
 
 " VimpleNote
 cnorea note VimpleNote
+
+" IDE風起動
+cnorea ta TrinityToggleAll
+
 "---------------------------------------------------------------------------
 " 編集に関する設定:
 "---------------------------------------------------------------------------
