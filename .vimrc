@@ -68,6 +68,7 @@ let g:quickrun_config   = {
 \   "_" : {
 \       "runner" : "vimproc",
 \       "outputter/buffer/split" : ":botright 8sp",
+\       "runner/vimproc/updatetime" : 40,
 \   },
 \   'ruby.rspec' : {
 \       'command' : "rspec"
@@ -161,8 +162,6 @@ set grepprg=grep\ -rnIH\ --exclude=*.svn*\ --exclude=*.git*
 autocmd QuickfixCmdPost vimgrep copen
 autocmd QuickfixCmdPost grep copen
 set switchbuf+=usetab,newtab
-" タグ
-set tags+=$HOME/tags
 " 日本語ドキュメントの格納場所
 helptags $HOME/dotfiles/.vim/doc
 " ステータスラインに表示する情報の指定
@@ -184,22 +183,20 @@ highlight PmenuThumb ctermfg=3
 "---------------------------------------------------------------------------
 " タブ
 "---------------------------------------------------------------------------
+set smarttab
+set expandtab
 set autoindent
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
-set expandtab
-set smarttab
-
-" リセット
-au BufNewFile,BufRead *      set tabstop=2 shiftwidth=2
 
 " 拡張子で変更
-au BufNewFile,BufRead *.php  set tabstop=4 shiftwidth=4
+au BufNewFile,BufRead *.php  set tabstop=4 shiftwidth=4 softtabstop=4
 
 "---------------------------------------------------------------------------
-" タグジャンプ
+" タグ
 "---------------------------------------------------------------------------
+set tags+=$HOME/tags
 
 " 拡張子で読み込みタグ変更
 au BufNewFile,BufRead *.php set tags+=$HOME/php.tags
@@ -265,6 +262,7 @@ vnoremap <silent> <C-p> "0p<CR>
 
 " vimrc編集
 nnoremap <silent> <Space>e  :<C-u>tabedit $MYVIMRC<CR>
+nnoremap <silent> <Space>E  :<C-u>source $MYVIMRC<CR>
 
 " sudoで開き直す
 nnoremap <silent> <Space>s :<C-u>edit sudo:%<CR>
