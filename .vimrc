@@ -41,6 +41,7 @@ NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'soramugi/vimplenote-vim', 'prot'
 NeoBundle 'mattn/excitetranslate-vim'
+NeoBundle 'kien/ctrlp.vim.git'
 " Ruby環境
 NeoBundle 'vim-ruby/vim-ruby'
 " js環境
