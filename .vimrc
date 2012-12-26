@@ -149,6 +149,7 @@ set title
 set textwidth=0
 set scrolloff=5
 set visualbell t_vb=
+set colorcolumn=80
 "自動折りたたみ設定
 set foldmethod=indent
 set foldlevel=1
@@ -181,6 +182,8 @@ highlight Pmenu      ctermbg=2
 highlight PmenuSel   ctermbg=7
 highlight PmenuSbar  ctermbg=2
 highlight PmenuThumb ctermfg=3
+
+highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
 
 "---------------------------------------------------------------------------
 " タブ
