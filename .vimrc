@@ -60,20 +60,20 @@ filetype plugin indent on
 
 " neocomplcache
 let g:neocomplcache_enable_at_startup            = 1
-let g:neocomplcache_enable_auto_select           = 1
+let g:neocomplcache_enable_auto_select           = 0
 let g:neocomplcache_enable_camel_case_completion = 1
 let g:neocomplcache_enable_underbar_completion   = 1
 let g:neocomplcache_max_list                     = 10
 
 " quickrun
 let g:quickrun_config   = {
-\   "_" : {
-\       "runner" : "vimproc",
-\       "outputter/buffer/split" : ":botright 8sp",
-\       "runner/vimproc/updatetime" : 40,
+\   '_' : {
+\       'runner' : 'vimproc',
+\       'outputter/buffer/split' : ':botright 8sp',
+\       'runner/vimproc/updatetime' : 40,
 \   },
 \   'ruby.rspec' : {
-\       'command' : "rspec"
+\       'command' : 'rspec'
 \   }
 \}
 augroup UjihisaRSpec
@@ -83,9 +83,9 @@ augroup END
 
 " taglist.vim
 set tags=tags
-let Tlist_Show_One_File      = 1 "現在編集中のソースのタグしか表示しない
-let Tlist_Exit_OnlyWiindow   = 1 "taglist が最後のウインドウなら vim を閉じる
-let Tlist_Enable_Fold_Column = 1 " 折り畳み
+let Tlist_Show_One_File      = 1
+let Tlist_Exit_OnlyWiindow   = 1
+let Tlist_Enable_Fold_Column = 1
 let g:tlist_php_settings     = 'php;c:class;d:constant;f:function'
 
 " syntastic.vim
@@ -116,7 +116,7 @@ map <silent> sy :call YanktmpYank()<CR>
 map <silent> sp :call YanktmpPaste_p()<CR>
 map <silent> sP :call YanktmpPaste_P()<CR>
 
-" ctrlp"
+" ctrlp
 let g:ctrlp_map = '<Space>f'
 
 "---------------------------------------------------------------------------
@@ -227,14 +227,14 @@ nnoremap / q/a
 " 終了
 nnoremap <C-q> :q<CR>
 
-"閉じかっこの自動入力
-inoremap { {}<LEFT>
-inoremap [ []<LEFT>
-inoremap ( ()<LEFT>
-inoremap " ""<LEFT>
-inoremap ' ''<LEFT>
+" 閉じかっこで移動
+inoremap {} {}<LEFT>
+inoremap [] []<LEFT>
+inoremap () ()<LEFT>
+inoremap "" ""<LEFT>
+inoremap '' ''<LEFT>
 
-"画面切り替え
+" 画面切り替え
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
