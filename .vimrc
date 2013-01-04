@@ -175,7 +175,6 @@ set statusline=%n%{winnr('$')>1?'/'.winnr().'/'.winnr('$'):''}\:%y%F\%h%w%m%r%=\
 "---------------------------------------------------------------------------
 set t_Co=256
 colorscheme desert
-"colorscheme molokai
 
 "ポップアップ補完メニュー
 highlight Pmenu      ctermbg=2
@@ -183,7 +182,7 @@ highlight PmenuSel   ctermbg=7
 highlight PmenuSbar  ctermbg=2
 highlight PmenuThumb ctermfg=3
 
-highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
+highlight ColorColumn ctermbg=DarkGreen guibg=DarkGreen
 
 "---------------------------------------------------------------------------
 " タブ
