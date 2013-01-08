@@ -13,13 +13,13 @@ NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'honza/snipmate-snippets'
 NeoBundle 'Shougo/vimproc', {
-\ 'build' : {
-\     'windows' : 'echo "Sorry, cannot update vimproc binary file in Windows."',
-\     'cygwin' : 'make -f make_cygwin.mak',
-\     'mac' : 'make -f make_mac.mak',
-\     'unix' : 'make -f make_unix.mak',
-\   },
-\ }
+      \ 'build' : {
+      \     'windows' : 'echo "Sorry, cannot update vimproc binary file in Windows."',
+      \     'cygwin' : 'make -f make_cygwin.mak',
+      \     'mac' : 'make -f make_mac.mak',
+      \     'unix' : 'make -f make_unix.mak',
+      \   },
+      \ }
 NeoBundle 'vim-scripts/yanktmp.vim'
 NeoBundle 'thinca/vim-visualstar'
 NeoBundle 'thinca/vim-quickrun'
@@ -43,7 +43,7 @@ NeoBundle 'kien/ctrlp.vim.git'
 NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'vim-scripts/Trinity'
 NeoBundle 'wesleyche/SrcExpl'
-NeoBundle 'scrooloose/nerdtree'
+"NeoBundle 'scrooloose/nerdtree'
 " Ruby環境
 NeoBundle 'vim-ruby/vim-ruby'
 " js環境
@@ -67,15 +67,15 @@ let g:neocomplcache_max_list                     = 10
 
 " quickrun
 let g:quickrun_config   = {
-\   '_' : {
-\       'runner' : 'vimproc',
-\       'outputter/buffer/split' : ':botright 8sp',
-\       'runner/vimproc/updatetime' : 40,
-\   },
-\   'ruby.rspec' : {
-\       'command' : 'rspec'
-\   }
-\}
+      \   '_' : {
+      \       'runner' : 'vimproc',
+      \       'outputter/buffer/split' : ':botright 8sp',
+      \       'runner/vimproc/updatetime' : 40,
+      \   },
+      \   'ruby.rspec' : {
+      \       'command' : 'rspec'
+      \   }
+      \}
 augroup UjihisaRSpec
   autocmd!
   autocmd BufWinEnter,BufNewFile *_spec.rb set filetype=ruby.rspec
@@ -215,7 +215,7 @@ au BufNewFile,BufRead *.php set tags+=$HOME/php.tags
 " cmap/cnoremap         -            -              @                  -
 " vmap/vnoremap         -            -              -                  @
 " map!/noremap!         -            @              @                  -
-"-------------------------------------------------------------------------------
+"---------------------------------------------------------------------------
 
 "leaderキー切り替え
 let mapleader = ","
@@ -278,6 +278,9 @@ nnoremap <expr> <Space>G ':sil grep! ' . expand('<cword>') . ' *'
 " help 引くのに便利かなと
 nnoremap <expr> <Space>h ':tab h ' . expand('<cword>')
 
+" ファイルの表示を整える
+nnoremap <Space>p :%s/\s\+$//ge<CR> gg =G
+
 " quickrun"
 nnoremap <Space>r :QuickRun<CR>
 
@@ -337,9 +340,6 @@ cnorea ta TrinityToggleAll
 
 " カーソル位置を最後の編集位置
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
-
-" 保存時に行末の空白を除去する
-"autocmd BufWritePre * :%s/\s\+$//ge
 
 " 検索などで飛んだらそこを真ん中に
 for maptype in ['n', 'N', '*', '#', 'g*', 'g#', 'G']
