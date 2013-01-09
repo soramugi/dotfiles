@@ -119,6 +119,11 @@ map <silent> sP :call YanktmpPaste_P()<CR>
 " ctrlp
 let g:ctrlp_map = '<Space>f'
 
+" netrw
+let g:netrw_liststyle = 3
+let g:netrw_winsize = 100
+let g:netrw_altv = 1
+
 "---------------------------------------------------------------------------
 " 基本設定:
 "---------------------------------------------------------------------------
@@ -325,8 +330,8 @@ cnorea neoin! NeoBundleInstall!
 cnorea neocl  NeoBundleClean
 cnorea neocl! NeoBundleClean!
 
-" taglist.vim
-cnorea tl Tlist
+" netrw
+cnorea tl 20Vexplore
 
 " VimpleNote
 cnorea note VimpleNote
