@@ -22,14 +22,18 @@ export HISTSIZE=9999
 export HISTTIMEFORMAT='%Y-%m-%d %T '
 
 # ---------------------------------------------------------------------------
-#  screen
+#  仮想端末
 # ---------------------------------------------------------------------------
 
-# screenの履歴を共有
+if which tmux 2>&1 >/dev/null; then
+  test -z "$TMUX" && (tmux attach || tmux new-session)
+fi
+
+# 履歴を共有
 function share_history {
-    history -a
-    history -c
-    history -r
+history -a
+history -c
+history -r
 }
 PROMPT_COMMAND='share_history'
 shopt -u histappend
