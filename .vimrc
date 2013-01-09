@@ -231,12 +231,12 @@ nnoremap / q/a
 " 終了
 nnoremap <C-q> :q<CR>
 
-" 閉じかっこで移動
-inoremap {} {}<LEFT>
-inoremap [] []<LEFT>
-inoremap () ()<LEFT>
-inoremap "" ""<LEFT>
-inoremap '' ''<LEFT>
+" 閉じ括弧の自動挿入
+inoremap { {}<LEFT>
+inoremap [ []<LEFT>
+inoremap ( ()<LEFT>
+inoremap " ""<LEFT>
+inoremap ' ''<LEFT>
 
 " 画面切り替え
 nnoremap <c-j> <c-w>j
