@@ -66,7 +66,7 @@ let g:neocomplcache_enable_underbar_completion   = 1
 let g:neocomplcache_max_list                     = 10
 
 " quickrun
-let g:quickrun_config   = {
+let g:quickrun_config = {
       \   '_' : {
       \       'runner' : 'vimproc',
       \       'outputter/buffer/split' : ':botright 8sp',
@@ -89,8 +89,8 @@ let Tlist_Enable_Fold_Column = 1
 let g:tlist_php_settings     = 'php;c:class;d:constant;f:function'
 
 " syntastic.vim
-let g:syntastic_enable_signs=1
-let g:syntastic_auto_loc_list=2
+let g:syntastic_enable_signs  = 1
+let g:syntastic_auto_loc_list = 2
 
 " neosnippet
 let g:neosnippet#snippets_directory='~/dotfiles/.vim/bundle/snipmate-snippets/snippets'
@@ -120,9 +120,13 @@ map <silent> sP :call YanktmpPaste_P()<CR>
 let g:ctrlp_map = '<Space>f'
 
 " netrw
-let g:netrw_liststyle = 3
-let g:netrw_winsize = 100
-let g:netrw_altv = 1
+let g:netrw_liststyle    = 3
+let g:netrw_winsize      = 100
+let g:netrw_altv         = 1
+let g:netrw_browse_split = 3
+
+" Align"
+let g:Align_xstrlen = 3
 
 "---------------------------------------------------------------------------
 " 基本設定:
@@ -285,6 +289,9 @@ nnoremap <expr> <Space>h ':tab h ' . expand('<cword>')
 
 " ファイルの表示を整える
 nnoremap <Space>p :%s/\s\+$//ge<CR> gg =G
+
+" Align"
+nnoremap <Space>a :Align<Space>
 
 " quickrun"
 nnoremap <Space>r :QuickRun<CR>

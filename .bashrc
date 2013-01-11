@@ -13,8 +13,7 @@ PS1="${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[01;33m\] \W \$
 #  標準変数
 # ---------------------------------------------------------------------------
 
-export PATH=~/bin:$PATH
-export PATH=~/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/local/bin:$PATH
 export CLICOLOR=1
 export LS_COLORS='di=33'
 export EDITOR=vim
@@ -25,6 +24,7 @@ export HISTTIMEFORMAT='%Y-%m-%d %T '
 #  仮想端末
 # ---------------------------------------------------------------------------
 
+# tmuxでattachかnew-session
 if which tmux 2>&1 >/dev/null; then
   test -z "$TMUX" && (tmux attach || tmux new-session)
 fi
@@ -67,8 +67,7 @@ alias sadd='svn st | grep '?' | sed 's/\?//' | xargs svn add'
 alias sup='svn up'
 alias sci='svn ci'
 alias scim='svn ci -m'
-alias spll='svn pl -R ./ | grep "svn:" | sort | uniq -c'
-
+alias spll='svn pl -R ./ | grep "svn:" | sort | uniq -c' # 属性表示
 
 # for git
 alias g='git'
