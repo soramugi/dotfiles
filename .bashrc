@@ -54,9 +54,9 @@ alias vi='vim'
 alias v='vim'
 alias t='tar zxvf'
 alias t-='tar xvf -'
+alias g='grep'
 
 # for svn
-alias s='svn'
 alias st='svn st'
 alias stu='svn st -u'
 alias sd='svn di'
@@ -68,9 +68,9 @@ alias sup='svn up'
 alias sci='svn ci'
 alias scim='svn ci -m'
 alias spll='svn pl -R ./ | grep "svn:" | sort | uniq -c' # 属性表示
+alias scut='tr -s " " | cut -d  " " -f 2-'
 
 # for git
-alias g='git'
 alias gs='git status'
 alias gst='git status'
 alias gd='git diff'
