@@ -85,6 +85,13 @@ alias gsb='git submodule'
 alias grh='git reset --soft HEAD'
 alias grhh='git reset --hard HEAD'
 
+# ディレクトリ移動
+alias ..='cd ..'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+alias .....='cd ../../../../'
+alias ......='cd ../../../../../'
+
 # オリジナル
 alias vl='vim -u ~/dotfiles/.vimrclite --noplugin'
 alias eman='LANG=c man'
