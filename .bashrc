@@ -52,8 +52,8 @@ alias ll='ls -laF'
 alias l='ls -laF'
 alias vi='vim'
 alias v='vim'
-alias t='tar zxvf'
-alias t-='tar xvf -'
+t () { tar zcvf `basename $1`.tar.gz $@; }
+alias t-='tar zxvf'
 alias g='grep'
 
 # for svn
@@ -61,7 +61,7 @@ alias st='svn st'
 alias stu='svn st -u'
 alias sd='svn di'
 alias sdi='svn di'
-function sdl () { svn di  $@ | less; }
+sdl () { svn di  $@ | less; }
 alias sad='svn add'
 alias sadd='svn st | grep '?' | sed 's/\?//' | xargs svn add'
 alias sup='svn up'
@@ -89,4 +89,3 @@ alias grhh='git reset --hard HEAD'
 alias vl='vim -u ~/dotfiles/.vimrclite --noplugin'
 alias eman='LANG=c man'
 alias ctags_php='ctags --languages=PHP --langmap=PHP:.php --exclude="*.js" --php-types=c+f+d -f ~/php.tags -R `pwd` -a'
-function pgrep () { grep -rnIH --color=auto --include=*.php $@ *; }
