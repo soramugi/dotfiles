@@ -5,9 +5,6 @@ if [ -e $HOME/dotfiles/gitSetup.sh ] ; then
   source $HOME/dotfiles/gitSetup.sh
 fi
 
-# neobundle install
-vim -N -u NONE -i NONE -V1 -e -s --cmd "source ~/dotfiles/.vimrc" --cmd NeoBundleInstall! --cmd qall!
-
 # bashrcの書き込み
 if [ ! -e $HOME/.bash_aliases ] && [ ! -e $HOME/.profile ] ; then
   echo 'if [ -f ~/.bash_aliases ] ; then' >> $HOME/.bashrc
