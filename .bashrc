@@ -79,9 +79,15 @@ alias gad='git add'
 alias gci='git commit'
 alias gp='git push'
 alias gl='git pull'
+alias glr='git pull --rebase' #本家 自分' ## fork元に追随
+alias gre='git remote' #add 短縮名 git://huge.git'
 alias gco='git checkout'
+alias gb='git branch | grep "*" | cut -d " " -f 2-' # 今のブランチ名表示
 alias gbr='git branch'
+alias gbrd='git branch -d' #削除するbr
+alias gbrp='git push origin' #:削除するリモートbr
 alias gsb='git submodule'
+alias gr='git checkout -- ' # 指定したファイルの変更巻き戻し
 alias grh='git reset --soft HEAD'
 alias grhh='git reset --hard HEAD'
 # git alias help
