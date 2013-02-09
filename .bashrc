@@ -84,6 +84,8 @@ alias gbr='git branch'
 alias gsb='git submodule'
 alias grh='git reset --soft HEAD'
 alias grhh='git reset --hard HEAD'
+# git alias help
+alias gh='grep gi[t] ~/dotfiles/.bashrc | sed "s/^alias\ //" | grep --color=auto -e "^[a-z]\+"'
 
 # ディレクトリ移動
 alias ..='cd ..'
