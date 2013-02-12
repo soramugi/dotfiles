@@ -18,5 +18,12 @@ git config --global alias.gr 'log --graph --date=short --decorate=short --pretty
 git config --global color.ui true
 
 # サブモジュール
-git submodule init
-git submodule update
+if [ -e $HOME/dotfiles/.gitmodules ] ; then
+  git submodule init
+  git submodule update
+fi
+
+# 大事
+if [ ! -e $HOME/dotfiles/.vim/bundle/neobundle.vim ] ; then
+  git clone git://github.com/Shougo/neobundle.vim.git $HOME/dotfiles/.vim/bundle/neobundle.vim
+fi
