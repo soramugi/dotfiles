@@ -288,7 +288,7 @@ nnoremap <expr> <Space>G ':sil grep! ' . expand('<cword>') . ' *'
 nnoremap <expr> <Space>h ':tab h ' . expand('<cword>')
 
 " ファイルの表示を整える
-nnoremap <Space>p :%s/\s\+$//ge<CR> gg =G
+nnoremap <Space>p ma :%s/\s\+$//ge<CR> gg =G `a
 
 " Align"
 nnoremap <Space>a :Align<Space>
