@@ -1,4 +1,11 @@
 # ---------------------------------------------------------------------------
+# パス
+# ---------------------------------------------------------------------------
+
+export PATH=$HOME/bin:$HOME/local/bin:$PATH
+export EDITOR=vim
+
+# ---------------------------------------------------------------------------
 #  プロンプト
 # ---------------------------------------------------------------------------
 
@@ -9,16 +16,8 @@ set bell-style none
 # 表示形式
 PS1="${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[01;33m\] \W \$\[\033[00m\] "
 
-# ---------------------------------------------------------------------------
-#  標準変数
-# ---------------------------------------------------------------------------
-
-export PATH=$HOME/bin:$HOME/local/bin:$PATH
 export CLICOLOR=1
 export LS_COLORS='di=33'
-export EDITOR=vim
-export HISTSIZE=9999
-export HISTTIMEFORMAT='%Y-%m-%d %T '
 
 # ---------------------------------------------------------------------------
 #  仮想端末
@@ -38,14 +37,16 @@ history -r
 PROMPT_COMMAND='share_history'
 shopt -u histappend
 
+export HISTSIZE=9999
+export HISTTIMEFORMAT='%Y-%m-%d %T '
+
 # ---------------------------------------------------------------------------
 #  エイリアス
 # ---------------------------------------------------------------------------
 
-# 標準コマンド書き換え系
+# 標準コマンド書き換え
 alias sudo='sudo -H'
 alias less='less -M'
-alias grep='grep --color=auto'
 
 # 短縮
 alias ll='ls -laF'
@@ -55,6 +56,7 @@ alias v='vim'
 t () { tar zcvf `basename $1`.tar.gz $@; }
 alias t-='tar zxvf'
 alias g='grep'
+export GREP_OPTIONS='--color=auto --exclude=*.git* --exclude=*.svn*'
 
 # for svn
 alias st='svn st'
@@ -69,7 +71,7 @@ alias sci='svn ci'
 alias scim='svn ci -m'
 alias spll='svn pl -R ./ | grep "svn:" | sort | uniq -c' # 属性表示
 alias scut='tr -s " " | cut -d  " " -f 2-'
-alias sop='svn info | grep URL | cut -d " " -f 2- | xargs open'
+alias sop='svn info | grep URL | cut -d " " -f 2- | xargs open' # mac & webdev svn
 
 # for git
 alias gs='git status'
@@ -101,7 +103,7 @@ alias ....='cd ../../../'
 alias .....='cd ../../../../'
 alias ......='cd ../../../../../'
 
-# オリジナル
+# 拡張
 alias vl='vim -u ~/dotfiles/.vimrclite --noplugin'
 alias eman='LANG=c man'
 alias ctags_php='ctags --languages=PHP --langmap=PHP:.php --exclude="*.js" --php-types=c+f+d -f ~/php.tags -R `pwd` -a'

@@ -1,8 +1,8 @@
-#!/bin/bash
+#!/bin/sh
 
 # gitの設定読み込み
-if [ -e $HOME/dotfiles/gitSetup.sh ] ; then
-  source $HOME/dotfiles/gitSetup.sh
+if [ -e $HOME/dotfiles/git_setup.sh ] ; then
+  source $HOME/dotfiles/git_setup.sh
 fi
 
 # bashrcの書き込み
@@ -24,7 +24,7 @@ do
   fi
 done
 
-#初期読み込み
+# reload
 if [ -e $HOME/.profile ] ; then
   source $HOME/.profile
 fi
