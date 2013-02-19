@@ -124,6 +124,7 @@ let g:netrw_liststyle    = 3
 let g:netrw_winsize      = 100
 let g:netrw_altv         = 1
 let g:netrw_browse_split = 3
+let g:netrw_list_hide    = '\.svn,\.DS_Store'
 
 " Align"
 let g:Align_xstrlen = 3
