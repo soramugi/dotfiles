@@ -2,7 +2,7 @@
 
 # gitの設定読み込み
 if [ -e $HOME/dotfiles/git_setup.sh ] ; then
-  source $HOME/dotfiles/git_setup.sh
+  . $HOME/dotfiles/git_setup.sh
 fi
 
 # bashrcの書き込み
@@ -16,8 +16,8 @@ fi
 if [ ! -e $HOME/.bash_aliases ] ; then
   ln -s $HOME/dotfiles/.bashrc $HOME/.bash_aliases
 fi
-DOT_FILES=( .vimrc .gvimrc .tmux.conf )
-for file in ${DOT_FILES[@]}
+DOT_FILES=".vimrc .gvimrc .tmux.conf"
+for file in $DOT_FILES
 do
   if [ ! -e $HOME/$file ] ; then
     ln -s $HOME/dotfiles/$file $HOME/$file
@@ -26,8 +26,8 @@ done
 
 # reload
 if [ -e $HOME/.profile ] ; then
-  source $HOME/.profile
+  . $HOME/.profile
 fi
 if [ -e $HOME/.bash_profile ] ; then
-  source $HOME/.bash_profile
+  . $HOME/.bash_profile
 fi
