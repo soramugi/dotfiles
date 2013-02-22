@@ -39,6 +39,7 @@ NeoBundle 'mattn/webapi-vim'
 NeoBundle 'soramugi/vimplenote-vim', 'prot'
 NeoBundle 'mattn/excitetranslate-vim'
 NeoBundle 'kien/ctrlp.vim.git'
+NeoBundle 'szw/vim-tags'
 " IDE風
 NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'vim-scripts/Trinity'
@@ -128,6 +129,9 @@ let g:netrw_list_hide    = '\.svn,\.DS_Store'
 
 " Align"
 let g:Align_xstrlen = 3
+
+" vim-tags
+let g:vim_tags_project_tags_command = "ctags -f ~/tags -R `pwd` -a 2>/dev/null &"
 
 "---------------------------------------------------------------------------
 " 基本設定:
@@ -346,6 +350,9 @@ cnorea note VimpleNote
 
 " IDE風起動
 cnorea ta TrinityToggleAll
+
+" tags作成
+cnorea tg TagsGenerate
 
 "---------------------------------------------------------------------------
 " 編集に関する設定:
