@@ -40,6 +40,7 @@ NeoBundle 'soramugi/vimplenote-vim', 'prot'
 NeoBundle 'mattn/excitetranslate-vim'
 NeoBundle 'kien/ctrlp.vim.git'
 NeoBundle 'szw/vim-tags'
+NeoBundle 'tpope/vim-fugitive'
 " IDE風
 NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'vim-scripts/Trinity'
@@ -47,11 +48,6 @@ NeoBundle 'wesleyche/SrcExpl'
 "NeoBundle 'scrooloose/nerdtree'
 " Ruby環境
 NeoBundle 'vim-ruby/vim-ruby'
-" js環境
-NeoBundle 'JavaScript-syntax'
-NeoBundle 'pangloss/vim-javascript'
-" php環境
-NeoBundle 'soh335/vim-symfony'
 
 filetype plugin indent on
 
