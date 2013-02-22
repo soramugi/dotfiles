@@ -131,7 +131,7 @@ let g:netrw_list_hide    = '\.svn,\.DS_Store'
 let g:Align_xstrlen = 3
 
 " vim-tags
-let g:vim_tags_project_tags_command = "ctags -f ~/tags -R `pwd` -a 2>/dev/null &"
+au BufNewFile,BufRead *.php let g:vim_tags_project_tags_command = "ctags -R --languages=php -f ~/php.tags `pwd` 2>/dev/null &"
 
 "---------------------------------------------------------------------------
 " 基本設定:

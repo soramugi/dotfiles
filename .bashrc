@@ -106,4 +106,4 @@ alias ......='cd ../../../../../'
 # 拡張
 alias vl='vim -u ~/dotfiles/.vimrclite --noplugin'
 alias eman='LANG=c man'
-alias ctags_php='find `pwd` -name *.php | xargs ctags -f ~/php.tags'
+alias ctags_php='ctags -R --languages=php -f ~/php.tags `pwd`'
