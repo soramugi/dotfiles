@@ -1,2 +1,3 @@
 #!/bin/sh
-/usr/local/bin/ctags -f .git/tags `pwd`
+/usr/local/bin/ctags `pwd`
+mv tags .git/
