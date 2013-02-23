@@ -47,7 +47,7 @@ NeoBundle 'vim-scripts/Trinity'
 NeoBundle 'wesleyche/SrcExpl'
 "NeoBundle 'scrooloose/nerdtree'
 " Ruby環境
-NeoBundle 'vim-ruby/vim-ruby'
+""NeoBundle 'vim-ruby/vim-ruby'
 
 filetype plugin indent on
 

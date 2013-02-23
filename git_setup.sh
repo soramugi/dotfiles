@@ -1,6 +1,7 @@
 #!/bin/bash
 
 #gitの設定とか
+git config --global init.templatedir '~/dotfiles/.git_tmp'
 
 #エディタ
 git config --global core.editor 'vim -c "set fenc=utf-8"'
