@@ -1,3 +1,2 @@
 #!/bin/sh
-/usr/local/bin/ctags `pwd`
-mv tags .git/
+/usr/local/bin/ctags -R -f .git/tags --append=no `pwd`
