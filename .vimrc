@@ -25,12 +25,8 @@ NeoBundle 'thinca/vim-visualstar'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'vim-scripts/sudo.vim'
 NeoBundle 'vim-scripts/Align'
-"NeoBundle 'myusuf3/numbers.vim'
-"NeoBundle 'vim-scripts/TagHighlight'
 "NeoBundle 'nathanaelkane/vim-indent-guides'
-"NeoBundle 'vim-scripts/project.tar.gz'
 "NeoBundle 'vim-scripts/wokmarks.vim'
-"NeoBundle 'vim-scripts/gtags.vim'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'svn-diff.vim'
 NeoBundle 'scrooloose/syntastic'
@@ -45,9 +41,6 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'vim-scripts/Trinity'
 NeoBundle 'wesleyche/SrcExpl'
-"NeoBundle 'scrooloose/nerdtree'
-" Ruby環境
-""NeoBundle 'vim-ruby/vim-ruby'
 
 filetype plugin indent on
 
@@ -61,6 +54,7 @@ let g:neocomplcache_enable_auto_select           = 0
 let g:neocomplcache_enable_camel_case_completion = 1
 let g:neocomplcache_enable_underbar_completion   = 1
 let g:neocomplcache_max_list                     = 10
+inoremap <expr><CR> neocomplcache#smart_close_popup() . "\<CR>"
 
 " quickrun
 let g:quickrun_config = {
@@ -142,6 +136,7 @@ set matchtime=2
 set wildmenu
 set formatoptions+=mM
 set clipboard=unnamed,autoselect
+set nrformats=
 " バックアップ作成
 set noswapfile
 set nobackup
