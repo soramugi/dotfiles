@@ -21,8 +21,8 @@ if [ ! -e $HOME/local/src/vim ] ; then
     hg clone https://vim.googlecode.com/hg/ vim
   else
     wget ftp://ftp.vim.org/pub/vim/unix/vim-7.3.tar.bz2
-    tar zxvf vim-7.3.tar.bz2
-    mv vim-7.3 vim
+    bzip2 -dc vim-7.3.tar.bz2 | tar xvf -
+    mv vim73 vim
   fi
   cd vim
   ./configure \
