@@ -1,12 +1,12 @@
 #!/bin/sh
 
 # debian
-if type -t apt-get ; then
+if type -P apt-get >/dev/null ; then
   sudo apt-get install mercurial libncurses-dev make gcc wget
 fi
 
 # redhat
-if type -t yum ; then
+if type -P yum >/dev/null ; then
   sudo yum install mercurial ncurses-devel make gcc wget
 fi
 
@@ -17,7 +17,7 @@ mkdir -p $HOME/local/src
 # vim install
 if [ ! -e $HOME/local/src/vim ] ; then
   cd $HOME/local/src/
-  if type -t hg ; then
+  if type -P hg >/dev/null ; then
     hg clone https://vim.googlecode.com/hg/ vim
   else
     wget ftp://ftp.vim.org/pub/vim/unix/vim-7.3.tar.bz2

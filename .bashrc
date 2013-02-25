@@ -24,7 +24,7 @@ export LS_COLORS='di=33'
 # ---------------------------------------------------------------------------
 
 # tmuxでattachかnew-session
-if which tmux 2>&1 >/dev/null; then
+if type -P tmux >/dev/null ; then
   test -z "$TMUX" && (tmux attach || tmux new-session)
 fi
 
