@@ -56,7 +56,7 @@ alias v='vim'
 t () { tar zcvf `basename $1`.tar.gz $@; }
 alias t-='tar zxvf'
 alias g='grep'
-export GREP_OPTIONS='--color=auto --exclude=*.git* --exclude=*.svn*'
+export GREP_OPTIONS='--color=auto --exclude=*.git* --exclude=*.svn* --exclude=*tags*'
 
 # for svn
 alias st='svn st'
