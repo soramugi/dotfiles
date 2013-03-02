@@ -308,23 +308,18 @@ nmap <C-e> :ExciteTranslate<CR>
 " noreab/noreabbrev           @                @
 "---------------------------------------------------------------------------
 
-cnorea h tab help
-
 " NeoBundle
-cnorea neoli  NeoBundleList
-cnorea neoin  NeoBundleInstall
-cnorea neoin! NeoBundleInstall!
-cnorea neocl  NeoBundleClean
-cnorea neocl! NeoBundleClean!
-
-" netrw
-cnorea tl 20Vexplore
+cnorea Neoli  NeoBundleList
+cnorea Neoin  NeoBundleInstall
+cnorea Neoin! NeoBundleInstall!
+cnorea Neocl  NeoBundleClean
+cnorea Neocl! NeoBundleClean!
 
 " IDE風起動
-cnorea ta TrinityToggleAll
+cnorea IDE TrinityToggleAll
 
 " tags作成
-cnorea tg TagsGenerate
+cnorea Ctags TagsGenerate
 
 " memo
 cnorea Memo edit ~/Dropbox/Memo/Memo.txt
