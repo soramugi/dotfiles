@@ -113,9 +113,6 @@ let g:netrw_list_hide    = '\.svn,\.DS_Store'
 " Align"
 let g:Align_xstrlen = 3
 
-" vim-tags
-au BufNewFile,BufRead *.php let g:vim_tags_project_tags_command = "ctags -R --languages=php -f ~/php.tags `pwd` 2>/dev/null &"
-
 " memolist.vim
 let g:memolist_path = "$HOME/Dropbox/Memo"
 
@@ -123,6 +120,8 @@ let g:memolist_path = "$HOME/Dropbox/Memo"
 " 基本設定:
 "---------------------------------------------------------------------------
 
+helptags $HOME/dotfiles/.vim/doc
+set tags+=$HOME/tags
 set runtimepath+=~/dotfiles/.vim/
 " 編集系
 set fileformats=unix,dos,mac
@@ -166,8 +165,6 @@ set grepprg=grep\ -rnIH\ --exclude=*.svn*\ --exclude=*.git*
 autocmd QuickfixCmdPost vimgrep copen
 autocmd QuickfixCmdPost grep copen
 set switchbuf+=usetab,newtab
-" 日本語ドキュメントの格納場所
-helptags $HOME/dotfiles/.vim/doc
 " ステータスラインに表示する情報の指定
 set statusline=%n%{winnr('$')>1?'/'.winnr().'/'.winnr('$'):''}\:%y%F\%h%w%m%r%=\|%{(&fenc!=''?&fenc:&enc).'\|'.&ff.'\|'}<%c,%l/%L:%p%%>
 
@@ -194,17 +191,6 @@ set autoindent
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
-
-" 拡張子で変更
-au BufNewFile,BufRead *.php  set tabstop=4 shiftwidth=4 softtabstop=4
-
-"---------------------------------------------------------------------------
-" タグ
-"---------------------------------------------------------------------------
-set tags+=$HOME/tags
-
-" 拡張子で読み込みタグ変更
-au BufNewFile,BufRead *.php set tags+=$HOME/php.tags
 
 "---------------------------------------------------------------------------
 " キーバインド設定
@@ -385,3 +371,9 @@ let php_sql_query=1
 let php_htmlInStrings=1
 let php_noShortTags = 1
 let php_folding = 1
+au BufNewFile,BufRead *.php set tabstop=4 shiftwidth=4 softtabstop=4
+au BufNewFile,BufRead *.php set tags+=$HOME/php.tags
+au BufNewFile,BufRead *.php set dictionary=~/.vim/dict/php.dict filetype=php
+" vim-tags
+au BufNewFile,BufRead *.php let g:vim_tags_project_tags_command = "ctags -R --languages=php -f ~/php.tags `pwd` 2>/dev/null &"
+

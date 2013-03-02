@@ -5,6 +5,11 @@ if [ -e $HOME/dotfiles/git_setup.sh ] ; then
   . $HOME/dotfiles/git_setup.sh
 fi
 
+# dictファイルの作成
+if type -P php > /dev/null ; then
+  php ~/dotfiles/.vim/dict/dict.php | sort > ~/dotfiles/.vim/dict/php.dict 2>&1 /dev/null
+fi
+
 # bashrcの書き込み
 if [ ! -e $HOME/.bash_aliases ] && [ ! -e $HOME/.profile ] ; then
   echo 'if [ -f ~/.bash_aliases ] ; then' >> $HOME/.bashrc
