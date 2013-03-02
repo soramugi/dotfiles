@@ -32,11 +32,11 @@ NeoBundle 'svn-diff.vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'mattn/webapi-vim'
-NeoBundle 'soramugi/vimplenote-vim', 'prot'
 NeoBundle 'mattn/excitetranslate-vim'
 NeoBundle 'kien/ctrlp.vim.git'
 NeoBundle 'szw/vim-tags'
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'glidenote/memolist.vim'
 " IDE風
 NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'vim-scripts/Trinity'
@@ -92,13 +92,6 @@ endif
 " open-browser
 let g:netrw_nogx = 1
 
-" vimplenote
-if filereadable(expand('$HOME/.VimpleNote'))
-  " let g:VimpleNoteUsername = your_email
-  " let g:VimpleNotePassword = your_pass
-  source $HOME/.VimpleNote
-endif
-
 source $VIMRUNTIME/macros/matchit.vim
 
 " yanktmp
@@ -122,6 +115,9 @@ let g:Align_xstrlen = 3
 
 " vim-tags
 au BufNewFile,BufRead *.php let g:vim_tags_project_tags_command = "ctags -R --languages=php -f ~/php.tags `pwd` 2>/dev/null &"
+
+" memolist.vim
+let g:memolist_path = "$HOME/Dropbox/Memo"
 
 "---------------------------------------------------------------------------
 " 基本設定:
@@ -336,14 +332,16 @@ cnorea neocl! NeoBundleClean!
 " netrw
 cnorea tl 20Vexplore
 
-" VimpleNote
-cnorea note VimpleNote
-
 " IDE風起動
 cnorea ta TrinityToggleAll
 
 " tags作成
 cnorea tg TagsGenerate
+
+" memo
+cnorea Memo edit ~/Dropbox/Memo/Memo.txt
+command! -nargs=1 Tmp edit ~/Dropbox/Memo/tmp/tmp.<args>
+command! -nargs=1 Temp edit ~/Dropbox/Memo/tmp/tmp.<args>
 
 "---------------------------------------------------------------------------
 " 編集に関する設定:
