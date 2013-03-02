@@ -117,6 +117,8 @@ let g:Align_xstrlen = 3
 " memolist.vim
 let g:memolist_path = "$HOME/Dropbox/Memo"
 
+autocmd FileType gitcommit DiffGitCached | only | split | b 1
+
 "---------------------------------------------------------------------------
 " 基本設定:
 "---------------------------------------------------------------------------
