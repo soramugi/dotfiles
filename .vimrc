@@ -21,6 +21,7 @@ NeoBundle 'Shougo/vimproc', {
       \   },
       \ }
 NeoBundle 'vim-scripts/yanktmp.vim'
+NeoBundle 'vim-jp/vimdoc-ja'
 NeoBundle 'thinca/vim-visualstar'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'vim-scripts/sudo.vim'
@@ -120,7 +121,6 @@ let g:memolist_path = "$HOME/Dropbox/Memo"
 " 基本設定:
 "---------------------------------------------------------------------------
 
-helptags $HOME/dotfiles/.vim/doc
 set tags+=$HOME/tags
 set runtimepath+=~/dotfiles/.vim/
 " 編集系
