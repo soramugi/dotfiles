@@ -72,6 +72,7 @@ alias scim='svn ci -m'
 alias spll='svn pl -R ./ | grep "svn:" | sort | uniq -c' # 属性表示
 alias scut='tr -s " " | cut -d  " " -f 2-'
 alias sop='svn info | grep URL | cut -d " " -f 2- | xargs open' # mac & webdev svn
+alias srm!='svn st | grep ! | tr -s " " | cut -d  " " -f 2- | xargs svn rm'
 
 # for git
 alias gs='git status'
