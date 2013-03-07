@@ -5,6 +5,12 @@ if [ -e $HOME/dotfiles/git_setup.sh ] ; then
   . $HOME/dotfiles/git_setup.sh
 fi
 
+if vim --version | grep 7.3 > /dev/null ; then
+  . ~/dotfiles/neoinstall
+else
+  echo 'please vim version update 7.3'
+fi
+
 # dictファイルの作成
 if type -P php > /dev/null ; then
   php ~/dotfiles/.vim/dict/dict.php | sort > ~/dotfiles/.vim/dict/php.dict 2>&1 /dev/null
