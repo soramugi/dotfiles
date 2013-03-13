@@ -62,6 +62,7 @@ alias fname='find . -name'
 
 # for svn
 alias st='svn st'
+stl () { svn st  $@ | less; }
 alias stu='svn st -u'
 alias sd='svn di'
 alias sdi='svn di'
