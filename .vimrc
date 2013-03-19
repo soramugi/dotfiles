@@ -103,6 +103,11 @@ map <silent> sP :call YanktmpPaste_P()<CR>
 
 " ctrlp
 let g:ctrlp_map = '<Space>f'
+let g:ctrlp_prompt_mappings = {
+      \ 'AcceptSelection("e")': [],
+      \ 'AcceptSelection("t")': ['<cr>', '<c-m>'],
+      \ }
+let g:ctrlp_working_path_mode = 'a'
 
 " netrw
 let g:netrw_liststyle    = 3
