@@ -10,8 +10,6 @@ if has('vim_starting')
 endif
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neocomplcache'
-NeoBundle 'Shougo/neosnippet'
-NeoBundle 'honza/snipmate-snippets'
 NeoBundle 'Shougo/vimproc', {
       \ 'build' : {
       \     'windows' : 'echo "Sorry, cannot update vimproc binary file in Windows."',
@@ -83,12 +81,6 @@ let g:tlist_php_settings     = 'php;c:class;d:constant;f:function'
 " syntastic.vim
 let g:syntastic_enable_signs  = 1
 let g:syntastic_auto_loc_list = 2
-
-" neosnippet
-let g:neosnippet#snippets_directory='~/dotfiles/.vim/bundle/snipmate-snippets/snippets'
-if has('conceal')
-  set conceallevel=2 concealcursor=i
-endif
 
 " open-browser
 let g:netrw_nogx = 1
@@ -290,12 +282,6 @@ map # <Plug>(visualstar-#)<Plug>N
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><C-j> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><C-k> pumvisible() ? "\<C-p>" : "\<TAB>"
-
-" neosnippet
-imap <C-i> <Plug>(neosnippet_expand_or_jump)
-smap <C-i> <Plug>(neosnippet_expand_or_jump)
-imap <expr><TAB> neosnippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
 " open-browser
 nmap <C-O> <Plug>(openbrowser-smart-search)
