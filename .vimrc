@@ -362,6 +362,7 @@ let php_folding = 1
 au BufNewFile,BufRead *.php set tabstop=4 shiftwidth=4 softtabstop=4
 au BufNewFile,BufRead *.php set tags+=$HOME/php.tags
 au BufNewFile,BufRead *.php set dictionary=~/.vim/dict/php.dict filetype=php
-" vim-tags
 au BufNewFile,BufRead *.php let g:vim_tags_project_tags_command = "ctags -R --languages=php -f ~/php.tags `pwd` 2>/dev/null &"
 
+" markdown
+au BufNewFile,BufRead *.markdown set tabstop=4 shiftwidth=4 softtabstop=4
