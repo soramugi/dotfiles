@@ -36,6 +36,7 @@ NeoBundle 'kien/ctrlp.vim.git'
 NeoBundle 'szw/vim-tags'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'glidenote/memolist.vim'
+NeoBundle 'kana/vim-fakeclip.git'
 " IDE風
 NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'vim-scripts/Trinity'
@@ -129,7 +130,7 @@ set showmatch
 set matchtime=2
 set wildmenu
 set formatoptions+=mM
-set clipboard=unnamed,autoselect
+set clipboard=unnamed
 set nrformats=
 " バックアップ作成
 set noswapfile
