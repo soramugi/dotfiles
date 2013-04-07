@@ -37,6 +37,7 @@ NeoBundle 'szw/vim-tags'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'glidenote/memolist.vim'
 NeoBundle 'kana/vim-fakeclip.git'
+NeoBundle 'tpope/vim-abolish'
 " IDE風
 NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'vim-scripts/Trinity'
