@@ -1,0 +1,12 @@
+#!/bin/sh
+
+if ! test /usr/local/bin/vi; then
+  brew install macvim --override-system-vim
+fi
+
+cd ~/Downloads/
+git clone git://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard.git
+cd tmux-MacOSX-pasteboard
+
+make reattach-to-user-namespace
+cp reattach-to-user-namespace ~/bin
