@@ -370,5 +370,8 @@ au BufNewFile,BufRead *.php set tags+=$HOME/php.tags
 au BufNewFile,BufRead *.php set dictionary=~/.vim/dict/php.dict filetype=php
 au BufNewFile,BufRead *.php let g:vim_tags_project_tags_command = "ctags -R --languages=php -f ~/php.tags `pwd` 2>/dev/null &"
 
+abbreviate <p <?php?><LEFT><LEFT>
+
+
 " markdown
 au BufNewFile,BufRead *.markdown set tabstop=4 shiftwidth=4 softtabstop=4
