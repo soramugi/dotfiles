@@ -227,6 +227,11 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
 nnoremap <c-h> <c-w>h
 
+" バッファ
+nnoremap <Tab>             :bnext<CR>
+nnoremap <S-Tab>           :bprevious<CR>
+nnoremap <silent> <Space>d :bdelete<CR>
+
 " tab移動
 nnoremap <C-n> gt
 nnoremap <C-p> gT
