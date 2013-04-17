@@ -355,23 +355,3 @@ if has('multi_byte_ime') || has('xim')
   " 挿入モード・検索モードでのデフォルトのIME状態設定
   set iminsert=0 imsearch=0
 endif
-
-"---------------------------------------------------------------------------
-" 言語毎設定
-"---------------------------------------------------------------------------
-
-" php
-let php_sql_query=1
-let php_htmlInStrings=1
-let php_noShortTags = 1
-let php_folding = 1
-au BufNewFile,BufRead *.php set tabstop=4 shiftwidth=4 softtabstop=4
-au BufNewFile,BufRead *.php set tags+=$HOME/php.tags
-au BufNewFile,BufRead *.php set dictionary=~/.vim/dict/php.dict filetype=php
-au BufNewFile,BufRead *.php let g:vim_tags_project_tags_command = "ctags -R --languages=php -f ~/php.tags `pwd` 2>/dev/null &"
-
-abbreviate <p <?php?><LEFT><LEFT>
-
-
-" markdown
-au BufNewFile,BufRead *.markdown set tabstop=4 shiftwidth=4 softtabstop=4
