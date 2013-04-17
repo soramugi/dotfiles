@@ -232,8 +232,7 @@ nnoremap <C-n> gt
 nnoremap <C-p> gT
 
 " カレントディレクトリをtabで開く
-nnoremap <silent> <Space>t :<C-u>tabnew ./<CR>
-" 開いてるファイルをtabで開く
+nnoremap <silent> <Space>t :<C-u>tabnew<CR>
 nnoremap <silent> <Space>T :<C-u>tabnew %<CR>
 
 " s* で置換指定
