@@ -296,6 +296,8 @@ vmap <C-O> <Plug>(openbrowser-smart-search)
 " excitetranslate-vim
 nmap <C-e> :ExciteTranslate<CR>
 
+" memolist.vim
+nnoremap <silent> <Space>m :MemoList<CR>
 "---------------------------------------------------------------------------
 " 短縮入力:
 "---------------------------------------------------------------------------
