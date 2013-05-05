@@ -2,7 +2,10 @@
 # パス
 # ---------------------------------------------------------------------------
 
-export PATH=$HOME/bin:$HOME/local/bin:$PATH
+export PATH=$HOME/local/bin:$PATH
+export PATH=./bin:vendor/bin:$PATH
+export PATH=$HOME/bin:$PATH
+
 export EDITOR=vim
 
 # ---------------------------------------------------------------------------
