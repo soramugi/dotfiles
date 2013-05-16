@@ -308,13 +308,6 @@ nnoremap <silent> <Space>m :MemoList<CR>
 " noreab/noreabbrev           @                @
 "---------------------------------------------------------------------------
 
-" NeoBundle
-cnorea Neoli  NeoBundleList
-cnorea Neoin  NeoBundleInstall
-cnorea Neoin! NeoBundleInstall!
-cnorea Neocl  NeoBundleClean
-cnorea Neocl! NeoBundleClean!
-
 " IDE風起動
 cnorea IDE TrinityToggleAll
 
