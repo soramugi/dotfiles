@@ -2,6 +2,7 @@
 
 if [ ! -f /usr/local/bin/brew ] ; then
   ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+  echo 'export PATH=/usr/local/bin:$PATH' >> .bashrc
 fi
 
 if [ ! -f /usr/local/bin/macvim ] ; then
@@ -24,6 +25,6 @@ fi
 make reattach-to-user-namespace
 cp reattach-to-user-namespace ~/bin
 
-if [ -f ~/.bash_profile ] ; then
-  echo 'if [ -f ~/.bashrc ] ; then . ~/.bashrc; fi' > ~/.bash_profile
+if [ ! -f ~/.bash_profile ] ; then
+  echo 'if [ -f ~/.bashrc ] ; then . ~/.bashrc; fi' >> ~/.bash_profile
 fi
