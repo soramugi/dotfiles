@@ -1,14 +1,14 @@
 #!/bin/sh
 
-if ! test /usr/local/bin/brew; then
+if [ ! -f /usr/local/bin/brew ] ; then
   ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 fi
 
-if ! test /usr/local/bin/vi; then
+if [ ! -f /usr/local/bin/macvim ] ; then
   /usr/local/bin/brew install macvim --override-system-vim
 fi
 
-if ! test /usr/local/bin/tmux; then
+if [ ! -f /usr/local/bin/tmux ] ; then
   /usr/local/bin/brew install tmux
 fi
 
