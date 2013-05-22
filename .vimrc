@@ -228,6 +228,10 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
 nnoremap <c-h> <c-w>h
 
+" 高速移動
+nnoremap J }
+nnoremap K {
+
 " バッファ
 nnoremap <Tab>             :bnext<CR>
 nnoremap <S-Tab>           :bprevious<CR>
