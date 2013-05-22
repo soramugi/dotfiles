@@ -59,7 +59,8 @@ alias v='vim'
 t () { tar zcvf `basename $1`.tar.gz $@; }
 alias t-='tar zxvf'
 g () { grep -lr $1 * | xargs grep -v -e "^[ \t]*[#*/]" | grep --color=auto $1; }
-export GREP_OPTIONS='--color=auto --exclude=*.git* --exclude=*.svn* --exclude=*tags*'
+export GREP_OPTIONS='--color=auto --binary-files=without-match --line-number'
+export GREP_OPTIONS='--exclude=*.git* --exclude=*.svn* --exclude=*tags* '$GREP_OPTIONS
 alias be='bundle exec'
 alias fname='find . -name'
 loop () { while (true) do $@ ; sleep 2; done;}
