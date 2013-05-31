@@ -162,6 +162,7 @@ set hlsearch
 set ignorecase
 set smartcase
 set wrapscan
+set keywordprg=:help
 set history=100
 set grepprg=grep\ -rnIH\ --exclude=*.svn*\ --exclude=*.git*
 autocmd QuickfixCmdPost vimgrep copen
