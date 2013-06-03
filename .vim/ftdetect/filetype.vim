@@ -9,3 +9,6 @@ autocmd BufRead,BufNewFile *.ru        setfiletype ruby
 
 "js"
 autocmd BufRead,BufNewFile *.coffee    setfiletype javascript
+
+"tags"
+autocmd BufRead,BufNewFile *.tags    setfiletype tags
