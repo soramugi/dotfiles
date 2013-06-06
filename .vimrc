@@ -65,14 +65,9 @@ let g:quickrun_config = {
       \       'outputter/buffer/split' : ':botright 8sp',
       \       'runner/vimproc/updatetime' : 40,
       \   },
-      \   'ruby.rspec' : {
-      \       'command' : 'rspec'
-      \   }
+      \   'ruby.rspec'  : { 'command' : 'rspec' },
+      \   'php.phpunit' : { 'command' : 'phpunit' }
       \}
-augroup UjihisaRSpec
-  autocmd!
-  autocmd BufWinEnter,BufNewFile *_spec.rb set filetype=ruby.rspec
-augroup END
 
 " taglist.vim
 set tags=tags
