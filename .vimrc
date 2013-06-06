@@ -62,12 +62,14 @@ inoremap <expr><CR> neocomplcache#smart_close_popup() . "\<CR>"
 let g:quickrun_config = {
       \   '_' : {
       \       'runner' : 'vimproc',
-      \       'outputter/buffer/split' : ':botright 8sp',
+      \       'outputter/buffer/split' : ':botright 10sp',
       \       'runner/vimproc/updatetime' : 40,
       \   },
       \   'ruby.rspec'  : { 'command' : 'rspec' },
       \   'php.phpunit' : { 'command' : 'phpunit' }
       \}
+
+autocmd BufWriteCmd *Test.php :QuickRun
 
 " taglist.vim
 set tags=tags
