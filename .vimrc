@@ -69,7 +69,7 @@ let g:quickrun_config = {
       \   'php.phpunit' : { 'command' : 'phpunit' }
       \}
 
-autocmd BufWriteCmd *Test.php :QuickRun
+autocmd BufWritePost *Test.php :QuickRun
 
 " taglist.vim
 set tags=tags
