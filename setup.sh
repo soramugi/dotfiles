@@ -5,6 +5,8 @@ if [ -e $HOME/dotfiles/git_setup.sh ] ; then
   . $HOME/dotfiles/git_setup.sh
 fi
 
+git pull
+
 if vim --version | grep 7.3 > /dev/null ; then
   . ~/dotfiles/neoinstall
 else
