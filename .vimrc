@@ -81,6 +81,9 @@ let g:tlist_php_settings     = 'php;c:class;d:constant;f:function'
 " syntastic.vim
 let g:syntastic_enable_signs  = 1
 let g:syntastic_auto_loc_list = 2
+let g:syntastic_check_on_open = 1
+let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
+let g:syntastic_php_phpcs_args="--standard=Zend --report=checkstyle"
 
 " open-browser
 let g:netrw_nogx = 1
