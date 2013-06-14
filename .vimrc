@@ -40,6 +40,7 @@ NeoBundle 'glidenote/memolist.vim'
 NeoBundle 'kana/vim-fakeclip.git'
 NeoBundle 'tpope/vim-abolish'
 NeoBundle 'mattn/habatobi-vim'
+NeoBundle 'kannokanno/previm'
 " IDE風
 NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'vim-scripts/Trinity'
@@ -119,6 +120,9 @@ let g:memolist_path = "$HOME/Dropbox/Memo"
 
 autocmd FileType gitcommit DiffGitCached | only | split | b 1
 
+" previm"
+let g:previm_open_cmd = 'open -a Safari'
+
 "---------------------------------------------------------------------------
 " 基本設定:
 "---------------------------------------------------------------------------
@@ -131,6 +135,7 @@ set backspace=2
 set showmatch
 set matchtime=2
 set wildmenu
+set wildmode=longest:full,full
 set formatoptions+=mM
 set clipboard=unnamed
 set nrformats=
@@ -308,6 +313,15 @@ nnoremap <silent> <Space>m :MemoList<CR>
 " cnorea/cnoreabbrev          -                @
 " noreab/noreabbrev           @                @
 "---------------------------------------------------------------------------
+
+"移動"
+cnoremap <C-a> <Home>
+cnoremap <C-b> <Left>
+cnoremap <C-d> <Del>
+cnoremap <C-e> <End>
+cnoremap <C-f> <Right>
+cnoremap <C-n> <Down>
+cnoremap <C-p> <Up>
 
 " IDE風起動
 cnorea IDE TrinityToggleAll
