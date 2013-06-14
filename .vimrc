@@ -39,6 +39,7 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'glidenote/memolist.vim'
 NeoBundle 'kana/vim-fakeclip.git'
 NeoBundle 'tpope/vim-abolish'
+NeoBundle 'mattn/habatobi-vim'
 " IDE風
 NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'vim-scripts/Trinity'
@@ -81,7 +82,7 @@ let g:tlist_php_settings     = 'php;c:class;d:constant;f:function'
 " syntastic.vim
 let g:syntastic_enable_signs  = 1
 let g:syntastic_auto_loc_list = 2
-let g:syntastic_check_on_open = 1
+""let g:syntastic_check_on_open = 1
 let g:syntastic_php_phpcs_args = '--report=csv --standard=Zend'
 
 " open-browser
