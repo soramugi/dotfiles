@@ -217,7 +217,7 @@ set shiftwidth=2
 let mapleader = ","
 
 " /で別ウィンドウ開く
-nnoremap / q/a
+nnoremap / q/a\v
 
 " 終了
 nnoremap <C-q> :q<CR>
