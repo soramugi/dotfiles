@@ -41,6 +41,7 @@ NeoBundle 'kana/vim-fakeclip.git'
 NeoBundle 'tpope/vim-abolish'
 NeoBundle 'mattn/habatobi-vim'
 NeoBundle 'kannokanno/previm'
+NeoBundle 'deris/vim-rengbang'
 " IDE風
 NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'vim-scripts/Trinity'
