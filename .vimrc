@@ -42,6 +42,7 @@ NeoBundle 'tpope/vim-abolish'
 NeoBundle 'mattn/habatobi-vim'
 NeoBundle 'kannokanno/previm'
 NeoBundle 'deris/vim-rengbang'
+NeoBundle 'vcscommand.vim'
 " IDE風
 NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'vim-scripts/Trinity'
