@@ -66,7 +66,7 @@ inoremap <expr><CR> neocomplcache#smart_close_popup() . "\<CR>"
 let g:quickrun_config = {
       \   '_' : {
       \       'runner' : 'vimproc',
-      \       'outputter/buffer/split' : ':botright 10sp',
+      \       'outputter/buffer/split' : ':botright 20sp',
       \       'runner/vimproc/updatetime' : 40,
       \   },
       \   'ruby.rspec'  : { 'command' : 'rspec' },
