@@ -40,7 +40,7 @@ NeoBundle 'glidenote/memolist.vim'
 NeoBundle 'kana/vim-fakeclip.git'
 NeoBundle 'tpope/vim-abolish'
 NeoBundle 'mattn/habatobi-vim'
-NeoBundle 'kannokanno/previm'
+NeoBundle 'kannokanno/previm', { 'rev' : '1.0' }
 NeoBundle 'deris/vim-rengbang'
 NeoBundle 'vcscommand.vim'
 " IDE風
