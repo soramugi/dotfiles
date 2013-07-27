@@ -19,3 +19,6 @@ autocmd BufRead,BufNewFile *.tags    setfiletype tags
 
 "markdown"
 autocmd BufRead,BufNewFile *.md setfiletype markdown
+
+"xml"
+autocmd BufRead,BufNewFile *.dist setfiletype xml
