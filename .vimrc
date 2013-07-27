@@ -43,6 +43,8 @@ NeoBundle 'mattn/habatobi-vim'
 NeoBundle 'kannokanno/previm', { 'rev' : '1.0' }
 NeoBundle 'deris/vim-rengbang'
 NeoBundle 'vcscommand.vim'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vimfiler'
 " IDE風
 NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'vim-scripts/Trinity'
@@ -108,11 +110,11 @@ let g:ctrlp_prompt_mappings = {
 let g:ctrlp_working_path_mode = 'a'
 
 " netrw
-let g:netrw_liststyle    = 3
-let g:netrw_winsize      = 100
-let g:netrw_altv         = 1
-let g:netrw_browse_split = 3
-let g:netrw_list_hide    = '\.git,\.svn,\.DS_Store'
+""let g:netrw_liststyle    = 3
+""let g:netrw_winsize      = 100
+""let g:netrw_altv         = 1
+""let g:netrw_browse_split = 3
+""let g:netrw_list_hide    = '\.git,\.svn,\.DS_Store'
 
 " Align"
 let g:Align_xstrlen = 3
@@ -124,6 +126,10 @@ autocmd FileType gitcommit DiffGitCached | only | split | b 1
 
 " previm"
 let g:previm_open_cmd = 'open -a Safari'
+
+"vimfiler"
+let g:vimfiler_as_default_explorer = 1
+let g:vimfiler_edit_action = 'tabopen'
 
 "---------------------------------------------------------------------------
 " 基本設定:
