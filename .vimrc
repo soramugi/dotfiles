@@ -45,6 +45,7 @@ NeoBundle 'deris/vim-rengbang'
 NeoBundle 'vcscommand.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimfiler'
+NeoBundle 'yuratomo/w3m.vim'
 " IDE風
 NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'vim-scripts/Trinity'
