@@ -43,8 +43,8 @@ NeoBundleLazy "mattn/habatobi-vim", { 'autoload' : { 'commands' : [ "Habatobi" ]
 NeoBundle 'kannokanno/previm', { 'rev' : '1.0' }
 NeoBundle 'deris/vim-rengbang'
 NeoBundle 'vcscommand.vim'
-NeoBundleLazy "Shougo/unite.vim", { 'autoload' : { 'commands' : [ "Unite" ] } }
-NeoBundle 'Shougo/vimfiler'
+NeoBundle "Shougo/unite.vim"
+NeoBundle 'Shougo/vimfiler', { 'depends' : ["Shougo/unite.vim"] }
 NeoBundleLazy 'yuratomo/w3m.vim', {
       \   'autoload' : {
       \       'commands' : [ "W3m", "W3mHistory", "W3mHistoryClear", "W3mLocal", "W3mSplit", "W3mTab", "W3mVSplit" ]
