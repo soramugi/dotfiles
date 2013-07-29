@@ -24,7 +24,7 @@ NeoBundle 'thinca/vim-visualstar'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'vim-scripts/sudo.vim'
 NeoBundle 'vim-scripts/Align'
-NeoBundle 'vim-scripts/netrw.vim'
+"NeoBundle 'vim-scripts/netrw.vim'
 "NeoBundle 'nathanaelkane/vim-indent-guides'
 "NeoBundle 'vim-scripts/wokmarks.vim'
 NeoBundle 'tpope/vim-surround'
@@ -39,17 +39,21 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'glidenote/memolist.vim'
 NeoBundle 'kana/vim-fakeclip.git'
 NeoBundle 'tpope/vim-abolish'
-NeoBundle 'mattn/habatobi-vim'
+NeoBundleLazy "mattn/habatobi-vim", { 'autoload' : { 'commands' : [ "Habatobi" ] } }
 NeoBundle 'kannokanno/previm', { 'rev' : '1.0' }
 NeoBundle 'deris/vim-rengbang'
 NeoBundle 'vcscommand.vim'
-NeoBundle 'Shougo/unite.vim'
+NeoBundleLazy "Shougo/unite.vim", { 'autoload' : { 'commands' : [ "Unite" ] } }
 NeoBundle 'Shougo/vimfiler'
-NeoBundle 'yuratomo/w3m.vim'
+NeoBundleLazy 'yuratomo/w3m.vim', {
+      \   'autoload' : {
+      \       'commands' : [ "W3m", "W3mHistory", "W3mHistoryClear", "W3mLocal", "W3mSplit", "W3mTab", "W3mVSplit" ]
+      \   }
+      \}
 " IDE風
-NeoBundle 'vim-scripts/taglist.vim'
-NeoBundle 'vim-scripts/Trinity'
-NeoBundle 'wesleyche/SrcExpl'
+""NeoBundle 'vim-scripts/taglist.vim'
+""NeoBundle 'vim-scripts/Trinity'
+""NeoBundle 'wesleyche/SrcExpl'
 
 filetype plugin indent on
 
@@ -333,7 +337,7 @@ cnoremap <C-n> <Down>
 cnoremap <C-p> <Up>
 
 " IDE風起動
-cnorea IDE TrinityToggleAll
+""cnorea IDE TrinityToggleAll
 
 " tags作成
 cnorea Ctags TagsGenerate
