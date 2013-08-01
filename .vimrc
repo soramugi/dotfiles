@@ -80,6 +80,7 @@ let g:quickrun_config = {
       \       'outputter/buffer/split' : ':botright 20sp',
       \       'runner/vimproc/updatetime' : 40,
       \   },
+      \   'markdown'  : { 'outputter' : 'browser' },
       \   'ruby.rspec'  : { 'command' : 'rspec' },
       \   'php.phpunit' : { 'command' : 'phpunit' },
       \   'phpcs'  : { "cmdopt" : "--encoding=utf-8 --standard=./phpcs.xml" },
