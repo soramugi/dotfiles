@@ -82,6 +82,7 @@ let g:quickrun_config = {
       \   },
       \   'ruby.rspec'  : { 'command' : 'rspec' },
       \   'php.phpunit' : { 'command' : 'phpunit' },
+      \   'phpcs'  : { "cmdopt" : "--encoding=utf-8 --standard=./phpcs.xml" },
       \   "watchdogs_checker/_" : {
       \       "hook/close_quickfix/enable_exit" : 1,
       \   },
