@@ -29,7 +29,11 @@ NeoBundle 'vim-scripts/Align'
 "NeoBundle 'vim-scripts/wokmarks.vim'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'svn-diff.vim'
-NeoBundle 'scrooloose/syntastic'
+""NeoBundle 'scrooloose/syntastic'
+"vim-quickrun,vimproc,shabadou.vim依存"
+NeoBundle 'osyo-manga/vim-watchdogs'
+NeoBundle 'osyo-manga/shabadou.vim'
+NeoBundle "jceb/vim-hier"
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mattn/excitetranslate-vim'
@@ -77,7 +81,18 @@ let g:quickrun_config = {
       \       'runner/vimproc/updatetime' : 40,
       \   },
       \   'ruby.rspec'  : { 'command' : 'rspec' },
-      \   'php.phpunit' : { 'command' : 'phpunit' }
+      \   'php.phpunit' : { 'command' : 'phpunit' },
+      \   "watchdogs_checker/_" : {
+      \       "hook/close_quickfix/enable_exit" : 1,
+      \   },
+      \   "php/watchdogs_checker" : {
+      \       "type" : "watchdogs_checker/phpcs",
+      \   },
+      \   "watchdogs_checker/phpcs" : {
+      \       'command' : 'phpcs',
+      \       "cmdopt" : "--encoding=utf-8 --report=csv --standard=./phpcs.xml",
+      \       'outputter/quickfix/errorformat' : '%-GFile\,Line\,Column\,Type\,Message\,Source\,Severity,"%f"\,%l\,%c\,%t%*[a-zA-Z]\,"%m"\,%*[a-zA-Z0-9_.-]\,%*[0-9]'
+      \   }
       \}
 
 autocmd BufWritePost *Test.php :QuickRun
@@ -90,10 +105,10 @@ let Tlist_Enable_Fold_Column = 1
 let g:tlist_php_settings     = 'php;c:class;d:constant;f:function'
 
 " syntastic.vim
-let g:syntastic_enable_signs  = 1
-let g:syntastic_auto_loc_list = 2
-""let g:syntastic_check_on_open = 1
-let g:syntastic_php_phpcs_args = '--config-set encoding utf-8 --report=csv --standard=./phpcs.xml'
+""let g:syntastic_enable_signs  = 1
+""let g:syntastic_auto_loc_list = 2
+""""let g:syntastic_check_on_open = 1
+""let g:syntastic_php_phpcs_args = '--encoding=utf-8 --report=csv --standard=./phpcs.xml'
 
 " open-browser
 let g:netrw_nogx = 1
@@ -135,6 +150,11 @@ let g:previm_open_cmd = 'open -a Safari'
 "vimfiler"
 let g:vimfiler_as_default_explorer = 1
 let g:vimfiler_edit_action = 'tabopen'
+
+" watchdogs.vim"
+call watchdogs#setup(g:quickrun_config)
+let g:watchdogs_check_BufWritePost_enable = 1
+let g:watchdogs_check_CursorHold_enable = 1
 
 "---------------------------------------------------------------------------
 " 基本設定:
@@ -202,6 +222,12 @@ highlight PmenuSbar  ctermbg=2
 highlight PmenuThumb ctermfg=3
 
 highlight ColorColumn ctermbg=DarkGreen guibg=DarkGreen
+
+" vim-hier"
+highlight QfErrorUcurl cterm=undercurl ctermfg=Red gui=undercurl guisp=Red
+let g:hier_highlight_group_qf  = "QfErrorUcurl"
+highlight QfWarningUcurl cterm=undercurl ctermfg=Blue gui=undercurl guisp=Blue
+let g:hier_highlight_group_qfw = "QfWarningUcurl"
 
 "---------------------------------------------------------------------------
 " タブ
