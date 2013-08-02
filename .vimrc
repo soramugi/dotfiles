@@ -54,6 +54,8 @@ NeoBundleLazy 'yuratomo/w3m.vim', {
       \       'commands' : [ "W3m", "W3mHistory", "W3mHistoryClear", "W3mLocal", "W3mSplit", "W3mTab", "W3mVSplit" ]
       \   }
       \}
+NeoBundle 'L9'
+NeoBundle 'FuzzyFinder'
 " IDE風
 ""NeoBundle 'vim-scripts/taglist.vim'
 ""NeoBundle 'vim-scripts/Trinity'
@@ -346,6 +348,10 @@ nmap <C-e> :ExciteTranslate<CR>
 
 " memolist.vim
 nnoremap <silent> <Space>m :MemoList<CR>
+
+" FuzzyFinder"
+nnoremap <Leader>f :FufFile<CR>
+
 "---------------------------------------------------------------------------
 " 短縮入力:
 "---------------------------------------------------------------------------
