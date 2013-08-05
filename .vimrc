@@ -46,7 +46,6 @@ NeoBundle 'tpope/vim-abolish'
 NeoBundleLazy "mattn/habatobi-vim", { 'autoload' : { 'commands' : [ "Habatobi" ] } }
 NeoBundle 'kannokanno/previm', { 'rev' : '1.0' }
 NeoBundle 'deris/vim-rengbang'
-NeoBundle 'vcscommand.vim'
 NeoBundle "Shougo/unite.vim"
 NeoBundle 'Shougo/vimfiler', { 'depends' : ["Shougo/unite.vim"] }
 NeoBundleLazy 'yuratomo/w3m.vim', {
@@ -56,6 +55,8 @@ NeoBundleLazy 'yuratomo/w3m.vim', {
       \}
 NeoBundle 'L9'
 NeoBundle 'FuzzyFinder'
+NeoBundle 'glidenote/octoeditor.vim'
+NeoBundle 'tpope/vim-fugitive'
 " IDE風
 ""NeoBundle 'vim-scripts/taglist.vim'
 ""NeoBundle 'vim-scripts/Trinity'
@@ -159,6 +160,9 @@ let g:vimfiler_edit_action = 'tabopen'
 call watchdogs#setup(g:quickrun_config)
 let g:watchdogs_check_BufWritePost_enable = 1
 let g:watchdogs_check_CursorHold_enable = 1
+
+" octopress.vim"
+let g:octopress_path = "$HOME/Dropbox/code/soramugi.github.io"
 
 " vim-indent-guides"
 let g:indent_guides_enable_on_vim_startup = 1
