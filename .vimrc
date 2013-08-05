@@ -25,7 +25,7 @@ NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'vim-scripts/sudo.vim'
 NeoBundle 'vim-scripts/Align'
 "NeoBundle 'vim-scripts/netrw.vim'
-"NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'nathanaelkane/vim-indent-guides'
 "NeoBundle 'vim-scripts/wokmarks.vim'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'svn-diff.vim'
@@ -160,6 +160,13 @@ call watchdogs#setup(g:quickrun_config)
 let g:watchdogs_check_BufWritePost_enable = 1
 let g:watchdogs_check_CursorHold_enable = 1
 
+" vim-indent-guides"
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_start_level=2
+let g:indent_guides_auto_colors=0
+let g:indent_guides_color_change_percent = 30
+let g:indent_guides_guide_size = 1
+
 "---------------------------------------------------------------------------
 " 基本設定:
 "---------------------------------------------------------------------------
@@ -232,6 +239,10 @@ highlight QfErrorUcurl cterm=undercurl ctermfg=Red gui=undercurl guisp=Red
 let g:hier_highlight_group_qf  = "QfErrorUcurl"
 highlight QfWarningUcurl cterm=undercurl ctermfg=Blue gui=undercurl guisp=Blue
 let g:hier_highlight_group_qfw = "QfWarningUcurl"
+
+"vim-indent-guides"
+highlight IndentGuidesOdd  guibg=#262626 ctermbg=grey
+highlight IndentGuidesEven guibg=#3c3c3c ctermbg=grey
 
 "---------------------------------------------------------------------------
 " タブ
@@ -380,6 +391,9 @@ cnorea Ctags TagsGenerate
 cnorea Memo edit ~/Dropbox/Memo/Memo.txt
 command! -nargs=1 Tmp edit ~/Dropbox/Memo/tmp/tmp.<args>
 command! -nargs=1 Temp edit ~/Dropbox/Memo/tmp/tmp.<args>
+
+" 色確認"
+cnorea ColorTest so $VIMRUNTIME/syntax/colortest.vim
 
 "---------------------------------------------------------------------------
 " 編集に関する設定:
