@@ -29,7 +29,9 @@ NeoBundle 'nathanaelkane/vim-indent-guides'
 "NeoBundle 'vim-scripts/wokmarks.vim'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'svn-diff.vim'
-""NeoBundle 'scrooloose/syntastic'
+"構文チェック系3兄弟"
+NeoBundle 'scrooloose/syntastic'
+""NeoBundle 'chikatoike/activefix.vim'
 "vim-quickrun,vimproc,shabadou.vim依存"
 NeoBundle 'osyo-manga/vim-watchdogs'
 NeoBundle 'osyo-manga/shabadou.vim'
@@ -110,10 +112,10 @@ let Tlist_Enable_Fold_Column = 1
 let g:tlist_php_settings     = 'php;c:class;d:constant;f:function'
 
 " syntastic.vim
-""let g:syntastic_enable_signs  = 1
-""let g:syntastic_auto_loc_list = 2
-""""let g:syntastic_check_on_open = 1
-""let g:syntastic_php_phpcs_args = '--encoding=utf-8 --report=csv --standard=./phpcs.xml'
+let g:syntastic_enable_signs  = 1
+let g:syntastic_auto_loc_list = 2
+""let g:syntastic_check_on_open = 1
+let g:syntastic_php_phpcs_args = '--encoding=utf-8 --report=csv --standard=./phpcs.xml'
 
 " open-browser
 let g:netrw_nogx = 1
@@ -135,11 +137,15 @@ let g:ctrlp_prompt_mappings = {
 let g:ctrlp_working_path_mode = 'a'
 
 " netrw
-""let g:netrw_liststyle    = 3
-""let g:netrw_winsize      = 100
-""let g:netrw_altv         = 1
-""let g:netrw_browse_split = 3
-""let g:netrw_list_hide    = '\.git,\.svn,\.DS_Store'
+""let s:bundle = neobundle#get("netrw")
+""function! s:bundle.hooks.on_source(bundle)
+""  let g:netrw_liststyle    = 3
+""  let g:netrw_winsize      = 100
+""  let g:netrw_altv         = 1
+""  let g:netrw_browse_split = 3
+""  let g:netrw_list_hide    = '\.git,\.svn,\.DS_Store'
+""endfunction
+""unlet s:bundle
 
 " Align"
 let g:Align_xstrlen = 3
