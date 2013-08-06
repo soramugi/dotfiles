@@ -22,7 +22,6 @@ NeoBundle 'vim-scripts/yanktmp.vim'
 NeoBundle 'vim-jp/vimdoc-ja'
 NeoBundle 'thinca/vim-visualstar'
 NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'vim-scripts/sudo.vim'
 NeoBundle 'vim-scripts/Align'
 "NeoBundle 'vim-scripts/netrw.vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
@@ -331,8 +330,8 @@ vnoremap <silent> <C-p> "0p<CR>
 nnoremap <silent> <Space>e  :<C-u>tabedit $MYVIMRC<CR>
 nnoremap <silent> <Space>E  :<C-u>source $MYVIMRC<CR>
 
-" sudoで開き直す
-nnoremap <silent> <Space>s :<C-u>edit sudo:%<CR>
+" sudoで保存
+nnoremap <silent> <Space>s :<C-u>w !sudo tee %<CR>
 
 " grep の書式を挿入
 nnoremap <expr> <Space>g ':vimgrep /\<' . expand('<cword>') . '\>/j **/*.' . expand('%:e')
