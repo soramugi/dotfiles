@@ -86,7 +86,8 @@ let g:quickrun_config = {
       \   },
       \   'markdown'  : { 'outputter' : 'browser' },
       \   'ruby.rspec'  : { 'command' : 'rspec' },
-      \   'php.phpunit' : { 'command' : 'phpunit' },
+      \   'php.phpunit' : { 'type' : executable('phpunit') ? 'phpunit' : 'php' },
+      \   'phpunit' : { 'command' : 'phpunit' },
       \   'phpcs'  : { "cmdopt" : "--encoding=utf-8 --standard=./phpcs.xml" },
       \   "watchdogs_checker/_" : {
       \       "hook/close_quickfix/enable_exit" : 1,
@@ -101,6 +102,7 @@ let g:quickrun_config = {
       \   }
       \}
 
+" 保存したら実行"
 autocmd BufWritePost *Test.php :QuickRun
 
 " taglist.vim
