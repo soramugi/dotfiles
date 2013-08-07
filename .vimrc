@@ -92,7 +92,7 @@ let g:quickrun_config = {
       \       "hook/close_quickfix/enable_exit" : 1,
       \   },
       \   "php/watchdogs_checker" : {
-      \       "type" : "watchdogs_checker/phpcs",
+      \       "type" : executable('phpcs') ? "watchdogs_checker/phpcs" : '',
       \   },
       \   "watchdogs_checker/phpcs" : {
       \       'command' : 'phpcs',
