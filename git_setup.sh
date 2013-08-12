@@ -14,6 +14,11 @@ git config --global alias.di 'diff'
 git config --global alias.br 'branch'
 git config --global alias.sub 'submodule'
 git config --global alias.gr 'log --graph --date=short --decorate=short --pretty=format:"%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s"'
+
+# statusで日本語表示
+git config --global core.quotepath false
+
+# push時にカレントのみ
 git config --global push.default current
 
 # カラー
