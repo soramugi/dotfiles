@@ -1,0 +1,5 @@
+_jump()
+{
+  COMPREPLY=($(echo ~/.marks/* | for f in $(xargs) ; do basename $f ; done | xargs))
+}
+complete -F _jump jump

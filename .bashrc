@@ -116,3 +116,17 @@ alias ......='cd ../../../../../'
 alias vl='vim -u ~/dotfiles/.vimrclite --noplugin'
 alias eman='LANG=c man'
 alias ctags_php='ctags -R --languages=php -f ~/php.tags `pwd`'
+
+export MARKPATH=$HOME/.marks
+function jump {
+    cd -P $MARKPATH/$1 2>/dev/null || echo "No such mark: $1"
+}
+function mark {
+    mkdir -p $MARKPATH; ln -s $(pwd) $MARKPATH/$1
+}
+function unmark {
+    rm -i $MARKPATH/$1
+}
+function marks {
+    ls -l $MARKPATH
+}
