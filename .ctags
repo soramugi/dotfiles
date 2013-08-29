@@ -2,3 +2,4 @@
 --recurse=yes
 --langmap=PHP:+.inc
 --php-kinds=cfd
+--links=no
