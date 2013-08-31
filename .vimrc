@@ -169,7 +169,7 @@ let g:watchdogs_check_BufWritePost_enable = 1
 let g:watchdogs_check_CursorHold_enable = 1
 
 " octopress.vim"
-let g:octopress_path = "$HOME/Dropbox/code/soramugi.github.io"
+let g:octopress_path = "$HOME/Dropbox/code/diary.soramugi.net"
 
 " vim-indent-guides"
 let g:indent_guides_enable_on_vim_startup = 1
