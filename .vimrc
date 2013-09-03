@@ -58,6 +58,7 @@ NeoBundle 'L9'
 NeoBundle 'FuzzyFinder'
 NeoBundle 'glidenote/octoeditor.vim'
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'bling/vim-airline'
 " IDE風
 ""NeoBundle 'vim-scripts/taglist.vim'
 ""NeoBundle 'vim-scripts/Trinity'
@@ -229,12 +230,12 @@ autocmd QuickfixCmdPost vimgrep copen
 autocmd QuickfixCmdPost grep copen
 set switchbuf+=usetab,newtab
 " ステータスラインに表示する情報の指定
-set statusline=%n%{winnr('$')>1?'/'.winnr().'/'.winnr('$'):''}\:%y%F\%h%w%m%r%=\|%{(&fenc!=''?&fenc:&enc).'\|'.&ff.'\|'}<%c,%l/%L:%p%%>
+""set statusline=%n%{winnr('$')>1?'/'.winnr().'/'.winnr('$'):''}\:%y%F\%h%w%m%r%=\|%{(&fenc!=''?&fenc:&enc).'\|'.&ff.'\|'}<%c,%l/%L:%p%%>
 
 "---------------------------------------------------------------------------
 " 色設定
 "---------------------------------------------------------------------------
-"set t_Co=256
+set t_Co=256
 colorscheme desert
 
 "ポップアップ補完メニュー
