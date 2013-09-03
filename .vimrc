@@ -28,12 +28,8 @@ NeoBundle 'nathanaelkane/vim-indent-guides'
 "NeoBundle 'vim-scripts/wokmarks.vim'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'svn-diff.vim'
-"構文チェック系3兄弟"
 NeoBundle 'scrooloose/syntastic'
 ""NeoBundle 'chikatoike/activefix.vim'
-"vim-quickrun,vimproc,shabadou.vim依存"
-NeoBundle 'osyo-manga/vim-watchdogs'
-NeoBundle 'osyo-manga/shabadou.vim'
 NeoBundle "jceb/vim-hier"
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'mattn/webapi-vim'
@@ -88,19 +84,7 @@ let g:quickrun_config = {
       \   'markdown'  : { 'outputter' : 'browser' },
       \   'ruby.rspec'  : { 'command' : 'rspec' },
       \   'php.phpunit' : { 'type' : executable('phpunit') ? 'phpunit' : 'php' },
-      \   'phpunit' : { 'command' : 'phpunit' },
-      \   'phpcs'  : { "cmdopt" : "--encoding=utf-8 --standard=./phpcs.xml" },
-      \   "watchdogs_checker/_" : {
-      \       "hook/close_quickfix/enable_exit" : 1,
-      \   },
-      \   "php/watchdogs_checker" : {
-      \       "type" : executable('phpcs') ? "watchdogs_checker/phpcs" : '',
-      \   },
-      \   "watchdogs_checker/phpcs" : {
-      \       'command' : 'phpcs',
-      \       "cmdopt" : "--encoding=utf-8 --report=csv --standard=./phpcs.xml",
-      \       'outputter/quickfix/errorformat' : '%-GFile\,Line\,Column\,Type\,Message\,Source\,Severity,"%f"\,%l\,%c\,%t%*[a-zA-Z]\,"%m"\,%*[a-zA-Z0-9_.-]\,%*[0-9]'
-      \   }
+      \   'phpunit' : { 'command' : 'phpunit' }
       \}
 
 " 保存したら実行"
@@ -163,11 +147,6 @@ let g:previm_open_cmd = 'open -a Safari'
 "vimfiler"
 let g:vimfiler_as_default_explorer = 1
 let g:vimfiler_edit_action = 'tabopen'
-
-" watchdogs.vim"
-call watchdogs#setup(g:quickrun_config)
-let g:watchdogs_check_BufWritePost_enable = 1
-let g:watchdogs_check_CursorHold_enable = 1
 
 " octopress.vim"
 let g:octopress_path = "$HOME/Dropbox/code/diary.soramugi.net"
