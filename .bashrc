@@ -17,7 +17,8 @@ stty -ixon -ixoff
 # 音
 set bell-style none
 # 表示形式
-PS1="${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[01;33m\] \W \$\[\033[00m\] "
+PS1="\`if [ \$? != 0 ]; then echo \[\e[31m\]o_O\[\e[0m\]; fi\`"
+PS1=$PS1"\[\033[01;33m\] \W \$\[\033[00m\] "
 
 export CLICOLOR=1
 export LS_COLORS='di=33'
