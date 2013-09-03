@@ -272,6 +272,7 @@ inoremap [ []<LEFT>
 inoremap ( ()<LEFT>
 inoremap " ""<LEFT>
 inoremap ' ''<LEFT>
+inoremap < <><LEFT>
 
 " 画面切り替え
 nnoremap <c-j> <c-w>j
