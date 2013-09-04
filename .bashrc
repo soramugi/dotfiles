@@ -51,6 +51,8 @@ export HISTTIMEFORMAT='%Y-%m-%d %T '
 # 標準コマンド書き換え
 alias sudo='sudo -H'
 alias less='less -M'
+alias ag='ag -S'
+alias agh='ag --hidden'
 
 # 短縮
 alias ll='ls -laF'

@@ -55,6 +55,7 @@ NeoBundle 'FuzzyFinder'
 NeoBundle 'glidenote/octoeditor.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'bling/vim-airline'
+NeoBundle 'rking/ag.vim'
 " IDE風
 ""NeoBundle 'vim-scripts/taglist.vim'
 ""NeoBundle 'vim-scripts/Trinity'
@@ -213,6 +214,7 @@ set history=100
 set grepprg=grep\ -rnIH\ --exclude=*.svn*\ --exclude=*.git*
 autocmd QuickfixCmdPost vimgrep copen
 autocmd QuickfixCmdPost grep copen
+autocmd QuickfixCmdPost Ag copen
 set switchbuf+=usetab,newtab
 " ステータスラインに表示する情報の指定
 ""set statusline=%n%{winnr('$')>1?'/'.winnr().'/'.winnr('$'):''}\:%y%F\%h%w%m%r%=\|%{(&fenc!=''?&fenc:&enc).'\|'.&ff.'\|'}<%c,%l/%L:%p%%>
@@ -323,8 +325,9 @@ nnoremap <silent> <Space>E  :<C-u>source $MYVIMRC<CR>
 nnoremap <silent> <Space>s :<C-u>w !sudo tee %<CR>
 
 " grep の書式を挿入
-nnoremap <expr> <Space>g ':vimgrep /\<' . expand('<cword>') . '\>/j **/*.' . expand('%:e')
-nnoremap <expr> <Space>G ':sil grep! ' . expand('<cword>') . ' *'
+""nnoremap <expr> <Space>g ':vimgrep /\<' . expand('<cword>') . '\>/j **/*.' . expand('%:e')
+""nnoremap <expr> <Space>G ':sil grep! ' . expand('<cword>') . ' *'
+nnoremap <expr> <Space>g ':Ag ' . expand('<cword>')
 
 " help 引くのに便利かなと
 nnoremap <expr> <Space>h ':tab h ' . expand('<cword>')
