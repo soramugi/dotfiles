@@ -81,7 +81,13 @@ let g:quickrun_config = {
       \       'outputter/buffer/split' : ':botright 20sp',
       \       'runner/vimproc/updatetime' : 40,
       \   },
-      \   'markdown'  : { 'outputter' : 'browser' },
+      \   'markdown'  : {
+      \       'outputter' : 'null',
+      \       'command'   : 'open',
+      \       'cmdopt'    : '-a',
+      \       'args'      : 'Kobito',
+      \       'exec'      : '%c %o %a %s',
+      \   },
       \   'ruby.rspec'  : { 'command' : 'rspec' },
       \   'php.phpunit' : { 'type' : executable('phpunit') ? 'phpunit' : 'php' },
       \   'phpunit' : { 'command' : 'phpunit' }
