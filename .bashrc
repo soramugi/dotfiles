@@ -52,13 +52,26 @@ export HISTTIMEFORMAT='%Y-%m-%d %T '
 alias sudo='sudo -H'
 alias less='less -M'
 alias ag='ag -S'
-alias agh='ag --hidden'
+export MANPAGER='less -R'
+man() {
+  env \
+    LESS_TERMCAP_mb=$(printf "\e[1;31m") \
+    LESS_TERMCAP_md=$(printf "\e[1;31m") \
+    LESS_TERMCAP_me=$(printf "\e[0m") \
+    LESS_TERMCAP_se=$(printf "\e[0m") \
+    LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
+    LESS_TERMCAP_ue=$(printf "\e[0m") \
+    LESS_TERMCAP_us=$(printf "\e[1;32m") \
+    man "$@"
+}
+
 
 # 短縮
 alias ll='ls -laF'
 alias l='ls -laF'
 alias vi='vim'
 alias v='vim'
+alias agh='ag --hidden'
 t () { tar zcvf `basename $1`.tar.gz $@; }
 alias t-='tar zxvf'
 g () { grep -lr $1 * | xargs grep -v -e "^[ \t]*[#*/]" | grep --color=auto $1; }
@@ -122,14 +135,14 @@ alias ctags_php='ctags -R --languages=php -f ~/php.tags `pwd`'
 
 export MARKPATH=$HOME/.marks
 function jump {
-    cd -P $MARKPATH/$1 2>/dev/null || echo "No such mark: $1"
+cd -P $MARKPATH/$1 2>/dev/null || echo "No such mark: $1"
 }
 function mark {
-    mkdir -p $MARKPATH; ln -s $(pwd) $MARKPATH/$1
+mkdir -p $MARKPATH; ln -s $(pwd) $MARKPATH/$1
 }
 function unmark {
-    rm -i $MARKPATH/$1
+rm -i $MARKPATH/$1
 }
 function marks {
-    ls -l $MARKPATH
+ls -l $MARKPATH
 }
