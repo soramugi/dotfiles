@@ -335,6 +335,9 @@ nnoremap <expr> <Space>h ':tab h ' . expand('<cword>')
 " ファイルの表示を整える
 nnoremap <Space>p ma :%s/\s\+$//ge<CR> gg =G `a
 
+" タイムスタンプの挿入"
+nnoremap <Space>j :<C-u>r !date +"\%Y\%m\%d\%H\%M"<CR>
+
 " Align"
 nnoremap <Space>a :Align<Space>
 
