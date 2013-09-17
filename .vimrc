@@ -32,8 +32,8 @@ NeoBundle 'scrooloose/syntastic'
 ""NeoBundle 'chikatoike/activefix.vim'
 NeoBundle "jceb/vim-hier"
 NeoBundle 'tyru/open-browser.vim'
-NeoBundle 'mattn/webapi-vim'
-NeoBundle 'mattn/excitetranslate-vim'
+""NeoBundle 'mattn/webapi-vim'
+""NeoBundle 'mattn/excitetranslate-vim'
 NeoBundle 'kien/ctrlp.vim.git'
 NeoBundle 'szw/vim-tags'
 NeoBundle 'tpope/vim-fugitive'
@@ -56,6 +56,7 @@ NeoBundle 'glidenote/octoeditor.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'rking/ag.vim'
+NeoBundle 'modsound/macdict-vim.git'
 " IDE風
 ""NeoBundle 'vim-scripts/taglist.vim'
 ""NeoBundle 'vim-scripts/Trinity'
@@ -164,6 +165,9 @@ let g:indent_guides_start_level=2
 let g:indent_guides_auto_colors=0
 let g:indent_guides_color_change_percent = 30
 let g:indent_guides_guide_size = 1
+
+"macdict"
+let g:macdict_window_size = 'botright 20split'
 
 "---------------------------------------------------------------------------
 " 基本設定:
@@ -364,7 +368,8 @@ nmap <C-O> <Plug>(openbrowser-smart-search)
 vmap <C-O> <Plug>(openbrowser-smart-search)
 
 " excitetranslate-vim
-nmap <C-e> :ExciteTranslate<CR>
+""nmap <C-e> :ExciteTranslate<CR>
+nmap <expr> <C-e> ':MacDict ' . expand('<cword>') . '<CR>'
 
 " memolist.vim
 nnoremap <silent> <Space>m :MemoList<CR>
