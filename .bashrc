@@ -132,6 +132,8 @@ alias ......='cd ../../../../../'
 alias vl='vim -u ~/dotfiles/.vimrclite --noplugin'
 alias eman='LANG=c man'
 alias ctags_php='ctags -R --languages=php -f ~/php.tags `pwd`'
+alias bf='cat > ~/.vim_bf'
+alias bfcat='cat ~/.vim_bf'
 
 export MARKPATH=$HOME/.marks
 function jump {

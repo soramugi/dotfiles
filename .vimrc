@@ -338,6 +338,11 @@ nnoremap <Space>p ma :%s/\s\+$//ge<CR> gg =G `a
 " タイムスタンプの挿入"
 nnoremap <Space>j :<C-u>r !date +"\%Y\%m\%d\%H\%M"<CR>
 
+"コマンドラインからテキスト受け渡し"
+imap <C-b> <ESC>:read ~/.vim_bf<CR>i
+nmap <C-b> :read ~/.vim_bf<CR>
+vmap <C-b> :w!~/.vim_bf<CR>
+
 " Align"
 nnoremap <Space>a :Align<Space>
 
