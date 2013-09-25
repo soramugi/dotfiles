@@ -347,6 +347,11 @@ imap <Space>b <ESC>:read ~/.vim_bf<CR>i
 nmap <Space>b :read ~/.vim_bf<CR>
 vmap <Space>b :w!~/.vim_bf<CR>
 
+"連番"
+nnoremap <silent> co :ContinuousNumber <C-a><CR>
+vnoremap <silent> co :ContinuousNumber <C-a><CR>
+command! -count -nargs=1 ContinuousNumber let c = col('.')|for n in range(1, <count>?<count>-line('.'):1)|exec 'normal! j' . n . <q-args>|call cursor('.', c)|endfor
+
 " Align"
 nnoremap <Space>a :Align<Space>
 
