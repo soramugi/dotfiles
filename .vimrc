@@ -57,6 +57,8 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'rking/ag.vim'
 NeoBundle 'modsound/macdict-vim.git'
+NeoBundle 'majutsushi/tagbar'
+NeoBundle 'vim-scripts/tagbar-phpctags'
 " IDE風
 ""NeoBundle 'vim-scripts/taglist.vim'
 ""NeoBundle 'vim-scripts/Trinity'

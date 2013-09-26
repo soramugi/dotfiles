@@ -22,6 +22,3 @@ autocmd BufRead,BufNewFile *.md setfiletype markdown
 
 "xml"
 autocmd BufRead,BufNewFile *.dist setfiletype xml
-
-"twig"
-autocmd BufRead,BufNewFile *.twig setfiletype htmljinja

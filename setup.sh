@@ -18,6 +18,13 @@ if type -P php > /dev/null ; then
   php ~/dotfiles/.vim/dict/dict.php | sort > ~/dotfiles/.vim/dict/php.dict 2>&1 /dev/null
 fi
 
+if type -P composer > /dev/null ; then
+  composer global require 'techlivezheng/phpctags=*'
+  cd $HOME/.composer/vendor/techlivezheng/phpctags/
+  make
+  ln -s $HOME/.composer/vendor/techlivezheng/phpctags/build/phpctags.phar $HOME/.composer/vendor/bin/phpctags
+fi
+
 # bashrcの書き込み
 if [ ! -e $HOME/.bash_aliases ] && [ ! -e $HOME/.profile ] ; then
   echo 'if [ -f ~/.bash_aliases ] ; then' >> $HOME/.bashrc
