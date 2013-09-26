@@ -165,6 +165,9 @@ let g:indent_guides_guide_size = 1
 "macdict"
 let g:macdict_window_size = 'botright 20split'
 
+"tagbar"
+let g:tagbar_left = 1
+
 "---------------------------------------------------------------------------
 " 基本設定:
 "---------------------------------------------------------------------------
@@ -377,6 +380,9 @@ nnoremap <silent> <Space>m :MemoList<CR>
 
 " FuzzyFinder"
 nnoremap <Leader>f :FufFile<CR>
+
+" tagbar"
+nnoremap <Leader>t :TagbarToggle<CR>
 
 "---------------------------------------------------------------------------
 " 短縮入力:
