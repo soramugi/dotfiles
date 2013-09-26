@@ -41,8 +41,6 @@ NeoBundle 'glidenote/memolist.vim'
 NeoBundle 'kana/vim-fakeclip.git'
 NeoBundle 'tpope/vim-abolish'
 NeoBundleLazy "mattn/habatobi-vim", { 'autoload' : { 'commands' : [ "Habatobi" ] } }
-NeoBundle 'kannokanno/previm', { 'rev' : '1.0' }
-NeoBundle 'deris/vim-rengbang'
 NeoBundle "Shougo/unite.vim"
 NeoBundle 'Shougo/vimfiler', { 'depends' : ["Shougo/unite.vim"] }
 NeoBundleLazy 'yuratomo/w3m.vim', {
@@ -59,10 +57,6 @@ NeoBundle 'rking/ag.vim'
 NeoBundle 'modsound/macdict-vim.git'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'vim-scripts/tagbar-phpctags'
-" IDE風
-""NeoBundle 'vim-scripts/taglist.vim'
-""NeoBundle 'vim-scripts/Trinity'
-""NeoBundle 'wesleyche/SrcExpl'
 
 filetype plugin indent on
 
@@ -187,7 +181,7 @@ set wildmode=longest:full,full
 set formatoptions+=mM
 set clipboard=unnamed
 set nrformats=
-" バックアップ作成
+" バックアップ
 set noswapfile
 set nobackup
 " 画面表示
@@ -402,9 +396,6 @@ cnoremap <C-f> <Right>
 cnoremap <C-n> <Down>
 cnoremap <C-p> <Up>
 
-" IDE風起動
-""cnorea IDE TrinityToggleAll
-
 " tags作成
 cnorea Ctags TagsGenerate
 
@@ -414,7 +405,7 @@ command! -nargs=1 Tmp edit ~/Dropbox/Memo/tmp/tmp.<args>
 command! -nargs=1 Temp edit ~/Dropbox/Memo/tmp/tmp.<args>
 
 " 色確認"
-cnorea ColorTest so $VIMRUNTIME/syntax/colortest.vim
+cnorea Color so $VIMRUNTIME/syntax/colortest.vim
 
 "---------------------------------------------------------------------------
 " 編集に関する設定:
