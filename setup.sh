@@ -22,6 +22,7 @@ if type -P composer > /dev/null ; then
   composer global require 'techlivezheng/phpctags=*'
   cd $HOME/.composer/vendor/techlivezheng/phpctags/
   make
+  mkdir -p $HOME/.composer/vendor/bin
   ln -s $HOME/.composer/vendor/techlivezheng/phpctags/build/phpctags.phar $HOME/.composer/vendor/bin/phpctags
 fi
 
