@@ -19,11 +19,16 @@ if type -P php > /dev/null ; then
 fi
 
 if type -P composer > /dev/null ; then
-  composer global require 'techlivezheng/phpctags=*'
-  cd $HOME/.composer/vendor/techlivezheng/phpctags/
-  make
-  mkdir -p $HOME/.composer/vendor/bin
-  ln -s $HOME/.composer/vendor/techlivezheng/phpctags/build/phpctags.phar $HOME/.composer/vendor/bin/phpctags
+  if [ ! -e $HOME/.composer/vendor/bin/phpunit ]  ; then
+    composer global require 'phpunit/phpunit=3.7.*'
+  fi
+  if [ ! -e $HOME/.composer/vendor/bin/phpctags ]  ; then
+    composer global require 'techlivezheng/phpctags=*'
+    cd $HOME/.composer/vendor/techlivezheng/phpctags/
+    make
+    mkdir -p $HOME/.composer/vendor/bin
+    ln -s $HOME/.composer/vendor/techlivezheng/phpctags/build/phpctags.phar $HOME/.composer/vendor/bin/phpctags
+  fi
 fi
 
 # bashrcの書き込み
