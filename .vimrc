@@ -57,6 +57,10 @@ NeoBundle 'rking/ag.vim'
 NeoBundle 'modsound/macdict-vim.git'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'vim-scripts/tagbar-phpctags'
+NeoBundle 'vim-scripts/vim-auto-save'
+NeoBundle 'kana/vim-textobj-user'
+NeoBundle 'osyo-manga/vim-textobj-multiblock'
+
 
 filetype plugin indent on
 
@@ -167,6 +171,9 @@ let g:macdict_window_size = 'botright 20split'
 
 "tagbar"
 let g:tagbar_left = 1
+
+"vim-auto-save"
+let g:auto_save = 1
 
 "---------------------------------------------------------------------------
 " 基本設定:
@@ -383,6 +390,10 @@ nnoremap <Leader>f :FufFile<CR>
 
 " tagbar"
 nnoremap <Leader>t :TagbarToggle<CR>
+
+"vim-textobj-multiblock"
+vmap ab <Plug>(textobj-multiblock-a)
+vmap ib <Plug>(textobj-multiblock-i)
 
 "---------------------------------------------------------------------------
 " 短縮入力:
