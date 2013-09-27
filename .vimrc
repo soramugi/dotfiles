@@ -20,7 +20,6 @@ NeoBundle 'Shougo/vimproc', {
       \ }
 NeoBundle 'vim-scripts/yanktmp.vim'
 NeoBundle 'vim-jp/vimdoc-ja'
-NeoBundle 'thinca/vim-visualstar'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'vim-scripts/Align'
 "NeoBundle 'vim-scripts/netrw.vim'
@@ -60,6 +59,7 @@ NeoBundle 'vim-scripts/tagbar-phpctags'
 NeoBundle 'vim-scripts/vim-auto-save'
 NeoBundle 'kana/vim-textobj-user'
 NeoBundle 'osyo-manga/vim-textobj-multiblock'
+NeoBundle 'osyo-manga/vim-anzu'
 
 
 filetype plugin indent on
@@ -278,9 +278,6 @@ set shiftwidth=2
 "leaderキー切り替え
 let mapleader = ","
 
-" /で別ウィンドウ開く
-nnoremap / q/a\v
-
 " 終了
 nnoremap <C-q> :q<CR>
 
@@ -319,10 +316,6 @@ nnoremap <ESC><ESC> :nohlsearch<CR><ESC>
 
 " tagsジャンプの時に複数ある時は一覧表示
 nnoremap <C-]> g<C-]>
-
-" 検索で自動的に移動しない
-nnoremap * *N
-nnoremap # #N
 
 " 連続ペーストを効率よく
 vnoremap <silent> <C-p> "0p<CR>
@@ -363,11 +356,6 @@ nnoremap <Space>a :Align<Space>
 " quickrun"
 nnoremap <Space>r :QuickRun<CR>
 
-" vim-visualstar
-nnoremap <Plug>N N
-map * <Plug>(visualstar-*)<Plug>N
-map # <Plug>(visualstar-#)<Plug>N
-
 " neocomplcache
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><C-j> pumvisible() ? "\<C-n>" : "\<TAB>"
@@ -394,6 +382,12 @@ nnoremap <Leader>t :TagbarToggle<CR>
 vmap ab <Plug>(textobj-multiblock-a)
 vmap ib <Plug>(textobj-multiblock-i)
 
+"vim-anzu"
+nmap n <Plug>(anzu-n-with-echo)
+nmap N <Plug>(anzu-N-with-echo)
+nmap * <Plug>(anzu-star-with-echo)
+nmap # <Plug>(anzu-sharp-with-echo)
+""nmap <Esc><Esc> :nohlsearch<CR><ESC> <Plug>(anzu-clear-search-status)
 "---------------------------------------------------------------------------
 " 短縮入力:
 "---------------------------------------------------------------------------
@@ -438,11 +432,6 @@ command! -nargs=? OctopressGit :call s:octopress_git(<q-args>)
 
 " カーソル位置を最後の編集位置
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
-
-" 検索などで飛んだらそこを真ん中に
-for maptype in ['n', 'N', '*', '#', 'g*', 'g#', 'G']
-  execute 'nmap' maptype maptype . 'zz'
-endfor
 
 " 全角スペースの表示
 highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=darkgray
