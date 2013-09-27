@@ -362,8 +362,8 @@ inoremap <expr><C-j> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><C-k> pumvisible() ? "\<C-p>" : "\<TAB>"
 
 " open-browser
-nmap <C-O> <Plug>(openbrowser-smart-search)
-vmap <C-O> <Plug>(openbrowser-smart-search)
+nmap <silent> <Space>o <Plug>(openbrowser-smart-search)
+vmap <silent> <Space>o <Plug>(openbrowser-smart-search)
 
 " excitetranslate-vim
 ""nmap <C-e> :ExciteTranslate<CR>
