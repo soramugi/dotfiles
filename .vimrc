@@ -423,6 +423,15 @@ command! -nargs=1 Temp edit ~/Dropbox/Memo/tmp/tmp.<args>
 " 色確認"
 cnorea Color so $VIMRUNTIME/syntax/colortest.vim
 
+" octopressの記事追加したらgit commitのやつ"
+function s:octopress_git(message)
+  if a:message == ''
+    exe "!cd " . g:octopress_path . " && git add -A && git ci && git push "
+  else
+    exe "!cd " . g:octopress_path . " && git add -A && git ci -m " a:message "&& git push "
+  endif
+endfunction
+command! -nargs=? OctopressGit :call s:octopress_git(<q-args>)
 "---------------------------------------------------------------------------
 " 編集に関する設定:
 "---------------------------------------------------------------------------
