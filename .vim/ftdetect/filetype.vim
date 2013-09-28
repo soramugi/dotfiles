@@ -22,3 +22,6 @@ autocmd BufRead,BufNewFile *.md setfiletype markdown
 
 "xml"
 autocmd BufRead,BufNewFile *.dist setfiletype xml
+
+"yaml"
+autocmd BufRead,BufNewFile Boxfile setfiletype yaml
