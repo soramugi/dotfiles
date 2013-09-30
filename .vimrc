@@ -180,7 +180,6 @@ let g:auto_save = 1
 "---------------------------------------------------------------------------
 
 set tags+=$HOME/tags
-set runtimepath+=~/dotfiles/.vim/
 " 編集系
 set fileformats=unix,dos,mac
 set backspace=2
