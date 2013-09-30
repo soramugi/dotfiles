@@ -60,7 +60,7 @@ NeoBundle 'vim-scripts/vim-auto-save'
 NeoBundle 'kana/vim-textobj-user'
 NeoBundle 'osyo-manga/vim-textobj-multiblock'
 NeoBundle 'osyo-manga/vim-anzu'
-
+NeoBundle 'vim-jp/vital.vim'
 
 filetype plugin indent on
 
@@ -417,15 +417,6 @@ command! -nargs=1 Temp edit ~/Dropbox/Memo/tmp/tmp.<args>
 " 色確認"
 cnorea Color so $VIMRUNTIME/syntax/colortest.vim
 
-" octopressの記事追加したらgit commitのやつ"
-function s:octopress_git(message)
-  if a:message == ''
-    exe "!cd " . g:octopress_path . " && git add -A && git ci -m \"`date`\" && git push "
-  else
-    exe "!cd " . g:octopress_path . " && git add -A && git ci -m " a:message "&& git push "
-  endif
-endfunction
-command! -nargs=? OctopressGit :call s:octopress_git(<q-args>)
 "---------------------------------------------------------------------------
 " 編集に関する設定:
 "---------------------------------------------------------------------------
@@ -453,3 +444,6 @@ if has('multi_byte_ime') || has('xim')
   " 挿入モード・検索モードでのデフォルトのIME状態設定
   set iminsert=0 imsearch=0
 endif
+
+" vimrc外部ファイル化"
+runtime! vimrc.d/*.vim
