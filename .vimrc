@@ -92,11 +92,13 @@ let g:quickrun_config = {
       \   },
       \   'ruby.rspec'  : { 'command' : 'rspec' },
       \   'php.phpunit' : { 'type' : executable('phpunit') ? 'phpunit' : 'php' },
-      \   'phpunit' : { 'command' : 'phpunit' }
+      \   'phpunit' : { 'command' : 'phpunit' },
+      \   'vital.vim' : { 'command' : '~/dotfiles/vital_test' },
       \}
 
 " 保存したら実行"
 autocmd BufWritePost *Test.php :QuickRun
+autocmd BufWritePost vital :QuickRun
 
 " taglist.vim
 set tags=tags
@@ -446,3 +448,4 @@ endif
 
 " vimrc外部ファイル化"
 runtime! vimrc.d/*.vim
+runtime! vimrc.d/vital
