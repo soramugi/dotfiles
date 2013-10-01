@@ -9,7 +9,7 @@ autocmd BufRead,BufNewFile *.ru        setfiletype ruby
 autocmd BufWinEnter,BufNewFile *_spec.rb setfiletype ruby.rspec
 
 "php"
-autocmd BufWinEnter,BufNewFile *Test.php setfiletype php.phpunit
+autocmd BufWinEnter,BufNewFile *Test.php setfiletype phpunit.php
 
 "js"
 autocmd BufRead,BufNewFile *.coffee    setfiletype javascript

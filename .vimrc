@@ -91,7 +91,7 @@ let g:quickrun_config = {
       \       'exec'      : '%c %o %a %s',
       \   },
       \   'ruby.rspec'  : { 'command' : 'rspec' },
-      \   'php.phpunit' : { 'type' : executable('phpunit') ? 'phpunit' : 'php' },
+      \   'phpunit.php' : { 'type' : executable('phpunit') ? 'phpunit' : 'php' },
       \   'phpunit' : { 'command' : 'phpunit' },
       \   'vital.vim' : { 'command' : '~/dotfiles/vital_test' },
       \}
