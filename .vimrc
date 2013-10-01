@@ -66,119 +66,6 @@ NeoBundle 'gist:soramugi/6775207', { 'script_type' : 'plugin' }
 filetype plugin indent on
 
 "---------------------------------------------------------------------------
-" プラグイン設定
-"---------------------------------------------------------------------------
-
-" neocomplcache
-let g:neocomplcache_enable_at_startup            = 1
-let g:neocomplcache_enable_auto_select           = 0
-let g:neocomplcache_enable_camel_case_completion = 1
-let g:neocomplcache_enable_underbar_completion   = 1
-let g:neocomplcache_max_list                     = 10
-inoremap <expr><CR> neocomplcache#smart_close_popup() . "\<CR>"
-
-" quickrun
-let g:quickrun_config = {
-      \   '_' : {
-      \       'runner' : 'vimproc',
-      \       'outputter/buffer/split' : ':botright 20sp',
-      \       'runner/vimproc/updatetime' : 40,
-      \   },
-      \   'markdown'  : {
-      \       'outputter' : 'null',
-      \       'command'   : 'open',
-      \       'cmdopt'    : '-a',
-      \       'args'      : 'Kobito',
-      \       'exec'      : '%c %o %a %s',
-      \   },
-      \   'ruby.rspec'  : { 'command' : 'rspec' },
-      \   'phpunit.php' : { 'type' : executable('phpunit') ? 'phpunit' : 'php' },
-      \   'phpunit' : { 'command' : 'phpunit' },
-      \   'vital.vim' : { 'command' : '~/dotfiles/vital_test' },
-      \}
-
-" 保存したら実行"
-autocmd BufWritePost *Test.php :QuickRun
-autocmd BufWritePost vital :QuickRun
-
-" taglist.vim
-set tags=tags
-let Tlist_Show_One_File      = 1
-let Tlist_Exit_OnlyWiindow   = 1
-let Tlist_Enable_Fold_Column = 1
-let g:tlist_php_settings     = 'php;c:class;d:constant;f:function'
-
-" syntastic.vim
-let g:syntastic_enable_signs  = 1
-let g:syntastic_auto_loc_list = 2
-""let g:syntastic_check_on_open = 1
-let g:syntastic_php_phpcs_args = '--encoding=utf-8 --report=csv --standard=./phpcs.xml'
-
-" open-browser
-let g:netrw_nogx = 1
-
-source $VIMRUNTIME/macros/matchit.vim
-
-" yanktmp
-let g:yanktmp_file = $HOME . '/.vim_tmp_file'
-map <silent> sy :call YanktmpYank()<CR>
-map <silent> sp :call YanktmpPaste_p()<CR>
-map <silent> sP :call YanktmpPaste_P()<CR>
-
-" ctrlp
-let g:ctrlp_map = '<Space>f'
-let g:ctrlp_prompt_mappings = {
-      \ 'AcceptSelection("e")': [],
-      \ 'AcceptSelection("t")': ['<cr>', '<c-m>'],
-      \ }
-let g:ctrlp_working_path_mode = 'a'
-
-" netrw
-""let s:bundle = neobundle#get("netrw")
-""function! s:bundle.hooks.on_source(bundle)
-""  let g:netrw_liststyle    = 3
-""  let g:netrw_winsize      = 100
-""  let g:netrw_altv         = 1
-""  let g:netrw_browse_split = 3
-""  let g:netrw_list_hide    = '\.git,\.svn,\.DS_Store'
-""endfunction
-""unlet s:bundle
-
-" Align"
-let g:Align_xstrlen = 3
-
-" memolist.vim
-let g:memolist_path = "$HOME/Dropbox/Memo"
-
-autocmd FileType gitcommit DiffGitCached | only | split | b 1
-
-" previm"
-let g:previm_open_cmd = 'open -a Safari'
-
-"vimfiler"
-let g:vimfiler_as_default_explorer = 1
-let g:vimfiler_edit_action = 'tabopen'
-
-" octopress.vim"
-let g:octopress_path = "$HOME/Dropbox/code/diary.soramugi.net"
-
-" vim-indent-guides"
-let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_start_level=2
-let g:indent_guides_auto_colors=0
-let g:indent_guides_color_change_percent = 30
-let g:indent_guides_guide_size = 1
-
-"macdict"
-let g:macdict_window_size = 'botright 20split'
-
-"tagbar"
-let g:tagbar_left = 1
-
-"vim-auto-save"
-let g:auto_save = 1
-
-"---------------------------------------------------------------------------
 " 基本設定:
 "---------------------------------------------------------------------------
 
@@ -228,42 +115,6 @@ autocmd QuickfixCmdPost vimgrep copen
 autocmd QuickfixCmdPost grep copen
 autocmd QuickfixCmdPost Ag copen
 set switchbuf+=usetab,newtab
-" ステータスラインに表示する情報の指定
-""set statusline=%n%{winnr('$')>1?'/'.winnr().'/'.winnr('$'):''}\:%y%F\%h%w%m%r%=\|%{(&fenc!=''?&fenc:&enc).'\|'.&ff.'\|'}<%c,%l/%L:%p%%>
-
-"---------------------------------------------------------------------------
-" 色設定
-"---------------------------------------------------------------------------
-set t_Co=256
-colorscheme desert
-
-"ポップアップ補完メニュー
-highlight Pmenu      ctermbg=2
-highlight PmenuSel   ctermbg=7
-highlight PmenuSbar  ctermbg=2
-highlight PmenuThumb ctermfg=3
-
-highlight ColorColumn ctermbg=DarkGreen guibg=DarkGreen
-
-" vim-hier"
-highlight QfErrorUcurl cterm=undercurl ctermfg=Red gui=undercurl guisp=Red
-let g:hier_highlight_group_qf  = "QfErrorUcurl"
-highlight QfWarningUcurl cterm=undercurl ctermfg=Blue gui=undercurl guisp=Blue
-let g:hier_highlight_group_qfw = "QfWarningUcurl"
-
-"vim-indent-guides"
-highlight IndentGuidesOdd  guibg=#262626 ctermbg=grey
-highlight IndentGuidesEven guibg=#3c3c3c ctermbg=grey
-
-"---------------------------------------------------------------------------
-" タブ
-"---------------------------------------------------------------------------
-set smarttab
-set expandtab
-set autoindent
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
 
 "---------------------------------------------------------------------------
 " キーバインド設定
@@ -426,26 +277,13 @@ cnorea Color so $VIMRUNTIME/syntax/colortest.vim
 " カーソル位置を最後の編集位置
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
-" 全角スペースの表示
-highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=darkgray
-match ZenkakuSpace /　/
 
 " 無限undo
 if has('persistent_undo')
   set undodir=~/dotfiles/.vim/undo/
   set undofile
 endif
-"---------------------------------------------------------------------------
-" 日本語入力に関する設定:
-"---------------------------------------------------------------------------
 
-" 日本語入力自設定
-if has('multi_byte_ime') || has('xim')
-  " カーソル色(設定例:紫)
-  highlight CursorIM guibg=Purple guifg=NONE
-  " 挿入モード・検索モードでのデフォルトのIME状態設定
-  set iminsert=0 imsearch=0
-endif
 
 " vimrc外部ファイル化"
 runtime! vimrc.d/*.vim
