@@ -25,7 +25,6 @@ else
   PS1=$PS1"\[\033[0;34m\] \W \[\033[00m\]\[\033[1;33m\]\$\[\033[00m\] "
 fi
 
-
 export CLICOLOR=1
 export LS_COLORS='di=33'
 
