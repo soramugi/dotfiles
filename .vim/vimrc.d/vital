@@ -1,8 +1,16 @@
 let V = vital#of("vital")
 let S = V.import("Web.HTTP")
+
 function! s:vital_test()
-  let s:url = g:S.get('http://b.hatena.ne.jp/soramugi/bookmark')
-  echo s:url
+  let s:url = g:S.get('http://atnd.org/events/33746')
+  if !empty(s:url.content)
+    let matched = matchlist(s:url.content, '<h2>\(.*\)</h2>')
+    if !empty(matched)
+    for m in matched
+      echo m
+    endfor
+    endif
+  endif
 endfunction
 
 command! -nargs=0 VitalTest :call s:vital_test()
