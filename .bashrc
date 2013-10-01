@@ -17,9 +17,14 @@ export EDITOR=vim
 stty -ixon -ixoff
 # 音
 set bell-style none
-# 表示形式
+# 表示形式ssh接続の時と色分ける
 PS1="\`if [ \$? != 0 ]; then echo \[\e[31m\]o_O\[\e[0m\]; fi\`"
-PS1=$PS1"\[\033[0;35m\] \W \[\033[00m\]\[\033[1;33m\]\$\[\033[00m\] "
+if [ -z "$SSH_CONNECTION" ]; then
+  PS1=$PS1"\[\033[0;35m\] \W \[\033[00m\]\[\033[1;33m\]\$\[\033[00m\] "
+else
+  PS1=$PS1"\[\033[0;34m\] \W \[\033[00m\]\[\033[1;33m\]\$\[\033[00m\] "
+fi
+
 
 export CLICOLOR=1
 export LS_COLORS='di=33'
