@@ -34,7 +34,7 @@ export LS_COLORS='di=33'
 
 # ssh接続の時に設定を変える
 if [ ! -z "$SSH_CONNECTION" ]; then
-  tmux set -t: status-bg cyan
+  tmux set -t: status-bg colour200
 fi
 
 # tmuxでattachかnew-session
