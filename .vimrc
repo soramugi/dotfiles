@@ -131,9 +131,6 @@ set switchbuf+=usetab,newtab
 "leaderキー切り替え
 let mapleader = ","
 
-" 終了
-nnoremap <C-q> :q<CR>
-
 " 閉じ括弧の自動挿入
 inoremap { {}<LEFT>
 inoremap [ []<LEFT>
