@@ -262,11 +262,6 @@ cnoremap <C-p> <Up>
 " tags作成
 cnorea Ctags TagsGenerate
 
-" memo
-cnorea Memo edit ~/Dropbox/Memo/Memo.txt
-command! -nargs=1 Tmp edit ~/Dropbox/Memo/tmp/tmp.<args>
-command! -nargs=1 Temp edit ~/Dropbox/Memo/tmp/tmp.<args>
-
 " 色確認"
 cnorea Color so $VIMRUNTIME/syntax/colortest.vim
 
@@ -276,13 +271,6 @@ cnorea Color so $VIMRUNTIME/syntax/colortest.vim
 
 " カーソル位置を最後の編集位置
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
-
-
-" 無限undo
-if has('persistent_undo')
-  set undodir=~/dotfiles/.vim/undo/
-  set undofile
-endif
 
 
 " vimrc外部ファイル化"
