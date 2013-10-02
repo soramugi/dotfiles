@@ -27,4 +27,4 @@ autocmd BufRead,BufNewFile *.dist setfiletype xml
 autocmd BufRead,BufNewFile Boxfile setfiletype yaml
 
 "vim"
-autocmd BufRead,BufNewFile vital setfiletype vital.vim
+autocmd BufRead,BufNewFile test.vital setfiletype vital.vim

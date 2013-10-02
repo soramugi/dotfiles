@@ -287,4 +287,4 @@ endif
 
 " vimrc外部ファイル化"
 runtime! vimrc.d/*.vim
-runtime! vimrc.d/vital
+runtime! test.vital
