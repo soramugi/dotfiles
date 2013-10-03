@@ -2,15 +2,23 @@ let V = vital#of("vital")
 let S = V.import("Web.HTTP")
 
 function! s:vital_test()
-  let s:url = g:S.get('http://atnd.org/events/33746')
-  if !empty(s:url.content)
-    let matched = matchlist(s:url.content, '<h2>\(.*\)</h2>')
+  ""let s:url = g:S.get('http://atnd.org/events/33746')
+  ""if !empty(s:url.content)
+    "let matched = matchlist(s:url.content, '<h2>\(.*\)<\/h2>')
+    ""echo s:url.content
+    ""for u in s:url.content
+    ""  echo u
+    ""endfor
+    key = "hi<h2>foo</h2>\r\n<h2>var</h2>"
+    while key != ''
+      let matched = matchlist(key, '<h2>\([^<]*\)</h2>')
+      echo key
+    endwhile
+    let matched = matchlist("hi<h2>foo</h2>\r\n<h2>var</h2>", '<h2>\([^<]*\)</h2>')
     if !empty(matched)
-    for m in matched
-      echo m
-    endfor
+      echo matched
     endif
-  endif
+  ""endif
 endfunction
 
 command! -nargs=0 VitalTest :call s:vital_test()
