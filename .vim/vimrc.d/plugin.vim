@@ -26,7 +26,7 @@ let g:quickrun_config = {
       \   },
       \   'ruby.rspec'  : { 'command' : 'rspec' },
       \   'phpunit.php' : { 'type' : executable('phpunit') ? 'phpunit' : 'php' },
-      \   'phpunit' : { 'command' : 'phpunit' },
+      \   'phpunit' : { 'command' : 'phpunit', 'cmdopt' : '--stderr' },
       \   'vital.vim' : { 'command' : '~/dotfiles/vital_test' },
       \}
 
