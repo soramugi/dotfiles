@@ -91,20 +91,6 @@ let g:vimfiler_edit_action = 'tabopen'
 
 " octopress.vim"
 let g:octopress_path = "$HOME/Dropbox/code/diary.soramugi.net"
-let g:octopress_path = "$HOME/Dropbox/code/af/octopress"
-
-let s:default_template = [
-\ '---' ,
-\ 'layout: post',
-\ 'title: "{{_title_}}"',
-\ 'published: {{_published_}}',
-\ 'date: {{_date_}}',
-\ 'comments: {{_comments_}}',
-\ 'tags: {{_tags_}}',
-\ 'categories: {{_categories_}}',
-\ 'keywords {{_keywords_}}',
-\ '---',
-\]
 
 " vim-indent-guides"
 let g:indent_guides_enable_on_vim_startup = 1
