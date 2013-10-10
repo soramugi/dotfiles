@@ -7,11 +7,7 @@ fi
 
 git pull
 
-if vim --version | grep 7.3 > /dev/null ; then
-  . ~/dotfiles/neoinstall
-else
-  echo 'please vim version update 7.3'
-fi
+. ~/dotfiles/neoinstall
 
 # dictファイルの作成
 if type -P php > /dev/null ; then
