@@ -13,6 +13,14 @@ if [ ! -f /usr/local/bin/tmux ] ; then
   /usr/local/bin/brew install tmux
 fi
 
+if [ ! -f /usr/local/bin/cowsay ] ; then
+  /usr/local/bin/brew install cowsay
+fi
+
+if [ ! -f /usr/local/bin/fortune ] ; then
+  /usr/local/bin/brew install fortune
+fi
+
 cd ~/Downloads/
 if [ ! -d ~/Downloads/tmux-MacOSX-pasteboard ] ; then
   git clone git://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard.git
