@@ -22,7 +22,7 @@ function random_cowsay() {
     COW_NAME=$(ls -1 $COWS | awk -F\. -v COWS_RANDOM_AWK=$COWS_RANDOM 'NR == COWS_RANDOM_AWK {print $1}')
     cowsay -f $COW_NAME "`Fortune -s`"
 }
-if which fortune cowsay >/dev/null && test "$TMUX"; then
+if type -P fortune cowsay >/dev/null && test "$TMUX"; then
     while :
     do
         random_cowsay 2>/dev/null && break
