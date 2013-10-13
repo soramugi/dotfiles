@@ -7,6 +7,7 @@ autocmd BufRead,BufNewFile *.rabl      setfiletype ruby
 autocmd BufRead,BufNewFile *.jbuilder  setfiletype ruby
 autocmd BufRead,BufNewFile *.ru        setfiletype ruby
 autocmd BufWinEnter,BufNewFile *_spec.rb setfiletype ruby.rspec
+autocmd BufWinEnter,BufNewFile *_test.rb setfiletype ruby.unit
 
 "php"
 autocmd BufWinEnter,BufNewFile *Test.php setfiletype phpunit.php

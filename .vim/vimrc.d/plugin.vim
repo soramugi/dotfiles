@@ -25,12 +25,14 @@ let g:quickrun_config = {
       \       'exec'      : '%c %o %a %s',
       \   },
       \   'ruby.rspec'  : { 'command' : 'rspec' },
+      \   'ruby.unit' : { 'command' : 'rake', 'args' : 'test' },
       \   'phpunit.php' : { 'type' : executable('phpunit') ? 'phpunit' : 'php' },
       \   'phpunit' : { 'command' : 'phpunit', 'cmdopt' : '--stderr' },
       \   'vital.vim' : { 'command' : '~/dotfiles/vital_test' },
       \}
 
 " 保存したら実行"
+autocmd BufWritePost *_test.rb :QuickRun
 autocmd BufWritePost *Test.php :QuickRun
 autocmd BufWritePost test.vital :QuickRun
 
