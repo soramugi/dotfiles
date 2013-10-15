@@ -38,7 +38,7 @@ fi
 if [ ! -e $HOME/.bash_aliases ] ; then
   ln -s $HOME/dotfiles/.bashrc $HOME/.bash_aliases
 fi
-DOT_FILES=".vimrc .gvimrc .tmux.conf .ctags .vim .bash_completion .gemrc"
+DOT_FILES=".vimrc .gvimrc .tmux.conf .ctags .vim .bash_completion .gemrc .agignore"
 for file in $DOT_FILES
 do
   if [ ! -e $HOME/$file ] ; then
