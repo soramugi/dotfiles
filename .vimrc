@@ -241,6 +241,10 @@ nmap N <Plug>(anzu-N-with-echo)
 nmap * <Plug>(anzu-star-with-echo)
 nmap # <Plug>(anzu-sharp-with-echo)
 ""nmap <Esc><Esc> :nohlsearch<CR><ESC> <Plug>(anzu-clear-search-status)
+
+"反復横跳び"
+nnoremap <expr> 0 col(".") == 1 ? '$' : '0'
+
 "---------------------------------------------------------------------------
 " 短縮入力:
 "---------------------------------------------------------------------------
