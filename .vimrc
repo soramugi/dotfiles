@@ -59,7 +59,6 @@ NeoBundle 'vim-scripts/tagbar-phpctags'
 NeoBundle 'vim-scripts/vim-auto-save'
 NeoBundle 'kana/vim-textobj-user'
 NeoBundle 'osyo-manga/vim-textobj-multiblock'
-NeoBundle 'osyo-manga/vim-anzu'
 NeoBundle 'vim-jp/vital.vim'
 NeoBundle 'gist:soramugi/6775207', { 'script_type' : 'plugin' }
 
@@ -234,13 +233,6 @@ nnoremap <Leader>t :TagbarToggle<CR>
 "vim-textobj-multiblock"
 vmap ab <Plug>(textobj-multiblock-a)
 vmap ib <Plug>(textobj-multiblock-i)
-
-"vim-anzu"
-nmap n <Plug>(anzu-n-with-echo)
-nmap N <Plug>(anzu-N-with-echo)
-nmap * <Plug>(anzu-star-with-echo)
-nmap # <Plug>(anzu-sharp-with-echo)
-""nmap <Esc><Esc> :nohlsearch<CR><ESC> <Plug>(anzu-clear-search-status)
 
 "反復横跳び"
 nnoremap <expr> 0 col(".") == 1 ? '$' : '0'
