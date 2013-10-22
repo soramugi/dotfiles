@@ -237,6 +237,14 @@ vmap ib <Plug>(textobj-multiblock-i)
 "反復横跳び"
 nnoremap <expr> 0 col(".") == 1 ? '$' : '0'
 
+" インサートモードで移動"
+inoremap <C-b> <Left>
+inoremap <C-f> <Right>
+inoremap <C-a> <Home>
+inoremap <C-e> <End>
+inoremap <C-k> <Up>
+inoremap <C-j> <Down>
+
 "---------------------------------------------------------------------------
 " 短縮入力:
 "---------------------------------------------------------------------------
