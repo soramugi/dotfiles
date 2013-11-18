@@ -166,6 +166,7 @@ alias ctags_php='ctags -R --languages=php -f ~/php.tags `pwd`'
 alias bf='cat > ~/.vim_bf'
 alias bfcat='cat ~/.vim_bf'
 alias saying='while (true) do f=$(fortune); echo "$f"; echo ""; say "$f"; sleep 10; done'
+alias pong='perl -nle '\''print "display notification \"$_\" with title \"Terminal\""'\'' | osascript'
 
 export MARKPATH=$HOME/.marks
 function jump {
