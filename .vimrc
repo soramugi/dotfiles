@@ -56,11 +56,12 @@ NeoBundle 'rking/ag.vim'
 NeoBundle 'modsound/macdict-vim.git'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'vim-scripts/tagbar-phpctags'
-NeoBundle 'vim-scripts/vim-auto-save'
+NeoBundle 'syui/wauto.vim'
 NeoBundle 'kana/vim-textobj-user'
 NeoBundle 'osyo-manga/vim-textobj-multiblock'
 NeoBundle 'vim-jp/vital.vim'
 NeoBundle 'gist:soramugi/6775207', { 'script_type' : 'plugin' }
+NeoBundle 'osyo-manga/vim-over'
 
 filetype plugin indent on
 

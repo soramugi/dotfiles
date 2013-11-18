@@ -107,5 +107,7 @@ let g:macdict_window_size = 'botright 20split'
 "tagbar"
 let g:tagbar_left = 1
 
-"vim-auto-save"
-let g:auto_save = 1
+"wauto.vim"
+let g:auto_write = 1
+nmap <Leader>s  <Plug>(AutoWriteStart)
+nmap <Leader>ss <Plug>(AutoWriteStop)
