@@ -111,3 +111,7 @@ let g:tagbar_left = 1
 let g:auto_write = 1
 nmap <Leader>s  <Plug>(AutoWriteStart)
 nmap <Leader>ss <Plug>(AutoWriteStop)
+
+"vim-auto-save"
+let g:auto_save = 1
+let g:auto_save_no_updatetime = 1
