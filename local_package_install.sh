@@ -20,9 +20,7 @@ if [ ! -e $HOME/local/src/vim ] ; then
   if type -P hg >/dev/null ; then
     hg clone https://vim.googlecode.com/hg/ vim
   else
-    wget ftp://ftp.vim.org/pub/vim/unix/vim-7.3.tar.bz2
-    bzip2 -dc vim-7.3.tar.bz2 | tar xvf -
-    mv vim73 vim
+    git clone https://github.com/vim-jp/vim.git
   fi
   cd vim
   ./configure \
