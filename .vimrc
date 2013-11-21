@@ -63,6 +63,7 @@ NeoBundle 'osyo-manga/vim-textobj-multiblock'
 NeoBundle 'vim-jp/vital.vim'
 NeoBundle 'gist:soramugi/6775207', { 'script_type' : 'plugin' }
 NeoBundle 'osyo-manga/vim-over'
+NeoBundle 'gist:soramugi/7574789', { 'script_type' : 'plugin' }
 
 filetype plugin indent on
 
