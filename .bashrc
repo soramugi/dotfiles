@@ -46,6 +46,12 @@ else
   PS1=$PS1"\[\033[0;35m\] \W \[\033[00m\]\[\033[1;33m\]\$\[\033[00m\] "
 fi
 
+# vim抜けたとき
+if [[ -n "$VIMRUNTIME" ]]; then
+    PS1="\[\033[0;33m\](vim)\[\033[00m\]"$PS1
+fi
+
+
 export CLICOLOR=1
 export LS_COLORS='di=33'
 
