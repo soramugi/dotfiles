@@ -29,6 +29,7 @@ let g:quickrun_config = {
       \   'phpunit.php' : { 'type' : executable('phpunit') ? 'phpunit' : 'php' },
       \   'phpunit' : { 'command' : 'phpunit', 'cmdopt' : '--stderr' },
       \   'vital.vim' : { 'command' : '~/dotfiles/vital_test' },
+      \   'vim-flavor.vim' : { 'command' : 'rake', 'args' : 'test' },
       \}
 
 " 保存したら実行"
@@ -37,6 +38,7 @@ augroup test
   autocmd BufWritePost *_test.rb :QuickRun
   autocmd BufWritePost *Test.php :QuickRun
   autocmd BufWritePost test.vital :QuickRun
+  autocmd BufWritePost t/*.vim :QuickRun
 augroup END
 
 " taglist.vim
@@ -118,3 +120,6 @@ nmap <Leader>ss <Plug>(AutoWriteStop)
 "vim-auto-save"
 let g:auto_save = 1
 let g:auto_save_no_updatetime = 1
+
+"auto-ctags.vim"
+let g:auto_ctags = 1

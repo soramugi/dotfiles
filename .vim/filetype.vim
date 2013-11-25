@@ -29,3 +29,4 @@ autocmd BufRead,BufNewFile Boxfile setfiletype yaml
 
 "vim"
 autocmd BufRead,BufNewFile test.vital setfiletype vital.vim
+autocmd BufRead,BufNewFile t/*.vim setfiletype vim-flavor.vim

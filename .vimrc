@@ -269,7 +269,7 @@ cnoremap <C-n> <Down>
 cnoremap <C-p> <Up>
 
 " tags作成
-cnorea Ctags TagsGenerate
+""cnorea Ctags TagsGenerate
 
 " 色確認"
 cnorea Color so $VIMRUNTIME/syntax/colortest.vim
