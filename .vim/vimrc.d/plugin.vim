@@ -32,9 +32,12 @@ let g:quickrun_config = {
       \}
 
 " 保存したら実行"
-autocmd BufWritePost *_test.rb :QuickRun
-autocmd BufWritePost *Test.php :QuickRun
-autocmd BufWritePost test.vital :QuickRun
+augroup test
+  autocmd!
+  autocmd BufWritePost *_test.rb :QuickRun
+  autocmd BufWritePost *Test.php :QuickRun
+  autocmd BufWritePost test.vital :QuickRun
+augroup END
 
 " taglist.vim
 set tags=tags

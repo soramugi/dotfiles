@@ -34,7 +34,8 @@ NeoBundle 'tyru/open-browser.vim'
 ""NeoBundle 'mattn/webapi-vim'
 ""NeoBundle 'mattn/excitetranslate-vim'
 NeoBundle 'kien/ctrlp.vim.git'
-NeoBundle 'szw/vim-tags'
+""NeoBundle 'szw/vim-tags'
+NeoBundle 'soramugi/auto-ctags.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'glidenote/memolist.vim'
 NeoBundle 'kana/vim-fakeclip.git'
@@ -279,7 +280,6 @@ cnorea Color so $VIMRUNTIME/syntax/colortest.vim
 
 " カーソル位置を最後の編集位置
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
-
 
 " vimrc外部ファイル化"
 runtime! vimrc.d/*.vim
