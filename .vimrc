@@ -162,7 +162,7 @@ nnoremap <silent> <Space>t :<C-u>tabnew<CR>
 nnoremap <silent> <Space>T :<C-u>tabnew %<CR>
 
 " s* で置換指定
-nnoremap <expr> s* ':%substitute/' . expand('<cword>') . '/'
+nnoremap s* :OverCommandLine<CR>%s/<C-r><C-w>/
 
 " ESC2回でハイライト非表示
 nnoremap <ESC><ESC> :nohlsearch<CR><ESC>
