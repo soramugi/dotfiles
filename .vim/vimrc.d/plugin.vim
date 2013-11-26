@@ -123,3 +123,4 @@ let g:auto_save_no_updatetime = 1
 
 "auto-ctags.vim"
 let g:auto_ctags = 1
+let g:auto_ctags_directory_list = ['.git', '.svn']

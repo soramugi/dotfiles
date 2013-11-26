@@ -72,7 +72,6 @@ filetype plugin indent on
 " 基本設定:
 "---------------------------------------------------------------------------
 
-set tags+=$HOME/tags
 " 編集系
 set fileformats=unix,dos,mac
 set backspace=2
