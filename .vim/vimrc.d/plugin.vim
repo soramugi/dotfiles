@@ -42,7 +42,7 @@ augroup test
 augroup END
 
 " taglist.vim
-set tags=tags
+set tags=tags,.svn/tags
 let Tlist_Show_One_File      = 1
 let Tlist_Exit_OnlyWiindow   = 1
 let Tlist_Enable_Fold_Column = 1
