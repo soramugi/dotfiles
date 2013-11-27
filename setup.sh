@@ -11,7 +11,7 @@ git pull
 
 # dictファイルの作成
 if type -P php > /dev/null ; then
-  php ~/dotfiles/.vim/dict/dict.php | sort > ~/dotfiles/.vim/dict/php.dict 2>&1 /dev/null
+  php ~/dotfiles/.vim/dict/dict.php | sort > ~/dotfiles/.vim/dict/php.dict
 fi
 
 if type -P composer > /dev/null ; then
