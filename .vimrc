@@ -62,9 +62,13 @@ NeoBundle 'syui/wauto.vim'
 NeoBundle 'kana/vim-textobj-user'
 NeoBundle 'osyo-manga/vim-textobj-multiblock'
 NeoBundle 'vim-jp/vital.vim'
+"OctopressGit.vim"
 NeoBundle 'git://gist.github.com/6775207.git', { 'script_type' : 'plugin' }
 NeoBundle 'osyo-manga/vim-over'
+"保存されて無かったら対話するやつ"
 NeoBundle 'git://gist.github.com/7574789.git', { 'script_type' : 'plugin' }
+"以前のカーソル位置に移動"
+NeoBundle 'git://gist.github.com/7671774.git', { 'script_type' : 'plugin' }
 
 filetype plugin indent on
 
@@ -273,12 +277,19 @@ cnoremap <C-p> <Up>
 " 色確認"
 cnorea Color so $VIMRUNTIME/syntax/colortest.vim
 
+" memo
+cnorea Memo edit ~/Dropbox/Memo/Memo.txt
+command! -nargs=1 Tmp edit ~/Dropbox/Memo/tmp/tmp.<args>
+command! -nargs=1 Temp edit ~/Dropbox/Memo/tmp/tmp.<args>
 "---------------------------------------------------------------------------
 " 編集に関する設定:
 "---------------------------------------------------------------------------
 
-" カーソル位置を最後の編集位置
-au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+" 無限undo
+if has('persistent_undo')
+  set undodir=~/dotfiles/.vim/undo/
+  set undofile
+endif
 
 " vimrc外部ファイル化"
 runtime! vimrc.d/*.vim
