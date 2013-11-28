@@ -42,7 +42,7 @@ augroup test
 augroup END
 
 " taglist.vim
-set tags=tags,.svn/tags
+set tags=tags
 let Tlist_Show_One_File      = 1
 let Tlist_Exit_OnlyWiindow   = 1
 let Tlist_Enable_Fold_Column = 1
@@ -122,5 +122,7 @@ let g:auto_save = 1
 let g:auto_save_no_updatetime = 1
 
 "auto-ctags.vim"
+set tags+=.svn/tags,.svn/php.tags
 let g:auto_ctags = 1
 let g:auto_ctags_directory_list = ['.git', '.svn']
+let g:auto_ctags_filetype_mode = 1
