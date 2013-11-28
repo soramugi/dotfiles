@@ -24,7 +24,8 @@ let g:quickrun_config = {
       \       'args'      : 'Kobito',
       \       'exec'      : '%c %o %a %s',
       \   },
-      \   'ruby.rspec'  : { 'command' : 'rspec' },
+      \   'ruby.rspec'  : { 'type' : executable('rspec') ? 'rspec' : 'ruby'  },
+      \   'rspec'  : { 'command' : 'rspec' },
       \   'ruby.unit' : { 'command' : 'rake', 'args' : 'test' },
       \   'phpunit.php' : { 'type' : executable('phpunit') ? 'phpunit' : 'php' },
       \   'phpunit' : { 'command' : 'phpunit', 'cmdopt' : '--stderr' },
@@ -36,7 +37,6 @@ let g:quickrun_config = {
 augroup test
   autocmd!
   autocmd BufWritePost *_test.rb :QuickRun
-  autocmd BufWritePost *Test.php :QuickRun
   autocmd BufWritePost test.vital :QuickRun
   autocmd BufWritePost t/*.vim :QuickRun
 augroup END
