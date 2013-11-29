@@ -1,13 +1,13 @@
 #!/bin/sh
 
 # gitの設定読み込み
-if [ -e $HOME/dotfiles/git_setup.sh ] ; then
-  . $HOME/dotfiles/git_setup.sh
+if [ -e $HOME/dotfiles/bin/git_setup ] ; then
+  . $HOME/dotfiles/bin/git_setup
 fi
 
 git pull
 
-. ~/dotfiles/neoinstall
+. ~/dotfiles/bin/neoinstall
 
 # dictファイルの作成
 if type -P php > /dev/null ; then

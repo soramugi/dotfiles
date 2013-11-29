@@ -29,7 +29,7 @@ let g:quickrun_config = {
       \   'ruby.unit' : { 'command' : 'rake', 'args' : 'test' },
       \   'phpunit.php' : { 'type' : executable('phpunit') ? 'phpunit' : 'php' },
       \   'phpunit' : { 'command' : 'phpunit', 'cmdopt' : '--stderr' },
-      \   'vital.vim' : { 'command' : '~/dotfiles/vital_test' },
+      \   'vital.vim' : { 'command' : '~/dotfiles/bin/vital_test' },
       \   'vim-flavor.vim' : { 'command' : 'rake', 'args' : 'test' },
       \}
 
