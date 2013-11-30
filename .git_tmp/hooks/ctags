@@ -1,2 +1,2 @@
 #!/bin/sh
-/usr/local/bin/ctags -R -f .git/tags --append=no `pwd`
+/usr/local/bin/ctags --tag-relative --recurse --sort=yes  --append=no -f .git/tags
