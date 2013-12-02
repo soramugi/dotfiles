@@ -22,7 +22,6 @@ NeoBundle 'vim-scripts/yanktmp.vim'
 NeoBundle 'vim-jp/vimdoc-ja'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'vim-scripts/Align'
-"NeoBundle 'vim-scripts/netrw.vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 "NeoBundle 'vim-scripts/wokmarks.vim'
 NeoBundle 'tpope/vim-surround'
@@ -34,7 +33,6 @@ NeoBundle 'tyru/open-browser.vim'
 ""NeoBundle 'mattn/webapi-vim'
 ""NeoBundle 'mattn/excitetranslate-vim'
 NeoBundle 'kien/ctrlp.vim.git'
-""NeoBundle 'szw/vim-tags'
 NeoBundle 'git@github.com:soramugi/auto-ctags.vim.git'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'glidenote/memolist.vim'
@@ -42,7 +40,8 @@ NeoBundle 'kana/vim-fakeclip.git'
 NeoBundle 'tpope/vim-abolish'
 NeoBundleLazy "mattn/habatobi-vim", { 'autoload' : { 'commands' : [ "Habatobi" ] } }
 NeoBundle "Shougo/unite.vim"
-NeoBundle 'Shougo/vimfiler', { 'depends' : ["Shougo/unite.vim"] }
+""NeoBundle 'Shougo/vimfiler', { 'depends' : ["Shougo/unite.vim"] }
+NeoBundle 'vim-scripts/netrw.vim'
 NeoBundleLazy 'yuratomo/w3m.vim', {
       \   'autoload' : {
       \       'commands' : [ "W3m", "W3mHistory", "W3mHistoryClear", "W3mLocal", "W3mSplit", "W3mTab", "W3mVSplit" ]
@@ -55,20 +54,21 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'rking/ag.vim'
 NeoBundle 'modsound/macdict-vim.git'
-NeoBundle 'majutsushi/tagbar'
-NeoBundle 'vim-scripts/tagbar-phpctags'
-""NeoBundle 'vim-scripts/vim-auto-save'
 NeoBundle 'syui/wauto.vim'
 NeoBundle 'kana/vim-textobj-user'
 NeoBundle 'osyo-manga/vim-textobj-multiblock'
+NeoBundle 'osyo-manga/vim-over'
 NeoBundle 'vim-jp/vital.vim'
 "OctopressGit.vim"
 NeoBundle 'git://gist.github.com/6775207.git', { 'script_type' : 'plugin' }
-NeoBundle 'osyo-manga/vim-over'
 "保存されて無かったら対話するやつ"
 NeoBundle 'git://gist.github.com/7574789.git', { 'script_type' : 'plugin' }
 "以前のカーソル位置に移動"
 NeoBundle 'git://gist.github.com/7671774.git', { 'script_type' : 'plugin' }
+" IDE風
+NeoBundle 'vim-scripts/taglist.vim'
+NeoBundle 'majutsushi/tagbar'
+NeoBundle 'vim-scripts/tagbar-phpctags'
 
 filetype plugin indent on
 

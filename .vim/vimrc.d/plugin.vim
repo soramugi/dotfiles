@@ -46,6 +46,7 @@ set tags=tags
 let Tlist_Show_One_File      = 1
 let Tlist_Exit_OnlyWiindow   = 1
 let Tlist_Enable_Fold_Column = 1
+let Tlist_Use_Right_Window = 1
 let g:tlist_php_settings     = 'php;c:class;d:constant;f:function'
 
 " syntastic.vim
@@ -74,15 +75,11 @@ let g:ctrlp_prompt_mappings = {
 let g:ctrlp_working_path_mode = 'a'
 
 " netrw
-""let s:bundle = neobundle#get("netrw")
-""function! s:bundle.hooks.on_source(bundle)
-""  let g:netrw_liststyle    = 3
-""  let g:netrw_winsize      = 100
-""  let g:netrw_altv         = 1
-""  let g:netrw_browse_split = 3
-""  let g:netrw_list_hide    = '\.git,\.svn,\.DS_Store'
-""endfunction
-""unlet s:bundle
+let g:netrw_liststyle    = 3
+let g:netrw_winsize      = 100
+let g:netrw_altv         = 1
+let g:netrw_browse_split = 3
+let g:netrw_list_hide    = '\.git,\.svn,\.DS_Store'
 
 " Align"
 let g:Align_xstrlen = 3
@@ -114,8 +111,6 @@ let g:tagbar_left = 1
 
 "wauto.vim"
 let g:auto_write = 1
-nmap <Leader>s  <Plug>(AutoWriteStart)
-nmap <Leader>ss <Plug>(AutoWriteStop)
 
 "vim-auto-save"
 let g:auto_save = 1
