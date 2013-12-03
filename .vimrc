@@ -52,7 +52,7 @@ NeoBundle 'FuzzyFinder'
 NeoBundle 'glidenote/octoeditor.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'bling/vim-airline'
-NeoBundle 'rking/ag.vim'
+""NeoBundle 'rking/ag.vim'
 NeoBundle 'modsound/macdict-vim.git'
 NeoBundle 'syui/wauto.vim'
 NeoBundle 'kana/vim-textobj-user'
@@ -185,9 +185,9 @@ nnoremap <silent> <Space>E  :<C-u>source $MYVIMRC<CR>
 nnoremap <silent> <Space>s :<C-u>w !sudo tee %<CR>
 
 " grep の書式を挿入
-""nnoremap <expr> <Space>g ':vimgrep /\<' . expand('<cword>') . '\>/j **/*.' . expand('%:e')
-""nnoremap <expr> <Space>G ':sil grep! ' . expand('<cword>') . ' *'
-nnoremap <expr> <Space>g ':Ag ' . expand('<cword>')
+nnoremap <expr> <Space>g ':vimgrep /\<' . expand('<cword>') . '\>/j **/*.' . &filetype
+nnoremap <expr> <Space>G ':sil grep! ' . expand('<cword>') . ' *'
+""nnoremap <expr> <Space>g ':Ag ' . expand('<cword>')
 
 " help 引くのに便利かなと
 nnoremap <expr> <Space>h ':tab h ' . expand('<cword>')
