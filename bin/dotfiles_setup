@@ -7,11 +7,16 @@ fi
 
 git pull
 
-. ~/dotfiles/bin/neoinstall
+# 大事
+if [ ! -e $HOME/dotfiles/.vim/bundle/neobundle.vim ] ; then
+  git clone git://github.com/Shougo/neobundle.vim.git $HOME/dotfiles/.vim/bundle/neobundle.vim
+fi
+
+. $HOME/dotfiles/.vim/bundle/neobundle.vim/bin/neoinstall
 
 # dictファイルの作成
 if type -P php > /dev/null ; then
-  php ~/dotfiles/.vim/dict/dict.php | sort > ~/dotfiles/.vim/dict/php.dict
+  php $HOME/dotfiles/.vim/dict/dict.php | sort > $HOME/dotfiles/.vim/dict/php.dict
 fi
 
 if type -P composer > /dev/null ; then
@@ -29,9 +34,7 @@ fi
 
 # bashrcの書き込み
 if [ ! -e $HOME/.bash_aliases ] && [ ! -e $HOME/.profile ] ; then
-  echo 'if [ -f ~/.bash_aliases ] ; then' >> $HOME/.bashrc
-  echo '    . ~/.bash_aliases' >> $HOME/.bashrc
-  echo 'fi' >> $HOME/.bashrc
+  echo 'if [ -f ~/.bash_aliases ] ; then . $HOME/.bash_aliases; fi' >> $HOME/.bashrc
 fi
 
 # aliase
