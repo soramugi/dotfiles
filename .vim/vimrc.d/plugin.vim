@@ -29,16 +29,12 @@ let g:quickrun_config = {
       \   'ruby.unit' : { 'command' : 'rake', 'args' : 'test' },
       \   'phpunit.php' : { 'type' : executable('phpunit') ? 'phpunit' : 'php' },
       \   'phpunit' : { 'command' : 'phpunit', 'cmdopt' : '--stderr' },
-      \   'vital.vim' : { 'command' : '~/dotfiles/bin/vital_test' },
-      \   'vim-flavor.vim' : { 'command' : 'rake', 'args' : 'test' },
       \}
 
 " 保存したら実行"
 augroup test
   autocmd!
   autocmd BufWritePost *_test.rb :QuickRun
-  autocmd BufWritePost test.vital :QuickRun
-  autocmd BufWritePost t/*.vim :QuickRun
 augroup END
 
 " taglist.vim
@@ -46,7 +42,7 @@ set tags=tags
 let Tlist_Show_One_File      = 1
 let Tlist_Exit_OnlyWiindow   = 1
 let Tlist_Enable_Fold_Column = 1
-let Tlist_Use_Right_Window = 1
+let Tlist_Use_Right_Window   = 1
 let g:tlist_php_settings     = 'php;c:class;d:constant;f:function'
 
 " syntastic.vim
@@ -111,10 +107,7 @@ let g:tagbar_left = 1
 
 "wauto.vim"
 let g:auto_write = 1
-
-"vim-auto-save"
-let g:auto_save = 1
-let g:auto_save_no_updatetime = 1
+let g:auto_write_ignore_filetype_list = ['svn', 'gitcommit']
 
 "auto-ctags.vim"
 set tags+=.svn/tags,.svn/php.tags
