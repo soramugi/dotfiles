@@ -14,18 +14,18 @@ export EDITOR=vim
 # ---------------------------------------------------------------------------
 
 function random_cowsay() {
-    COWS=$(ls -1 `brew --prefix`/Cellar/cowsay/3.03/share/cows/)
-    COWS="$COWS $(cd ~/dotfiles/cows ;find `pwd` -maxdepth 1 -mindepth 1 -name *.cow)"
-    NBRE_COWS=$(for f in $COWS; do echo $f; done | wc -l)
-    COWS_RANDOM=$(expr $RANDOM % $NBRE_COWS + 1)
-    COW_NAME=$(for f in $COWS; do echo $f; done | awk -v COWS_RANDOM_AWK=$COWS_RANDOM 'NR == COWS_RANDOM_AWK {print $1}')
-    cowsay -f $COW_NAME "`Fortune -s`"
+COWS=$(ls -1 `brew --prefix`/Cellar/cowsay/3.03/share/cows/)
+COWS="$COWS $(cd ~/dotfiles/cows ;find `pwd` -maxdepth 1 -mindepth 1 -name *.cow)"
+NBRE_COWS=$(for f in $COWS; do echo $f; done | wc -l)
+COWS_RANDOM=$(expr $RANDOM % $NBRE_COWS + 1)
+COW_NAME=$(for f in $COWS; do echo $f; done | awk -v COWS_RANDOM_AWK=$COWS_RANDOM 'NR == COWS_RANDOM_AWK {print $1}')
+cowsay -f $COW_NAME "`Fortune -s`"
 }
 if type -P fortune cowsay >/dev/null && test "$TMUX"; then
-    while :
-    do
-        random_cowsay 2>/dev/null && break
-    done
+  while :
+  do
+    random_cowsay 2>/dev/null && break
+  done
 fi
 
 # ---------------------------------------------------------------------------
@@ -48,7 +48,7 @@ fi
 
 # vim抜けたとき
 if [[ -n "$VIMRUNTIME" ]]; then
-    PS1="\[\033[0;33m\](vim)\[\033[00m\]"$PS1
+  PS1="\[\033[0;33m\](vim)\[\033[00m\]"$PS1
 fi
 
 
@@ -186,4 +186,18 @@ rm -i $MARKPATH/$1
 }
 function marks {
 ls -l $MARKPATH
+}
+
+function sum_num {
+if [ -p /dev/stdin ]; then
+  args=$(cat -)
+else
+  args=$*
+fi
+
+_num=0
+for i in $args; do
+  _num=$((_num+$i))
+done
+echo $_num
 }
