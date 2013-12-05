@@ -58,12 +58,15 @@ NeoBundle 'kana/vim-textobj-user'
 NeoBundle 'osyo-manga/vim-textobj-multiblock'
 NeoBundle 'osyo-manga/vim-over'
 NeoBundle 'vim-jp/vital.vim'
+NeoBundle 'LeafCage/vimhelpgenerator'
 "OctopressGit.vim"
 NeoBundle 'git://gist.github.com/6775207.git', { 'script_type' : 'plugin' }
 "保存されて無かったら対話するやつ"
 NeoBundle 'git://gist.github.com/7574789.git', { 'script_type' : 'plugin' }
 "以前のカーソル位置に移動"
 NeoBundle 'git://gist.github.com/7671774.git', { 'script_type' : 'plugin' }
+"agあればgrepをagコマンドに"
+NeoBundle 'git://gist.github.com/7800124.git', { 'script_type' : 'plugin' }
 " IDE風
 NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'majutsushi/tagbar'
@@ -117,9 +120,7 @@ set wrapscan
 set keywordprg=:help
 set history=100
 set grepprg=grep\ -rnIH\ --exclude=*.svn*\ --exclude=*.git*
-autocmd QuickfixCmdPost vimgrep copen
-autocmd QuickfixCmdPost grep copen
-autocmd QuickfixCmdPost Ag copen
+autocmd QuickFixCmdPost *grep* cwindow
 set switchbuf+=usetab,newtab
 
 "---------------------------------------------------------------------------

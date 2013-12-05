@@ -13,7 +13,7 @@ highlight PmenuThumb ctermfg=3
 highlight ColorColumn ctermbg=DarkGreen guibg=DarkGreen
 
 " vim-hier"
-highlight QfErrorUcurl cterm=undercurl ctermfg=Red gui=undercurl guisp=Red
+highlight QfErrorUcurl cterm=underline gui=undercurl guisp=Red
 let g:hier_highlight_group_qf  = "QfErrorUcurl"
 highlight QfWarningUcurl cterm=undercurl ctermfg=Blue gui=undercurl guisp=Blue
 let g:hier_highlight_group_qfw = "QfWarningUcurl"
