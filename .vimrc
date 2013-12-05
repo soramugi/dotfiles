@@ -12,7 +12,7 @@ NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/vimproc', {
       \ 'build' : {
-      \     'windows' : 'echo "Sorry, cannot update vimproc binary file in Windows."',
+      \     'windows' : 'echo "Cannot update vimproc binary file in Windows."',
       \     'cygwin' : 'make -f make_cygwin.mak',
       \     'mac' : 'make -f make_mac.mak',
       \     'unix' : 'make -f make_unix.mak',
@@ -28,7 +28,7 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'svn-diff.vim'
 NeoBundle 'scrooloose/syntastic'
 ""NeoBundle 'chikatoike/activefix.vim'
-NeoBundle "jceb/vim-hier"
+""NeoBundle 'jceb/vim-hier'
 NeoBundle 'tyru/open-browser.vim'
 ""NeoBundle 'mattn/webapi-vim'
 ""NeoBundle 'mattn/excitetranslate-vim'
@@ -37,19 +37,19 @@ NeoBundle 'git@github.com:soramugi/auto-ctags.vim.git'
 NeoBundle 'glidenote/memolist.vim'
 NeoBundle 'kana/vim-fakeclip.git'
 NeoBundle 'tpope/vim-abolish'
-NeoBundleLazy "mattn/habatobi-vim", { 'autoload' : { 'commands' : [ "Habatobi" ] } }
-NeoBundle "Shougo/unite.vim"
+""NeoBundleLazy 'mattn/habatobi-vim', { 'autoload' : { 'commands' : [ 'Habatobi' ] } }
+""NeoBundle 'Shougo/unite.vim'
 ""NeoBundle 'Shougo/vimfiler', { 'depends' : ["Shougo/unite.vim"] }
 NeoBundle 'vim-scripts/netrw.vim'
 NeoBundleLazy 'yuratomo/w3m.vim', {
       \   'autoload' : {
-      \       'commands' : [ "W3m", "W3mHistory", "W3mHistoryClear", "W3mLocal", "W3mSplit", "W3mTab", "W3mVSplit" ]
+      \       'commands' : [ 'W3m', 'W3mHistory', 'W3mHistoryClear', 'W3mLocal', 'W3mSplit', 'W3mTab', 'W3mVSplit' ]
       \   }
       \}
 NeoBundle 'L9'
 NeoBundle 'FuzzyFinder'
 NeoBundle 'glidenote/octoeditor.vim'
-NeoBundle 'tpope/vim-fugitive'
+""NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'bling/vim-airline'
 ""NeoBundle 'rking/ag.vim'
 NeoBundle 'modsound/macdict-vim.git'

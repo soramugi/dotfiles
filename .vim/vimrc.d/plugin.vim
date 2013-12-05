@@ -102,6 +102,10 @@ let g:indent_guides_guide_size = 1
 "macdict"
 let g:macdict_window_size = 'botright 20split'
 
+"w3m"
+let g:w3m#search_engine = 'http://www.google.co.jp/search?ie=' . &encoding . '&q=%s'
+let g:w3m#homepage = 'http://www.google.co.jp/'
+
 "tagbar"
 let g:tagbar_left = 1
 
@@ -110,7 +114,7 @@ let g:auto_write = 1
 let g:auto_write_ignore_filetype_list = ['svn', 'gitcommit']
 
 "auto-ctags.vim"
-set tags+=.svn/tags,.svn/php.tags
+set tags+=.svn/tags,.git/tags
 let g:auto_ctags = 1
 let g:auto_ctags_directory_list = ['.git', '.svn']
 ""let g:auto_ctags_filetype_mode = 1
