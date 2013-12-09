@@ -59,6 +59,8 @@ NeoBundle 'osyo-manga/vim-textobj-multiblock'
 NeoBundle 'osyo-manga/vim-over'
 NeoBundle 'vim-jp/vital.vim'
 NeoBundle 'LeafCage/vimhelpgenerator'
+NeoBundle 'rbtnn/puyo.vim'
+
 "OctopressGit.vim"
 NeoBundle 'git://gist.github.com/6775207.git', { 'script_type' : 'plugin' }
 "保存されて無かったら対話するやつ"
