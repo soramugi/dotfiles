@@ -96,7 +96,6 @@ set nobackup
 " 画面表示
 syntax on
 set number
-set relativenumber
 set ruler
 set list
 set listchars=tab:>\ ,extends:<,trail:-
@@ -108,7 +107,10 @@ set title
 set textwidth=0
 set scrolloff=5
 set visualbell t_vb=
-set colorcolumn=80
+if v:version > 702
+  set relativenumber
+  set colorcolumn=80
+endif
 "自動折りたたみ設定
 set foldmethod=indent
 set foldlevel=1
