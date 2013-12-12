@@ -15,8 +15,8 @@ syntax match phpUnitOk /OK.*/
 syntax match phpUnitFailures /FAILURES.*/
 
 "group-nameをハイライトの指定と関連付け
-highlight phpUnitOk term=reverse ctermbg=2 guibg=DarkGreen
-highlight phpUnitFailures term=reverse ctermbg=4 guibg=DarkRed
+highlight phpUnitOk term=reverse ctermfg=0 ctermbg=2 guibg=DarkGreen
+highlight phpUnitFailures term=reverse ctermfg=0 ctermbg=4 guibg=DarkRed
 
 "unlet b:current_syntax
 let b:current_syntax = 'quickrun'
