@@ -1,5 +1,5 @@
-if filereadable(expand('$HOME/dotfiles/.vimrc'))
-    source $HOME/dotfiles/.vimrc
+if filereadable(expand('$HOME/.vimrc'))
+    source $HOME/.vimrc
 endif
 
 " とりあえずのWindows用、gvim設定置いておく

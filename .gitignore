@@ -1,5 +1,5 @@
-.vim/bundle/*
-.vim/undo/*
-.vim/dict/*.dict
-.vim/.netrwhist
+vim/bundle/*
+vim/undo/*
+vim/dict/*.dict
+vim/.netrwhist
 tags

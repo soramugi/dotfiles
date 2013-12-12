@@ -156,7 +156,7 @@ alias gr='git checkout -- ' # 指定したファイルの変更巻き戻し
 alias grh='git reset --soft HEAD'
 alias grhh='git reset --hard HEAD'
 # git alias help
-alias gh='grep gi[t] ~/dotfiles/.bashrc | sed "s/^alias\ //" | grep --color=auto -e "^[a-z]\+"'
+alias gh='grep gi[t] ~/dotfiles/bashrc | sed "s/^alias\ //" | grep --color=auto -e "^[a-z]\+"'
 
 # ディレクトリ移動
 alias ..='cd ..'
@@ -166,7 +166,7 @@ alias .....='cd ../../../../'
 alias ......='cd ../../../../../'
 
 # 拡張
-alias vl='vim -u ~/dotfiles/.vimrclite --noplugin'
+alias vl='vim -u ~/dotfiles/vimrclite --noplugin'
 alias eman='LANG=c man'
 alias ctags_php='ctags -R --languages=php -f ~/php.tags `pwd`'
 alias bf='cat > ~/.vim_bf'

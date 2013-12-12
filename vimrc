@@ -5,8 +5,8 @@ set nocompatible
 filetype plugin indent off
 
 if has('vim_starting')
-  set runtimepath+=~/dotfiles/.vim/bundle/neobundle.vim/
-  call neobundle#rc(expand('~/dotfiles/.vim/bundle/'))
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+  call neobundle#rc(expand('~/.vim/bundle/'))
 endif
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neocomplcache'
@@ -289,7 +289,7 @@ command! -nargs=1 Temp edit ~/Dropbox/Memo/tmp/tmp.<args>
 
 " 無限undo
 if has('persistent_undo')
-  set undodir=~/dotfiles/.vim/undo/
+  set undodir=~/.vim/undo/
   set undofile
 endif
 

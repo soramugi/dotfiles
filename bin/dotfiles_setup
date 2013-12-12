@@ -7,16 +7,9 @@ fi
 
 git pull
 
-# 大事
-if [ ! -e $HOME/dotfiles/.vim/bundle/neobundle.vim ] ; then
-  git clone git://github.com/Shougo/neobundle.vim.git $HOME/dotfiles/.vim/bundle/neobundle.vim
-fi
-
-. $HOME/dotfiles/.vim/bundle/neobundle.vim/bin/neoinstall
-
 # dictファイルの作成
 if type -P php > /dev/null ; then
-  php $HOME/dotfiles/.vim/dict/dict.php | sort > $HOME/dotfiles/.vim/dict/php.dict
+  php $HOME/dotfiles/vim/dict/dict.php | sort > $HOME/dotfiles/vim/dict/php.dict
 fi
 
 if type -P composer > /dev/null ; then
@@ -39,15 +32,23 @@ fi
 
 # aliase
 if [ ! -e $HOME/.bash_aliases ] ; then
-  ln -s $HOME/dotfiles/.bashrc $HOME/.bash_aliases
+  ln -s $HOME/dotfiles/bashrc $HOME/.bash_aliases
 fi
-DOT_FILES=".vimrc .gvimrc .tmux.conf .ctags .vim .bash_completion .gemrc .agignore .bundle"
+DOT_FILES="vimrc gvimrc tmux.conf ctags vim bash_completion gemrc agignore bundle"
 for file in $DOT_FILES
 do
-  if [ ! -e $HOME/$file ] ; then
-    ln -s $HOME/dotfiles/$file $HOME/$file
+  if [ ! -e $HOME/.$file ] ; then
+    ln -s $HOME/dotfiles/$file $HOME/.$file
   fi
 done
+
+# 大事
+if [ ! -e $HOME/.vim/bundle/neobundle.vim ] ; then
+  git clone git://github.com/Shougo/neobundle.vim.git $HOME/.vim/bundle/neobundle.vim
+fi
+
+. $HOME/.vim/bundle/neobundle.vim/bin/neoinstall
+
 
 # reload
 if [ -e $HOME/.profile ] ; then
