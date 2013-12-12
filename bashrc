@@ -6,8 +6,14 @@ export PATH=$HOME/local/bin:$PATH
 export PATH=./bin:vendor/bin:$PATH
 export PATH=$HOME/bin:$PATH
 export PATH=$HOME/.composer/vendor/bin:$PATH
-if type -P brew >/dev/null && brew --prefix coreutils >/dev/null; then
-  export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+if type -P brew >/dev/null; then
+  export PATH="/usr/local/sbin:/usr/local/bin:$PATH"
+  if brew --prefix coreutils >/dev/null; then
+    export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+  fi
+  if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
+  fi
 fi
 
 export EDITOR=vim
