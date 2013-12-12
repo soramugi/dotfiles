@@ -9,6 +9,10 @@ if [ ! -f /usr/local/bin/macvim ] ; then
   /usr/local/bin/brew install macvim --override-system-vim
 fi
 
+if brew --prefix coreutils >/dev/null ; then
+  /usr/local/bin/brew install coreutils
+fi
+
 if [ ! -f /usr/local/bin/tmux ] ; then
   /usr/local/bin/brew install tmux
 fi

@@ -6,6 +6,9 @@ export PATH=$HOME/local/bin:$PATH
 export PATH=./bin:vendor/bin:$PATH
 export PATH=$HOME/bin:$PATH
 export PATH=$HOME/.composer/vendor/bin:$PATH
+if type -P brew >/dev/null && brew --prefix coreutils >/dev/null; then
+  export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+fi
 
 export EDITOR=vim
 
@@ -53,7 +56,11 @@ fi
 
 
 export CLICOLOR=1
-export LS_COLORS='di=33'
+if type -P dircolors >/dev/null ; then
+  eval `dircolors $HOME/.dir_colors`
+else
+  export LS_COLORS='di=33'
+fi
 
 # ---------------------------------------------------------------------------
 #  仮想端末
@@ -104,6 +111,7 @@ man() {
 
 
 # 短縮
+alias ls='ls --color=auto'
 alias ll='ls -AlFh --show-control-chars --color=auto'
 alias l='ls -AlFh --show-control-chars --color=auto'
 alias vi='vim'
@@ -201,3 +209,5 @@ for i in $args; do
 done
 echo $_num
 }
+
+# vim:ft=sh:

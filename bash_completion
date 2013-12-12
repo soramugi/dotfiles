@@ -29,3 +29,5 @@ function _completemarks() {
 
 complete -F _completemarks jump
 complete -F _completemarks unmark
+
+# vim:ft=sh:
