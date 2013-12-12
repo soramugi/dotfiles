@@ -104,8 +104,8 @@ man() {
 
 
 # 短縮
-alias ll='ls -laF'
-alias l='ls -laF'
+alias ll='ls -AlFh --show-control-chars --color=auto'
+alias l='ls -AlFh --show-control-chars --color=auto'
 alias vi='vim'
 alias v='vim'
 alias agh='ag --hidden'
