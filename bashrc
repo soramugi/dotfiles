@@ -23,7 +23,7 @@ export EDITOR=vim
 # ---------------------------------------------------------------------------
 
 function random_cowsay() {
-COWS=$(ls -1 `brew --prefix`/Cellar/cowsay/3.03/share/cows/)
+#COWS=$(ls -1 `brew --prefix`/Cellar/cowsay/3.03/share/cows/)
 COWS="$COWS $(cd ~/dotfiles/cows ;find `pwd` -type f -print)"
 NBRE_COWS=$(for f in $COWS; do echo $f; done | wc -l)
 COWS_RANDOM=$(expr $RANDOM % $NBRE_COWS + 1)
