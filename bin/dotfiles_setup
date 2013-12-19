@@ -15,6 +15,10 @@ fi
 if type -P composer > /dev/null ; then
   if [ ! -e $HOME/.composer/vendor/bin/phpunit ]  ; then
     composer global require 'phpunit/phpunit=3.7.*'
+    composer global require 'phpunit/phpunit-selenium=*'
+    composer global require 'phpunit/phpunit-story=*'
+    composer global require 'phpunit/dbunit=*'
+    composer global require 'phpunit/php-invoker=*'
   fi
   if [ ! -e $HOME/.composer/vendor/bin/phpctags ]  ; then
     composer global require 'techlivezheng/phpctags=*'
