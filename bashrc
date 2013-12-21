@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------------------
 
 export PATH=$HOME/local/bin:$PATH
-export PATH=./bin:vendor/bin:$PATH
+export PATH=./bin:vendor/bin:protected/vendor/bin:$PATH
 export PATH=$HOME/bin:$PATH
 export PATH=$HOME/.composer/vendor/bin:$PATH
 if type -P brew >/dev/null; then
