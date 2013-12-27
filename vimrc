@@ -60,6 +60,7 @@ NeoBundle 'osyo-manga/vim-over'
 NeoBundle 'vim-jp/vital.vim'
 NeoBundle 'LeafCage/vimhelpgenerator'
 NeoBundle 'rbtnn/puyo.vim'
+NeoBundle 'mopp/autodirmake.vim'
 
 "OctopressGit.vim"
 NeoBundle 'git://gist.github.com/6775207.git', { 'script_type' : 'plugin' }
