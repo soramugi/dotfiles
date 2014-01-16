@@ -71,6 +71,9 @@ NeoBundle 'git://gist.github.com/7574789.git', { 'script_type' : 'plugin' }
 NeoBundle 'git://gist.github.com/7671774.git', { 'script_type' : 'plugin' }
 "agあればgrepをagコマンドに"
 NeoBundle 'git://gist.github.com/7800124.git', { 'script_type' : 'plugin' }
+
+NeoBundle 'othree/html5.vim'
+
 " IDE風
 NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'majutsushi/tagbar'

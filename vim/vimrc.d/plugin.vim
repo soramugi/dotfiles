@@ -118,3 +118,10 @@ set tags+=.svn/tags,.git/tags
 let g:auto_ctags = 1
 let g:auto_ctags_directory_list = ['.git', '.svn']
 ""let g:auto_ctags_filetype_mode = 1
+
+"html5"
+let g:html5_event_handler_attributes_complete = 1
+let g:html5_rdfa_attributes_complete          = 1
+let g:html5_microdata_attributes_complete     = 1
+let g:html5_aria_attributes_complete          = 1
+
