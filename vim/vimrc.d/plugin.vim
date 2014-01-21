@@ -125,3 +125,5 @@ let g:html5_rdfa_attributes_complete          = 1
 let g:html5_microdata_attributes_complete     = 1
 let g:html5_aria_attributes_complete          = 1
 
+"vim-splash"
+let g:splash#path = $HOME."/.vim/bundle/7630711/vim_intro.txt"

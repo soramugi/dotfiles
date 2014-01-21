@@ -63,6 +63,8 @@ NeoBundle 'rbtnn/puyo.vim'
 NeoBundle 'mopp/autodirmake.vim'
 NeoBundle 'koron/codic-vim'
 NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'othree/html5.vim'
+NeoBundle 'thinca/vim-splash'
 
 "OctopressGit.vim"
 NeoBundle 'git://gist.github.com/6775207.git', { 'script_type' : 'plugin' }
@@ -72,8 +74,8 @@ NeoBundle 'git://gist.github.com/7574789.git', { 'script_type' : 'plugin' }
 NeoBundle 'git://gist.github.com/7671774.git', { 'script_type' : 'plugin' }
 "agあればgrepをagコマンドに"
 NeoBundle 'git://gist.github.com/7800124.git', { 'script_type' : 'plugin' }
-
-NeoBundle 'othree/html5.vim'
+"vim-splash 用のテキストファイル"
+NeoBundle 'git://gist.github.com/7630711.git'
 
 " IDE風
 NeoBundle 'vim-scripts/taglist.vim'
