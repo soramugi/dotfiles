@@ -65,6 +65,8 @@ NeoBundle 'koron/codic-vim'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'thinca/vim-splash'
+NeoBundle 'comeonly/php.vim-html-enhanced'
+
 
 "OctopressGit.vim"
 NeoBundle 'git://gist.github.com/6775207.git', { 'script_type' : 'plugin' }
