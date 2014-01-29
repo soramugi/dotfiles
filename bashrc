@@ -15,6 +15,7 @@ if type -P brew >/dev/null; then
     . `brew --prefix`/etc/bash_completion
   fi
 fi
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 export EDITOR=vim
 
