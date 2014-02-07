@@ -2,6 +2,7 @@
 # パス
 # ---------------------------------------------------------------------------
 
+export PATH=$HOME/dotfiles/bin:$PATH
 export PATH=$HOME/local/bin:$PATH
 export PATH=$HOME/bin:$PATH
 export PATH=$HOME/.composer/vendor/bin:$PATH
@@ -188,6 +189,7 @@ alias bf='cat > ~/.vim_bf'
 alias bfcat='cat ~/.vim_bf'
 alias saying='while (true) do f=$(fortune); echo "$f"; echo ""; say "$f"; sleep 10; done'
 alias pong='perl -nle '\''print "display notification \"$_\" with title \"Terminal\""'\'' | osascript'
+alias gyazo_del='curl -X DELETE -d "id=$(cat ~/Library/Gyazo/id)" '
 
 export MARKPATH=$HOME/.marks
 function jump {
