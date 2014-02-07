@@ -3,7 +3,6 @@
 # ---------------------------------------------------------------------------
 
 export PATH=$HOME/local/bin:$PATH
-export PATH=./bin:vendor/bin:protected/vendor/bin:$PATH
 export PATH=$HOME/bin:$PATH
 export PATH=$HOME/.composer/vendor/bin:$PATH
 if type -P brew >/dev/null; then
@@ -16,6 +15,7 @@ if type -P brew >/dev/null; then
   fi
 fi
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+export PATH=./bin:vendor/bin:protected/vendor/bin:$PATH
 
 export EDITOR=vim
 
