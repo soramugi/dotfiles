@@ -49,7 +49,9 @@ EOF
     }
     Net::HTTP.start(HOST, PORT) do |http|
       response = http.post(CGI, content, header)
-      puts response.response.body
+      url = response.response.body
+      `echo #{url} | pbcopy`
+      `open #{url}`
     end
   end
 
