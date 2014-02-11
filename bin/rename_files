@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# http://hideki0001.wordpress.com/2012/04/29/複数のファイルを指定して、同一名で連番をつけ/#
+cnt=`ls -1 $* | wc -l`
+echo $*
+echo "${cnt}個の対象ファイルがあります。変更ファイル名を指定して下さい。"
+read fn
+
+n=1
+for f in $*; do
+    mv $f ${fn}_`printf "%02d" ${n}`.jpg
+    n=`expr $n + 1`
+done
