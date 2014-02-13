@@ -19,6 +19,9 @@ git config --global alias.gr 'log --graph --date=short --decorate=short --pretty
 # statusで日本語表示
 git config --global core.quotepath false
 
+# 濁点の日本語ファイルを正しく認識
+git config --global core.precomposeunicode true
+
 # push時にカレントのみ
 git config --global push.default current
 
