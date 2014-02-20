@@ -66,6 +66,7 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'thinca/vim-splash'
 NeoBundle 'comeonly/php.vim-html-enhanced'
+NeoBundle 'git@github.com:soramugi/pocket.vim.git'
 
 
 "OctopressGit.vim"
