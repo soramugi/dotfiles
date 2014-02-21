@@ -46,11 +46,6 @@ do
   fi
 done
 
-# 大事
-if [ ! -e $HOME/.vim/bundle/neobundle.vim ] ; then
-  git clone git://github.com/Shougo/neobundle.vim.git $HOME/.vim/bundle/neobundle.vim
-fi
-
 . $HOME/.vim/bundle/neobundle.vim/bin/neoinstall
 
 

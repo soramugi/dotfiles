@@ -5,6 +5,11 @@ set nocompatible
 filetype plugin indent off
 
 if has('vim_starting')
+  if !isdirectory(expand("~/.vim/bundle/neobundle.vim/"))
+    echo "install neobundle..."
+    call system("git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim")
+    echo "done neobundle install!!"
+  endif
   set runtimepath+=~/.vim/bundle/neobundle.vim/
   call neobundle#rc(expand('~/.vim/bundle/'))
 endif
@@ -84,6 +89,8 @@ NeoBundle 'git://gist.github.com/7630711.git'
 NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'vim-scripts/tagbar-phpctags'
+
+NeoBundleCheck
 
 filetype plugin indent on
 
