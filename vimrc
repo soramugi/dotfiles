@@ -84,6 +84,8 @@ NeoBundle 'git://gist.github.com/7671774.git', { 'script_type' : 'plugin' }
 NeoBundle 'git://gist.github.com/7800124.git', { 'script_type' : 'plugin' }
 "vim-splash 用のテキストファイル"
 NeoBundle 'git://gist.github.com/7630711.git'
+"NeoBundleUpdate!を1日毎勝手に実行"
+NeoBundle 'git://gist.github.com/9133200.git', { 'script_type' : 'plugin' }
 
 " IDE風
 NeoBundle 'vim-scripts/taglist.vim'
