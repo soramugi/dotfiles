@@ -2,6 +2,7 @@
 
 ## bundler
 vendor/bundle/
+vendor/bin/
 
 ## OSX
 .DS_Store
