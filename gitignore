@@ -1,6 +1,7 @@
 ## See https://github.com/github/gitignore
 
 ## bundler
+.bundle/
 vendor/bundle/
 vendor/bin/
 
