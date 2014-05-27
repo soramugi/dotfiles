@@ -320,5 +320,6 @@ if has('persistent_undo')
   set undofile
 endif
 set fileencodings=utf-8,default,iso-2022-jp,euc-jp,cp932,ucs-bom,latin1
+
 " vimrc外部ファイル化"
 runtime! vimrc.d/*.vim

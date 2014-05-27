@@ -34,3 +34,15 @@ if has('multi_byte_ime') || has('xim')
   set iminsert=0 imsearch=0
 endif
 
+" markdownのシンタックス色表示"
+let g:markdown_fenced_languages = [
+\  'coffee',
+\  'css',
+\  'erb=eruby',
+\  'javascript',
+\  'js=javascript',
+\  'json=javascript',
+\  'ruby',
+\  'sass',
+\  'xml',
+\]
