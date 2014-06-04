@@ -1,0 +1,23 @@
+#!/bin/bash
+if [ ! -e $HOME/.rbenv/plugins ] ; then
+  mkdir $HOME/.rbenv/plugins
+fi
+# build
+if [ ! -e $HOME/.rbenv/plugins/ruby-build ] ; then
+  git clone https://github.com/sstephenson/ruby-build.git $HOME/.rbenv/plugins/ruby-build
+fi
+# rbenv updateコマンドの追加
+if [ ! -e $HOME/.rbenv/plugins/rbenv-update ] ; then
+  git clone https://github.com/rkh/rbenv-update.git $HOME/.rbenv/plugins/rbenv-update
+fi
+# rbenv rehashの自動
+if [ ! -e $HOME/.rbenv/plugins/rbenv-gem-rehash ] ; then
+  git clone https://github.com/sstephenson/rbenv-gem-rehash.git $HOME/.rbenv/plugins/rbenv-gem-rehash
+fi
+# gemをデフォで
+if [ ! -e $HOME/.rbenv/default-gems ] ; then
+  ln -s $HOME/dotfiles/rbenv/default-gems $HOME/.rbenv/default-gems
+fi
+if [ ! -e $HOME/.rbenv/plugins/rbenv-default-gems ] ; then
+  git clone https://github.com/sstephenson/rbenv-default-gems.git $HOME/.rbenv/plugins/rbenv-default-gems
+fi

@@ -7,6 +7,11 @@ fi
 
 git pull
 
+# rbenv plugin install
+if [ -e $HOME/dotfiles/bin/rbenv_plugin_install ] && [ -e $HOME/.rbenv ] ; then
+  . $HOME/dotfiles/bin/rbenv_plugin_install
+fi
+
 # dictファイルの作成
 if type -P php > /dev/null ; then
   php $HOME/dotfiles/vim/dict/dict.php | sort > $HOME/dotfiles/vim/dict/php.dict
