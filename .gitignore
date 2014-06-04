@@ -3,6 +3,3 @@ vim/undo/*
 vim/dict/*.dict
 vim/.netrwhist
 tags
-rbenv/shims/
-rbenv/version
-rbenv/versions/
