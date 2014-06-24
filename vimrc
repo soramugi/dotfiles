@@ -74,6 +74,7 @@ NeoBundle 'comeonly/php.vim-html-enhanced'
 NeoBundle 'git@github.com:soramugi/pocket.vim.git'
 NeoBundle 'thinca/vim-threes'
 NeoBundle 'mattn/emoji-vim'
+NeoBundle 'slim-template/vim-slim'
 
 
 "OctopressGit.vim"
