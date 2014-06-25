@@ -58,7 +58,6 @@ NeoBundle 'glidenote/octoeditor.vim'
 NeoBundle 'bling/vim-airline'
 ""NeoBundle 'rking/ag.vim'
 NeoBundle 'modsound/macdict-vim.git'
-NeoBundle 'syui/wauto.vim'
 NeoBundle 'kana/vim-textobj-user'
 NeoBundle 'osyo-manga/vim-textobj-multiblock'
 NeoBundle 'osyo-manga/vim-over'
@@ -75,6 +74,7 @@ NeoBundle 'git@github.com:soramugi/pocket.vim.git'
 NeoBundle 'thinca/vim-threes'
 NeoBundle 'mattn/emoji-vim'
 NeoBundle 'slim-template/vim-slim'
+NeoBundle 'vim-scripts/vim-auto-save'
 
 
 "OctopressGit.vim"

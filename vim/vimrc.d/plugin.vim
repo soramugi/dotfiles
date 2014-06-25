@@ -109,10 +109,6 @@ let g:w3m#homepage = 'http://www.google.co.jp/'
 "tagbar"
 let g:tagbar_left = 1
 
-"wauto.vim"
-let g:auto_write = 1
-let g:auto_write_ignore_filetype_list = ['svn', 'gitcommit']
-
 "auto-ctags.vim"
 set tags+=.svn/tags,.git/tags
 let g:auto_ctags = 1
@@ -127,3 +123,6 @@ let g:html5_aria_attributes_complete          = 1
 
 "vim-splash"
 let g:splash#path = $HOME."/.vim/bundle/7630711/vim_intro.txt"
+
+"vim-auto-save"
+let g:auto_save = 1
