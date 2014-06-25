@@ -110,9 +110,9 @@ let g:w3m#homepage = 'http://www.google.co.jp/'
 let g:tagbar_left = 1
 
 "auto-ctags.vim"
-set tags+=.svn/tags,.git/tags
+set tags+=.svn/tags,.git/tags,.bundle/tags
 let g:auto_ctags = 1
-let g:auto_ctags_directory_list = ['.git', '.svn']
+let g:auto_ctags_directory_list = ['.git', '.svn', '.bundle']
 ""let g:auto_ctags_filetype_mode = 1
 
 "html5"
