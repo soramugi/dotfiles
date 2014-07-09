@@ -75,6 +75,7 @@ NeoBundle 'thinca/vim-threes'
 NeoBundle 'mattn/emoji-vim'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'vim-scripts/vim-auto-save'
+NeoBundle 'vim-scripts/zoom.vim'
 
 
 "OctopressGit.vim"
