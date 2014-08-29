@@ -19,6 +19,7 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export PATH=./bin:vendor/bin:protected/vendor/bin:$PATH
 
 export EDITOR=vim
+export HOMEBREW_INSTALL_BADGE='🍣'
 
 # ---------------------------------------------------------------------------
 # 立ち上げ時にAAと名言
