@@ -11,8 +11,8 @@ if has('vim_starting')
     echo "done neobundle install!!"
   endif
   set runtimepath+=~/.vim/bundle/neobundle.vim/
-  call neobundle#rc(expand('~/.vim/bundle/'))
 endif
+call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/vimproc', {
@@ -96,9 +96,11 @@ NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'vim-scripts/tagbar-phpctags'
 
-NeoBundleCheck
+call neobundle#end()
 
 filetype plugin indent on
+
+NeoBundleCheck
 
 "---------------------------------------------------------------------------
 " 基本設定:
