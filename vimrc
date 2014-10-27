@@ -45,7 +45,8 @@ NeoBundle 'tpope/vim-abolish'
 ""NeoBundleLazy 'mattn/habatobi-vim', { 'autoload' : { 'commands' : [ 'Habatobi' ] } }
 ""NeoBundle 'Shougo/unite.vim'
 ""NeoBundle 'Shougo/vimfiler', { 'depends' : ["Shougo/unite.vim"] }
-NeoBundle 'vim-scripts/netrw.vim'
+""NeoBundle 'vim-scripts/netrw.vim'
+NeoBundle 'soramugi/nerdtree', 'open-t'
 NeoBundleLazy 'yuratomo/w3m.vim', {
       \   'autoload' : {
       \       'commands' : [ 'W3m', 'W3mHistory', 'W3mHistoryClear', 'W3mLocal', 'W3mSplit', 'W3mTab', 'W3mVSplit' ]
