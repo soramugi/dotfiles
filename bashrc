@@ -191,7 +191,7 @@ alias bfcat='cat ~/.vim_bf'
 alias saying='while (true) do f=$(fortune); echo "$f"; echo ""; say "$f"; sleep 10; done'
 alias pong='perl -nle '\''print "display notification \"$_\" with title \"Terminal\""'\'' | osascript'
 alias gyazo_del='curl -X DELETE -d "id=$(cat ~/Library/Gyazo/id)" '
-alias ip_addres='curl ipcheck.ieserver.net'
+alias ip_addres='curl ifconfig.me/ip'
 
 export MARKPATH=$HOME/.marks
 function jump {
