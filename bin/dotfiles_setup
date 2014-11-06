@@ -8,7 +8,7 @@ fi
 git pull
 
 # rbenv plugin install
-if [ -e $HOME/dotfiles/bin/rbenv_plugin_install ] && [ -e $HOME/.rbenv ] ; then
+if [ -e $HOME/dotfiles/bin/rbenv_plugin_install ] ; then
   . $HOME/dotfiles/bin/rbenv_plugin_install
 fi
 
