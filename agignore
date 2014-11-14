@@ -3,3 +3,4 @@ coverage/
 vendor/
 tmp/
 log/
+db/*.sql

@@ -4,6 +4,7 @@
 .bundle/
 vendor/bundle/
 vendor/bin/
+gemfiles/vendor
 
 ## OSX
 .DS_Store
