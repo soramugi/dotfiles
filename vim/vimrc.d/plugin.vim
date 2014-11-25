@@ -126,5 +126,6 @@ let g:splash#path = $HOME."/.vim/bundle/7630711/vim_intro.txt"
 
 "vim-auto-save"
 let g:auto_save = 1
+let g:auto_save_in_insert_mode = 0
 
 "NERD_tree.vim"
