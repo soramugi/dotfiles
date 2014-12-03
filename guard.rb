@@ -12,7 +12,7 @@ if Gem::Specification.find_all_by_name('guard-rspec').any?
   cmd = ''
   cmd += 'zeus ' if zeus
   cmd += 'spring ' if spring
-  cmd += 'rspec --color --fail-fast --profile 5 --format documentation '
+  cmd += 'rspec '
   cmd += '--drb ' if spork
 
   guard 'rspec', :all_on_start => false, :all_after_pass => false, :cmd => cmd do
