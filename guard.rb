@@ -10,12 +10,13 @@ if Gem::Specification.find_all_by_name('guard-rspec').any?
   spring = Gem::Specification.find_all_by_name('spring').any?
 
   cmd = ''
+  cmd += 'bundle exec  ' if File.exists?('Gemfile.lock')
   cmd += 'zeus ' if zeus
   cmd += 'spring ' if spring
   cmd += 'rspec '
   cmd += '--drb ' if spork
 
-  guard 'rspec', :all_on_start => false, :all_after_pass => false, :cmd => cmd do
+  guard :rspec, :all_on_start => false, :all_after_pass => false, :cmd => cmd do
     # Spec files
     watch(%r{^spec/.+_spec\.rb$})
 
