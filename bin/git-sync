@@ -1,0 +1,38 @@
+#!/bin/sh
+# 参考 https://github.com/masarakki/dotfiles/blob/master/bin/git-sync
+
+set -eu
+
+branch=`git rev-parse --abbrev-ref HEAD`
+
+if [ "`git status | grep modified`" ] ; then
+  trap pop EXIT
+  # 作業途中を対比
+  git stash
+  function pop { git stash pop; }
+fi
+
+# remoteブランチ全部を同期&&削除済みブランチを削除
+git fetch --all --prune
+git pull origin
+
+if [ "$branch" != 'master' ] ; then
+  trap branch_revert EXIT
+  git checkout master
+  # TODO checkoutした時にブランチ消してたらどうなる？
+  function branch_revert { git checkout $branch; }
+fi
+
+# fork元の変更をマージ(fork元のブランチがupstream前提)
+if [ "`git remote | grep upstream`" ] ; then
+  trap push EXIT
+  git merge upstream/master
+  function push { git push origin master; }
+fi
+
+
+# マージ済みブランチの削除
+merge_branchs=`git branch --merged | grep -v master || echo ''`
+for merge_branch in ${merge_branchs[@]}; do
+  git branch -d ${merge_branch}
+done
