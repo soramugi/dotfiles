@@ -35,6 +35,11 @@ for merge_branch in ${merge_branchs[@]}; do
   git branch -d ${merge_branch}
 done
 
+# リモートのマージ済みブランチの削除(upstreamにも残ってるマージ済みブランチは削除したくないかも？(しちゃってる))
+# http://qiita.com/fukayatsu/items/b1a5e1c0b98acaa6261d
+git branch -a --merged | grep -v master | grep remotes/origin| sed -e 's% *remotes/origin/%%' | xargs -I% git push origin :%
+
+
 if [ "`git branch | grep ${branch}`" -a $branch != 'master' ] ; then
   git checkout $branch
 fi
