@@ -1,7 +1,7 @@
 #!/bin/sh
 # 参考 https://github.com/masarakki/dotfiles/blob/master/bin/git-sync
 
-set -eux
+set -eu
 
 branch=`git rev-parse --abbrev-ref HEAD`
 
