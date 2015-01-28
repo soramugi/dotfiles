@@ -128,4 +128,4 @@ let g:splash#path = $HOME."/.vim/bundle/7630711/vim_intro.txt"
 let g:auto_save = 1
 let g:auto_save_in_insert_mode = 0
 
-"NERD_tree.vim"
+let g:linktotag_link = 'http://soramugi.tumblr.com/random'
