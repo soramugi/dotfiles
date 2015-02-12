@@ -38,7 +38,7 @@ NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'mattn/webapi-vim'
 ""NeoBundle 'mattn/excitetranslate-vim'
 NeoBundle 'kien/ctrlp.vim.git'
-NeoBundle 'git@github.com:soramugi/auto-ctags.vim.git'
+NeoBundle 'soramugi/auto-ctags.vim'
 NeoBundle 'glidenote/memolist.vim'
 NeoBundle 'kana/vim-fakeclip.git'
 NeoBundle 'tpope/vim-abolish'
@@ -71,7 +71,7 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'thinca/vim-splash'
 ""NeoBundle 'comeonly/php.vim-html-enhanced'
-NeoBundle 'git@github.com:soramugi/pocket.vim.git'
+NeoBundle 'soramugi/pocket.vim'
 NeoBundle 'thinca/vim-threes'
 NeoBundle 'mattn/emoji-vim'
 NeoBundle 'slim-template/vim-slim'
@@ -80,19 +80,19 @@ NeoBundle 'vim-scripts/zoom.vim'
 
 
 "OctopressGit.vim"
-NeoBundle 'git://gist.github.com/6775207.git', { 'script_type' : 'plugin' }
+NeoBundle 'https://gist.github.com/6775207.git', { 'script_type' : 'plugin' }
 "保存されて無かったら対話するやつ"
-NeoBundle 'git://gist.github.com/7574789.git', { 'script_type' : 'plugin' }
+NeoBundle 'https://gist.github.com/7574789.git', { 'script_type' : 'plugin' }
 "以前のカーソル位置に移動"
-NeoBundle 'git://gist.github.com/7671774.git', { 'script_type' : 'plugin' }
+NeoBundle 'https://gist.github.com/7671774.git', { 'script_type' : 'plugin' }
 "agあればgrepをagコマンドに"
-NeoBundle 'git://gist.github.com/7800124.git', { 'script_type' : 'plugin' }
+NeoBundle 'https://gist.github.com/7800124.git', { 'script_type' : 'plugin' }
 "vim-splash 用のテキストファイル"
-NeoBundle 'git://gist.github.com/7630711.git'
+NeoBundle 'https://gist.github.com/7630711.git'
 "NeoBundleUpdate!を1日毎勝手に実行"
-NeoBundle 'git://gist.github.com/9133200.git', { 'script_type' : 'plugin' }
+NeoBundle 'https://gist.github.com/9133200.git', { 'script_type' : 'plugin' }
 "tumblrからランダムで画像リンクの出力"
-NeoBundle 'git@gist.github.com:/4f6d95e05827018f2318.git', { 'script_type' : 'plugin' }
+NeoBundle 'https://gist.github.com/4f6d95e05827018f2318.git', { 'script_type' : 'plugin' }
 
 " IDE風
 NeoBundle 'vim-scripts/taglist.vim'
