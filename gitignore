@@ -68,3 +68,6 @@ TAGS
 !TAGS/
 tags
 !tags/
+
+## Redis
+dump.rdb
