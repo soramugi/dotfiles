@@ -48,16 +48,12 @@ else
   NeoBundle 'LeafCage/vimhelpgenerator'
   NeoBundle 'mopp/autodirmake.vim'
   NeoBundle 'koron/codic-vim'
-  NeoBundle 'kchmck/vim-coffee-script'
-  NeoBundle 'othree/html5.vim'
   NeoBundle 'thinca/vim-splash'
   NeoBundle 'soramugi/pocket.vim'
   NeoBundle 'thinca/vim-threes'
   NeoBundle 'mattn/emoji-vim'
-  NeoBundle 'slim-template/vim-slim'
   NeoBundle 'vim-scripts/vim-auto-save'
   NeoBundle 'vim-scripts/zoom.vim'
-  NeoBundle 'vim-scripts/applescript.vim'
 
   "OctopressGit.vim"
   NeoBundle 'https://gist.github.com/6775207.git', { 'script_type' : 'plugin' }
