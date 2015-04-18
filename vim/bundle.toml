@@ -21,3 +21,7 @@ repository = 'kchmck/vim-coffee-script'
 # 便利系
 [[plugins]]
 repository = 'osyo-manga/vim-itunes-bgm'
+
+[[plugins]]
+repository = 'lambdalisue/vim-gista'
+depends = [ 'tyru/open-browser.vim' ]

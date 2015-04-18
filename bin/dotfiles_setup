@@ -52,16 +52,6 @@ do
 done
 
 
-# Detect .vimrc path.
-VIMRC=$HOME/.vimrc
-
-if [ ! -e $VIMRC ]; then
-        VIMRC=$HOME/.vim/vimrc
-fi
-
-vim -N -u $VIMRC -c "try | NeoBundleClearCache ! $* | finally | qall! | endtry" \
-        -U NONE -i NONE -V1 -e -s
-echo ''
 . $HOME/.vim/bundle/neobundle.vim/bin/neoinstall
 
 
