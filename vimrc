@@ -24,24 +24,16 @@ else
   NeoBundle 'thinca/vim-quickrun'
   NeoBundle 'vim-scripts/Align'
   NeoBundle 'nathanaelkane/vim-indent-guides'
-  "NeoBundle 'vim-scripts/wokmarks.vim'
   NeoBundle 'tpope/vim-surround'
   NeoBundle 'svn-diff.vim'
   NeoBundle 'scrooloose/syntastic'
-  ""NeoBundle 'chikatoike/activefix.vim'
-  ""NeoBundle 'jceb/vim-hier'
   NeoBundle 'tyru/open-browser.vim'
   NeoBundle 'mattn/webapi-vim'
-  ""NeoBundle 'mattn/excitetranslate-vim'
   NeoBundle 'kien/ctrlp.vim.git'
   NeoBundle 'soramugi/auto-ctags.vim'
   NeoBundle 'glidenote/memolist.vim'
   NeoBundle 'kana/vim-fakeclip.git'
   NeoBundle 'tpope/vim-abolish'
-  ""NeoBundleLazy 'mattn/habatobi-vim', { 'autoload' : { 'commands' : [ 'Habatobi' ] } }
-  ""NeoBundle 'Shougo/unite.vim'
-  ""NeoBundle 'Shougo/vimfiler', { 'depends' : ["Shougo/unite.vim"] }
-  ""NeoBundle 'vim-scripts/netrw.vim'
   NeoBundle 'soramugi/nerdtree', 'open-t'
   NeoBundleLazy 'yuratomo/w3m.vim', {
         \   'autoload' : {
@@ -51,22 +43,18 @@ else
   NeoBundle 'L9'
   NeoBundle 'FuzzyFinder'
   NeoBundle 'glidenote/octoeditor.vim'
-  ""NeoBundle 'tpope/vim-fugitive'
   NeoBundle 'bling/vim-airline'
-  ""NeoBundle 'rking/ag.vim'
   NeoBundle 'modsound/macdict-vim.git'
   NeoBundle 'kana/vim-textobj-user'
   NeoBundle 'osyo-manga/vim-textobj-multiblock'
   NeoBundle 'osyo-manga/vim-over'
   NeoBundle 'vim-jp/vital.vim'
   NeoBundle 'LeafCage/vimhelpgenerator'
-  NeoBundle 'rbtnn/puyo.vim'
   NeoBundle 'mopp/autodirmake.vim'
   NeoBundle 'koron/codic-vim'
   NeoBundle 'kchmck/vim-coffee-script'
   NeoBundle 'othree/html5.vim'
   NeoBundle 'thinca/vim-splash'
-  ""NeoBundle 'comeonly/php.vim-html-enhanced'
   NeoBundle 'soramugi/pocket.vim'
   NeoBundle 'thinca/vim-threes'
   NeoBundle 'mattn/emoji-vim'
@@ -90,11 +78,6 @@ else
   NeoBundle 'https://gist.github.com/9133200.git', { 'script_type' : 'plugin' }
   "tumblrからランダムで画像リンクの出力"
   NeoBundle 'https://gist.github.com/4f6d95e05827018f2318.git', { 'script_type' : 'plugin' }
-
-  " IDE風
-  NeoBundle 'vim-scripts/taglist.vim'
-  NeoBundle 'majutsushi/tagbar'
-  NeoBundle 'vim-scripts/tagbar-phpctags'
 
   NeoBundleSaveCache
 endif
