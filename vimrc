@@ -13,12 +13,12 @@ if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 call neobundle#begin(expand('~/.vim/bundle/'))
-if neobundle#has_cache()
+  NeoBundleFetch 'Shougo/neobundle.vim'
+if neobundle#has_fresh_cache(expand('$MYVIMRC'))
   NeoBundleLoadCache
 else
-  NeoBundleFetch 'Shougo/neobundle.vim'
   call neobundle#load_toml('~/.vim/bundle.toml')
-  call neobundle#load_toml('~/.vim/bundle_lazy.toml')
+  call neobundle#load_toml('~/.vim/bundle_lazy.toml', {'lazy':1})
   NeoBundle 'Shougo/neocomplcache'
   NeoBundle 'vim-scripts/yanktmp.vim'
   NeoBundle 'vim-jp/vimdoc-ja'
@@ -58,7 +58,6 @@ else
   NeoBundle 'vim-scripts/vim-auto-save'
   NeoBundle 'vim-scripts/zoom.vim'
   NeoBundle 'vim-scripts/applescript.vim'
-  NeoBundle 'cespare/vim-toml'
 
   "OctopressGit.vim"
   NeoBundle 'https://gist.github.com/6775207.git', { 'script_type' : 'plugin' }
