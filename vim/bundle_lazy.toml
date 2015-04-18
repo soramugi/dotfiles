@@ -1,0 +1,4 @@
+[[plugins]]
+repository = 'yuratomo/w3m.vim'
+  [plugins.autoload]
+  commands = [ 'W3m', 'W3mHistory', 'W3mHistoryClear', 'W3mLocal', 'W3mSplit', 'W3mTab', 'W3mVSplit' ]

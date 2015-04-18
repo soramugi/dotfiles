@@ -18,6 +18,7 @@ if neobundle#has_cache()
 else
   NeoBundleFetch 'Shougo/neobundle.vim'
   call neobundle#load_toml('~/.vim/bundle.toml')
+  call neobundle#load_toml('~/.vim/bundle_lazy.toml')
   NeoBundle 'Shougo/neocomplcache'
   NeoBundle 'vim-scripts/yanktmp.vim'
   NeoBundle 'vim-jp/vimdoc-ja'
@@ -35,11 +36,6 @@ else
   NeoBundle 'kana/vim-fakeclip.git'
   NeoBundle 'tpope/vim-abolish'
   NeoBundle 'soramugi/nerdtree', 'open-t'
-  NeoBundleLazy 'yuratomo/w3m.vim', {
-        \   'autoload' : {
-        \       'commands' : [ 'W3m', 'W3mHistory', 'W3mHistoryClear', 'W3mLocal', 'W3mSplit', 'W3mTab', 'W3mVSplit' ]
-        \   }
-        \}
   NeoBundle 'L9'
   NeoBundle 'FuzzyFinder'
   NeoBundle 'glidenote/octoeditor.vim'
