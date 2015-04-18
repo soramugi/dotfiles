@@ -24,18 +24,9 @@ let g:quickrun_config = {
       \       'args'      : 'Kobito',
       \       'exec'      : '%c %o %a %s',
       \   },
-      \   'ruby.rspec'  : { 'type' : executable('rspec') ? 'rspec' : 'ruby'  },
-      \   'rspec'  : { 'command' : 'rspec' },
-      \   'ruby.unit' : { 'command' : 'rake', 'args' : 'test' },
       \   'phpunit.php' : { 'type' : executable('phpunit') ? 'phpunit' : 'php' },
       \   'phpunit' : { 'command' : 'phpunit', 'cmdopt' : '--stderr' },
       \}
-
-" 保存したら実行"
-augroup test
-  autocmd!
-  autocmd BufWritePost *_test.rb :QuickRun
-augroup END
 
 " taglist.vim
 set tags=tags
