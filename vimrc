@@ -13,10 +13,8 @@ if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 call neobundle#begin(expand('~/.vim/bundle/'))
-  NeoBundleFetch 'Shougo/neobundle.vim'
-if neobundle#has_fresh_cache(expand('$MYVIMRC'))
-  NeoBundleLoadCache
-else
+NeoBundleFetch 'Shougo/neobundle.vim'
+if neobundle#load_cache(expand('$MYVIMRC'))
   call neobundle#load_toml('~/.vim/bundle.toml')
   call neobundle#load_toml('~/.vim/bundle_lazy.toml', {'lazy':1})
   NeoBundle 'Shougo/neocomplcache'
