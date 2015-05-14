@@ -90,6 +90,7 @@ set wildmenu
 set wildmode=longest:full,full
 set formatoptions+=mM
 set clipboard=unnamed
+set cursorline
 set nrformats=
 " バックアップ
 set noswapfile
