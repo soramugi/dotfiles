@@ -1,3 +1,5 @@
+# サンプル
+# https://gist.github.com/Shougo/3d2adcb83e9eb0e8d4af
 [[plugins]]
 repository = 'Shougo/vimproc.vim'
   [plugins.build]
