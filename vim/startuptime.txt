@@ -1,0 +1,3 @@
+vim --startuptime start
+vim -X --startuptime not-x-start
+vim -u ~/.vimrc --noplugin --startuptime not-plugin-start

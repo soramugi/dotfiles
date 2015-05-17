@@ -36,37 +36,23 @@ if neobundle#load_cache(expand('$MYVIMRC'))
   NeoBundle 'soramugi/nerdtree', 'open-t'
   NeoBundle 'L9'
   NeoBundle 'FuzzyFinder'
-  NeoBundle 'glidenote/octoeditor.vim'
   NeoBundle 'bling/vim-airline'
-  NeoBundle 'modsound/macdict-vim.git'
   NeoBundle 'kana/vim-textobj-user'
   NeoBundle 'osyo-manga/vim-textobj-multiblock'
   NeoBundle 'osyo-manga/vim-over'
   NeoBundle 'vim-jp/vital.vim'
-  NeoBundle 'LeafCage/vimhelpgenerator'
   NeoBundle 'mopp/autodirmake.vim'
-  NeoBundle 'koron/codic-vim'
-  NeoBundle 'thinca/vim-splash'
-  NeoBundle 'soramugi/pocket.vim'
-  NeoBundle 'thinca/vim-threes'
-  NeoBundle 'mattn/emoji-vim'
   NeoBundle 'vim-scripts/vim-auto-save'
   NeoBundle 'vim-scripts/zoom.vim'
 
-  "OctopressGit.vim"
-  NeoBundle 'https://gist.github.com/6775207.git', { 'script_type' : 'plugin' }
   "保存されて無かったら対話するやつ"
   NeoBundle 'https://gist.github.com/7574789.git', { 'script_type' : 'plugin' }
   "以前のカーソル位置に移動"
   NeoBundle 'https://gist.github.com/7671774.git', { 'script_type' : 'plugin' }
   "agあればgrepをagコマンドに"
   NeoBundle 'https://gist.github.com/7800124.git', { 'script_type' : 'plugin' }
-  "vim-splash 用のテキストファイル"
-  NeoBundle 'https://gist.github.com/7630711.git'
   "NeoBundleUpdate!を1日毎勝手に実行"
   NeoBundle 'https://gist.github.com/9133200.git', { 'script_type' : 'plugin' }
-  "tumblrからランダムで画像リンクの出力"
-  NeoBundle 'https://gist.github.com/4f6d95e05827018f2318.git', { 'script_type' : 'plugin' }
 
   NeoBundleSaveCache
 endif

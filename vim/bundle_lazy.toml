@@ -2,3 +2,33 @@
 repository = 'yuratomo/w3m.vim'
   [plugins.autoload]
   commands = [ 'W3m', 'W3mHistory', 'W3mHistoryClear', 'W3mLocal', 'W3mSplit', 'W3mTab', 'W3mVSplit' ]
+[[plugins]]
+repository = 'mattn/benchvimrc-vim'
+  [plugins.autoload]
+  commands = [ 'BenchVimrc' ]
+[[plugins]]
+repository = 'soramugi/pocket.vim'
+  [plugins.autoload]
+  commands = [ 'PocketList' ]
+[[plugins]]
+repository = 'mattn/emoji-vim'
+  [plugins.autoload]
+  commands = [ 'Emoji' ]
+[[plugins]]
+repository = 'glidenote/octoeditor.vim'
+  [plugins.autoload]
+  commands = [ 'OctopressNew', 'OctopressList', 'OctopressGrep' ]
+[[plugins]]
+repository = 'koron/codic-vim'
+  [plugins.autoload]
+  commands = [ 'Codic' ]
+
+[[plugins]] # OctopressGit.vim
+repository = 'https://gist.github.com/6775207.git'
+depends = ['glidenote/octoeditor.vim']
+script_type = 'plugin'
+[[plugins]] # tumblrからランダムで画像リンクの出力
+repository = 'https://gist.github.com/4f6d95e05827018f2318.git'
+script_type = 'plugin'
+  [plugins.autoload]
+  commands = [ 'Linktotag' ]
