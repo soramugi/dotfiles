@@ -2,5 +2,6 @@ vim/bundle/*
 vim/undo/*
 vim/dict/*.dict
 vim/.netrwhist
+vim/startuptime/*start
 tags
 tags.lock
