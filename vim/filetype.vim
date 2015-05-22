@@ -15,8 +15,8 @@ autocmd BufWinEnter,BufNewFile *_test.rb setfiletype ruby.unit
 "php"
 autocmd BufWinEnter,BufNewFile *Test.php setfiletype phpunit.php
 
-"js"
-autocmd BufRead,BufNewFile *.coffee    setfiletype javascript
+"js.coffee"
+autocmd BufRead,BufNewFile *.coffee    setfiletype coffee
 
 "tags"
 autocmd BufRead,BufNewFile *.tags    setfiletype tags
@@ -33,3 +33,6 @@ autocmd BufRead,BufNewFile Boxfile setfiletype yaml
 "vim"
 autocmd BufRead,BufNewFile test.vital setfiletype vital.vim
 autocmd BufRead,BufNewFile t/*.vim setfiletype vim-flavor.vim
+
+"toml"
+autocmd BufRead,BufNewFile *.toml setfiletype toml

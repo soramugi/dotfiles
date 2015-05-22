@@ -25,6 +25,29 @@ repository = 'koron/codic-vim'
   [plugins.autoload]
   commands = [ 'Codic' ]
 
+# filetype
+[[plugins]]
+repository = 'cespare/vim-toml'
+  [plugins.autoload]
+  filetypes = [ 'toml' ]
+[[plugins]]
+repository = 'slim-template/vim-slim'
+  [plugins.autoload]
+  filetypes = [ 'slim' ]
+[[plugins]]
+repository = 'vim-scripts/applescript.vim'
+  [plugins.autoload]
+  filetypes = [ 'scpt', 'applescript' ]
+[[plugins]]
+repository = 'othree/html5.vim'
+  [plugins.autoload]
+  filetypes = [ 'html' ]
+[[plugins]]
+repository = 'kchmck/vim-coffee-script'
+  [plugins.autoload]
+  filetypes = [ 'coffee' ]
+
+
 [[plugins]] # OctopressGit.vim
 repository = 'https://gist.github.com/6775207.git'
 script_type = 'plugin'
