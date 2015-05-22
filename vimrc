@@ -17,7 +17,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 if neobundle#load_cache(expand('$MYVIMRC'))
   call neobundle#load_toml('~/.vim/bundle.toml')
   call neobundle#load_toml('~/.vim/bundle_lazy.toml', {'lazy':1})
-  NeoBundle 'Shougo/neocomplcache'
   NeoBundle 'vim-scripts/yanktmp.vim'
   NeoBundle 'vim-jp/vimdoc-ja'
   NeoBundle 'thinca/vim-quickrun'
@@ -25,7 +24,6 @@ if neobundle#load_cache(expand('$MYVIMRC'))
   NeoBundle 'nathanaelkane/vim-indent-guides'
   NeoBundle 'tpope/vim-surround'
   NeoBundle 'svn-diff.vim'
-  NeoBundle 'scrooloose/syntastic'
   NeoBundle 'tyru/open-browser.vim'
   NeoBundle 'mattn/webapi-vim'
   NeoBundle 'kien/ctrlp.vim.git'
@@ -33,8 +31,6 @@ if neobundle#load_cache(expand('$MYVIMRC'))
   NeoBundle 'glidenote/memolist.vim'
   NeoBundle 'kana/vim-fakeclip.git'
   NeoBundle 'tpope/vim-abolish'
-  NeoBundle 'L9'
-  NeoBundle 'FuzzyFinder'
   NeoBundle 'bling/vim-airline'
   NeoBundle 'kana/vim-textobj-user'
   NeoBundle 'osyo-manga/vim-textobj-multiblock'

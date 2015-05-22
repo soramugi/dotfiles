@@ -1,11 +1,25 @@
 # サンプル
 # https://gist.github.com/Shougo/3d2adcb83e9eb0e8d4af
+# https://github.com/Shougo/shougo-s-github/blob/master/vim/rc/neobundle.toml
 
 [[plugins]]
 repository = 'soramugi/nerdtree'
   [plugins.autoload]
   commands = [ 'NERDTree', 'NERDTreeClose', 'NERDTreeToggle', 'NERDTreeFromBookmark' ]
   explorer = 1
+[[plugins]]
+repository = 'scrooloose/syntastic'
+insert = 1
+[[plugins]]
+repository = 'Shougo/neocomplcache'
+insert = 1
+[[plugins]]
+repository = 'L9'
+insert = 1
+[[plugins]]
+repository = 'FuzzyFinder'
+depends = 'L9'
+insert = 1
 [[plugins]]
 repository = 'yuratomo/w3m.vim'
   [plugins.autoload]
