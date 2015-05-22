@@ -1,5 +1,11 @@
 # サンプル
 # https://gist.github.com/Shougo/3d2adcb83e9eb0e8d4af
+
+[[plugins]]
+repository = 'soramugi/nerdtree'
+  [plugins.autoload]
+  commands = [ 'NERDTree', 'NERDTreeClose', 'NERDTreeToggle', 'NERDTreeFromBookmark' ]
+  explorer = 1
 [[plugins]]
 repository = 'yuratomo/w3m.vim'
   [plugins.autoload]

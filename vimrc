@@ -33,7 +33,6 @@ if neobundle#load_cache(expand('$MYVIMRC'))
   NeoBundle 'glidenote/memolist.vim'
   NeoBundle 'kana/vim-fakeclip.git'
   NeoBundle 'tpope/vim-abolish'
-  NeoBundle 'soramugi/nerdtree', 'open-t'
   NeoBundle 'L9'
   NeoBundle 'FuzzyFinder'
   NeoBundle 'bling/vim-airline'
