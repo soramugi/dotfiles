@@ -176,6 +176,7 @@ alias grhh='git reset --hard HEAD'
 alias gbrd='git br --merged | grep -v '*'| xargs git br -d'
 # git alias help
 alias gh='grep gi[t] ~/dotfiles/bashrc | sed "s/^alias\ //" | grep --color=auto -e "^[a-z]\+"'
+alias gpr='hub browse -- pull/$(git rev-parse --abbrev-ref HEAD)'
 
 # ディレクトリ移動
 alias ..='cd ..'
