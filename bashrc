@@ -173,7 +173,7 @@ alias gsb='git submodule'
 alias gr='git checkout -- ' # 指定したファイルの変更巻き戻し
 alias grh='git reset --soft HEAD'
 alias grhh='git reset --hard HEAD'
-alias gbrd='git br --merged | grep -v '*'| xargs git br -d'
+alias gbrd='git br --merged | grep -v "*"| xargs git br -d'
 # git alias help
 alias gh='grep gi[t] ~/dotfiles/bashrc | sed "s/^alias\ //" | grep --color=auto -e "^[a-z]\+"'
 alias gpr='hub browse -- pull/$(git rev-parse --abbrev-ref HEAD)'
