@@ -33,3 +33,6 @@ autocmd BufRead,BufNewFile t/*.vim setfiletype vim-flavor.vim
 
 "toml"
 autocmd BufRead,BufNewFile *.toml setfiletype toml
+
+"blade"
+autocmd BufRead,BufNewFile *.blade.php setfiletype blade

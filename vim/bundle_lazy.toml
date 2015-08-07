@@ -66,6 +66,10 @@ repository = 'othree/html5.vim'
 repository = 'kchmck/vim-coffee-script'
   [plugins.autoload]
   filetypes = [ 'coffee' ]
+[[plugins]]
+repository = 'xsbeats/vim-blade'
+  [plugins.autoload]
+  filetypes = [ 'blade' ]
 
 
 [[plugins]] # OctopressGit.vim
