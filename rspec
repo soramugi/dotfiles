@@ -1,5 +1,5 @@
 --color
 --require spec_helper
 --fail-fast
---profile 1
+--profile 3
 --drb

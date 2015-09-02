@@ -40,6 +40,7 @@ if type -P fortune cowsay >/dev/null && test "$TMUX"; then
     random_cowsay 2>/dev/null && break
   done
 fi
+export ANSIBLE_NOCOWS=1
 
 # ---------------------------------------------------------------------------
 #  プロンプト
