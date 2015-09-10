@@ -24,8 +24,6 @@ let g:quickrun_config = {
       \       'args'      : 'Kobito',
       \       'exec'      : '%c %o %a %s',
       \   },
-      \   'phpunit.php' : { 'type' : executable('phpunit') ? 'phpunit' : 'php' },
-      \   'phpunit' : { 'command' : 'phpunit', 'cmdopt' : '--stderr' },
       \}
 
 " taglist.vim

@@ -70,6 +70,10 @@ repository = 'kchmck/vim-coffee-script'
 repository = 'xsbeats/vim-blade'
   [plugins.autoload]
   filetypes = [ 'blade' ]
+[[plugins]]
+repository = 'jelera/vim-javascript-syntax'
+  [plugins.autoload]
+  filetypes = [ 'javascript' ]
 
 
 [[plugins]] # OctopressGit.vim
