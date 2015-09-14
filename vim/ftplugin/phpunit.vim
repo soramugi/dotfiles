@@ -1,1 +1,1 @@
-autocmd BufWritePost * :QuickRun
+"autocmd BufWritePost * :QuickRun
