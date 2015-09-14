@@ -3,6 +3,6 @@ let php_htmlInStrings=1
 let php_noShortTags = 1
 let php_folding = 1
 ""set noexpandtab
-set tabstop=2 shiftwidth=2 softtabstop=2
+set tabstop=4 shiftwidth=4 softtabstop=4
 
 set dictionary=~/.vim/dict/php.dict
