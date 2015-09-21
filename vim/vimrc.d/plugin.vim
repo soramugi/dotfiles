@@ -79,7 +79,7 @@ let g:vimfiler_as_default_explorer = 1
 let g:vimfiler_edit_action = 'tabopen'
 
 " octopress.vim"
-let g:octopress_path = "$HOME/Dropbox/code/diary.soramugi.net"
+let g:octopress_path = "$HOME/git/diary.soramugi.net"
 
 " vim-indent-guides"
 let g:indent_guides_enable_on_vim_startup = 1
