@@ -1,5 +1,6 @@
 "ruby"
 autocmd BufRead,BufNewFile Gemfile       setfiletype ruby
+autocmd BufRead,BufNewFile Podfile       setfiletype ruby
 autocmd BufRead,BufNewFile Guardfile     setfiletype ruby
 autocmd BufRead,BufNewFile Vagrantfile   setfiletype ruby
 autocmd BufRead,BufNewFile Berksfile     setfiletype ruby
