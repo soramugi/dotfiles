@@ -3,11 +3,6 @@
 # https://github.com/Shougo/shougo-s-github/blob/master/vim/rc/neobundle.toml
 
 [[plugins]]
-repository = 'soramugi/nerdtree'
-  [plugins.autoload]
-  commands = [ 'NERDTree', 'NERDTreeClose', 'NERDTreeToggle', 'NERDTreeFromBookmark' ]
-  explorer = 1
-[[plugins]]
 repository = 'scrooloose/syntastic'
 insert = 1
 [[plugins]]
@@ -74,6 +69,10 @@ repository = 'xsbeats/vim-blade'
 repository = 'jelera/vim-javascript-syntax'
   [plugins.autoload]
   filetypes = [ 'javascript' ]
+[[plugins]]
+repository = 'rhysd/vim-clang-format'
+  [plugins.autoload]
+  filetypes = [ 'c', 'cpp', 'objc', 'pch' ]
 
 
 [[plugins]] # OctopressGit.vim
