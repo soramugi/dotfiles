@@ -124,7 +124,7 @@ man() {
 # 短縮
 alias ls='ls --color=auto'
 alias ll='ls -AlFh --show-control-chars --color=auto'
-alias l='ls -AlFh --show-control-chars --color=auto'
+alias l='ls -1F --color=auto'
 alias vi='vim'
 alias v='vim'
 alias agh='ag --hidden'
