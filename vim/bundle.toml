@@ -18,3 +18,6 @@ repository = 'osyo-manga/vim-itunes-bgm'
 [[plugins]]
 repository = 'lambdalisue/vim-gista'
 depends = [ 'tyru/open-browser.vim' ]
+
+[[plugins]]
+repository = 'justinmk/vim-dirvish'

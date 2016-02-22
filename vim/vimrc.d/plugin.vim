@@ -121,3 +121,9 @@ let g:linktotag_link = 'http://soramugi.tumblr.com/random'
 
 "vim-gista"
 let g:gista#github_user = 'soramugi'
+
+"dirvish"
+augroup my_dirvish_events
+    au!
+    au User DirvishEnter let b:dirvish.showhidden = 1
+augroup END
