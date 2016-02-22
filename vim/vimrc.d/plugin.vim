@@ -52,6 +52,11 @@ map <silent> sp :call YanktmpPaste_p()<CR>
 map <silent> sP :call YanktmpPaste_P()<CR>
 
 " ctrlp
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](\.git|\.hg|\.svn|node_modules|build|tmp|vendor)$',
+  \ 'file': '\v\.(exe|so|dll|swp|zip|jpg|png)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
 let g:ctrlp_map = '<Space>f'
 let g:ctrlp_prompt_mappings = {
       \ 'AcceptSelection("e")': [],
