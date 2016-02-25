@@ -8,16 +8,10 @@ repository = 'Shougo/vimproc.vim'
   mac = 'make -f make_mac.mak'
   unix = 'make -f make_unix.mak'
 
-#[[plugins]]
-#repository = 'soramugi/nerdtree'
-
 # 便利系
 [[plugins]]
 repository = 'osyo-manga/vim-itunes-bgm'
-
-[[plugins]]
 repository = 'lambdalisue/vim-gista'
 depends = [ 'tyru/open-browser.vim' ]
-
-[[plugins]]
-repository = 'justinmk/vim-dirvish'
+#repository = 'justinmk/vim-dirvish'
+repository = 'scrooloose/nerdtree'
