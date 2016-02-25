@@ -200,6 +200,9 @@ command! -count -nargs=1 ContinuousNumber let c = col('.')|for n in range(1, <co
 "ファイルリストの表示"
 nnoremap <Space>n :NERDTreeToggle<CR>
 
+"今見てるタブ以外を閉じる"
+nnoremap <Space>w :tabonly<CR>
+
 " Align"
 nnoremap <Space>a :Align<Space>
 

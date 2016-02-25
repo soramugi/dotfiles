@@ -146,7 +146,7 @@ alias sd='svn di'
 alias sdi='svn di'
 sdl () { svn di  $@ | less; }
 alias sad='svn add'
-alias sadd='svn st | grep '?' | sed 's/\?//' | xargs svn add'
+alias sadd="svn st | grep '?' | sed 's/\?//' | xargs svn add"
 alias sup='svn up'
 alias sci='svn ci'
 alias scim='svn ci -m'
