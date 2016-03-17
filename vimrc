@@ -90,6 +90,7 @@ set title
 set textwidth=0
 set scrolloff=5
 set visualbell t_vb=
+set synmaxcol=200
 if v:version > 702
   set relativenumber
   set colorcolumn=80
