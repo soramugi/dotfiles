@@ -73,6 +73,11 @@ repository = 'jelera/vim-javascript-syntax'
 repository = 'rhysd/vim-clang-format'
   [plugins.autoload]
   filetypes = [ 'c', 'cpp', 'objc', 'pch' ]
+[[plugins]]
+repository = 'mxw/vim-jsx'
+  [plugins.autoload]
+  filetypes = [ 'jsx' ]
+
 
 
 [[plugins]] # OctopressGit.vim

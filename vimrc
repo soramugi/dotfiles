@@ -71,7 +71,6 @@ set wildmenu
 set wildmode=longest:full,full
 set formatoptions+=mM
 set clipboard=unnamed
-set cursorline
 set nrformats=
 " バックアップ
 set noswapfile
@@ -92,7 +91,7 @@ set scrolloff=5
 set visualbell t_vb=
 set synmaxcol=200
 if v:version > 702
-  set relativenumber
+  ""set relativenumber
   set colorcolumn=80
 endif
 "自動折りたたみ設定
