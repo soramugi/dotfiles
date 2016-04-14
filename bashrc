@@ -127,7 +127,8 @@ alias ll='ls -AlFh --show-control-chars --color=auto'
 alias l='ls -1F --color=auto'
 alias vi='vim'
 alias v='vim'
-alias vn='vim -c "try | NERDTreeTabsToggle | endtry"'
+
+alias vn='vim -c "try | NERDTreeToggle | endtry"'
 alias agh='ag --hidden'
 t () { tar zcvf `basename $1`.tar.gz $@; }
 alias t-='tar zxvf'
