@@ -14,4 +14,7 @@ repository = 'osyo-manga/vim-itunes-bgm'
 repository = 'lambdalisue/vim-gista'
 depends = [ 'tyru/open-browser.vim' ]
 #repository = 'justinmk/vim-dirvish'
+[[plugins]]
 repository = 'scrooloose/nerdtree'
+[[plugins]]
+repository = 'jistr/vim-nerdtree-tabs'
