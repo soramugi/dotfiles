@@ -106,7 +106,7 @@ export HISTTIMEFORMAT='%Y-%m-%d %T '
 # 標準コマンド書き換え
 alias sudo='sudo -H'
 alias less='less -M'
-alias ag='ag -S'
+alias ag='ag -S --depth 10 --ignore-dir node_modules --silent'
 export MANPAGER='less -R'
 man() {
   env \
