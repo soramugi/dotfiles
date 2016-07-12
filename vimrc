@@ -39,6 +39,8 @@ if neobundle#load_cache(expand('$MYVIMRC'))
   NeoBundle 'mopp/autodirmake.vim'
   NeoBundle 'vim-scripts/vim-auto-save'
   NeoBundle 'vim-scripts/zoom.vim'
+  NeoBundle 'othree/yajs.vim'
+  NeoBundle 'maxmellon/vim-jsx-pretty'
 
   "保存されて無かったら対話するやつ"
   NeoBundle 'https://gist.github.com/7574789.git', { 'script_type' : 'plugin' }
