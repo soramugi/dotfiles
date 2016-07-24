@@ -5,3 +5,4 @@ vim/.netrwhist
 vim/startuptime/*start
 tags
 tags.lock
+bundle/cache/
