@@ -21,6 +21,10 @@ if [ ! -f /usr/local/bin/cowsay ] ; then
   /usr/local/bin/brew install cowsay
 fi
 
+if [ ! -f /usr/local/bin/cmatrix ] ; then
+  /usr/local/bin/brew install cmatrix
+fi
+
 if [ ! -f /usr/local/bin/fortune ] ; then
   /usr/local/bin/brew install fortune
 fi
