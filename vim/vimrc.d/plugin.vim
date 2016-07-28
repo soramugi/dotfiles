@@ -132,3 +132,16 @@ augroup my_dirvish_events
     au!
     au User DirvishEnter let b:dirvish.showhidden = 1
 augroup END
+
+if argc() == 0 && exists('g:nerdtree_tabs_not_open') == 0
+  let g:nerdtree_tabs_open_on_console_startup = 1
+end
+
+" j/kによる移動を速くする
+nmap j <Plug>(accelerated_jk_gj)
+nmap k <Plug>(accelerated_jk_gk)
+
+" vim-monsterを有効にする
+let g:neocomplete#sources#omni#input_patterns = {
+\  'ruby': '[^. *\t]\.\w*\|\h\w*::'
+\}

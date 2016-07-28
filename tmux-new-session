@@ -1,0 +1,6 @@
+# 左右にウィンドウを分割
+split-window -h
+# 1番目(右下)のpaneの横幅（境界)を右に22文字幅移動する
+resize-pane -R -t 1 32
+
+select-pane -t 0
