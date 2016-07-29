@@ -21,6 +21,7 @@ export PATH=./bin:vendor/bin:protected/vendor/bin:$PATH
 
 export EDITOR=vim
 export HOMEBREW_INSTALL_BADGE='🍣'
+export SDKPATH=$(/usr/bin/env xcrun --show-sdk-path --sdk macosx)
 
 # ---------------------------------------------------------------------------
 # 立ち上げ時にAAと名言
@@ -199,6 +200,7 @@ alias saying='while (true) do f=$(fortune); echo "$f"; echo ""; say "$f"; sleep 
 alias pong='perl -nle '\''print "display notification \"$_\" with title \"Terminal\""'\'' | osascript'
 alias gyazo_del='curl -X DELETE -d "id=$(cat ~/Library/Gyazo/id)" '
 alias ip_addres='curl ifconfig.me/ip'
+alias swift='xcrun swift'
 
 export MARKPATH=$HOME/.marks
 function jump {

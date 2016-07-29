@@ -23,11 +23,11 @@ repository = 'jistr/vim-nerdtree-tabs'
 [[plugins]]
 repository = 'rhysd/accelerated-jk'
 
-[[plugins]]
-repository = 'tpope/vim-endwise'
-[[plugins]]
-repository = 'osyo-manga/vim-monster'
-[[plugins]]
-repository = 'todesking/ruby_hl_lvar.vim'
+#[[plugins]]
+#repository = 'tpope/vim-endwise'
+#[[plugins]]
+#repository = 'osyo-manga/vim-monster'
+#[[plugins]]
+#repository = 'todesking/ruby_hl_lvar.vim'
 
 

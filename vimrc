@@ -41,7 +41,11 @@ if neobundle#load_cache(expand('$MYVIMRC'))
   NeoBundle 'vim-scripts/zoom.vim'
   NeoBundle 'othree/yajs.vim'
   NeoBundle 'maxmellon/vim-jsx-pretty'
-  NeoBundle 'apple-swift', {'type': 'nosync', 'base': '~/.vim/bundle/manual'}
+  NeoBundle 'keith/swift.vim'
+  NeoBundle 'kballard/vim-swift', {
+        \ 'filetypes': 'swift',
+        \ 'unite_sources': ['swift/device', 'swift/developer_dir']
+        \}
 
 
   "保存されて無かったら対話するやつ"

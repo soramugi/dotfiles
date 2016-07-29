@@ -24,6 +24,11 @@ let g:quickrun_config = {
       \       'args'      : 'Kobito',
       \       'exec'      : '%c %o %a %s',
       \   },
+      \   'swift' : {
+      \       'command': 'xcrun',
+      \       'cmdopt': 'swift',
+      \       'exec': '%c %o %s',
+      \   },
       \}
 
 " taglist.vim
@@ -145,3 +150,4 @@ nmap k <Plug>(accelerated_jk_gk)
 let g:neocomplete#sources#omni#input_patterns = {
 \  'ruby': '[^. *\t]\.\w*\|\h\w*::'
 \}
+

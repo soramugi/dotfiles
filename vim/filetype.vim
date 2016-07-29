@@ -37,3 +37,6 @@ autocmd BufRead,BufNewFile *.toml setfiletype toml
 
 "blade"
 autocmd BufRead,BufNewFile *.blade.php setfiletype blade
+
+"swift"
+autocmd BufRead,BufNewFile *.swift setfiletype swift
