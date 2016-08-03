@@ -51,18 +51,17 @@ export ANSIBLE_NOCOWS=1
 stty -ixon -ixoff
 # 音
 set bell-style none
-# 表示形式ssh接続の時と色分ける
+
 GIT_PS1_SHOWDIRTYSTATE=true
 PS1="\`if [ \$? != 0 ]; then echo \[\e[31m\]o_O\[\e[0m\]; fi\`"
-PS1=$PS1'\[\033[36m\] \W '
-PS1=$PS1'\[\033[31m\]$(__git_ps1 "[%s]")\[\033[00m\]\[\033[33m\]'
-PS1=$PS1'\$\[\033[00m\] '
+PS1=$PS1"\[\033[36m \W \033[00m"
+PS1=$PS1"\[\033[31m\$(__git_ps1 '[%s] ')\[\033[00m"
+PS1=$PS1"\[\033[33m\$\[\033[00m "
 
 # vim抜けたとき
 if [[ -n "$VIMRUNTIME" ]]; then
   PS1="\[\033[0;33m\](vim)\[\033[00m\]"$PS1
 fi
-
 
 export CLICOLOR=1
 if type -P dircolors >/dev/null ; then
