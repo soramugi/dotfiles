@@ -52,14 +52,11 @@ stty -ixon -ixoff
 # 音
 set bell-style none
 # 表示形式ssh接続の時と色分ける
+GIT_PS1_SHOWDIRTYSTATE=true
 PS1="\`if [ \$? != 0 ]; then echo \[\e[31m\]o_O\[\e[0m\]; fi\`"
-if [ -z "$SSH_CONNECTION" ]; then
-  # not ssh
-  PS1=$PS1"\[\033[0;32m\] \W \[\033[00m\]\[\033[1;33m\]\$\[\033[00m\] "
-else
-  # ssh
-  PS1=$PS1"\[\033[0;35m\] \W \[\033[00m\]\[\033[1;33m\]\$\[\033[00m\] "
-fi
+PS1=$PS1'\[\033[36m\] \W '
+PS1=$PS1'\[\033[31m\]$(__git_ps1 "[%s]")\[\033[00m\]\[\033[33m\]'
+PS1=$PS1'\$\[\033[00m\] '
 
 # vim抜けたとき
 if [[ -n "$VIMRUNTIME" ]]; then
@@ -229,5 +226,10 @@ for i in $args; do
 done
 echo $_num
 }
+
+# ---------------------------------------------------------------------------
+# コマンド補完
+# ---------------------------------------------------------------------------
+source $HOME/dotfiles/completion/*
 
 # vim:ft=sh:
