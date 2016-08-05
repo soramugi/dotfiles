@@ -136,6 +136,7 @@ export GREP_OPTIONS='--exclude=*.git* --exclude=*.svn* --exclude=*tags* '$GREP_O
 alias be='bundle exec'
 alias fname='find . -name'
 loop () { while (true) do $@ ; sleep 2; done;}
+alias parmit='stat -c "%a %U:%G %n" '
 
 # for svn
 alias st='svn st'
