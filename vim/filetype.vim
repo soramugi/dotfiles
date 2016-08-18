@@ -5,6 +5,9 @@ autocmd BufRead,BufNewFile Guardfile     setfiletype ruby
 autocmd BufRead,BufNewFile Vagrantfile   setfiletype ruby
 autocmd BufRead,BufNewFile Berksfile     setfiletype ruby
 autocmd BufRead,BufNewFile Capfile       setfiletype ruby
+autocmd BufRead,BufNewFile Fastfile      setfiletype ruby
+autocmd BufRead,BufNewFile Appfile       setfiletype ruby
+autocmd BufRead,BufNewFile Matchfile     setfiletype ruby
 autocmd BufRead,BufNewFile *.cap         setfiletype ruby
 autocmd BufRead,BufNewFile *.rabl        setfiletype ruby
 autocmd BufRead,BufNewFile *.jbuilder    setfiletype ruby
@@ -12,6 +15,7 @@ autocmd BufRead,BufNewFile *.ru          setfiletype ruby
 autocmd BufRead,BufNewFile simplecov     setfiletype ruby
 autocmd BufWinEnter,BufNewFile *_spec.rb setfiletype ruby.rspec
 autocmd BufWinEnter,BufNewFile *_test.rb setfiletype ruby.unit
+
 
 "php"
 autocmd BufWinEnter,BufNewFile *Test.php setfiletype phpunit.php
