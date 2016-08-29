@@ -52,9 +52,9 @@ stty -ixon -ixoff
 # 音
 set bell-style none
 
-GIT_PS1_SHOWDIRTYSTATE=true
+export GIT_PS1_SHOWDIRTYSTATE=true
 PS1="\`if [ \$? != 0 ]; then echo \[\e[31m\]o_O\[\e[0m\]; fi\`"
-PS1=$PS1"\[\033[36m\] \W \033[00m\]"
+PS1=$PS1"\[\033[36m\] \W \[\033[00m\]"
 PS1=$PS1"\[\033[38;05;13m\]\$(__git_ps1 '[%s] ')\[\033[00m\]"
 PS1=$PS1"\[\033[33m\]\$\[\033[00m\] "
 

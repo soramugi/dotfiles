@@ -8,6 +8,7 @@ autocmd BufRead,BufNewFile Capfile       setfiletype ruby
 autocmd BufRead,BufNewFile Fastfile      setfiletype ruby
 autocmd BufRead,BufNewFile Appfile       setfiletype ruby
 autocmd BufRead,BufNewFile Matchfile     setfiletype ruby
+autocmd BufRead,BufNewFile Movefile      setfiletype ruby
 autocmd BufRead,BufNewFile *.cap         setfiletype ruby
 autocmd BufRead,BufNewFile *.rabl        setfiletype ruby
 autocmd BufRead,BufNewFile *.jbuilder    setfiletype ruby
