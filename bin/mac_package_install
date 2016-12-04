@@ -29,6 +29,8 @@ if [ ! -f /usr/local/bin/fortune ] ; then
   /usr/local/bin/brew install fortune
 fi
 
+/usr/local/bin/brew install bash-completion
+
 if [ ! -f /usr/local/bin/reattach-to-user-namespace ] ; then
   /usr/local/bin/brew install reattach-to-user-namespace
 fi

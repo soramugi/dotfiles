@@ -40,7 +40,8 @@ if neobundle#load_cache(expand('$MYVIMRC'))
   NeoBundle 'vim-scripts/vim-auto-save'
   NeoBundle 'vim-scripts/zoom.vim'
   NeoBundle 'othree/yajs.vim'
-  NeoBundle 'maxmellon/vim-jsx-pretty'
+  NeoBundle "pangloss/vim-javascript"
+  NeoBundle "mxw/vim-jsx"
   NeoBundle 'keith/swift.vim'
   NeoBundle 'kballard/vim-swift', {
         \ 'filetypes': 'swift',
