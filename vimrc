@@ -21,7 +21,7 @@ if neobundle#load_cache(expand('$MYVIMRC'))
   NeoBundle 'vim-jp/vimdoc-ja'
   NeoBundle 'thinca/vim-quickrun'
   NeoBundle 'vim-scripts/Align'
-  NeoBundle 'nathanaelkane/vim-indent-guides'
+  ""NeoBundle 'nathanaelkane/vim-indent-guides'
   NeoBundle 'tpope/vim-surround'
   NeoBundle 'svn-diff.vim'
   NeoBundle 'tyru/open-browser.vim'
@@ -40,14 +40,31 @@ if neobundle#load_cache(expand('$MYVIMRC'))
   NeoBundle 'vim-scripts/vim-auto-save'
   NeoBundle 'vim-scripts/zoom.vim'
   NeoBundle 'othree/yajs.vim'
-  NeoBundle "pangloss/vim-javascript"
+  "NeoBundle 'pangloss/vim-javascript'
   NeoBundle "mxw/vim-jsx"
   NeoBundle 'keith/swift.vim'
   NeoBundle 'kballard/vim-swift', {
         \ 'filetypes': 'swift',
         \ 'unite_sources': ['swift/device', 'swift/developer_dir']
         \}
+  NeoBundle 'violetyk/cake.vim'
+  NeoBundle 'vim-scripts/smarty-syntax'
 
+  NeoBundle 'scrooloose/syntastic'
+  NeoBundle 'Shougo/neocomplete.vim'
+  NeoBundle 'tpope/vim-dispatch'
+  NeoBundle 'editorconfig/editorconfig-vim'
+
+
+  NeoBundleLazy 'OrangeT/vim-csharp', { 'autoload': { 'filetypes': [ 'cs', 'csi', 'csx' ] } }
+  NeoBundleLazy 'OmniSharp/omnisharp-vim', {
+  \   'autoload': { 'filetypes': [ 'cs', 'csi', 'csx' ] },
+  \   'build': {
+  \     'windows' : 'msbuild server/OmniSharp.sln',
+  \     'mac': 'xbuild server/OmniSharp.sln',
+  \     'unix': 'xbuild server/OmniSharp.sln',
+  \   },
+  \ }
 
   "保存されて無かったら対話するやつ"
   NeoBundle 'https://gist.github.com/7574789.git', { 'script_type' : 'plugin' }
@@ -81,6 +98,7 @@ set wildmode=longest:full,full
 set formatoptions+=mM
 set clipboard=unnamed
 set nrformats=
+set noexpandtab
 " バックアップ
 set noswapfile
 set nobackup
@@ -98,7 +116,7 @@ set title
 set textwidth=0
 set scrolloff=5
 set visualbell t_vb=
-set synmaxcol=200
+""set synmaxcol=200
 if v:version > 702
   ""set relativenumber
   set colorcolumn=80

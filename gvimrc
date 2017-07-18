@@ -2,7 +2,8 @@
 set columns=140
 set lines=45
 set guioptions-=T
-set guifont=Monaco:h11
+set guifont=Monaco:h19
+
 
 let g:nerdtree_tabs_not_open = 1
 let g:nerdtree_tabs_open_on_console_startup = 0

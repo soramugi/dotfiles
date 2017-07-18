@@ -82,7 +82,7 @@ let g:Align_xstrlen = 3
 " memolist.vim
 let g:memolist_path = "$HOME/Dropbox/Memo"
 
-autocmd FileType gitcommit DiffGitCached | only | split | b 1
+autocmd FileType gitcommit DiffGitCached | wincmd x | resize 10
 
 "vimfiler"
 let g:vimfiler_as_default_explorer = 1

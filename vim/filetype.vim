@@ -20,6 +20,7 @@ autocmd BufWinEnter,BufNewFile *_test.rb setfiletype ruby.unit
 
 "php"
 autocmd BufWinEnter,BufNewFile *Test.php setfiletype phpunit.php
+autocmd BufWinEnter,BufNewFile *.ctp setfiletype smarty
 
 "js.coffee"
 autocmd BufRead,BufNewFile *.coffee    setfiletype coffee
