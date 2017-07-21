@@ -25,6 +25,10 @@ if [ ! -f /usr/local/bin/cmatrix ] ; then
   /usr/local/bin/brew install cmatrix
 fi
 
+if [ ! -f /usr/local/bin/xbuild ] ; then
+  /usr/local/bin/brew install mono
+fi
+
 if [ ! -f /usr/local/bin/fortune ] ; then
   /usr/local/bin/brew install fortune
 fi
