@@ -5,8 +5,8 @@ if [ ! -f /usr/local/bin/brew ] ; then
   echo 'export PATH=/usr/local/bin:$PATH' >> .bashrc
 fi
 
-if [ ! -f /usr/local/bin/macvim ] ; then
-  /usr/local/bin/brew install macvim --override-system-vim
+if [ ! -f /usr/local/bin/gvim ] ; then
+  /usr/local/bin/brew install macvim
 fi
 
 if brew --prefix coreutils >/dev/null ; then
