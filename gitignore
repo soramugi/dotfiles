@@ -3,7 +3,7 @@
 ## bundler
 .bundle/
 vendor/bundle/
-vendor/bin/
+#vendor/bin/
 rails/vendor/bundle/
 rails/vendor/bin/
 gemfiles/vendor

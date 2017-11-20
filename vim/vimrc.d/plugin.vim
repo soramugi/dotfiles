@@ -44,6 +44,7 @@ let g:syntastic_enable_signs  = 1
 let g:syntastic_auto_loc_list = 2
 ""let g:syntastic_check_on_open = 1
 let g:syntastic_php_phpcs_args = '--encoding=utf-8 --report=csv --standard=./phpcs.xml'
+let g:syntastic_php_phpmd_post_args='$HOME/dotfiles/phpmd.xml'
 
 " open-browser
 let g:netrw_nogx = 1
