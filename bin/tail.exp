@@ -1,0 +1,12 @@
+#!/usr/bin/expect
+
+## Access CLI
+set sudo_password "hugehuge"
+set timeout -1
+
+spawn ssh hugehuge
+expect "huge@hugehuge:~ %" {send "sudo echo hi\n"}
+expect "Password:" {send "$sudo_password\n"}
+send "tail -f /var/log/message\n"
+
+expect eof
