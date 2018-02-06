@@ -8,11 +8,14 @@ export PATH=$HOME/bin:$PATH
 export PATH=$HOME/.composer/vendor/bin:$PATH
 if type -P brew >/dev/null; then
   export PATH="/usr/local/sbin:/usr/local/bin:$PATH"
-  if brew --prefix coreutils >/dev/null; then
-    export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+  export brew_prefix=`brew --prefix`
+  # brew --prefix coreutils でパス取得すべきだけど実行時間が長いので変更
+  export coreutils_path=${brew_prefix}/opt/coreutils
+  if [ -d $coreutils_path ]; then
+    export PATH="$coreutils_path/libexec/gnubin:$PATH"
   fi
-  if [ -f `brew --prefix`/etc/bash_completion ]; then
-    . `brew --prefix`/etc/bash_completion
+  if [ -f ${brew_prefix}/etc/bash_completion ]; then
+    . ${brew_prefix}/etc/bash_completion
   fi
 fi
 export PATH=$HOME/.rbenv/bin:$PATH
@@ -27,21 +30,21 @@ export SDKPATH=$(/usr/bin/env xcrun --show-sdk-path --sdk macosx)
 # 立ち上げ時にAAと名言
 # ---------------------------------------------------------------------------
 
-function random_cowsay() {
-#COWS=$(ls -1 `brew --prefix`/Cellar/cowsay/3.03/share/cows/)
-COWS="$COWS $(cd ~/dotfiles/cows ;find `pwd` -type f -print)"
-NBRE_COWS=$(for f in $COWS; do echo $f; done | wc -l)
-COWS_RANDOM=$(expr $RANDOM % $NBRE_COWS + 1)
-COW_NAME=$(for f in $COWS; do echo $f; done | awk -v COWS_RANDOM_AWK=$COWS_RANDOM 'NR == COWS_RANDOM_AWK {print $1}')
-cowsay -f $COW_NAME "`Fortune -s`"
-}
-if type -P fortune cowsay >/dev/null && test "$TMUX"; then
-  while :
-  do
-    random_cowsay 2>/dev/null && break
-  done
-fi
-export ANSIBLE_NOCOWS=1
+#function random_cowsay() {
+##COWS=$(ls -1 `brew --prefix`/Cellar/cowsay/3.03/share/cows/)
+#COWS="$COWS $(cd ~/dotfiles/cows ;find `pwd` -type f -print)"
+#NBRE_COWS=$(for f in $COWS; do echo $f; done | wc -l)
+#COWS_RANDOM=$(expr $RANDOM % $NBRE_COWS + 1)
+#COW_NAME=$(for f in $COWS; do echo $f; done | awk -v COWS_RANDOM_AWK=$COWS_RANDOM 'NR == COWS_RANDOM_AWK {print $1}')
+#cowsay -f $COW_NAME "`Fortune -s`"
+#}
+#if type -P fortune cowsay >/dev/null && test "$TMUX"; then
+#  while :
+#  do
+#    random_cowsay 2>/dev/null && break
+#  done
+#fi
+#export ANSIBLE_NOCOWS=1
 
 # ---------------------------------------------------------------------------
 #  プロンプト
@@ -52,8 +55,8 @@ stty -ixon -ixoff
 # 音
 set bell-style none
 
-source /usr/local/etc/bash_completion.d/git-prompt.sh
-source /usr/local/etc/bash_completion.d/git-completion.bash
+#source /usr/local/etc/bash_completion.d/git-prompt.sh
+#source /usr/local/etc/bash_completion.d/git-completion.bash
 
 export GIT_PS1_SHOWDIRTYSTATE=true
 PS1="\`if [ \$? != 0 ]; then echo \[\e[31m\]o_O\[\e[0m\]; fi\`"
