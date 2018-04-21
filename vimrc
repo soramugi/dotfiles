@@ -54,6 +54,7 @@ if neobundle#load_cache(expand('$MYVIMRC'))
   NeoBundle 'Shougo/neocomplete.vim'
   NeoBundle 'tpope/vim-dispatch'
   NeoBundle 'editorconfig/editorconfig-vim'
+  NeoBundle 'leafgarland/typescript-vim'
 
 
   NeoBundleLazy 'OrangeT/vim-csharp', { 'autoload': { 'filetypes': [ 'cs', 'csi', 'csx' ] } }

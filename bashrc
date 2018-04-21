@@ -86,9 +86,8 @@ if [ ! -z "$SSH_CONNECTION" ]; then
 fi
 
 # tmuxでattachかnew-session
-if type -P tmux >/dev/null ; then
+if [[ ! `type -P tmux` == "" ]] && [[ $VSCODE_PID == "" ]] ; then
   test -z "$TMUX" && (tmux -2 attach || tmux -2 new-session)
-  #test -z "$TMUX" && (tmux -2 attach || tmux -2 new-session \; source-file ~/dotfiles/tmux-new-session)
 fi
 
 ## 履歴を共有
@@ -169,7 +168,7 @@ alias gdi='git diff'
 alias gad='git add'
 alias gci='git commit -a'
 alias gp='git push'
-alias gl='git pull --rebase'
+alias gl='git pull'
 alias glr='git pull --rebase' #本家 自分' ## fork元に追随
 alias gre='git remote' #add 短縮名 git://huge.git'
 alias gco='git checkout'
