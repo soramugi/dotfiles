@@ -114,6 +114,7 @@ let g:tagbar_left = 1
 "auto-ctags.vim"
 set tags+=.svn/tags,.git/tags,.bundle/tags
 let g:auto_ctags = 1
+let g:auto_ctags_bin_path = '/usr/local/bin/ctags'
 let g:auto_ctags_directory_list = ['.git', '.svn', '.bundle']
 ""let g:auto_ctags_filetype_mode = 1
 
