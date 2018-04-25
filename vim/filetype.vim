@@ -46,3 +46,6 @@ autocmd BufRead,BufNewFile *.blade.php setfiletype blade
 
 "swift"
 autocmd BufRead,BufNewFile *.swift setfiletype swift
+
+"ejs nodeのviewテンプレート"
+autocmd BufRead,BufNewFile *.ejs setfiletype ejs
