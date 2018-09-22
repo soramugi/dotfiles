@@ -67,6 +67,7 @@ if neobundle#load_cache(expand('$MYVIMRC'))
   \     'unix': 'xbuild server/OmniSharp.sln',
   \   },
   \ }
+  NeoBundleLazy 'heavenshell/vim-jsdoc' , {'autoload': {'filetypes': ['javascript']}}
 
   "保存されて無かったら対話するやつ"
   NeoBundle 'https://gist.github.com/7574789.git', { 'script_type' : 'plugin' }

@@ -86,8 +86,9 @@ if [ ! -z "$SSH_CONNECTION" ]; then
 fi
 
 # tmuxでattachかnew-session
-if [[ ! `type -P tmux` == "" ]] && [[ $VSCODE_PID == "" ]] ; then
+if type -P tmux >/dev/null ; then
   test -z "$TMUX" && (tmux -2 attach || tmux -2 new-session)
+  #test -z "$TMUX" && (tmux -2 attach || tmux -2 new-session \; source-file ~/dotfiles/tmux-new-session)
 fi
 
 ## 履歴を共有
