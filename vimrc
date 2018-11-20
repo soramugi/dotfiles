@@ -59,14 +59,14 @@ if neobundle#load_cache(expand('$MYVIMRC'))
   NeoBundle 'posva/vim-vue'
 
   NeoBundleLazy 'OrangeT/vim-csharp', { 'autoload': { 'filetypes': [ 'cs', 'csi', 'csx' ] } }
-  NeoBundleLazy 'OmniSharp/omnisharp-vim', {
-  \   'autoload': { 'filetypes': [ 'cs', 'csi', 'csx' ] },
-  \   'build': {
-  \     'windows' : 'msbuild server/OmniSharp.sln',
-  \     'mac': 'xbuild server/OmniSharp.sln',
-  \     'unix': 'xbuild server/OmniSharp.sln',
-  \   },
-  \ }
+  ""NeoBundleLazy 'OmniSharp/omnisharp-vim', {
+  ""\   'autoload': { 'filetypes': [ 'cs', 'csi', 'csx' ] },
+  ""\   'build': {
+  ""\     'windows' : 'msbuild server/OmniSharp.sln',
+  ""\     'mac': 'xbuild server/OmniSharp.sln',
+  ""\     'unix': 'xbuild server/OmniSharp.sln',
+  ""\   },
+  ""\ }
   NeoBundleLazy 'heavenshell/vim-jsdoc' , {'autoload': {'filetypes': ['javascript']}}
 
   "保存されて無かったら対話するやつ"
