@@ -1,3 +1,10 @@
+--exclude=.git
+--exclude=out
+--exclude=public
+--exclude=coverage
+--exclude=node_modules
+--exclude=*.js
+--exclude=*.h
 --append=yes
 --recurse=yes
 --langmap=PHP:+.inc
