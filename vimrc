@@ -58,6 +58,9 @@ if neobundle#load_cache(expand('$MYVIMRC'))
   NeoBundle 'nikvdp/ejs-syntax'
   NeoBundle 'posva/vim-vue'
 
+  "typescriptの保管やコンパイルエラーの確認"
+  NeoBundle 'Quramy/tsuquyomi'
+
   NeoBundleLazy 'OrangeT/vim-csharp', { 'autoload': { 'filetypes': [ 'cs', 'csi', 'csx' ] } }
   ""NeoBundleLazy 'OmniSharp/omnisharp-vim', {
   ""\   'autoload': { 'filetypes': [ 'cs', 'csi', 'csx' ] },
