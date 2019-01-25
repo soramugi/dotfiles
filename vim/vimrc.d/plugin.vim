@@ -63,7 +63,7 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(exe|so|dll|swp|zip|jpg|png)$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
-let g:ctrlp_map = '<Space>f'
+""let g:ctrlp_map = '<Space>f'
 let g:ctrlp_prompt_mappings = {
       \ 'AcceptSelection("e")': [],
       \ 'AcceptSelection("t")': ['<cr>', '<c-m>'],
