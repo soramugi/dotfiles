@@ -154,3 +154,6 @@ let g:neocomplete#sources#omni#input_patterns = {
 \  'ruby': '[^. *\t]\.\w*\|\h\w*::'
 \}
 
+" tsuquyomi"
+let g:tsuquyomi_disable_quickfix = 1
+let g:syntastic_typescript_checkers = ['tsuquyomi']

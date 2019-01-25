@@ -181,8 +181,8 @@ nnoremap <c-h> <c-w>h
 nnoremap <silent> <Space>d :bdelete<CR>
 
 " tab移動
-nnoremap <C-n> gt
-nnoremap <C-p> gT
+nnoremap <C-I> gt
+""nnoremap <S-C-I> gT " 同時押しは不可能
 
 " カレントディレクトリをtabで開く
 nnoremap <silent> <Space>t :<C-u>tabnew<CR>
