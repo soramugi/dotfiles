@@ -6,7 +6,7 @@ if [ ! -f /usr/local/bin/brew ] ; then
 fi
 
 if [ ! -f /usr/local/bin/gvim ] ; then
-  /usr/local/bin/brew install macvim
+  /usr/local/bin/brew cask install macvim
 fi
 
 if brew --prefix coreutils >/dev/null ; then
