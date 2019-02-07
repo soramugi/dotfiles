@@ -58,6 +58,7 @@ if neobundle#load_cache(expand('$MYVIMRC'))
   NeoBundle 'leafgarland/typescript-vim'
   NeoBundle 'nikvdp/ejs-syntax'
   NeoBundle 'posva/vim-vue'
+  NeoBundle 'junegunn/vim-easy-align'
 
   "typescriptの保管やコンパイルエラーの確認"
   NeoBundle 'Quramy/tsuquyomi'
@@ -126,7 +127,7 @@ set visualbell t_vb=
 ""set synmaxcol=200
 if v:version > 702
   ""set relativenumber
-  set colorcolumn=80
+  set colorcolumn=120
 endif
 "自動折りたたみ設定
 set foldmethod=indent
@@ -280,6 +281,8 @@ inoremap <C-a> <Home>
 inoremap <C-e> <End>
 inoremap <C-p> <Up>
 inoremap <C-n> <Down>
+
+vmap <Enter> <Plug>(EasyAlign)
 
 "---------------------------------------------------------------------------
 " 短縮入力:
