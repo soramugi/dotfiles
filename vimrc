@@ -49,6 +49,7 @@ if neobundle#load_cache(expand('$MYVIMRC'))
         \}
   NeoBundle 'violetyk/cake.vim'
   NeoBundle 'vim-scripts/smarty-syntax'
+  NeoBundle 'mileszs/ack.vim'
 
   NeoBundle 'scrooloose/syntastic'
   NeoBundle 'Shougo/neocomplete.vim'
@@ -77,7 +78,7 @@ if neobundle#load_cache(expand('$MYVIMRC'))
   "以前のカーソル位置に移動"
   NeoBundle 'https://gist.github.com/7671774.git', { 'script_type' : 'plugin' }
   "agあればgrepをagコマンドに"
-  NeoBundle 'https://gist.github.com/7800124.git', { 'script_type' : 'plugin' }
+  ""NeoBundle 'https://gist.github.com/7800124.git', { 'script_type' : 'plugin' }
   "NeoBundleUpdate!を1日毎勝手に実行"
   NeoBundle 'https://gist.github.com/9133200.git', { 'script_type' : 'plugin' }
 
@@ -208,9 +209,9 @@ nnoremap <silent> <Space>E  :<C-u>source $MYVIMRC<CR>
 nnoremap <silent> <Space>s :<C-u>w !sudo tee %<CR>
 
 " grep の書式を挿入
-nnoremap <expr> <Space>g ':vimgrep /\<' . expand('<cword>') . '\>/j **/*.' . &filetype
+""nnoremap <expr> <Space>g ':vimgrep /\<' . expand('<cword>') . '\>/j **/*.' . &filetype
 nnoremap <expr> <Space>G ':sil grep! ' . expand('<cword>') . ' *'
-""nnoremap <expr> <Space>g ':Ag ' . expand('<cword>')
+nnoremap <expr> <S-k> ':Ack! ' . expand('<cword>') . '<CR>'
 
 " help 引くのに便利かなと
 nnoremap <expr> <Space>h ':tab h ' . expand('<cword>')
@@ -231,7 +232,7 @@ vnoremap <silent> co :ContinuousNumber <C-a><CR>
 command! -count -nargs=1 ContinuousNumber let c = col('.')|for n in range(1, <count>?<count>-line('.'):1)|exec 'normal! j' . n . <q-args>|call cursor('.', c)|endfor
 
 "ファイルリストの表示"
-nnoremap <Space>n :NERDTreeToggle<CR>
+nnoremap <C-n> :NERDTreeToggle<CR>
 
 "今見てるタブ以外を閉じる"
 nnoremap <Space>w :tabonly<CR>

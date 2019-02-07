@@ -58,6 +58,7 @@ map <silent> sp :call YanktmpPaste_p()<CR>
 map <silent> sP :call YanktmpPaste_P()<CR>
 
 " ctrlp
+""let g:ctrlp_user_command = 'ag %s -l'
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/](\.git|\.hg|\.svn|node_modules|build|tmp|vendor)$',
   \ 'file': '\v\.(exe|so|dll|swp|zip|jpg|png)$',
@@ -141,8 +142,9 @@ augroup my_dirvish_events
     au User DirvishEnter let b:dirvish.showhidden = 1
 augroup END
 
+"nerdtree"
 if argc() == 0 && exists('g:nerdtree_tabs_not_open') == 0
-  let g:nerdtree_tabs_open_on_console_startup = 1
+  ""let g:nerdtree_tabs_open_on_console_startup = 1
 end
 
 " j/kによる移動を速くする
@@ -157,3 +159,8 @@ let g:neocomplete#sources#omni#input_patterns = {
 " tsuquyomi"
 let g:tsuquyomi_disable_quickfix = 1
 let g:syntastic_typescript_checkers = ['tsuquyomi']
+
+"Ack"
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif

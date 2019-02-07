@@ -11,4 +11,4 @@ if filereadable(expand('$HOME/.vimrc'))
     source $HOME/.vimrc
 endif
 cd $HOME/Dropbox/Memo/
-try | NERDTreeToggle | endtry
+""try | NERDTreeToggle | endtry
