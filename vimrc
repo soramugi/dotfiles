@@ -144,7 +144,7 @@ set history=100
 
 set grepprg=grep\ -rnIH\ --exclude=*.svn*\ --exclude=*.git*
 autocmd QuickFixCmdPost *grep* cwindow
-set switchbuf+=usetab,newtab
+""set switchbuf+=usetab,newtab
 
 "-----------------------------------------------------------------------------------"
 "                                      チートシート                                 "

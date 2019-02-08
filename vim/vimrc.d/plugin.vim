@@ -65,11 +65,13 @@ let g:ctrlp_custom_ignore = {
   \ 'link': 'some_bad_symbolic_links',
   \ }
 ""let g:ctrlp_map = '<Space>f'
-let g:ctrlp_prompt_mappings = {
-      \ 'AcceptSelection("e")': [],
-      \ 'AcceptSelection("t")': ['<cr>', '<c-m>'],
-      \ }
-let g:ctrlp_working_path_mode = 'a'
+""let g:ctrlp_prompt_mappings = {
+""      \ 'AcceptSelection("e")': [],
+""      \ 'AcceptSelection("t")': ['<cr>', '<c-m>'],
+""      \ }
+""let g:ctrlp_working_path_mode = 'a'
+let g:ctrlp_working_path_mode = 'c'
+let g:ctrlp_max_height = 20
 
 " netrw
 let g:netrw_liststyle    = 3
@@ -88,7 +90,7 @@ autocmd FileType gitcommit DiffGitCached | wincmd x | resize 10
 
 "vimfiler"
 let g:vimfiler_as_default_explorer = 1
-let g:vimfiler_edit_action = 'tabopen'
+""let g:vimfiler_edit_action = 'tabopen'
 
 " octopress.vim"
 let g:octopress_path = "$HOME/git/diary.soramugi.net"
