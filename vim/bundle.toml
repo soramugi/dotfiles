@@ -10,7 +10,6 @@ repository = 'Shougo/vimproc.vim'
 
 # 便利系
 [[plugins]]
-repository = 'osyo-manga/vim-itunes-bgm'
 repository = 'lambdalisue/vim-gista'
 depends = [ 'tyru/open-browser.vim' ]
 #repository = 'justinmk/vim-dirvish'

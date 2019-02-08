@@ -9,13 +9,6 @@ insert = 1
 repository = 'Shougo/neocomplcache'
 insert = 1
 [[plugins]]
-repository = 'L9'
-insert = 1
-[[plugins]]
-repository = 'FuzzyFinder'
-depends = 'L9'
-insert = 1
-[[plugins]]
 repository = 'yuratomo/w3m.vim'
   [plugins.autoload]
   commands = [ 'W3m', 'W3mHistory', 'W3mHistoryClear', 'W3mLocal', 'W3mSplit', 'W3mTab', 'W3mVSplit' ]
@@ -23,10 +16,6 @@ repository = 'yuratomo/w3m.vim'
 repository = 'mattn/benchvimrc-vim'
   [plugins.autoload]
   commands = [ 'BenchVimrc' ]
-[[plugins]]
-repository = 'soramugi/pocket.vim'
-  [plugins.autoload]
-  commands = [ 'PocketList' ]
 [[plugins]]
 repository = 'mattn/emoji-vim'
   [plugins.autoload]
@@ -74,14 +63,8 @@ repository = 'rhysd/vim-clang-format'
   [plugins.autoload]
   filetypes = [ 'c', 'cpp', 'objc', 'pch' ]
 
-
 [[plugins]] # OctopressGit.vim
 repository = 'https://gist.github.com/6775207.git'
 script_type = 'plugin'
   [plugins.autoload]
   commands = [ 'OctopressGit' ]
-[[plugins]] # tumblrからランダムで画像リンクの出力
-repository = 'https://gist.github.com/4f6d95e05827018f2318.git'
-script_type = 'plugin'
-  [plugins.autoload]
-  commands = [ 'Linktotag' ]

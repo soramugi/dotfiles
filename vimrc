@@ -32,8 +32,6 @@ if neobundle#load_cache(expand('$MYVIMRC'))
   NeoBundle 'kana/vim-fakeclip.git'
   NeoBundle 'tpope/vim-abolish'
   NeoBundle 'bling/vim-airline'
-  NeoBundle 'kana/vim-textobj-user'
-  NeoBundle 'osyo-manga/vim-textobj-multiblock'
   NeoBundle 'osyo-manga/vim-over'
   NeoBundle 'vim-jp/vital.vim'
   NeoBundle 'mopp/autodirmake.vim'
@@ -47,8 +45,6 @@ if neobundle#load_cache(expand('$MYVIMRC'))
         \ 'filetypes': 'swift',
         \ 'unite_sources': ['swift/device', 'swift/developer_dir']
         \}
-  NeoBundle 'violetyk/cake.vim'
-  NeoBundle 'vim-scripts/smarty-syntax'
   NeoBundle 'mileszs/ack.vim'
 
   NeoBundle 'scrooloose/syntastic'
@@ -146,46 +142,68 @@ set grepprg=grep\ -rnIH\ --exclude=*.svn*\ --exclude=*.git*
 autocmd QuickFixCmdPost *grep* cwindow
 ""set switchbuf+=usetab,newtab
 
-"-----------------------------------------------------------------------------------"
-"                                      チートシート                                 "
-"-----------------------------------------------------------------------------------"
 
+" 無限undo
+if has('persistent_undo')
+  set undodir=~/.vim/undo/
+  set undofile
+endif
+set fileencodings=utf-8,default,iso-2022-jp,euc-jp,cp932,ucs-bom,latin1
 
-""ウィンドウ分割
-""
-""水平分割	:split	ss
-""垂直分割	:vsplit	sv
-""
-""左に移動	<C-w>h	sh
-""下に移動	<C-w>j	sj
-""上に移動	<C-w>k	sk
-""右に移動	<C-w>l	sl
-""次に移動	<C-w>w	sw
-""
-""ウィンドウそのもの
-""左に移動	<C-w>H	sH
-""下に移動	<C-w>J	sJ
-""上に移動	<C-w>K	sK
-""右に移動	<C-w>L	sL
-""回転	<C-w>r	sr
+" vimrc外部ファイル化"
+runtime! vimrc.d/*.vim
 
 "-----------------------------------------------------------------------------------"
 " Mappings                                                                          |
 "-----------------------------------------------------------------------------------"
 " コマンド        | ノーマル | 挿入 | コマンドライン | ビジュアル | 選択 | 演算待ち |
 " map  / noremap  |    @     |  -   |       -        |     @      |  @   |    @     |
-" nmap / nnoremap |    @     |  -   |       -        |     -      |  -   |    -     |
-" vmap / vnoremap |    -     |  -   |       -        |     @      |  @   |    -     |
-" omap / onoremap |    -     |  -   |       -        |     -      |  -   |    @     |
-" xmap / xnoremap |    -     |  -   |       -        |     @      |  -   |    -     |
-" smap / snoremap |    -     |  -   |       -        |     -      |  @   |    -     |
 " map! / noremap! |    -     |  @   |       @        |     -      |  -   |    -     |
+" vmap / vnoremap |    -     |  -   |       -        |     @      |  @   |    -     |
+" nmap / nnoremap |    @     |  -   |       -        |     -      |  -   |    -     |
 " imap / inoremap |    -     |  @   |       -        |     -      |  -   |    -     |
 " cmap / cnoremap |    -     |  -   |       @        |     -      |  -   |    -     |
+" xmap / xnoremap |    -     |  -   |       -        |     @      |  -   |    -     |
+" smap / snoremap |    -     |  -   |       -        |     -      |  @   |    -     |
+" omap / onoremap |    -     |  -   |       -        |     -      |  -   |    @     |
 "-----------------------------------------------------------------------------------"
 
 "leaderキー切り替え
 let mapleader = ","
+
+map <silent> sy :call YanktmpYank()<CR>
+map <silent> sp :call YanktmpPaste_p()<CR>
+map <silent> sP :call YanktmpPaste_P()<CR>
+
+" ESC2回でハイライト非表示
+nnoremap <ESC><ESC> :nohlsearch<CR><ESC>
+
+" バッファ
+nnoremap <C-j> :bnext<CR>
+nnoremap <C-k> :bprevious<CR>
+nnoremap <silent> <Space>d :bdelete<CR>
+
+"ファイルリストの表示"
+nnoremap <C-n> :NERDTreeToggle<CR>
+
+" tab移動
+nnoremap <Tab>   gt
+nnoremap <S-Tab> gT
+
+" カレントディレクトリをtabで開く
+nnoremap <silent> <Space>t :<C-u>tabnew<CR>
+nnoremap <silent> <Space>T :<C-u>tabnew %<CR>
+
+" grep の書式を挿入
+""nnoremap <expr> <Space>g ':vimgrep /\<' . expand('<cword>') . '\>/j **/*.' . &filetype
+nnoremap <expr> <Space>G ':sil grep! ' . expand('<cword>') . ' *'
+nnoremap <expr> <S-k> ':Ack! ' . expand('<cword>') . '<CR>'
+
+" s* で置換指定
+nnoremap s* :OverCommandLine<CR>%s/<C-r><C-w>/
+
+" tagsジャンプの時に複数ある時は一覧表示
+nnoremap <C-]> g<C-]>
 
 " 閉じ括弧の自動挿入
 inoremap { {}<LEFT>
@@ -194,34 +212,6 @@ inoremap ( ()<LEFT>
 inoremap " ""<LEFT>
 inoremap ' ''<LEFT>
 inoremap < <><LEFT>
-
-""" 画面切り替え
-""nnoremap <c-j> <c-w>j
-""nnoremap <c-k> <c-w>k
-""nnoremap <c-l> <c-w>l
-""nnoremap <c-h> <c-w>h
-
-" バッファ
-""nnoremap <Tab>             :bnext<CR>
-""nnoremap <S-Tab>           :bprevious<CR>
-nnoremap <silent> <Space>d :bdelete<CR>
-
-" tab移動
-nnoremap <C-I> gt
-""nnoremap <S-C-I> gT " 同時押しは不可能
-
-" カレントディレクトリをtabで開く
-nnoremap <silent> <Space>t :<C-u>tabnew<CR>
-nnoremap <silent> <Space>T :<C-u>tabnew %<CR>
-
-" s* で置換指定
-nnoremap s* :OverCommandLine<CR>%s/<C-r><C-w>/
-
-" ESC2回でハイライト非表示
-nnoremap <ESC><ESC> :nohlsearch<CR><ESC>
-
-" tagsジャンプの時に複数ある時は一覧表示
-nnoremap <C-]> g<C-]>
 
 " 連続ペーストを効率よく
 vnoremap <silent> <C-p> "0p<CR>
@@ -233,14 +223,6 @@ nnoremap <silent> <Space>E  :source $MYVIMRC<CR>
 " sudoで保存
 nnoremap <silent> <Space>s :<C-u>w !sudo tee %<CR>
 
-" grep の書式を挿入
-""nnoremap <expr> <Space>g ':vimgrep /\<' . expand('<cword>') . '\>/j **/*.' . &filetype
-nnoremap <expr> <Space>G ':sil grep! ' . expand('<cword>') . ' *'
-nnoremap <expr> <S-k> ':Ack! ' . expand('<cword>') . '<CR>'
-
-" help 引くのに便利かなと
-""nnoremap <expr> <Space>h ':tab h ' . expand('<cword>')
-
 " ファイルの表示を整える
 nnoremap <Space>p ma :%s/\s\+$//ge<CR> gg =G `a
 
@@ -251,19 +233,8 @@ nnoremap <Space>j :<C-u>r !date +"\%Y\%m\%d\%H\%M"<CR>
 nmap <Space>b :read ~/.vim_bf<CR>
 vmap <Space>b :w!~/.vim_bf<CR>
 
-"連番"
-nnoremap <silent> co :ContinuousNumber <C-a><CR>
-vnoremap <silent> co :ContinuousNumber <C-a><CR>
-command! -count -nargs=1 ContinuousNumber let c = col('.')|for n in range(1, <count>?<count>-line('.'):1)|exec 'normal! j' . n . <q-args>|call cursor('.', c)|endfor
-
-"ファイルリストの表示"
-nnoremap <C-n> :NERDTreeToggle<CR>
-
 "今見てるタブ以外を閉じる"
 nnoremap <Space>q :tabonly<CR>
-
-" Align"
-nnoremap <Space>a :Align<Space>
 
 " quickrun"
 nnoremap <Space>r :QuickRun<CR>
@@ -277,22 +248,10 @@ inoremap <expr><C-k> pumvisible() ? "\<C-p>" : "\<TAB>"
 nmap <silent> <Space>o <Plug>(openbrowser-smart-search)
 vmap <silent> <Space>o <Plug>(openbrowser-smart-search)
 
-" excitetranslate-vim
-""nmap <C-e> :ExciteTranslate<CR>
-nmap <expr> <C-e> ':MacDict ' . expand('<cword>') . '<CR>'
-
 " memolist.vim
 nnoremap <silent> <Space>m :MemoList<CR>
 
-" FuzzyFinder"
-nnoremap <Leader>f :FufFile<CR>
-
-" tagbar"
-nnoremap <Leader>t :TagbarToggle<CR>
-
-"vim-textobj-multiblock"
-vmap ab <Plug>(textobj-multiblock-a)
-vmap ib <Plug>(textobj-multiblock-i)
+vmap <Enter> <Plug>(EasyAlign)
 
 "反復横跳び"
 nnoremap <expr> 0 col(".") == 1 ? '$' : '0'
@@ -305,7 +264,11 @@ inoremap <C-e> <End>
 inoremap <C-p> <Up>
 inoremap <C-n> <Down>
 
-vmap <Enter> <Plug>(EasyAlign)
+" j/kによる移動を速くする
+nmap j <Plug>(accelerated_jk_gj)
+nmap k <Plug>(accelerated_jk_gk)
+
+inoremap <expr><CR> neocomplcache#smart_close_popup() . "\<CR>"
 
 "---------------------------------------------------------------------------
 " 短縮入力:
@@ -316,7 +279,7 @@ vmap <Enter> <Plug>(EasyAlign)
 " noreab/noreabbrev           @                @
 "---------------------------------------------------------------------------
 
-"移動"
+" 移動
 cnoremap <C-a> <Home>
 cnoremap <C-b> <Left>
 cnoremap <C-d> <Del>
@@ -335,16 +298,26 @@ cnorea Color so $VIMRUNTIME/syntax/colortest.vim
 cnorea Memo edit ~/Dropbox/Memo/Memo.txt
 command! -nargs=1 Tmp edit ~/Dropbox/Memo/tmp/tmp.<args>
 command! -nargs=1 Temp edit ~/Dropbox/Memo/tmp/tmp.<args>
+
 "---------------------------------------------------------------------------
-" 編集に関する設定:
+" チートシート:
 "---------------------------------------------------------------------------
 
-" 無限undo
-if has('persistent_undo')
-  set undodir=~/.vim/undo/
-  set undofile
-endif
-set fileencodings=utf-8,default,iso-2022-jp,euc-jp,cp932,ucs-bom,latin1
+"ウィンドウ分割
+"
+"水平分割	:split	ss
+"垂直分割	:vsplit	sv
+"
+"左に移動	<C-w>h	sh
+"下に移動	<C-w>j	sj
+"上に移動	<C-w>k	sk
+"右に移動	<C-w>l	sl
+"次に移動	<C-w>w	sw
+"
+"ウィンドウそのもの
+"左に移動	<C-w>H	sH
+"下に移動	<C-w>J	sJ
+"上に移動	<C-w>K	sK
+"右に移動	<C-w>L	sL
+"回転	<C-w>r	sr
 
-" vimrc外部ファイル化"
-runtime! vimrc.d/*.vim
