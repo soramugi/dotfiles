@@ -171,11 +171,11 @@ inoremap " ""<LEFT>
 inoremap ' ''<LEFT>
 inoremap < <><LEFT>
 
-" 画面切り替え
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-l> <c-w>l
-nnoremap <c-h> <c-w>h
+""" 画面切り替え
+""nnoremap <c-j> <c-w>j
+""nnoremap <c-k> <c-w>k
+""nnoremap <c-l> <c-w>l
+""nnoremap <c-h> <c-w>h
 
 " バッファ
 ""nnoremap <Tab>             :bnext<CR>
