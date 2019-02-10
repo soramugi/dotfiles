@@ -71,7 +71,7 @@ if neobundle#load_cache(expand('$MYVIMRC'))
   NeoBundleLazy 'heavenshell/vim-jsdoc' , {'autoload': {'filetypes': ['javascript']}}
 
   "保存されて無かったら対話するやつ"
-  NeoBundle 'https://gist.github.com/7574789.git', { 'script_type' : 'plugin' }
+  ""NeoBundle 'https://gist.github.com/7574789.git', { 'script_type' : 'plugin' }
   "以前のカーソル位置に移動"
   NeoBundle 'https://gist.github.com/7671774.git', { 'script_type' : 'plugin' }
   "agあればgrepをagコマンドに"

@@ -80,16 +80,16 @@ fi
 #  仮想端末
 # ---------------------------------------------------------------------------
 
-# ssh接続の時に設定を変える
-if [ ! -z "$SSH_CONNECTION" ]; then
-  tmux set -t: status-bg colour200
-fi
-
-# tmuxでattachかnew-session
-if type -P tmux >/dev/null ; then
-  test -z "$TMUX" && (tmux -2 attach || tmux -2 new-session)
-  #test -z "$TMUX" && (tmux -2 attach || tmux -2 new-session \; source-file ~/dotfiles/tmux-new-session)
-fi
+## ssh接続の時に設定を変える
+#if [ ! -z "$SSH_CONNECTION" ]; then
+#  tmux set -t: status-bg colour200
+#fi
+#
+## tmuxでattachかnew-session
+#if type -P tmux >/dev/null ; then
+#  test -z "$TMUX" && (tmux -2 attach || tmux -2 new-session)
+#  #test -z "$TMUX" && (tmux -2 attach || tmux -2 new-session \; source-file ~/dotfiles/tmux-new-session)
+#fi
 
 ## 履歴を共有
 #function share_history {
