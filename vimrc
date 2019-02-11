@@ -507,6 +507,7 @@ if argc() == 0 && exists('g:nerdtree_tabs_not_open') == 0
   ""let g:nerdtree_tabs_open_on_console_startup = 1
 end
 let g:NERDTreeWinSize = 40
+let g:NERDTreeShowHidden = 1
 
 " vim-monsterを有効にする
 let g:neocomplete#sources#omni#input_patterns = {
