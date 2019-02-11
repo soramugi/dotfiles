@@ -58,6 +58,7 @@ if neobundle#load_cache(expand('$MYVIMRC'))
   NeoBundle 'nikvdp/ejs-syntax'
   NeoBundle 'posva/vim-vue'
   NeoBundle 'junegunn/vim-easy-align'
+  NeoBundle 'simeji/winresizer'
 
   "typescriptの保管やコンパイルエラーの確認"
   NeoBundle 'Quramy/tsuquyomi'
