@@ -26,7 +26,7 @@ if neobundle#load_cache(expand('$MYVIMRC'))
   NeoBundle 'svn-diff.vim'
   NeoBundle 'tyru/open-browser.vim'
   NeoBundle 'mattn/webapi-vim'
-  NeoBundle 'kien/ctrlp.vim.git'
+  NeoBundle 'ctrlpvim/ctrlp.vim'
   NeoBundle 'soramugi/auto-ctags.vim'
   NeoBundle 'glidenote/memolist.vim'
   NeoBundle 'kana/vim-fakeclip.git'
@@ -440,7 +440,7 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(exe|so|dll|swp|zip|jpg|png)$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
-let g:ctrlp_working_path_mode = 'c'
+let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_max_height = 20
 
 " netrw
