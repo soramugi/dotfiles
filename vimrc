@@ -17,11 +17,15 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 if neobundle#load_cache(expand('$MYVIMRC'))
   call neobundle#load_toml('~/.vim/bundle.toml')
   call neobundle#load_toml('~/.vim/bundle_lazy.toml', {'lazy':1})
-  NeoBundle 'vim-scripts/yanktmp.vim'
-  NeoBundle 'vim-jp/vimdoc-ja'
+  NeoBundle 'Shougo/neocomplete.vim'
+  NeoBundle 'Shougo/neosnippet.vim'
+  NeoBundle 'Shougo/neosnippet-snippets'
   NeoBundle 'thinca/vim-quickrun'
+
+  NeoBundle 'vim-jp/vimdoc-ja'
+  NeoBundle 'vim-scripts/vim-auto-save'
+  NeoBundle 'vim-scripts/yanktmp.vim'
   NeoBundle 'vim-scripts/Align'
-  ""NeoBundle 'nathanaelkane/vim-indent-guides'
   NeoBundle 'tpope/vim-surround'
   NeoBundle 'svn-diff.vim'
   NeoBundle 'tyru/open-browser.vim'
@@ -35,10 +39,8 @@ if neobundle#load_cache(expand('$MYVIMRC'))
   NeoBundle 'osyo-manga/vim-over'
   NeoBundle 'vim-jp/vital.vim'
   NeoBundle 'mopp/autodirmake.vim'
-  NeoBundle 'vim-scripts/vim-auto-save'
   NeoBundle 'vim-scripts/zoom.vim'
   NeoBundle 'othree/yajs.vim'
-  "NeoBundle 'pangloss/vim-javascript'
   NeoBundle "mxw/vim-jsx"
   NeoBundle 'keith/swift.vim'
   NeoBundle 'kballard/vim-swift', {
@@ -47,21 +49,21 @@ if neobundle#load_cache(expand('$MYVIMRC'))
         \}
   NeoBundle 'mileszs/ack.vim'
 
-  NeoBundle 'Shougo/neosnippet.vim'
-  NeoBundle 'Shougo/neosnippet-snippets'
+  ""NeoBundle 'scrooloose/syntastic'
+  NeoBundle 'w0rp/ale'
+  NeoBundle 'tpope/vim-unimpaired'
 
-  NeoBundle 'scrooloose/syntastic'
-  NeoBundle 'Shougo/neocomplete.vim'
   NeoBundle 'tpope/vim-dispatch'
   NeoBundle 'editorconfig/editorconfig-vim'
   NeoBundle 'leafgarland/typescript-vim'
   NeoBundle 'nikvdp/ejs-syntax'
   NeoBundle 'posva/vim-vue'
   NeoBundle 'junegunn/vim-easy-align'
+
   NeoBundle 'simeji/winresizer'
   NeoBundle 'reireias/vim-cheatsheet'
 
-  "typescriptの保管やコンパイルエラーの確認"
+  "typescript
   NeoBundle 'Quramy/tsuquyomi'
 
   NeoBundleLazy 'OrangeT/vim-csharp', { 'autoload': { 'filetypes': [ 'cs', 'csi', 'csx' ] } }
@@ -159,6 +161,21 @@ if has('persistent_undo')
 endif
 set fileencodings=utf-8,default,iso-2022-jp,euc-jp,cp932,ucs-bom,latin1
 
+function! LinterStatus() abort
+  let l:counts = ale#statusline#Count(bufnr(''))
+
+  let l:all_errors = l:counts.error + l:counts.style_error
+  let l:all_non_errors = l:counts.total - l:all_errors
+
+  return l:counts.total == 0 ? 'OK' : printf(
+        \   '%dW %dE',
+        \   all_non_errors,
+        \   all_errors
+        \)
+endfunction
+
+set statusline=%{LinterStatus()}
+
 "-----------------------------------------------------------------------------------"
 " Mappings                                                                          |
 "-----------------------------------------------------------------------------------"
@@ -185,9 +202,13 @@ map <silent> sP :call YanktmpPaste_P()<CR>
 nnoremap <ESC><ESC> :nohlsearch<CR><ESC>
 
 " バッファ
-nnoremap <C-j> :bnext<CR>
-nnoremap <C-k> :bprevious<CR>
+""nnoremap <C-j> :bnext<CR>
+""nnoremap <C-k> :bprevious<CR>
 nnoremap <silent> <Leader>d :bdelete<CR>
+
+" 警告表示の行に飛ぶ"
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 "ファイルリストの表示"
 nnoremap <C-n> :NERDTreeToggle<CR>
@@ -354,16 +375,16 @@ endif
 
 " markdownのシンタックス色表示"
 let g:markdown_fenced_languages = [
-\  'coffee',
-\  'css',
-\  'erb=eruby',
-\  'javascript',
-\  'js=javascript',
-\  'json=javascript',
-\  'ruby',
-\  'sass',
-\  'xml',
-\]
+      \  'coffee',
+      \  'css',
+      \  'erb=eruby',
+      \  'javascript',
+      \  'js=javascript',
+      \  'json=javascript',
+      \  'ruby',
+      \  'sass',
+      \  'xml',
+      \]
 
 "---------------------------------------------------------------------------
 " プラグイン設定
@@ -383,11 +404,11 @@ xmap <C-k>     <Plug>(neosnippet_expand_target)
 " SuperTab like snippets behavior.
 " Note: It must be "imap" and "smap".  It uses <Plug> mappings.
 imap <expr><TAB>
- \ pumvisible() ? "\<C-n>" :
- \ neosnippet#expandable_or_jumpable() ?
- \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+      \ pumvisible() ? "\<C-n>" :
+      \ neosnippet#expandable_or_jumpable() ?
+      \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+      \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 " For conceal markers.
 if has('conceal')
   set conceallevel=2 concealcursor=niv
@@ -441,10 +462,10 @@ let g:yanktmp_file = $HOME . '/.vim_tmp_file'
 
 " ctrlp
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.git|\.hg|\.svn|node_modules|build|tmp|vendor)$',
-  \ 'file': '\v\.(exe|so|dll|swp|zip|jpg|png)$',
-  \ 'link': 'some_bad_symbolic_links',
-  \ }
+      \ 'dir':  '\v[\/](\.git|\.hg|\.svn|node_modules|build|tmp|vendor)$',
+      \ 'file': '\v\.(exe|so|dll|swp|zip|jpg|png)$',
+      \ 'link': 'some_bad_symbolic_links',
+      \ }
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_max_height = 20
 
@@ -503,8 +524,8 @@ let g:gista#github_user = 'soramugi'
 
 "dirvish"
 augroup my_dirvish_events
-    au!
-    au User DirvishEnter let b:dirvish.showhidden = 1
+  au!
+  au User DirvishEnter let b:dirvish.showhidden = 1
 augroup END
 
 " NERDTree"
@@ -517,8 +538,8 @@ let g:NERDTreeShowHidden = 1
 
 " vim-monsterを有効にする
 let g:neocomplete#sources#omni#input_patterns = {
-\  'ruby': '[^. *\t]\.\w*\|\h\w*::'
-\}
+      \  'ruby': '[^. *\t]\.\w*\|\h\w*::'
+      \}
 
 " tsuquyomi"
 let g:tsuquyomi_disable_quickfix = 1
@@ -531,3 +552,17 @@ endif
 
 " cheatsheet
 let g:cheatsheet#cheat_file = $HOME . '/dotfiles/cheatsheet.md'
+
+" ALE
+let g:ale_set_loclist = 0
+let g:ale_set_quickfix = 1
+" 保存時のみ実行する
+let g:ale_lint_on_text_changed = 0
+" 表示に関する設定
+""let g:ale_sign_error = 'x'
+""let g:ale_sign_warning = '!'
+let g:airline#extensions#ale#open_lnum_symbol = '('
+let g:airline#extensions#ale#close_lnum_symbol = ')'
+let g:ale_echo_msg_format = '[%linter%]%code: %%s'
+highlight link ALEErrorSign Tag
+highlight link ALEWarningSign StorageClass
