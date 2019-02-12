@@ -59,6 +59,7 @@ if neobundle#load_cache(expand('$MYVIMRC'))
   NeoBundle 'posva/vim-vue'
   NeoBundle 'junegunn/vim-easy-align'
   NeoBundle 'simeji/winresizer'
+  NeoBundle 'reireias/vim-cheatsheet'
 
   "typescriptの保管やコンパイルエラーの確認"
   NeoBundle 'Quramy/tsuquyomi'
@@ -73,6 +74,10 @@ if neobundle#load_cache(expand('$MYVIMRC'))
   ""\   },
   ""\ }
   NeoBundleLazy 'heavenshell/vim-jsdoc' , {'autoload': {'filetypes': ['javascript']}}
+
+  NeoBundleLazy 'prettier/vim-prettier', {
+  \ 'build': {'unix': 'npm install'},
+  \ 'autoload': { 'filetypes': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] } }
 
   "保存されて無かったら対話するやつ"
   ""NeoBundle 'https://gist.github.com/7574789.git', { 'script_type' : 'plugin' }
@@ -170,7 +175,7 @@ set fileencodings=utf-8,default,iso-2022-jp,euc-jp,cp932,ucs-bom,latin1
 "-----------------------------------------------------------------------------------"
 
 "leaderキー切り替え
-let mapleader = ","
+let mapleader = "\<Space>"
 
 map <silent> sy :call YanktmpYank()<CR>
 map <silent> sp :call YanktmpPaste_p()<CR>
@@ -182,7 +187,7 @@ nnoremap <ESC><ESC> :nohlsearch<CR><ESC>
 " バッファ
 nnoremap <C-j> :bnext<CR>
 nnoremap <C-k> :bprevious<CR>
-nnoremap <silent> <Space>d :bdelete<CR>
+nnoremap <silent> <Leader>d :bdelete<CR>
 
 "ファイルリストの表示"
 nnoremap <C-n> :NERDTreeToggle<CR>
@@ -192,12 +197,12 @@ nnoremap <Tab>   gt
 nnoremap <S-Tab> gT
 
 " カレントディレクトリをtabで開く
-nnoremap <silent> <Space>t :<C-u>tabnew<CR>
-nnoremap <silent> <Space>T :<C-u>tabnew %<CR>
+nnoremap <silent> <Leader>t :<C-u>tabnew<CR>
+nnoremap <silent> <Leader>T :<C-u>tabnew %<CR>
 
 " grep の書式を挿入
-""nnoremap <expr> <Space>g ':vimgrep /\<' . expand('<cword>') . '\>/j **/*.' . &filetype
-nnoremap <expr> <Space>G ':sil grep! ' . expand('<cword>') . ' *'
+""nnoremap <expr> <Leader>g ':vimgrep /\<' . expand('<cword>') . '\>/j **/*.' . &filetype
+nnoremap <expr> <Leader>G ':sil grep! ' . expand('<cword>') . ' *'
 nnoremap <expr> <S-k> ':Ack! ' . expand('<cword>') . '<CR>'
 
 " s* で置換指定
@@ -218,27 +223,27 @@ inoremap < <><LEFT>
 vnoremap <silent> <C-p> "0p<CR>
 
 " vimrc編集
-nnoremap <silent> <Space>e  :vsplit $MYVIMRC<CR>
-nnoremap <silent> <Space>E  :source $MYVIMRC<CR>
+nnoremap <silent> <Leader>e  :vsplit $MYVIMRC<CR>
+nnoremap <silent> <Leader>E  :source $MYVIMRC<CR>
 
 " sudoで保存
-nnoremap <silent> <Space>s :<C-u>w !sudo tee %<CR>
+nnoremap <silent> <Leader>s :<C-u>w !sudo tee %<CR>
 
 " ファイルの表示を整える
-nnoremap <Space>p ma :%s/\s\+$//ge<CR> gg =G `a
+""nnoremap <Leader>p ma :%s/\s\+$//ge<CR> gg =G `a
 
 " タイムスタンプの挿入"
-nnoremap <Space>j :<C-u>r !date +"\%Y\%m\%d\%H\%M"<CR>
+nnoremap <Leader>j :<C-u>r !date +"\%Y\%m\%d\%H\%M"<CR>
 
 "コマンドラインからテキスト受け渡し"
-nmap <Space>b :read ~/.vim_bf<CR>
-vmap <Space>b :w!~/.vim_bf<CR>
+nmap <Leader>b :read ~/.vim_bf<CR>
+vmap <Leader>b :w!~/.vim_bf<CR>
 
 "今見てるタブ以外を閉じる"
-nnoremap <Space>q :tabonly<CR>
+nnoremap <Leader>q :tabonly<CR>
 
 " quickrun"
-nnoremap <Space>r :QuickRun<CR>
+nnoremap <Leader>r :QuickRun<CR>
 
 " neocomplcache
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
@@ -246,11 +251,11 @@ inoremap <expr><C-j> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><C-k> pumvisible() ? "\<C-p>" : "\<TAB>"
 
 " open-browser
-nmap <silent> <Space>o <Plug>(openbrowser-smart-search)
-vmap <silent> <Space>o <Plug>(openbrowser-smart-search)
+nmap <silent> <Leader>o <Plug>(openbrowser-smart-search)
+vmap <silent> <Leader>o <Plug>(openbrowser-smart-search)
 
 " memolist.vim
-nnoremap <silent> <Space>m :MemoList<CR>
+nnoremap <silent> <Leader>m :MemoList<CR>
 
 vmap <Enter> <Plug>(EasyAlign)
 
@@ -524,25 +529,5 @@ if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 
-"---------------------------------------------------------------------------
-" チートシート:
-"---------------------------------------------------------------------------
-
-"ウィンドウ分割
-"
-"水平分割	:split	ss
-"垂直分割	:vsplit	sv
-"
-"左に移動	<C-w>h	sh
-"下に移動	<C-w>j	sj
-"上に移動	<C-w>k	sk
-"右に移動	<C-w>l	sl
-"次に移動	<C-w>w	sw
-"
-"ウィンドウそのもの
-"左に移動	<C-w>H	sH
-"下に移動	<C-w>J	sJ
-"上に移動	<C-w>K	sK
-"右に移動	<C-w>L	sL
-"回転	<C-w>r	sr
-
+" cheatsheet
+let g:cheatsheet#cheat_file = $HOME . '/dotfiles/cheatsheet.md'
