@@ -9,6 +9,11 @@ if [ ! -f /usr/local/bin/gvim ] ; then
   /usr/local/bin/brew cask install macvim
 fi
 
+
+if [ ! -f /usr/local/bin/fzf ] ; then
+  /usr/local/bin/brew install fzf
+fi
+
 if brew --prefix coreutils >/dev/null ; then
   /usr/local/bin/brew install coreutils
 fi

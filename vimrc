@@ -30,7 +30,7 @@ if neobundle#load_cache(expand('$MYVIMRC'))
   NeoBundle 'svn-diff.vim'
   NeoBundle 'tyru/open-browser.vim'
   NeoBundle 'mattn/webapi-vim'
-  NeoBundle 'ctrlpvim/ctrlp.vim'
+  ""NeoBundle 'ctrlpvim/ctrlp.vim'
   NeoBundle 'soramugi/auto-ctags.vim'
   NeoBundle 'glidenote/memolist.vim'
   NeoBundle 'kana/vim-fakeclip.git'
@@ -59,6 +59,11 @@ if neobundle#load_cache(expand('$MYVIMRC'))
   NeoBundle 'nikvdp/ejs-syntax'
   NeoBundle 'posva/vim-vue'
   NeoBundle 'junegunn/vim-easy-align'
+  NeoBundle 'tpope/vim-commentary'
+  NeoBundle 'qpkorr/vim-bufkill'
+
+  NeoBundle '/usr/local/opt/fzf'
+  NeoBundle 'junegunn/fzf.vim'
 
   NeoBundle 'simeji/winresizer'
   NeoBundle 'reireias/vim-cheatsheet'
@@ -202,16 +207,16 @@ map <silent> sP :call YanktmpPaste_P()<CR>
 nnoremap <ESC><ESC> :nohlsearch<CR><ESC>
 
 " バッファ
-""nnoremap <C-j> :bnext<CR>
-""nnoremap <C-k> :bprevious<CR>
+nnoremap ] :bnext<CR>
+nnoremap [ :bprevious<CR>
 nnoremap <silent> <Leader>d :bdelete<CR>
 
 " 警告表示の行に飛ぶ"
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
+nmap <silent> <C-n> <Plug>(ale_previous_wrap)
+nmap <silent> <C-p> <Plug>(ale_next_wrap)
 
 "ファイルリストの表示"
-nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <C-l> :NERDTreeToggle<CR>
 
 " tab移動
 nnoremap <Tab>   gt
@@ -296,6 +301,14 @@ nmap j <Plug>(accelerated_jk_gj)
 nmap k <Plug>(accelerated_jk_gk)
 
 inoremap <expr><CR> neocomplcache#smart_close_popup() . "\<CR>"
+
+" バッファを削除するがvimの終了まではしない
+nmap <C-q> :bd<CR>
+
+" fzf.vim
+nmap ; :Buffers<CR>
+nmap f :Files<CR>
+nmap t :Tags<CR>
 
 "---------------------------------------------------------------------------
 " 短縮入力:
@@ -557,7 +570,7 @@ let g:cheatsheet#cheat_file = $HOME . '/dotfiles/cheatsheet.md'
 let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 1
 " 保存時のみ実行する
-let g:ale_lint_on_text_changed = 0
+let g:ale_lint_on_text_changed = 1
 " 表示に関する設定
 ""let g:ale_sign_error = 'x'
 ""let g:ale_sign_warning = '!'
