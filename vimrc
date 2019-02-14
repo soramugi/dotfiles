@@ -30,7 +30,6 @@ if neobundle#load_cache(expand('$MYVIMRC'))
   NeoBundle 'svn-diff.vim'
   NeoBundle 'tyru/open-browser.vim'
   NeoBundle 'mattn/webapi-vim'
-  ""NeoBundle 'ctrlpvim/ctrlp.vim'
   NeoBundle 'soramugi/auto-ctags.vim'
   NeoBundle 'glidenote/memolist.vim'
   NeoBundle 'kana/vim-fakeclip.git'
@@ -49,7 +48,6 @@ if neobundle#load_cache(expand('$MYVIMRC'))
         \}
   NeoBundle 'mileszs/ack.vim'
 
-  ""NeoBundle 'scrooloose/syntastic'
   NeoBundle 'w0rp/ale'
   NeoBundle 'tpope/vim-unimpaired'
 
@@ -68,9 +66,6 @@ if neobundle#load_cache(expand('$MYVIMRC'))
   NeoBundle 'simeji/winresizer'
   NeoBundle 'reireias/vim-cheatsheet'
 
-  "typescript
-  NeoBundle 'Quramy/tsuquyomi'
-
   NeoBundleLazy 'OrangeT/vim-csharp', { 'autoload': { 'filetypes': [ 'cs', 'csi', 'csx' ] } }
   ""NeoBundleLazy 'OmniSharp/omnisharp-vim', {
   ""\   'autoload': { 'filetypes': [ 'cs', 'csi', 'csx' ] },
@@ -81,10 +76,6 @@ if neobundle#load_cache(expand('$MYVIMRC'))
   ""\   },
   ""\ }
   NeoBundleLazy 'heavenshell/vim-jsdoc' , {'autoload': {'filetypes': ['javascript']}}
-
-  NeoBundleLazy 'prettier/vim-prettier', {
-  \ 'build': {'unix': 'npm install'},
-  \ 'autoload': { 'filetypes': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] } }
 
   "保存されて無かったら対話するやつ"
   ""NeoBundle 'https://gist.github.com/7574789.git', { 'script_type' : 'plugin' }
@@ -212,8 +203,8 @@ nnoremap [ :bprevious<CR>
 nnoremap <silent> <Leader>d :bdelete<CR>
 
 " 警告表示の行に飛ぶ"
-nmap <silent> <C-n> <Plug>(ale_previous_wrap)
-nmap <silent> <C-p> <Plug>(ale_next_wrap)
+nmap <silent> <C-n> <Plug>(ale_next_wrap)
+nmap <silent> <C-p> <Plug>(ale_previous_wrap)
 
 "ファイルリストの表示"
 nnoremap <C-l> :NERDTreeToggle<CR>
@@ -257,6 +248,7 @@ nnoremap <silent> <Leader>s :<C-u>w !sudo tee %<CR>
 
 " ファイルの表示を整える
 ""nnoremap <Leader>p ma :%s/\s\+$//ge<CR> gg =G `a
+nnoremap <Leader>p :ALEFix<CR>
 
 " タイムスタンプの挿入"
 nnoremap <Leader>j :<C-u>r !date +"\%Y\%m\%d\%H\%M"<CR>
@@ -548,6 +540,7 @@ if argc() == 0 && exists('g:nerdtree_tabs_not_open') == 0
 end
 let g:NERDTreeWinSize = 40
 let g:NERDTreeShowHidden = 1
+let g:NERDTreeIgnore = ['.DS_Store']
 
 " vim-monsterを有効にする
 let g:neocomplete#sources#omni#input_patterns = {
@@ -567,15 +560,17 @@ endif
 let g:cheatsheet#cheat_file = $HOME . '/dotfiles/cheatsheet.md'
 
 " ALE
-let g:ale_set_loclist = 0
-let g:ale_set_quickfix = 1
-" 保存時のみ実行する
-let g:ale_lint_on_text_changed = 1
-" 表示に関する設定
-""let g:ale_sign_error = 'x'
-""let g:ale_sign_warning = '!'
-let g:airline#extensions#ale#open_lnum_symbol = '('
-let g:airline#extensions#ale#close_lnum_symbol = ')'
+let g:ale_linters = {
+      \ 'html': [],
+      \ 'css': ['stylelint'],
+      \ 'javascript': ['eslint'],
+      \ 'typescript': ['tslint', 'tsserver', 'typecheck'],
+      \ 'vue': ['eslint']
+      \ }
+let g:ale_fixers = {
+      \ 'typescript': ['prettier', 'tslint']
+      \ }
 let g:ale_echo_msg_format = '[%linter%]%code: %%s'
+let g:ale_sign_column_always = 1 " 警告がなくてもスペースを空ける
 highlight link ALEErrorSign Tag
 highlight link ALEWarningSign StorageClass
