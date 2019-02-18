@@ -172,6 +172,9 @@ endfunction
 
 set statusline=%{LinterStatus()}
 
+"vue"
+autocmd FileType vue syntax sync fromstart
+
 "-----------------------------------------------------------------------------------"
 " Mappings                                                                          |
 "-----------------------------------------------------------------------------------"
@@ -565,9 +568,10 @@ let g:ale_linters = {
       \ 'css': ['stylelint'],
       \ 'javascript': ['eslint'],
       \ 'typescript': ['tslint', 'tsserver', 'typecheck'],
-      \ 'vue': ['eslint']
+      \ 'vue': ['vls', 'eslint']
       \ }
 let g:ale_fixers = {
+      \ 'javascript': ['prettier', 'eslint'],
       \ 'typescript': ['prettier', 'tslint']
       \ }
 let g:ale_echo_msg_format = '[%linter%]%code: %%s'
