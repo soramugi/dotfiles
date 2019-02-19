@@ -22,6 +22,10 @@ if [ ! -f /usr/local/bin/tmux ] ; then
   /usr/local/bin/brew install tmux
 fi
 
+if [ ! -f /usr/local/bin/ag ] ; then
+  /usr/local/bin/brew install ag
+fi
+
 if [ ! -f /usr/local/bin/cowsay ] ; then
   /usr/local/bin/brew install cowsay
 fi
