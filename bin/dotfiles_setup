@@ -63,8 +63,7 @@ if [ ! -e $HOME/dotfiles/vim/bundle/manual/apple-swift ]  ; then
   cd $HOME/dotfiles
 fi
 
-. $HOME/.vim/bundle/neobundle.vim/bin/neoinstall
-
+vim +NeoBundleInstall +qall
 
 # reload
 if [ -e $HOME/.profile ] ; then

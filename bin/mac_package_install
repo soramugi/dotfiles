@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [ ! -f /usr/local/bin/brew ] ; then
-  ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   echo 'export PATH=/usr/local/bin:$PATH' >> .bashrc
 fi
 
@@ -43,6 +43,8 @@ if [ ! -f /usr/local/bin/vim ] ; then
 fi
 
 /usr/local/bin/brew install bash-completion
+/usr/local/bin/brew install git
+/usr/local/bin/brew install ctags
 
 if [ ! -f /usr/local/bin/reattach-to-user-namespace ] ; then
   /usr/local/bin/brew install reattach-to-user-namespace

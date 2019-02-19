@@ -67,8 +67,8 @@ stty -ixon -ixoff
 # 音
 set bell-style none
 
-#source /usr/local/etc/bash_completion.d/git-prompt.sh
-#source /usr/local/etc/bash_completion.d/git-completion.bash
+source /usr/local/etc/bash_completion.d/git-prompt.sh
+source /usr/local/etc/bash_completion.d/git-completion.bash
 
 export GIT_PS1_SHOWDIRTYSTATE=true
 PS1="\`if [ \$? != 0 ]; then echo \[\e[31m\]o_O\[\e[0m\]; fi\`"
