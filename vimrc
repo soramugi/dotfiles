@@ -1,99 +1,76 @@
 "---------------------------------------------------------------------------
-" neobundle.vim
+" dein.vim
 "---------------------------------------------------------------------------
-set nocompatible
-filetype plugin indent off
-
-if has('vim_starting')
-  if !isdirectory(expand("~/.vim/bundle/neobundle.vim/"))
-    echo "install neobundle..."
-    call system("git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim")
-    echo "done neobundle install!!"
-  endif
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
+if &compatible
+  set nocompatible
 endif
-call neobundle#begin(expand('~/.vim/bundle/'))
-NeoBundleFetch 'Shougo/neobundle.vim'
-if neobundle#load_cache(expand('$MYVIMRC'))
-  call neobundle#load_toml('~/.vim/bundle.toml')
-  call neobundle#load_toml('~/.vim/bundle_lazy.toml', {'lazy':1})
-  NeoBundle 'Shougo/neocomplete.vim'
-  NeoBundle 'Shougo/neosnippet.vim'
-  NeoBundle 'Shougo/neosnippet-snippets'
-  NeoBundle 'thinca/vim-quickrun'
+set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
-  NeoBundle 'vim-jp/vimdoc-ja'
-  NeoBundle 'vim-scripts/vim-auto-save'
-  NeoBundle 'vim-scripts/yanktmp.vim'
-  NeoBundle 'vim-scripts/Align'
-  NeoBundle 'tpope/vim-surround'
-  NeoBundle 'svn-diff.vim'
-  NeoBundle 'tyru/open-browser.vim'
-  NeoBundle 'mattn/webapi-vim'
-  NeoBundle 'soramugi/auto-ctags.vim'
-  NeoBundle 'glidenote/memolist.vim'
-  NeoBundle 'kana/vim-fakeclip.git'
-  NeoBundle 'tpope/vim-abolish'
-  NeoBundle 'bling/vim-airline'
-  NeoBundle 'osyo-manga/vim-over'
-  NeoBundle 'vim-jp/vital.vim'
-  NeoBundle 'mopp/autodirmake.vim'
-  NeoBundle 'vim-scripts/zoom.vim'
-  NeoBundle 'othree/yajs.vim'
-  NeoBundle "mxw/vim-jsx"
-  NeoBundle 'keith/swift.vim'
-  NeoBundle 'kballard/vim-swift', {
-        \ 'filetypes': 'swift',
-        \ 'unite_sources': ['swift/device', 'swift/developer_dir']
-        \}
-  NeoBundle 'mileszs/ack.vim'
+if dein#load_state('~/.cache/dein')
+  call dein#begin('~/.cache/dein')
 
-  NeoBundle 'w0rp/ale'
-  NeoBundle 'tpope/vim-unimpaired'
+  call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
+  call dein#add('wsdjeg/dein-ui.vim')
 
-  NeoBundle 'tpope/vim-dispatch'
-  NeoBundle 'editorconfig/editorconfig-vim'
-  NeoBundle 'leafgarland/typescript-vim'
-  NeoBundle 'nikvdp/ejs-syntax'
-  NeoBundle 'posva/vim-vue'
-  NeoBundle 'junegunn/vim-easy-align'
-  NeoBundle 'tpope/vim-commentary'
-  NeoBundle 'qpkorr/vim-bufkill'
+  call dein#add('Shougo/deoplete.nvim')
+  call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
+  call dein#add('scrooloose/nerdtree')
+  call dein#add('jistr/vim-nerdtree-tabs')
+  call dein#add('rhysd/accelerated-jk')
+  call dein#add('Shougo/neocomplcache')
+  call dein#add('glidenote/octoeditor.vim')
+  call dein#add('koron/codic-vim')
+  call dein#add('Shougo/neocomplete.vim')
+  call dein#add('Shougo/neosnippet.vim')
+  call dein#add('Shougo/neosnippet-snippets')
+  call dein#add('thinca/vim-quickrun')
+  call dein#add('vim-jp/vimdoc-ja')
+  call dein#add('vim-scripts/vim-auto-save')
+  call dein#add('vim-scripts/yanktmp.vim')
+  call dein#add('vim-scripts/Align')
+  call dein#add('tpope/vim-surround')
+  call dein#add('tyru/open-browser.vim')
+  call dein#add('mattn/webapi-vim')
+  call dein#add('soramugi/auto-ctags.vim')
+  call dein#add('glidenote/memolist.vim')
+  call dein#add('kana/vim-fakeclip.git')
+  call dein#add('tpope/vim-abolish')
+  call dein#add('bling/vim-airline')
+  call dein#add('osyo-manga/vim-over')
+  call dein#add('vim-jp/vital.vim')
+  call dein#add('mopp/autodirmake.vim')
+  call dein#add('vim-scripts/zoom.vim')
+  call dein#add('othree/yajs.vim')
+  call dein#add("mxw/vim-jsx")
+  call dein#add('keith/swift.vim')
+  call dein#add('mileszs/ack.vim')
+  call dein#add('w0rp/ale')
+  call dein#add('tpope/vim-unimpaired')
+  call dein#add('tpope/vim-dispatch')
+  call dein#add('editorconfig/editorconfig-vim')
+  call dein#add('leafgarland/typescript-vim')
+  call dein#add('nikvdp/ejs-syntax')
+  call dein#add('posva/vim-vue')
+  call dein#add('junegunn/vim-easy-align')
+  call dein#add('tpope/vim-commentary')
+  call dein#add('qpkorr/vim-bufkill')
+  call dein#add('/usr/local/opt/fzf')
+  call dein#add('junegunn/fzf.vim')
+  call dein#add('simeji/winresizer')
+  call dein#add('reireias/vim-cheatsheet')
+  call dein#add('https://gist.github.com/7671774.git', { 'script_type' : 'plugin' })
+  call dein#add('https://gist.github.com/6775207.git', { 'script_type' : 'plugin' })
 
-  NeoBundle '/usr/local/opt/fzf'
-  NeoBundle 'junegunn/fzf.vim'
-
-  NeoBundle 'simeji/winresizer'
-  NeoBundle 'reireias/vim-cheatsheet'
-
-  NeoBundleLazy 'OrangeT/vim-csharp', { 'autoload': { 'filetypes': [ 'cs', 'csi', 'csx' ] } }
-  ""NeoBundleLazy 'OmniSharp/omnisharp-vim', {
-  ""\   'autoload': { 'filetypes': [ 'cs', 'csi', 'csx' ] },
-  ""\   'build': {
-  ""\     'windows' : 'msbuild server/OmniSharp.sln',
-  ""\     'mac': 'xbuild server/OmniSharp.sln',
-  ""\     'unix': 'xbuild server/OmniSharp.sln',
-  ""\   },
-  ""\ }
-  NeoBundleLazy 'heavenshell/vim-jsdoc' , {'autoload': {'filetypes': ['javascript']}}
-
-  "保存されて無かったら対話するやつ"
-  ""NeoBundle 'https://gist.github.com/7574789.git', { 'script_type' : 'plugin' }
-  "以前のカーソル位置に移動"
-  NeoBundle 'https://gist.github.com/7671774.git', { 'script_type' : 'plugin' }
-  "agあればgrepをagコマンドに"
-  ""NeoBundle 'https://gist.github.com/7800124.git', { 'script_type' : 'plugin' }
-  "NeoBundleUpdate!を1日毎勝手に実行"
-  NeoBundle 'https://gist.github.com/9133200.git', { 'script_type' : 'plugin' }
-
-  NeoBundleSaveCache
+  call dein#end()
+  call dein#save_state()
 endif
-
-call neobundle#end()
 
 filetype plugin indent on
+syntax enable
 
-NeoBundleCheck
+if dein#check_install()
+  call dein#install()
+endif
 
 "---------------------------------------------------------------------------
 " 基本設定:
