@@ -97,11 +97,12 @@ fi
 #  tmux set -t: status-bg colour200
 #fi
 #
-## tmuxでattachかnew-session
-#if type -P tmux >/dev/null ; then
-#  test -z "$TMUX" && (tmux -2 attach || tmux -2 new-session)
-#  #test -z "$TMUX" && (tmux -2 attach || tmux -2 new-session \; source-file ~/dotfiles/tmux-new-session)
-#fi
+# tmuxでattachかnew-session
+if type -P tmux >/dev/null ; then
+  #test -z "$TMUX" && (tmux -2 attach || tmux -2 new-session)
+  #test -z "$TMUX" && (tmux -2 attach || tmux -2 new-session \; source-file ~/dotfiles/tmux-new-session)
+  tmux -2 new-session
+fi
 
 ## 履歴を共有
 #function share_history {
