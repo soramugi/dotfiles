@@ -13,7 +13,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('wsdjeg/dein-ui.vim')
 
   call dein#add('Shougo/deoplete.nvim')
-  call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
+  call dein#add('Shougo/vimproc.vim', {'build': 'make'})
   call dein#add('scrooloose/nerdtree')
   call dein#add('jistr/vim-nerdtree-tabs')
   call dein#add('rhysd/accelerated-jk')
