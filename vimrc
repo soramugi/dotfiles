@@ -41,7 +41,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('mopp/autodirmake.vim')
   call dein#add('vim-scripts/zoom.vim')
   call dein#add('othree/yajs.vim')
-  call dein#add("mxw/vim-jsx")
+  "call dein#add("mxw/vim-jsx")
   call dein#add('keith/swift.vim')
   call dein#add('mileszs/ack.vim')
   call dein#add('w0rp/ale')
@@ -543,7 +543,6 @@ let g:cheatsheet#cheat_file = $HOME . '/dotfiles/cheatsheet.md'
 let g:ale_linters = {
       \ 'html': [],
       \ 'css': ['stylelint'],
-      \ 'javascript': ['eslint'],
       \ 'typescript': ['tslint', 'tsserver', 'typecheck'],
       \ 'vue': ['vls', 'eslint']
       \ }

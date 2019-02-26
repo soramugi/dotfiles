@@ -50,6 +50,8 @@ fi
 /usr/local/bin/brew install git
 /usr/local/bin/brew install ctags
 
+npm i -g prettier
+
 if [ ! -f /usr/local/bin/reattach-to-user-namespace ] ; then
   /usr/local/bin/brew install reattach-to-user-namespace
 fi
