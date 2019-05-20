@@ -58,6 +58,8 @@ if dein#load_state('~/.cache/dein')
   call dein#add('junegunn/fzf.vim')
   call dein#add('simeji/winresizer')
   call dein#add('reireias/vim-cheatsheet')
+  call dein#add('elzr/vim-json')
+
   call dein#add('https://gist.github.com/7671774.git', { 'script_type' : 'plugin' })
   call dein#add('https://gist.github.com/6775207.git', { 'script_type' : 'plugin' })
 
@@ -554,3 +556,6 @@ let g:ale_echo_msg_format = '[%linter%]%code: %%s'
 let g:ale_sign_column_always = 1 " 警告がなくてもスペースを空ける
 highlight link ALEErrorSign Tag
 highlight link ALEWarningSign StorageClass
+
+" elzr/vim-json
+let g:vim_json_syntax_conceal = 0
