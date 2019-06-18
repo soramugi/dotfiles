@@ -59,6 +59,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('simeji/winresizer')
   call dein#add('reireias/vim-cheatsheet')
   call dein#add('elzr/vim-json')
+  call dein#add('martinda/Jenkinsfile-vim-syntax')
 
   call dein#add('https://gist.github.com/7671774.git', { 'script_type' : 'plugin' })
   call dein#add('https://gist.github.com/6775207.git', { 'script_type' : 'plugin' })
