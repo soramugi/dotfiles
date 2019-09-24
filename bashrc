@@ -26,6 +26,9 @@ export EDITOR=vim
 export HOMEBREW_INSTALL_BADGE='🍣'
 export SDKPATH=$(/usr/bin/env xcrun --show-sdk-path --sdk macosx)
 
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$PATH
+
 # ---------------------------------------------------------------------------
 # 立ち上げ時にAAと名言
 # ---------------------------------------------------------------------------
